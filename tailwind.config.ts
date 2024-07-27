@@ -25,10 +25,17 @@ const config: Config = {
             },
             fontFamily: {
                 'ibm-mono': ['"IBM Plex Mono"', 'monospace'],
-                'general-sans': ['"General Sans"', 'sans-serif'],
+                'general-sans': 'General Sans, sans-serif',
+            },
+            screens: {
+                mobile: '375px',
+                tablet: '768px',
+                laptop: '1024px',
+                desktop: '1440px',
             },
         },
     },
+
     plugins: [],
 };
 export default config;

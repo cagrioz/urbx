@@ -9,7 +9,15 @@ body {
 h1 {
     font-family: 'SF Pro Text', sans-serif;
 }
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
-p {
-    font-family: var(--font-ibm-plex-mono);
+.animate-marquee {
+    animation: marquee 15s linear infinite;
 }
