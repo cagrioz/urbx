@@ -24,21 +24,21 @@ export default function Home() {
                     {
                         title: '100 LBS',
                         description:
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+                            'Handles loads up to 100 pounds for efficient material handling.',
                     },
                     {
                         title: '125 FEET',
                         description:
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna .',
+                            'Reaches up to 125 feet, maximizing storage space.',
                     },
                     {
                         title: 'High Speeds',
                         description:
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labo.',
+                            'Operates at high speeds for faster cycle times.',
                     },
                     {
                         title: '100 TPH Per Bot',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoda.',
+                        description: 'Achieves up to 100 transactions per hour for optimal workflow.',
                     },
                 ]}
                 image={SideViewImage}
@@ -46,23 +46,23 @@ export default function Home() {
             <Features
                 features={[
                     {
-                        title: '100 LBS',
+                        title: 'Routing and Tasking',
                         description:
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+                            'Machine learning optimizes tasking and routing for maximum throughput and storage.',
                     },
                     {
-                        title: '125 FEET',
+                        title: 'AI Driven Grid',
                         description:
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna .',
+                            'Efficiently tasks and routes robots using AI-driven grid technology.',
                     },
                     {
-                        title: 'High Speeds',
+                        title: 'Advanced Controls',
                         description:
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labo.',
+                            'Fast, accurate navigation and localization with torque-assisted control for better performance.',
                     },
                     {
-                        title: '100 TPH Per Bot',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoda.',
+                        title: 'Optimized Storage',
+                        description: 'Maximizes space utilization and enhances operational efficiency.',
                     },
                 ]}
                 image={TopViewImage}
