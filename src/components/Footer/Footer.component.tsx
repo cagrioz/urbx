@@ -65,13 +65,13 @@ export default function Footer() {
                         </Link>
                     </div>
                     <div className="flex gap-6 laptop:gap-10">
-                        <Link href="http://twitter.com/urbx_inc" className="text-sm">
+                        <Link href="https://twitter.com/urbx_inc" className="text-sm">
                             X (twitter)
                         </Link>
-                        <Link href="http://instagram.com/urbx_inc" className="text-sm">
+                        <Link href="https://instagram.com/urbx_inc" className="text-sm">
                             Instagram
                         </Link>
-                        <Link href="#" className="text-sm">
+                        <Link href="https://www.linkedin.com/company/urbx/" className="text-sm">
                             LinkedIn
                         </Link>
                     </div>

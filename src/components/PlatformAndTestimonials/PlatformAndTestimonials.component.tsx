@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { ibm_mono } from '@/styles/fonts';
 
-import NephyPerezAvatar from '@/assets/nephy_perez.png';
-import TollGroupLogo from '@/assets/toll.png';
+import TestimonialAvatar from '@/assets/avatar.jpg';
+import CompanyLogo from '@/assets/company_logo.jpg';
 import Link from 'next/link';
 import ButtonLink from '@/components/ButtonLink';
 
@@ -38,24 +38,24 @@ export default function PlatformAndTestimonials() {
                         Enterprise Customers
                     </p>
                     <p className="text-xl font-medium mt-5">
-                        “Some automated material handling solutions often complement existing operations while some try
-                        to revolutionize them. At Toll, we serve a large array of customers, and we aspire to create
-                        value for them through practical Innovation. In collaborating with URBX, we have found the
-                        creative wisdom to develop and implement new automation methods, redefining supply chain
-                        practices. Every second counts; efficiency and reliability are essential. We are excited about
-                        the possibilities and look forward to working together.”
+                        “Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit eum accusamus nulla voluptas
+                        odit, possimus cumque quae explicabo necessitatibus sequi exercitationem quod. Amet corrupti
+                        distinctio earum eveniet tempora necessitatibus nam perferendis perspiciatis sint harum dicta
+                        aliquam magni at repellat laboriosam error architecto quis doloremque, voluptatum nisi totam
+                        ducimus! Dolorum perspiciatis fugit ab eaque minima officia quisquam deleniti unde, repellendus
+                        aliquam! ”
                     </p>
                     <div className="mt-[60px] flex items-center gap-5">
                         <div className="w-[60px] h-[60px]">
-                            <Image src={NephyPerezAvatar} alt="Nephy Perez" />
+                            <Image src={TestimonialAvatar} alt="Avatar" />
                         </div>
                         <div className="flex items-center gap-10">
                             <div>
-                                <h5 className="font-bold text-standard-1">Nephy Perez</h5>
-                                <span>SVP Supply Chain, Toll Group</span>
+                                <h5 className="font-bold text-standard-1">John Doe</h5>
+                                <span>Company Detail</span>
                             </div>
                             <div>
-                                <Image height={20} src={TollGroupLogo} alt="Toll Group" />
+                                <Image height={20} src={CompanyLogo} alt="Logo" />
                             </div>
                         </div>
                     </div>
