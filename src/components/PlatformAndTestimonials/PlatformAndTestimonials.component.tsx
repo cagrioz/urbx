@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { ibm_mono } from '@/styles/fonts';
 
 import TestimonialAvatar from '@/assets/avatar.jpg';
-import CompanyLogo from '@/assets/company_logo.jpg';
+import CompanyLogo from '@/assets/dcs_logo.svg';
 import Link from 'next/link';
 import ButtonLink from '@/components/ButtonLink';
 
