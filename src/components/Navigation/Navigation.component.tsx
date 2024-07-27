@@ -16,7 +16,7 @@ type NavigationItem = {
 const navigationItems: NavigationItem[] = [
     {
         text: 'Enterprise',
-        href: '#',
+        href: 'https://urbx.com/enterprise',
     },
     {
         text: 'AI Software',
@@ -24,11 +24,11 @@ const navigationItems: NavigationItem[] = [
     },
     {
         text: 'News',
-        href: '#',
+        href: 'https://urbx.com/news',
     },
     {
         text: 'About Us',
-        href: '#',
+        href: 'https://urbx.com/about-us',
     },
 ];
 
@@ -56,7 +56,7 @@ export default function Navigation() {
                     </nav>
                     <div className="hidden tablet:block">
                         <Link
-                            href="#"
+                            href="https://urbx.com/contact-us"
                             className="bg-white text-black font-semibold py-[14px] px-6 rounded-[31px] text-sm"
                         >
                             Contact Us

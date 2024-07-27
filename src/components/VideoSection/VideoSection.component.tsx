@@ -46,7 +46,7 @@ const VideoSection: React.FC = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative flex flex-col bg-black">
+        <section ref={sectionRef} className="relative flex flex-col bg-black -mt-1">
             <Container className="text-center pb-[65px]">
                 <p className="text-standard-4 text-sm font-medium uppercase tracking-widest" style={ibm_mono.style}>
                     Welcome to Urbx
@@ -56,7 +56,7 @@ const VideoSection: React.FC = () => {
                     designed to revolutionize your logistics and supply chain operations.
                 </h3>
             </Container>
-            <div className="w-full h-[772px] flex items-center justify-center bg-[#2a2a2a]">
+            <div className="w-full h-full desktop:h-[772px] flex items-center justify-center bg-[#2a2a2a]">
                 <video ref={videoRef} className="w-full h-auto max-w-full max-h-full rounded-lg" muted playsInline>
                     <source src={TowerVideo} type="video/mp4" />
                     Your browser does not support the video tag.

@@ -10,7 +10,7 @@ export default function Footer() {
         <footer className="bg-black py-[60px]">
             <Container>
                 <div className="text-white">
-                    <div className="flex text-white justify-between items-center">
+                    <div className="flex flex-col tablet:flex-row gap-4 text-white tablet:justify-between tablet:items-center">
                         <div>
                             <Image src={UrbxLogo} alt="Urbx Logo" width={123} height={30} />
                         </div>
@@ -54,8 +54,8 @@ export default function Footer() {
                 <Image src={FadedLine} alt="Faded Line" className="mx-auto pt-8 pb-5" />
             </div>
             <Container>
-                <div className="flex justify-between text-standard-4">
-                    <div className="flex gap-10">
+                <div className="flex flex-col tablet:flex-row gap-10 justify-between text-standard-4">
+                    <div className="flex gap-6 laptop:gap-10">
                         <p className="text-sm">© URBX 2024</p>
                         <Link href="#" className="text-sm uppercase">
                             Terms of Use
@@ -64,11 +64,11 @@ export default function Footer() {
                             Data Protection Policy
                         </Link>
                     </div>
-                    <div className="flex gap-10">
-                        <Link href="#" className="text-sm">
+                    <div className="flex gap-6 laptop:gap-10">
+                        <Link href="http://twitter.com/urbx_inc" className="text-sm">
                             X (twitter)
                         </Link>
-                        <Link href="#" className="text-sm">
+                        <Link href="http://instagram.com/urbx_inc" className="text-sm">
                             Instagram
                         </Link>
                         <Link href="#" className="text-sm">
