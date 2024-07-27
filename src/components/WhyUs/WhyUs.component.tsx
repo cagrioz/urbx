@@ -1,12 +1,54 @@
+'use client';
 import Container from '@/components/Container';
 import { ibm_mono } from '@/styles/fonts';
 
-import WhyUsImage from '@/assets/why_us.jpg';
+import UrbxSystem from '@/assets/urbx_system.mp4';
 import Image from 'next/image';
+import { useEffect, useRef } from 'react';
 
 export default function WhyUs() {
+    const videoRef = useRef<HTMLVideoElement | null>(null);
+    const sectionRef = useRef<HTMLElement | null>(null);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        const section = sectionRef.current;
+
+        if (!video || !section) return;
+
+        video.playbackRate = 1; // Set video playback rate to 3x speed
+
+        const handleVisibilityChange = () => {
+            if (document.hidden) {
+                video.pause();
+            } else {
+                video.play().catch((error) => console.log('Video play error:', error));
+            }
+        };
+
+        const handleIntersect = (entries: IntersectionObserverEntry[]) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    video.play().catch((error) => console.log('Video play error:', error));
+                } else {
+                    video.pause();
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(handleIntersect, { threshold: 0.5 });
+
+        observer.observe(section);
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+
+        return () => {
+            observer.disconnect();
+            document.removeEventListener('visibilitychange', handleVisibilityChange);
+        };
+    }, []);
+
     return (
-        <section className="bg-black py-20">
+        <section ref={sectionRef} className="bg-black py-20">
             <Container>
                 <div className="grid grid-cols-1 tablet:grid-cols-2 gap-2 text-white">
                     <div>
@@ -25,7 +67,17 @@ export default function WhyUs() {
                     </p>
                 </div>
                 <div className="relative mt-10 rounded-[20px] overflow-hidden">
-                    <Image src={WhyUsImage} alt="Why Us" />
+                    <video
+                        ref={videoRef}
+                        className="w-full h-auto max-w-full max-h-full rounded-lg"
+                        muted
+                        playsInline
+                        autoPlay
+                        loop
+                    >
+                        <source src={UrbxSystem} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </Container>
         </section>
