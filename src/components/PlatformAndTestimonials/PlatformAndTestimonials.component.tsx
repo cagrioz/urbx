@@ -1,7 +1,5 @@
 import Image from 'next/image';
 import { ibm_mono } from '@/styles/fonts';
-
-import TestimonialAvatar from '@/assets/avatar.jpg';
 import CompanyLogo from '@/assets/dcs_logo.svg';
 import Link from 'next/link';
 import ButtonLink from '@/components/ButtonLink';
@@ -41,9 +39,6 @@ export default function PlatformAndTestimonials() {
                         “The URBX system is truly a strategic game-changer in the retail space because it enables high-speed, on-demand fulfillment of both e-commerce and store-level replenishment orders.”
                     </p>
                     <div className="mt-[60px] flex items-center gap-5">
-                        <div className="w-[60px] h-[60px]">
-                            <Image src={TestimonialAvatar} alt="Avatar" />
-                        </div>
                         <div className="flex items-center gap-10">
                             <div>
                                 <h5 className="font-bold text-standard-1">Matt Ferguson</h5>
