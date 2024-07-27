@@ -47,7 +47,7 @@ export default function PlatformAndTestimonials() {
                         <div className="flex items-center gap-10">
                             <div>
                                 <h5 className="font-bold text-standard-1">Matt Ferguson</h5>
-                                <span>DCS</span>
+                                <span>President, DCS</span>
                             </div>
                             <div>
                                 <Image height={20} src={CompanyLogo} alt="Logo" />
