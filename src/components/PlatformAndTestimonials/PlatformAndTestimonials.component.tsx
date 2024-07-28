@@ -45,7 +45,7 @@ export default function PlatformAndTestimonials() {
                                 <span>President, DCS</span>
                             </div>
                             <div>
-                                <Image width={150} height={auto} src={CompanyLogo} alt="Logo" />
+                                <Image width={150} src={CompanyLogo} alt="Logo" />
                             </div>
                         </div>
                     </div>
