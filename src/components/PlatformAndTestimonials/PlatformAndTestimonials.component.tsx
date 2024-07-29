@@ -44,9 +44,6 @@ export default function PlatformAndTestimonials() {
                                 <h5 className="font-bold text-standard-1">Matt Ferguson</h5>
                                 <span>President, DCS</span>
                             </div>
-                            <div>
-                                <Image width={150} src={CompanyLogo} alt="Logo" />
-                            </div>
                         </div>
                     </div>
                 </div>
