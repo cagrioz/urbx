@@ -33,7 +33,7 @@ export default function PlatformAndTestimonials() {
             <div className="bg-standard-7 py-16 laptop:pl-8 laptop:pt-24 laptop:pb-32 desktop:pt-[120px] desktop:pl-[110px] desktop:pb-[180px]">
                 <div className="max-w-[440px] mx-auto laptop:mr-auto laptop:ml-0">
                     <p className="text-standard-4 text-sm font-medium uppercase tracking-widest" style={ibm_mono.style}>
-                        Enterprise Customers
+                        Enterprise Partners
                     </p>
                     <p className="text-xl font-medium mt-5">
                         “The URBX system is truly a strategic game-changer in the retail space because it enables high-speed, on-demand fulfillment of both e-commerce and store-level replenishment orders.”
