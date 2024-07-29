@@ -5,8 +5,8 @@ import Partners from '@/components/Partners';
 import PlatformAndTestimonials from '@/components/PlatformAndTestimonials';
 import WhyUs from '@/components/WhyUs';
 
-import SideViewImage from '@/assets/urbx_side_view.jpg';
-import TopViewImage from '@/assets/urbx_top_view.jpg';
+import TopViewImage from '@/assets/urbx_side_view.jpg';
+import SideViewImage from '@/assets/urbx_top_view.jpg';
 import Footer from '@/components/Footer';
 import VideoSection from '@/components/VideoSection';
 import Overview from '@/components/Overview';
