@@ -9,7 +9,7 @@ const config: Config = {
     theme: {
             extend: {
               colors: {
-                black: '#0b0b0b', // Overwrite the default black color
+                black: '#000000', // Overwrite the default black color
                 standard: {
                   1: '#111222',
                   2: '#394365',
