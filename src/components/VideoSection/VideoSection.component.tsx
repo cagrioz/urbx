@@ -52,7 +52,7 @@ const VideoSection: React.FC = () => {
                     Welcome to Urbx
                 </p>
                 <h3 className="text-white text-[32px] leading-10 max-w-[680px] mt-10">
-                    Experience the future of <b>omni - channel fulfillment</b> with Urbx, the cutting - edge solution
+                    Experience the future of <b>omni-channel fulfillment</b> with Urbx, the cutting-edge solution
                     designed to revolutionize your logistics and supply chain operations.
                 </h3>
             </Container>
