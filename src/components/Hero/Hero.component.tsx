@@ -33,7 +33,7 @@ export default function Hero() {
                     </h1>
                 </div>
             </Container>
-            <Image src={UrbxHero} alt="Urbx Hero" layout="fill" className="z-0 object-cover" style={{ bottom: '20px' }}/>
+            <Image src={UrbxHero} alt="Urbx Hero" layout="fill" className="z-0 object-cover" />
         </section>
     );
 }
