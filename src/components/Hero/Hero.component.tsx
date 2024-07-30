@@ -32,21 +32,6 @@ export default function Hero() {
                         <b>Coming Soon:</b> AI-Driven Dual Grid Robotics in 3D Space.
                     </h1>
                 </div>
-                <div onClick={openModal} className="cursor-pointer">
-                    <div className="w-60 bg-black rounded-[20px] p-4">
-                        <Image src={VideoPreviewImg} alt="Video Preview" className="mb-5" />
-                        <div className="w-full flex justify-between items-center">
-                            <span className="text-white text-base font-semibold">Watch Video</span>
-                            <Image
-                                src={AngleRightIcon}
-                                alt="Angle Right"
-                                width={20}
-                                height={20}
-                                className="object-contain"
-                            />
-                        </div>
-                    </div>
-                </div>
             </Container>
             <Image src={UrbxHero} alt="Urbx Hero" layout="fill" className="z-0 object-cover" />
             <Modal isOpen={modalIsOpen} closeModal={closeModal}>
