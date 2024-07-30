@@ -14,7 +14,7 @@ const config: Config = {
             },
             colors: {
                 standard: {
-                    1: '#111222',
+                    1: '#0b0b0b',
                     2: '#394365',
                     3: '#535B75',
                     4: '#969FBC',
