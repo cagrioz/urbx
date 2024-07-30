@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
-import TowerVideo from '@/assets/towerbot.mp4'; // Adjust this path based on your project structure
+import TowerSectionVideo from '@/assets/sectionvideo.mp4'; // Adjust this path based on your project structure
 import Container from '../Container';
 import { ibm_mono } from '@/styles/fonts';
 
@@ -47,18 +47,15 @@ const VideoSection: React.FC = () => {
 
     return (
         <section ref={sectionRef} className="relative flex flex-col bg-black -mt-1">
-            <Container className="text-center pb-[65px]">
-                <p className="text-standard-4 text-sm font-medium uppercase tracking-widest" style={ibm_mono.style}>
-                    Welcome to Urbx
-                </p>
-                <h3 className="text-white text-[32px] leading-10 max-w-[680px] mt-10">
-                    Experience the future of <b>omni-channel fulfillment</b> with Urbx, the cutting-edge solution
-                    designed to revolutionize your logistics and supply chain operations.
+            <Container className="text-center pb-20">
+                <h3 className="text-white text-[32px] leading-10 max-w-[680px]">
+                    Our fully automated system leverages advanced robotics to <b>optimize efficiency, accuracy,</b> and
+                    <b>speed,</b> ensuring your business stays ahead of the competition.
                 </h3>
             </Container>
             <div className="w-full h-full desktop:h-[772px] flex items-center justify-center bg-[#000000]">
                 <video ref={videoRef} className="w-full h-auto max-w-full max-h-full rounded-lg" muted playsInline loop>
-                    <source src={TowerVideo} type="video/mp4" />
+                    <source src={TowerSectionVideo} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>
