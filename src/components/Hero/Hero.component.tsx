@@ -33,19 +33,7 @@ export default function Hero() {
                     </h1>
                 </div>
             </Container>
-            <Image src={UrbxHero} alt="Urbx Hero" layout="fill" className="z-0 object-cover" />
-            <Modal isOpen={modalIsOpen} closeModal={closeModal}>
-                <div className="relative w-full h-0 pb-[56.25%]">
-                    <iframe
-                        className="absolute top-0 left-0 w-full h-full"
-                        src="https://www.youtube.com/embed/_PeYvImR03E"
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                    ></iframe>
-                </div>
-            </Modal>
+            <Image src={UrbxHero} alt="Urbx Hero" layout="fill" className="z-0 object-cover" style={{ bottom: '20px' }}/>
         </section>
     );
 }
