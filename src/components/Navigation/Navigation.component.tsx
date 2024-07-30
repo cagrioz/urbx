@@ -19,10 +19,6 @@ const navigationItems: NavigationItem[] = [
         href: 'https://urbx.com/enterprise',
     },
     {
-        text: 'AI Software',
-        href: '#',
-    },
-    {
         text: 'News',
         href: 'https://urbx.com/news',
     },
