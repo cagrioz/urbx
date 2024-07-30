@@ -50,7 +50,7 @@ const VideoSection: React.FC = () => {
             <Container className="text-center pb-20">
                 <h3 className="text-white text-[32px] leading-10 max-w-[680px]">
                     Our fully automated system leverages advanced robotics to <b>optimize efficiency, accuracy,</b> and
-                    <b>speed,</b> ensuring your business stays ahead of the competition.
+                    <b> speed,</b> ensuring your business stays ahead of the competition.
                 </h3>
             </Container>
             <div className="w-full h-full desktop:h-[772px] flex items-center justify-center bg-[#000000]">
