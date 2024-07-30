@@ -53,7 +53,7 @@ const VideoSection: React.FC = () => {
                     <b>speed,</b> ensuring your business stays ahead of the competition.
                 </h3>
             </Container>
-            <div className="w-full h-full desktop:h-[772px] flex items-center justify-center bg-[#0b0b0b]">
+            <div className="w-full h-full desktop:h-[772px] flex items-center justify-center bg-[#000000]">
                 <video ref={videoRef} className="w-full h-auto max-w-full max-h-full rounded-lg" muted playsInline loop>
                     <source src={TowerSectionVideo} type="video/mp4" />
                     Your browser does not support the video tag.
