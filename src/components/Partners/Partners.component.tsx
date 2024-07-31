@@ -6,7 +6,7 @@ import CarterLogo from '@/assets/carter.png';
 import MainwayLogo from '@/assets/mainway.png';
 import AbcoLogo from '@/assets/abco.png';
 
-const partners = [DCSLogo, CarterLogo, MainwayLogo, YargoLogo, AbcoLogo];
+const partners = [DCSLogo, CarterLogo, MainwayLogo, AbcoLogo];
 
 export default function Partners() {
     return (
