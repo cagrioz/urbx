@@ -46,7 +46,7 @@ const VideoSection: React.FC = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative flex flex-col bg-black -mt-1">
+        <section ref={sectionRef} className="relative flex flex-col bg-black -mt-1 pt-[80px]">
             <Container className="text-center pb-20">
                 <h3 className="text-white text-[32px] leading-10 max-w-[680px]">
                     Our fully automated system leverages advanced robotics to <b>optimize efficiency, accuracy,</b> and
