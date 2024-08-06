@@ -4,9 +4,10 @@ import Image from 'next/image';
 import DCSLogo from '@/assets/dcs.png';
 import CarterLogo from '@/assets/carter.png';
 import MainwayLogo from '@/assets/mainway.png';
+import YargoLogo from '@/assets/yargo.png';
 import AbcoLogo from '@/assets/abco.png';
 
-const partners = [DCSLogo, CarterLogo, MainwayLogo, AbcoLogo];
+const partners = [DCSLogo, CarterLogo, MainwayLogo, YargoLogo, AbcoLogo];
 
 export default function Partners() {
     return (
