@@ -38,17 +38,19 @@ export default function Navigation() {
                     <div>
                         <Image src={UrbxLogo} alt="Urbx Logo" width={123} height={30} />
                     </div>
-                    <nav className="hidden tablet:flex gap-x-2 laptop:gap-x-4">
-                        {navigationItems.map((item) => (
-                            <li key={item.text}>
-                                <Link
-                                    href={item.href}
-                                    className="text-standard-5 hover:text-standard-4 text-base font-light"
-                                >
-                                    {item.text}
-                                </Link>
-                            </li>
-                        ))}
+                    <nav className="hidden tablet:block">
+                        <ul className="list-none tablet:flex gap-x-2 laptop:gap-x-4">
+                            {navigationItems.map((item) => (
+                                <li key={item.text}>
+                                    <Link
+                                        href={item.href}
+                                        className="text-standard-5 hover:text-standard-4 text-base font-light"
+                                    >
+                                        {item.text}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
                     </nav>
                     <div className="hidden tablet:block">
                         <Link

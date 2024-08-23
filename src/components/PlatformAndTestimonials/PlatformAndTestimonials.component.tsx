@@ -36,12 +36,13 @@ export default function PlatformAndTestimonials() {
                         Enterprise Partners
                     </p>
                     <p className="text-xl font-medium mt-5">
-                        “The URBX system is truly a strategic game-changer in the retail space because it enables high-speed, on-demand fulfillment of both e-commerce and store-level replenishment orders.”
+                        “The URBX system is truly a strategic game-changer in the retail space because it enables
+                        high-speed, on-demand fulfillment of both e-commerce and store-level replenishment orders.”
                     </p>
                     <div className="mt-[60px] flex items-center gap-5">
                         <div className="flex items-center gap-10">
                             <div>
-                                <h5 className="font-bold text-standard-1">Matt Ferguson</h5>
+                                <p className="font-bold text-standard-1">Matt Ferguson</p>
                                 <span>President, DCS</span>
                             </div>
                         </div>
