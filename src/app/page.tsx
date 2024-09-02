@@ -10,11 +10,22 @@ import SideViewImage from '@/assets/urbx_top_view.jpg';
 import Footer from '@/components/Footer';
 import VideoSection from '@/components/VideoSection';
 import Overview from '@/components/Overview';
+import VideoHero from '@/components/VideoHero';
+
+import HeroVideo from '@/assets/home_hero.mp4';
 
 export default function Home() {
     return (
         <>
-            <Hero />
+            <VideoHero
+                video={HeroVideo}
+                subtitle="Urbx - The Vertical Revolution"
+                title={
+                    <>
+                        AI-Driven <b>Dual Grid Robotics</b> in 3D Space.
+                    </>
+                }
+            />
             <Partners />
             <VideoSection />
             <Overview />
@@ -23,18 +34,15 @@ export default function Home() {
                 features={[
                     {
                         title: '100 LBS',
-                        description:
-                            'Handles loads up to 100 pounds for efficient material handling.',
+                        description: 'Handles loads up to 100 pounds for efficient material handling.',
                     },
                     {
                         title: '125 FEET',
-                        description:
-                            'Reaches up to 125 feet, maximizing storage space.',
+                        description: 'Reaches up to 125 feet, maximizing storage space.',
                     },
                     {
                         title: 'High Speeds',
-                        description:
-                            'Operates at high speeds for faster cycle times.',
+                        description: 'Operates at high speeds for faster cycle times.',
                     },
                     {
                         title: '100 TPH Per Bot',
@@ -52,8 +60,7 @@ export default function Home() {
                     },
                     {
                         title: 'AI Driven Grid',
-                        description:
-                            'Efficiently tasks and routes robots using AI-driven grid technology.',
+                        description: 'Efficiently tasks and routes robots using AI-driven grid technology.',
                     },
                     {
                         title: 'Advanced Controls',

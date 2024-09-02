@@ -53,7 +53,7 @@ function FAQ() {
                                 </p>
                             </Accordion>
                         </div>
-                        <div className="relative rounded-[20px] overflow-hidden">
+                        <div className="relative rounded-[20px] h-[356px] overflow-hidden">
                             <Image src={FAQImage} alt="FAQ" className="absolute inset-0 w-full h-full object-cover" />
                             <div className="z-10 relative p-10">
                                 <h4 className="font-bold text-2xl text-white">Don’t have an answer?</h4>

@@ -12,10 +12,21 @@ import Image from 'next/image';
 import Separator from '@/components/Separator';
 import FAQ from '@/components/FAQ';
 
+import FullFillmentVideo from '@/assets/fullfillment.mp4'; // Adjust this path based on your project structure
+
 export default function FullFillment() {
     return (
         <>
-            <VideoHero />
+            <VideoHero
+                video={FullFillmentVideo}
+                subtitle="Fulfillment Solution"
+                title={
+                    <>
+                        AI-Driven Dual Grid Robotics in <b>3D Space.</b>
+                    </>
+                }
+                description="Discover the power of our advanced robotic systems designed to optimize and revolutionize your fulfillment operations."
+            />
             <StackedImageContent />
             <div className="pt-[120px] pb-40 bg-black">
                 <ContentWithImageGrid
