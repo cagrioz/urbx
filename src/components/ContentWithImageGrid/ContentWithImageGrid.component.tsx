@@ -18,11 +18,14 @@ function ContentWithImageGrid({ title, superTitle, description, image, reverse }
         <section>
             <Container>
                 <div
-                    className={classNames('flex items-center gap-8 desktop:gap-[110px]', {
-                        'tablet:flex-row-reverse': reverse,
-                    })}
+                    className={classNames(
+                        'flex flex-col tablet:flex-row tablet:items-center gap-8 desktop:gap-[110px]',
+                        {
+                            'tablet:flex-row-reverse': reverse,
+                        }
+                    )}
                 >
-                    <div className="w-1/2 shrink-0">
+                    <div className="w-[320px] tablet:w-1/2 shrink-0">
                         <Image src={image} alt={title} />
                     </div>
                     <div>

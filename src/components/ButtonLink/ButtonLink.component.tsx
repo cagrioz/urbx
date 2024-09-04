@@ -1,7 +1,7 @@
 import { ibm_mono } from '@/styles/fonts';
 import classNames from 'classnames';
 
-export type ButtonLinkVariants = 'dark' | 'light';
+export type ButtonLinkVariants = 'dark' | 'light' | 'primary';
 export type ButtonLinkVariantStyle = { background: string; text: string };
 
 const VariantStyling: Record<ButtonLinkVariants, ButtonLinkVariantStyle> = {
@@ -12,6 +12,10 @@ const VariantStyling: Record<ButtonLinkVariants, ButtonLinkVariantStyle> = {
     light: {
         background: 'bg-white',
         text: 'text-standard-1',
+    },
+    primary: {
+        background: 'bg-accent',
+        text: 'text-white',
     },
 };
 

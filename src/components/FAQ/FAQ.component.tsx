@@ -9,9 +9,9 @@ import ButtonLink from '../ButtonLink';
 
 function FAQ() {
     return (
-        <section className="bg-black py-[120px]">
+        <section className="bg-black pb-8 tablet:pb-16 laptop:pb-[120px]">
             <Container>
-                <div className="bg-standard-7 p-[60px] rounded-[20px]">
+                <div className="bg-standard-7 p-8 desktop:p-[60px] rounded-[20px]">
                     <div>
                         <p
                             className="text-standard-4 text-sm font-medium uppercase tracking-widest"
@@ -26,7 +26,7 @@ function FAQ() {
                             We’re here for you. Browse our FAQ below
                         </p>
                     </div>
-                    <div className="grid grid-cols-2 mt-10 gap-10">
+                    <div className="grid grid-cols-1 tablet:grid-cols-2 mt-10 gap-10">
                         <div className="flex flex-col gap-4">
                             <Accordion
                                 labelText="What’s the efficiency improvement I can expect using Urbx?"

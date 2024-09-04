@@ -4,7 +4,7 @@ import SeparatorLine from '@/assets/separator.png';
 export default function Hero() {
     return (
         <Container>
-            <Image src={SeparatorLine} alt="Seperator Line" className="pt-12 pb-20" />
+            <Image src={SeparatorLine} alt="Seperator Line" className="pt-6 pb-12 laptop:pt-12 laptop:pb-20" />
         </Container>
     );
 }

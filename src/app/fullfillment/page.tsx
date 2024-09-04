@@ -13,6 +13,7 @@ import Separator from '@/components/Separator';
 import FAQ from '@/components/FAQ';
 
 import FullFillmentVideo from '@/assets/fullfillment.mp4'; // Adjust this path based on your project structure
+import CubeImage from '@/assets/fullfillment_cube.gif';
 
 export default function FullFillment() {
     return (
@@ -27,8 +28,25 @@ export default function FullFillment() {
                 }
                 description="Discover the power of our advanced robotic systems designed to optimize and revolutionize your fulfillment operations."
             />
-            <StackedImageContent />
-            <div className="pt-[120px] pb-40 bg-black">
+            <div className="py-16 desktop:py-[120px] bg-black">
+                <StackedImageContent
+                    subtitle="Efficient and Intelligent 3D Storage Solutions"
+                    description={
+                        <>
+                            Our robotics solutions are designed to maximize storage efficiency using{' '}
+                            <span className="font-bold">advanced 3D storage technology.</span> By utilizing vertical and
+                            horizontal space, our systems enable high-density storage and rapid retrieval of items,
+                            ensuring optimal use of your facility&apos;s footprint. This innovative approach to storage
+                            allows for <span className="font-bold">seamless integration</span> with existing
+                            infrastructure, providing a{' '}
+                            <span className="font-bold">scalable and adaptable solution</span> to meet the evolving
+                            demands of modern fulfillment centers.
+                        </>
+                    }
+                    image={CubeImage}
+                />
+            </div>
+            <div className="flex flex-col gap-10 pt-16 desktop:pt-[120px] pb-20 desktop:pb-40 bg-black">
                 <ContentWithImageGrid
                     title="TowerBot"
                     superTitle="01."
