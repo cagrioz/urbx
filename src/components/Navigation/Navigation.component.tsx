@@ -55,7 +55,7 @@ export default function Navigation() {
                     <div className="hidden tablet:block">
                         <Link
                             href="https://urbx.com/contact-us"
-                            className="bg-white text-black font-semibold py-[14px] px-6 rounded-[31px] text-sm"
+                            className="bg-accent text-white font-semibold py-[14px] px-6 rounded-[31px] text-sm"
                         >
                             Contact Us
                         </Link>

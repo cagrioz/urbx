@@ -2,13 +2,14 @@
 import Container from '@/components/Container';
 import Image from 'next/image';
 import DCSLogo from '@/assets/dcs.png';
-import HYTLogo from '@/assets/hyt.png';
+import ISDLogo from '@/assets/isd.png';
+import HytekLogo from '@/assets/hytek.png';
 import CarterLogo from '@/assets/carter.png';
 import MainwayLogo from '@/assets/mainway.png';
 import YargoLogo from '@/assets/yargo.png';
 import AbcoLogo from '@/assets/abco.png';
 
-const partners = [DCSLogo, HYTLogo, CarterLogo, MainwayLogo, YargoLogo, AbcoLogo];
+const partners = [DCSLogo, ISDLogo, HytekLogo, CarterLogo, MainwayLogo, YargoLogo, AbcoLogo];
 
 export default function Partners() {
     return (

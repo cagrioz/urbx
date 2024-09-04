@@ -4,7 +4,7 @@ import TowerSectionVideo from '@/assets/sectionvideo.mp4'; // Adjust this path b
 import Container from '../Container';
 import { ibm_mono } from '@/styles/fonts';
 
-const VideoSection: React.FC = () => {
+const Overview: React.FC = () => {
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const sectionRef = useRef<HTMLElement | null>(null);
 
@@ -48,7 +48,7 @@ const VideoSection: React.FC = () => {
     return (
         <section ref={sectionRef} className="relative flex flex-col bg-black -mt-1 pt-[80px]">
             <Container className="text-center pb-20">
-                <h3 className="text-white text-[32px] leading-10 max-w-[680px]">
+                <h3 className="text-white text-[32px] leading-10 max-w-[680px] mx-auto">
                     Our fully automated system leverages advanced robotics to <b>optimize efficiency, accuracy,</b> and
                     <b> speed,</b> ensuring your business stays ahead of the competition.
                 </h3>
@@ -63,4 +63,4 @@ const VideoSection: React.FC = () => {
     );
 };
 
-export default VideoSection;
+export default Overview;

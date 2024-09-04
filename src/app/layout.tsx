@@ -16,8 +16,7 @@ export default function RootLayout({
             <head>
                 <link
                     href="https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600,700&display=swap"
-                    rel="preload"
-                    as="style"
+                    rel="stylesheet"
                 />
             </head>
             <body>{children}</body>
