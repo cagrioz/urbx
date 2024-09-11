@@ -4,10 +4,10 @@ import SeparatorLine from '@/assets/separator.png';
 import classNames from 'classnames';
 
 export interface SeperatorProps {
-    noPadding: boolean;
+    noPadding?: boolean;
 }
 
-export default function Seperator({ noPadding }: SeperatorProps) {
+export default function Seperator({ noPadding = false }: SeperatorProps) {
     return (
         <div className="bg-black">
             <Container>
