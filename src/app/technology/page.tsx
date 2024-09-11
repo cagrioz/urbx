@@ -2,16 +2,9 @@ import ContentWithImageGrid from '@/components/ContentWithImageGrid';
 import Footer from '@/components/Footer';
 import StackedImageContent from '@/components/StackedImageContent';
 import VideoHero from '@/components/VideoHero';
-import TowerbotImage from '@/assets/towerbot.png';
-import GridbotImage from '@/assets/gridbot.png';
-import EmbeddedConveyorImage from '@/assets/embedded_conveyor.png';
-import StorageSystemImage from '@/assets/3d_storage_system.png';
 
-import GridContentWithImage from '@/components/GridContentWithImage';
-import Image from 'next/image';
-import Separator from '@/components/Separator';
-import FAQ from '@/components/FAQ';
-import FullfillmentTechImg from '@/assets/fullfillment_tech.png';
+import MobileRoboticsImg from '@/assets/mobile_robotics.jpg';
+import RoboticsShowcaseImg from '@/assets/ipad_mockup_robotics.png';
 
 import FullFillmentVideo from '@/assets/fullfillment.mp4';
 import RoboticsControlImg from '@/assets/robotics_control.jpg';
@@ -19,6 +12,7 @@ import RoboticsControlImg from '@/assets/robotics_control.jpg';
 import CubeGif from '@/assets/fullfillment_tech.png';
 import StackedImageContentB from '@/components/StackedImageContentB';
 import PlatformAndTestimonials from '@/components/PlatformAndTestimonials';
+import FeatureShowcaseWithDetails from '@/components/FeatureShowcaseWithDetails';
 
 export default function Technology() {
     return (
@@ -49,6 +43,12 @@ export default function Technology() {
                     />
                 </div>
             </div>
+            <FeatureShowcaseWithDetails
+                title="Advanced Mobile Robotics Controls"
+                description="URBX's distributed controls architecture enables fast, accurate navigation and localization. Our proprietary software provides torque assistance for improved control and efficient turning, enhancing system performance with advanced case handling."
+                bgImage={MobileRoboticsImg}
+                showcaseImage={RoboticsShowcaseImg}
+            />
             <PlatformAndTestimonials />
             <Footer />
         </>
