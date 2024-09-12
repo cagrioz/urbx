@@ -6,7 +6,6 @@ import VideoHero from '@/components/VideoHero';
 import MobileRoboticsImg from '@/assets/mobile_robotics.jpg';
 import RoboticsShowcaseImg from '@/assets/ipad_mockup_robotics.png';
 
-import FullFillmentVideo from '@/assets/fullfillment.mp4';
 import RoboticsControlImg from '@/assets/robotics_control.jpg';
 
 import CubeGif from '@/assets/fullfillment_tech.png';
@@ -18,7 +17,7 @@ export default function Technology() {
     return (
         <>
             <VideoHero
-                video={FullFillmentVideo}
+                video="/videos/fulfillment.mp4"
                 subtitle="Fulfillment Solution"
                 title={<>Revolutionizing Fulfillment with Intelligent Robotics</>}
                 description="Discover the power of our advanced robotic systems designed to optimize and revolutionize your fulfillment operations."
