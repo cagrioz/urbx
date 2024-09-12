@@ -11,8 +11,6 @@ import GridContentWithImage from '@/components/GridContentWithImage';
 import Separator from '@/components/Separator';
 import FAQ from '@/components/FAQ';
 
-import CubeImage from '@/assets/fullfillment_cube.gif';
-
 export default function Robotics() {
     return (
         <>
@@ -41,7 +39,7 @@ export default function Robotics() {
                             demands of modern fulfillment centers.
                         </>
                     }
-                    image={CubeImage}
+                    video="/videos/fulfillment_cube.mp4"
                 />
             </div>
             <div className="flex flex-col gap-10 pt-16 desktop:pt-[120px] pb-20 desktop:pb-40 bg-black">
