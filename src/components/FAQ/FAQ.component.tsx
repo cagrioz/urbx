@@ -57,7 +57,11 @@ function FAQ() {
                             <Image src={FAQImage} alt="FAQ" className="absolute inset-0 w-full h-full object-cover" />
                             <div className="z-10 relative p-10">
                                 <h4 className="font-bold text-2xl text-white">Don’t have an answer?</h4>
-                                <ButtonLink href="/contact" className="mt-4 uppercase py-3.5 px-[22px]" variant="light">
+                                <ButtonLink
+                                    href="/contact-us"
+                                    className="mt-4 uppercase py-3.5 px-[22px]"
+                                    variant="light"
+                                >
                                     Contact Us
                                 </ButtonLink>
                             </div>

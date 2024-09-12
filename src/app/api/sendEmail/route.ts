@@ -1,26 +1,48 @@
-// /app/api/sendEmail/route.ts
 import { NextResponse } from 'next/server';
 import sgMail from '@sendgrid/mail';
 
-// Set your SendGrid API Key
 sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
 
 export async function POST(req: Request) {
     const data = await req.json();
-    const { firstName, lastName, phoneNumber, emailAddress, businessType, businessName, businessAddress } = data;
+    const {
+        firstName,
+        lastName,
+        phoneNumber,
+        emailAddress,
+        countryCode,
+        businessType,
+        businessName,
+        businessAddress,
+        businessState,
+        businessZipCode,
+        country,
+        numberOfLocations,
+        tosAccepted,
+    } = data;
+
+    const subject = businessName
+        ? `${businessName} - New Enterprise Inquiry`
+        : `${firstName} ${lastName} - New Enterprise Inquiry`;
 
     const msg = {
         to: 'sales@urbx.com',
         from: 'sales@urbx.com',
-        subject: 'New Contact Us Form Submission',
+        subject,
         text: `
                 First Name: ${firstName}
                 Last Name: ${lastName}
                 Phone Number: ${phoneNumber}
                 Email Address: ${emailAddress}
+                Country Code: ${countryCode}
                 Business Type: ${businessType}
                 Business Name: ${businessName}
                 Business Address: ${businessAddress}
+                Business State: ${businessState}
+                Business Zip Code: ${businessZipCode}
+                Country: ${country}
+                Number of Locations: ${numberOfLocations}
+                Terms of Service Accepted: ${tosAccepted}
     `,
     };
 
