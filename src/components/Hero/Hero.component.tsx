@@ -21,7 +21,7 @@ export default function Hero() {
     }
 
     return (
-        <section className="relative flex flex-col min-h-[650px] laptop:min-h-[800px] pt-5 pb-20 h-lvh">
+        <section className="relative flex flex-col min-h-[650px] laptop:min-h-[800px] pb-20 h-lvh">
             <Navigation />
             <Container className="relative z-10 w-full grow flex flex-col justify-between">
                 <div className="mt-20">

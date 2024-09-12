@@ -34,7 +34,7 @@ export default function Navigation() {
     const pathname = usePathname();
 
     return (
-        <header className="z-10 relative">
+        <header className="z-10 relative pt-5">
             <Container>
                 <div className="flex bg-black py-5 px-5 laptop:px-10 rounded-[20px] justify-between items-center">
                     <Link href="/">

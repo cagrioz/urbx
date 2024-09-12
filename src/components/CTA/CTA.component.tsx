@@ -20,7 +20,7 @@ function CTA() {
                             Want to become a <br /> <span className="font-semibold">Partners?</span>
                         </h2>
                         <ButtonLink
-                            href="/contact"
+                            href="/contact-us"
                             className="mt-6 laptop:mt-10 uppercase py-3.5 px-6 laptop:py-4.5 laptop:px-[38px]"
                             variant="primary"
                         >

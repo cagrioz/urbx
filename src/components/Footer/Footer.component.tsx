@@ -46,7 +46,9 @@ export default function Footer() {
                         </div>
                     </div>
                     <div>
-                        <p className="mt-5 text-sm">Email: sales@urbx.com</p>
+                        <p className="mt-5 text-sm">
+                            Email: <a href="mailto:sales@urbx.com">sales@urbx.com </a>
+                        </p>
                     </div>
                 </div>
             </Container>

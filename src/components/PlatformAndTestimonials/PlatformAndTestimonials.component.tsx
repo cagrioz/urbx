@@ -24,7 +24,7 @@ export default function PlatformAndTestimonials() {
                         <h3 className="text-black font-bold text-[40px] leading-[52px]">
                             Lets talk about the future of retail
                         </h3>
-                        <ButtonLink href="https://urbx.com/contact-us" className="mt-5 uppercase" variant="primary">
+                        <ButtonLink href="/contact-us" className="mt-5 uppercase" variant="primary">
                             Contact Us
                         </ButtonLink>
                     </div>
