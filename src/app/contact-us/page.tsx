@@ -74,19 +74,19 @@ export default function ContactUs() {
                     <h1 className="text-white font-semibold text-[40px] leading-[52px] mt-3">
                         Let&apos;s talk together
                     </h1>
-                    <div className="mx-auto p-[60px] bg-standard-7 rounded-[20px] shadow-sm mt-10">
-                        <p className="w-[589px] font-general-sans text-2xl mb-10 font-normal">
+                    <div className="mx-auto px-6 py-8 laptop:p-[60px] bg-standard-7 rounded-[20px] shadow-sm mt-10">
+                        <p className="max-w-[589px] font-general-sans text-xl laptop:text-2xl mb-10 font-normal">
                             Tell us more about your business so we can determine the right URBX solution for your space.
                         </p>
                         <form onSubmit={handleSubmit}>
                             <h2 className="text-base font-semibold mb-4">Introduce yourself</h2>
-                            <div className="grid grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 tablet:grid-cols-2 gap-6">
                                 {/* First Name */}
-                                <div className="flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
+                                <div className="overflow-hidden flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
                                     <label
                                         style={ibm_mono.style}
                                         htmlFor="firstName"
-                                        className="uppercase w-[180px] font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
+                                        className="uppercase shrink-0 w-[180px] tablet:w-[120px] laptop:w-[180px] font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
                                     >
                                         FIRST NAME{' '}
                                         <span className="shrink-0 text-red-500 ml-2 -mt-1.5 text-[8px]">*</span>
@@ -102,11 +102,11 @@ export default function ContactUs() {
                                     />
                                 </div>
 
-                                <div className="flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
+                                <div className="overflow-hidden flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
                                     <label
                                         style={ibm_mono.style}
                                         htmlFor="lastName"
-                                        className="uppercase w-[180px] font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
+                                        className="uppercase shrink-0 w-[180px] tablet:w-[120px] laptop:w-[180px] font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
                                     >
                                         LAST NAME{' '}
                                         <span className="shrink-0 text-red-500 ml-2 -mt-1.5 text-[8px]">*</span>
@@ -123,11 +123,11 @@ export default function ContactUs() {
                                 </div>
 
                                 {/* Phone Number */}
-                                <div className="flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
+                                <div className="overflow-hidden flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
                                     <label
                                         style={ibm_mono.style}
                                         htmlFor="phoneNumber"
-                                        className="uppercase w-[180px] font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
+                                        className="uppercase shrink-0 w-[180px] tablet:w-[120px] laptop:w-[180px] font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
                                     >
                                         PHONE NUMBER{' '}
                                         <span className="shrink-0 text-red-500 ml-2 -mt-1.5 text-[8px]">*</span>
@@ -155,11 +155,11 @@ export default function ContactUs() {
                                 </div>
 
                                 {/* Email Address */}
-                                <div className="flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
+                                <div className="overflow-hidden flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
                                     <label
                                         style={ibm_mono.style}
                                         htmlFor="emailAddress"
-                                        className="uppercase w-[180px] font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
+                                        className="uppercase shrink-0 w-[180px] tablet:w-[120px] laptop:w-[180px] font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
                                     >
                                         EMAIL ADDRESS{' '}
                                         <span className="shrink-0 text-red-500 ml-2 -mt-1.5 text-[8px]">*</span>
@@ -178,13 +178,13 @@ export default function ContactUs() {
                             <h2 className="text-base font-semibold mb-4 mt-10">
                                 Tell us about your business <span className="font-normal">(optional)</span>
                             </h2>
-                            <div className="grid grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 tablet:grid-cols-2 gap-6">
                                 {/* First Name */}
-                                <div className="flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
+                                <div className="overflow-hidden flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
                                     <label
                                         style={ibm_mono.style}
                                         htmlFor="businessType"
-                                        className="uppercase w-[180px] font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
+                                        className="uppercase shrink-0 w-[180px] tablet:w-[120px] laptop:w-[180px] font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
                                     >
                                         Business Type
                                     </label>
@@ -198,11 +198,11 @@ export default function ContactUs() {
                                     />
                                 </div>
 
-                                <div className="flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
+                                <div className="overflow-hidden flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
                                     <label
                                         style={ibm_mono.style}
                                         htmlFor="businessName"
-                                        className="uppercase w-[180px] font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
+                                        className="uppercase shrink-0 w-[180px] tablet:w-[120px] laptop:w-[180px] font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
                                     >
                                         Business Name
                                     </label>
@@ -215,11 +215,11 @@ export default function ContactUs() {
                                         className="grow h-14 bg-white rounded-r-[10px] px-3 py-2 focus:outline-none"
                                     />
                                 </div>
-                                <div className="flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
+                                <div className="overflow-hidden flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
                                     <label
                                         style={ibm_mono.style}
                                         htmlFor="businessAddress"
-                                        className="uppercase w-[180px] font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
+                                        className="uppercase shrink-0 w-[180px] tablet:w-[120px] laptop:w-[180px] font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
                                     >
                                         Business Address
                                     </label>
@@ -232,11 +232,11 @@ export default function ContactUs() {
                                         className="grow h-14 bg-white rounded-r-[10px] px-3 py-2 focus:outline-none"
                                     />
                                 </div>
-                                <div className="flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
+                                <div className="overflow-hidden flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
                                     <label
                                         style={ibm_mono.style}
                                         htmlFor="businessState"
-                                        className="uppercase w-[180px] font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
+                                        className="uppercase shrink-0 w-[180px] tablet:w-[120px] laptop:w-[180px] font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
                                     >
                                         Business State
                                     </label>
@@ -300,11 +300,11 @@ export default function ContactUs() {
                                         <option value="WY">Wyoming</option>
                                     </select>
                                 </div>
-                                <div className="flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
+                                <div className="overflow-hidden flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
                                     <label
                                         style={ibm_mono.style}
                                         htmlFor="businessZipCode"
-                                        className="uppercase w-[180px] whitespace-nowrap font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
+                                        className="uppercase shrink-0 w-[180px] tablet:w-[120px] laptop:w-[180px] whitespace-nowrap font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
                                     >
                                         Business Zip Code
                                     </label>
@@ -318,11 +318,11 @@ export default function ContactUs() {
                                     />
                                 </div>
 
-                                <div className="flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
+                                <div className="overflow-hidden flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
                                     <label
                                         style={ibm_mono.style}
                                         htmlFor="country"
-                                        className="uppercase w-[180px] font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
+                                        className="uppercase shrink-0 w-[180px] tablet:w-[120px] laptop:w-[180px] font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
                                     >
                                         Country
                                     </label>
@@ -337,11 +337,11 @@ export default function ContactUs() {
                                         <option value="US">🇺🇸 United States</option>
                                     </select>
                                 </div>
-                                <div className="flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
+                                <div className="overflow-hidden flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
                                     <label
                                         style={ibm_mono.style}
                                         htmlFor="numberOfLocations"
-                                        className="uppercase w-[180px] whitespace-nowrap font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
+                                        className="uppercase shrink-0 w-[180px] tablet:w-[120px] laptop:w-[180px] whitespace-nowrap font-normal h-14 flex items-center px-5 bg-standard-7 rounded-l-[10px] text-[13px] text-standard-4"
                                     >
                                         Number of Locations
                                     </label>
@@ -355,7 +355,7 @@ export default function ContactUs() {
                                     />
                                 </div>
                             </div>
-                            <div className="flex space-x-3 mt-11 w-[774px]">
+                            <div className="flex space-x-3 mt-11 max-w-[774px]">
                                 <Checkbox
                                     checked={accepted}
                                     onChange={setAccepted}

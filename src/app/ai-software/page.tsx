@@ -13,7 +13,7 @@ import StackedImageContentB from '@/components/StackedImageContentB';
 import PlatformAndTestimonials from '@/components/PlatformAndTestimonials';
 import FeatureShowcaseWithDetails from '@/components/FeatureShowcaseWithDetails';
 
-export default function Technology() {
+export default function AISoftware() {
     return (
         <>
             <VideoHero
