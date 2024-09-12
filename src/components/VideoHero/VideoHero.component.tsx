@@ -4,6 +4,8 @@ import Navigation from '@/components/Navigation';
 import Container from '@/components/Container';
 import { ibm_mono } from '@/styles/fonts';
 
+import HeroVideo from '../../../public/home_hero.mp4';
+
 export interface VideoHeroProps {
     video: string;
     subtitle: string;
@@ -20,7 +22,7 @@ export default function VideoHero({ video, subtitle, title, description }: Video
                 loop
                 playsInline
                 className="absolute z-0 object-cover w-full h-full"
-                src={video}
+                src={HeroVideo}
             ></video>
             <div className="bg-black opacity-40 absolute inset-0"></div>
             <div className="pt-5">
