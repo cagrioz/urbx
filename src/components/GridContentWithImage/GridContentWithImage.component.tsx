@@ -4,14 +4,13 @@ import Container from '@/components/Container';
 import { ibm_mono } from '@/styles/fonts';
 import Image, { StaticImageData } from 'next/image';
 
-export interface GridContentWithImageProps {
+export type GridContentWithImageProps = {
     title: string;
     superTitle: string;
     description: string;
-    image: StaticImageData;
-}
+} & ({ image: StaticImageData; video?: never } | { video: string; image?: never });
 
-function GridContentWithImage({ title, superTitle, description, image }: GridContentWithImageProps) {
+function GridContentWithImage({ title, superTitle, description, image, video }: GridContentWithImageProps) {
     return (
         <section>
             <Container>
@@ -25,7 +24,14 @@ function GridContentWithImage({ title, superTitle, description, image }: GridCon
                     <p className="text-white text-base max-w-[648px] whitespace-pre-line">{description}</p>
                 </div>
                 <div className="mt-10">
-                    <Image src={image} alt={title} />
+                    {image ? (
+                        <Image src={image} alt={title} />
+                    ) : (
+                        <video className="w-full h-auto" autoPlay loop muted>
+                            <source src={video as string} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    )}
                 </div>
             </Container>
         </section>

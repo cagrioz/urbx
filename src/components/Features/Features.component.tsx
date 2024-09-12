@@ -9,13 +9,12 @@ type FeatureItem = {
     description: string;
 };
 
-export interface FeaturesProps {
+export type FeaturesProps = {
     title?: string;
     features: FeatureItem[];
-    image: StaticImageData;
-}
+} & ({ image: StaticImageData; video?: never } | { video: string; image?: never });
 
-export default function Features({ title, features, image }: FeaturesProps) {
+export default function Features({ title, features, image, video }: FeaturesProps) {
     return (
         <section className="bg-black py-[20px] laptop:py-[60px]">
             {title && (
@@ -35,8 +34,15 @@ export default function Features({ title, features, image }: FeaturesProps) {
                         </div>
                     ))}
                 </div>
-                <div>
-                    <Image src={image} alt="URBX Features" className="mt-10 rounded-[10px]" />
+                <div className="mt-10 rounded-[10px] overflow-hidden">
+                    {image ? (
+                        <Image src={image} alt="URBX Features" />
+                    ) : (
+                        <video className="w-full h-auto" autoPlay loop muted>
+                            <source src={video as string} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    )}
                 </div>
             </Container>
         </section>

@@ -8,7 +8,6 @@ import RoboticsShowcaseImg from '@/assets/ipad_mockup_robotics.png';
 
 import RoboticsControlImg from '@/assets/robotics_control.jpg';
 
-import CubeGif from '@/assets/fullfillment_tech.png';
 import StackedImageContentB from '@/components/StackedImageContentB';
 import PlatformAndTestimonials from '@/components/PlatformAndTestimonials';
 import FeatureShowcaseWithDetails from '@/components/FeatureShowcaseWithDetails';
@@ -17,7 +16,7 @@ export default function AISoftware() {
     return (
         <>
             <VideoHero
-                video="/videos/fulfillment.mp4"
+                video="/videos/retract_hero.mp4"
                 subtitle="Fulfillment Solution"
                 title={<>Revolutionizing Fulfillment with Intelligent Robotics</>}
                 description="Discover the power of our advanced robotic systems designed to optimize and revolutionize your fulfillment operations."
@@ -32,7 +31,7 @@ export default function AISoftware() {
                             throughout the structure using the most optimal paths for the fleet.
                         </>
                     }
-                    image={CubeGif}
+                    video="/videos/dual_grid.mp4"
                 />
                 <div className="mt-[50px]">
                     <StackedImageContentB
