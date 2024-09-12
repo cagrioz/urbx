@@ -4,7 +4,7 @@ import Navigation from '@/components/Navigation';
 import Container from '@/components/Container';
 import { ibm_mono } from '@/styles/fonts';
 
-import HeroVideo from '../../../public/home_hero.mp4';
+import HeroVideo from '@/assets/home_hero.mp4';
 
 export interface VideoHeroProps {
     video: string;
