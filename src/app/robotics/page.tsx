@@ -71,8 +71,15 @@ export default function Robotics() {
                 />
                 <Separator />
                 <GridContentWithImage
-                    title="3D Storage System"
+                    title="Dynamic Tote Heights"
                     superTitle="04."
+                    description={`Dynamic tote heights offer unlimited creativity and flexibility, accommodating everything from fresh and frozen goods to taller totes for hydroponics. The possibilities are endless when tote height restrictions are removed—your storage solutions can truly reach new heights`}
+                    video="/videos/dynamic_tote.mp4"
+                />
+                <Separator />
+                <GridContentWithImage
+                    title="3D Storage System"
+                    superTitle="05."
                     description={`Our 3D storage system leverages vertical space to increase storage density, allowing for the efficient use of your warehouse or fulfillment center's footprint. By integrating advanced robotics and AI, our storage system ensures rapid retrieval and precise placement of items, significantly reducing the time and effort required for manual handling.\n\nKey Features: The 3D storage system offers high-density vertical storage, rapid access and retrieval, and seamless integration with other robotic systems.`}
                     image={StorageSystemImage}
                 />

@@ -1,11 +1,8 @@
 import Features from '@/components/Features';
-import Hero from '@/components/Hero';
-import Navigation from '@/components/Navigation';
 import Partners from '@/components/Partners';
 import PlatformAndTestimonials from '@/components/PlatformAndTestimonials';
 import WhyUs from '@/components/WhyUs';
 
-import TopViewImage from '@/assets/urbx_side_view.jpg';
 import SideViewImage from '@/assets/urbx_top_view.jpg';
 import Footer from '@/components/Footer';
 import VideoSection from '@/components/VideoSection';
@@ -47,7 +44,7 @@ export default function Home() {
                         description: 'Achieves up to 100 transactions per hour for optimal workflow.',
                     },
                 ]}
-                image={SideViewImage}
+                video="/videos/bots_side_view.mp4"
             />
             <Features
                 features={[
@@ -70,7 +67,7 @@ export default function Home() {
                         description: 'Maximizes space utilization and enhances operational efficiency.',
                     },
                 ]}
-                image={TopViewImage}
+                video="/videos/routing.mp4"
             />
             <WhyUs />
             <PlatformAndTestimonials />

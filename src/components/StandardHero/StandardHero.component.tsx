@@ -13,7 +13,7 @@ export interface StandardHeroProps {
 
 export default function StandardHero({ title, subtitle, image }: StandardHeroProps): JSX.Element {
     return (
-        <section className="bg-black">
+        <section className="bg-black pb-20">
             <div className="pt-5 mb-20">
                 <Navigation />
             </div>

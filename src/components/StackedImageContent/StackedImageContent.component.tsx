@@ -4,13 +4,12 @@ import Container from '@/components/Container';
 import { ibm_mono } from '@/styles/fonts';
 import Image, { StaticImageData } from 'next/image';
 
-export interface StackedImageContentProps {
+type StackedImageContentProps = {
     subtitle: string;
     description: ReactNode;
-    image: StaticImageData;
-}
+} & ({ image: StaticImageData; video?: never } | { video: string; image?: never });
 
-function StackedImageContent({ subtitle, description, image }: StackedImageContentProps) {
+function StackedImageContent({ subtitle, description, image, video }: StackedImageContentProps) {
     return (
         <section className="bg-black">
             <Container>
@@ -24,7 +23,14 @@ function StackedImageContent({ subtitle, description, image }: StackedImageConte
                     {description}
                 </p>
                 <div className="mx-auto w-full h-auto mt-[60px]">
-                    <Image src={image} alt={subtitle} />
+                    {image ? (
+                        <Image src={image} alt={subtitle} />
+                    ) : (
+                        <video className="w-full h-auto" autoPlay loop muted>
+                            <source src={video as string} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    )}
                 </div>
             </Container>
         </section>
