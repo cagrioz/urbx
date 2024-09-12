@@ -13,7 +13,7 @@ import FAQ from '@/components/FAQ';
 
 import CubeImage from '@/assets/fullfillment_cube.gif';
 
-export default function FullFillment() {
+export default function Robotics() {
     return (
         <>
             <VideoHero

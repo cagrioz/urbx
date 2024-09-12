@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { IoMenuOutline } from 'react-icons/io5';
 import { useState } from 'react';
 import classNames from 'classnames';
+import { usePathname } from 'next/navigation';
 
 type NavigationItem = {
     text: string;
@@ -15,47 +16,64 @@ type NavigationItem = {
 
 const navigationItems: NavigationItem[] = [
     {
-        text: 'Enterprise',
-        href: 'https://urbx.com/enterprise',
+        text: 'Robotics',
+        href: '/robotics',
     },
     {
-        text: 'News',
-        href: 'https://urbx.com/news',
+        text: 'AI Software',
+        href: '/ai-software',
     },
     {
         text: 'About Us',
-        href: 'https://urbx.com/about-us',
+        href: '/about-us',
     },
 ];
 
 export default function Navigation() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const pathname = usePathname();
 
     return (
         <header className="z-10 relative">
             <Container>
                 <div className="flex bg-black py-5 px-5 laptop:px-10 rounded-[20px] justify-between items-center">
-                    <div>
+                    <Link href="/">
                         <Image src={UrbxLogo} alt="Urbx Logo" width={123} height={30} />
-                    </div>
+                    </Link>
                     <nav className="hidden tablet:block">
                         <ul className="list-none tablet:flex gap-x-2 laptop:gap-x-4">
                             {navigationItems.map((item) => (
                                 <li key={item.text}>
                                     <Link
                                         href={item.href}
-                                        className="text-standard-5 hover:text-standard-4 text-base font-light"
+                                        className={classNames(
+                                            'text-standard-5 hover:text-standard-4 text-base font-light px-[22px] py-2.5 rounded-full',
+                                            {
+                                                border: pathname === item.href,
+                                            }
+                                        )}
                                     >
                                         {item.text}
                                     </Link>
                                 </li>
                             ))}
+                            <li className="relative">
+                                <Link
+                                    href="#"
+                                    className="opacity-70 text-standard-5 hover:text-standard-4 text-base font-light px-[22px] py-2.5 rounded-full"
+                                >
+                                    News
+                                    <span className="absolute -top-3 -right-5 bg-red-500 text-white font-semibold rounded-2xl py-1.5 px-2 inline-block text-[9px] leading-none">
+                                        Soon
+                                    </span>
+                                </Link>
+                            </li>
                         </ul>
                     </nav>
                     <div className="hidden tablet:block">
                         <Link
-                            href="https://urbx.com/contact-us"
-                            className="bg-accent text-white font-semibold py-[14px] px-6 rounded-[31px] text-sm"
+                            href="/contact-us"
+                            className="inline-block bg-accent text-white font-semibold py-[14px] px-6 rounded-[31px] text-sm"
                         >
                             Contact Us
                         </Link>
