@@ -3,11 +3,8 @@ import React, { ReactNode, useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Container from '@/components/Container';
 import { ibm_mono } from '@/styles/fonts';
-
-import HeroVideo from '@/assets/home_hero.mp4';
-
 export interface VideoHeroProps {
-    video: string;
+    video: any;
     subtitle: string;
     title: ReactNode;
     description?: string;
@@ -18,6 +15,7 @@ export default function VideoHero({ video, subtitle, title, description }: Video
         <section className="relative flex flex-col justify-between min-h-[650px] laptop:min-h-[800px] pb-[100px] h-lvh">
             <video autoPlay muted loop playsInline className="absolute z-0 object-cover w-full h-full">
                 <source src={video} type="video/mp4" />
+                Your browser does not support the video tag.
             </video>
             <div className="bg-black opacity-40 absolute inset-0"></div>
             <div className="pt-5">
