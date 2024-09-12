@@ -18,9 +18,7 @@ export default function VideoHero({ video, subtitle, title, description }: Video
                 Your browser does not support the video tag.
             </video>
             <div className="bg-black opacity-40 absolute inset-0"></div>
-            <div className="pt-5">
-                <Navigation />
-            </div>
+            <Navigation />
             <Container className="z-50">
                 <p className="text-standard-4 text-sm font-medium uppercase" style={ibm_mono.style}>
                     {subtitle}
