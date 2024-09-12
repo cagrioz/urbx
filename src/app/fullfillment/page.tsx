@@ -8,18 +8,16 @@ import EmbeddedConveyorImage from '@/assets/embedded_conveyor.png';
 import StorageSystemImage from '@/assets/3d_storage_system.png';
 
 import GridContentWithImage from '@/components/GridContentWithImage';
-import Image from 'next/image';
 import Separator from '@/components/Separator';
 import FAQ from '@/components/FAQ';
 
-import FullFillmentVideo from '@/assets/fullfillment.mp4'; // Adjust this path based on your project structure
 import CubeImage from '@/assets/fullfillment_cube.gif';
 
 export default function FullFillment() {
     return (
         <>
             <VideoHero
-                video={FullFillmentVideo}
+                video="/videos/fulfillment.mp4"
                 subtitle="Fulfillment Solution"
                 title={
                     <>
