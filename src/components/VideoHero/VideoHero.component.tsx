@@ -16,14 +16,9 @@ export interface VideoHeroProps {
 export default function VideoHero({ video, subtitle, title, description }: VideoHeroProps): JSX.Element {
     return (
         <section className="relative flex flex-col justify-between min-h-[650px] laptop:min-h-[800px] pb-[100px] h-lvh">
-            <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="absolute z-0 object-cover w-full h-full"
-                src={HeroVideo}
-            ></video>
+            <video autoPlay muted loop playsInline className="absolute z-0 object-cover w-full h-full">
+                <source src={video} type="video/mp4" />
+            </video>
             <div className="bg-black opacity-40 absolute inset-0"></div>
             <div className="pt-5">
                 <Navigation />

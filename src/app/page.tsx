@@ -11,7 +11,7 @@ import Footer from '@/components/Footer';
 import VideoSection from '@/components/VideoSection';
 import Overview from '@/components/Overview';
 import VideoHero from '@/components/VideoHero';
-const HeroVideo = 'test';
+import HeroVideo from '@/assets/home_hero.mp4';
 
 export default function Home() {
     return (
