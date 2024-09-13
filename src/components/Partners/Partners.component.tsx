@@ -13,7 +13,7 @@ const partners = [DCSLogo, ISDLogo, HytekLogo, CarterLogo, MainwayLogo, YargoLog
 
 export default function Partners() {
     return (
-        <section className="bg-black pt-[120px] pb-[170px] overflow-hidden">
+        <section className="bg-black pt-[60px] pb-[80px] tablet:py-[80px] tablet:pb-[100px] desktop:pt-[120px] desktop:pb-[170px] overflow-hidden">
             <Container>
                 <h2 className="text-2xl text-white text-center mb-10">Our Partners</h2>
             </Container>

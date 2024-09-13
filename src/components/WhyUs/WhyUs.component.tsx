@@ -52,10 +52,13 @@ export default function WhyUs() {
             <Container>
                 <div className="grid grid-cols-1 tablet:grid-cols-2 gap-2 text-white">
                     <div>
-                        <p className="text-standard-4 text-sm font-medium uppercase" style={ibm_mono.style}>
+                        <p
+                            className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase tracking-widest"
+                            style={ibm_mono.style}
+                        >
                             The URbx System
                         </p>
-                        <h2 className="text-[32px] leading-10 max-w-[434px] mt-5">
+                        <h2 className="text-2xl laptop:text-[32px] laptop:leading-10 max-w-[434px] mt-5">
                             Intelligent robotics powers <b>omni - channel</b> fulfillment
                         </h2>
                     </div>
