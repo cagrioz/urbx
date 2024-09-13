@@ -29,7 +29,7 @@ function ContentWithImageGrid({ title, superTitle, description, image, reverse }
                         <Image src={image} alt={title} />
                     </div>
                     <div>
-                        <h3 className="text-white text-[40px] leading-[52px] relative inline-block mb-5 desktop:mb-[60px]">
+                        <h3 className="text-white text-3xl laptop:text-[40px] laptop:leading-[52px] relative inline-block mb-5 desktop:mb-[60px]">
                             {title}
                             <span
                                 className="text-standard-4 text-sm absolute top-0 left-full pl-3"

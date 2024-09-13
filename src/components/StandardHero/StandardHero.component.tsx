@@ -19,7 +19,10 @@ export default function StandardHero({ title, subtitle, image }: StandardHeroPro
             </div>
             <Container>
                 <div className="text-center">
-                    <p className="text-standard-4 text-sm font-medium uppercase" style={ibm_mono.style}>
+                    <p
+                        className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase"
+                        style={ibm_mono.style}
+                    >
                         {subtitle}
                     </p>
                     <h1 className="mt-3 text-white text-[40px] leading-tight">{title}</h1>

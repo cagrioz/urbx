@@ -25,10 +25,13 @@ export default function Hero() {
             <Navigation />
             <Container className="relative z-10 w-full grow flex flex-col justify-between">
                 <div className="mt-20">
-                    <p className="text-standard-4 text-sm font-medium uppercase" style={ibm_mono.style}>
+                    <p
+                        className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase tracking-widest"
+                        style={ibm_mono.style}
+                    >
                         Urbx - The Vertical Revolution
                     </p>
-                    <h1 className="mt-4 text-white text-[40px] leading-tight max-w-[547px]">
+                    <h1 className="mt-4 text-white text-3xl tablet:text-[40px] tablet:leading-tight max-w-[547px]">
                         <b>Coming Soon:</b> AI-Driven Dual Grid Robotics in 3D Space.
                     </h1>
                 </div>

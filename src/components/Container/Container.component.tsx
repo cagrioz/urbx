@@ -9,7 +9,7 @@ export default function Container({ children, className }: ContainerProps) {
     return (
         <div
             className={classNames(
-                'relative px-8 desktop:px-0 tablet:max-w-5xl laptop:max-w-[1120px] mx-auto w-full',
+                'relative px-6 desktop:px-0 tablet:max-w-5xl laptop:max-w-[1120px] mx-auto w-full',
                 className
             )}
         >

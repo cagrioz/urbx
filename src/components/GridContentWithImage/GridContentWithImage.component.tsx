@@ -15,7 +15,7 @@ function GridContentWithImage({ title, superTitle, description, image, video }: 
         <section>
             <Container>
                 <div className="flex flex-col tablet:flex-row justify-between gap-6">
-                    <h3 className="text-white text-[40px] leading-[52px] relative inline-block tablet:mb-[60px] w-fit">
+                    <h3 className="text-white text-3xl laptop:text-[40px] laptop:leading-[52px] relative inline-block tablet:mb-[60px] w-fit">
                         {title}
                         <span className="text-standard-4 text-sm absolute -top-2 -right-6 pl-3" style={ibm_mono.style}>
                             {superTitle}

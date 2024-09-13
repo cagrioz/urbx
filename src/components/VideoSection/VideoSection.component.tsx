@@ -48,10 +48,13 @@ const VideoSection: React.FC = () => {
     return (
         <section ref={sectionRef} className="relative flex flex-col bg-black -mt-1">
             <Container className="text-center pb-[65px]">
-                <p className="text-standard-4 text-sm font-medium uppercase tracking-widest" style={ibm_mono.style}>
+                <p
+                    className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase tracking-widest"
+                    style={ibm_mono.style}
+                >
                     Welcome to Urbx
                 </p>
-                <h3 className="text-white text-[32px] leading-10 max-w-[680px] mt-10 mx-auto">
+                <h3 className="text-white text-2xl laptop:text-[32px] laptop:leading-10 max-w-[680px] mt-10 mx-auto">
                     Experience the future of <b>omni-channel fulfillment</b> with Urbx, the cutting-edge solution
                     designed to revolutionize your logistics and supply chain operations.
                 </h3>

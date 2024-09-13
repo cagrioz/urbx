@@ -19,7 +19,10 @@ export default function Features({ title, features, image, video }: FeaturesProp
         <section className="bg-black py-[20px] laptop:py-[60px]">
             {title && (
                 <Container>
-                    <p className="text-standard-4 text-sm font-medium uppercase" style={ibm_mono.style}>
+                    <p
+                        className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase tracking-widest"
+                        style={ibm_mono.style}
+                    >
                         URBX Specs{' '}
                     </p>
                 </Container>

@@ -71,7 +71,7 @@ export default function ContactUs() {
                     >
                         Contact Us
                     </p>
-                    <h1 className="text-white font-semibold text-[40px] leading-[52px] mt-3">
+                    <h1 className="text-white font-semibold text-3xl laptop:text-[40px] laptop:leading-[52px] mt-3">
                         Let&apos;s talk together
                     </h1>
                     <div className="mx-auto px-6 py-8 laptop:p-[60px] bg-standard-7 rounded-[20px] shadow-sm mt-10">

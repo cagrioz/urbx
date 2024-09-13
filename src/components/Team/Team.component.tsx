@@ -53,13 +53,13 @@ function Team() {
         <section className="bg-black pt-[60px] laptop:pt-[120px] pb-[60px]">
             <Container>
                 <p
-                    className="text-standard-4 text-sm font-medium uppercase text-center tracking-widest"
+                    className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase text-center tracking-widest"
                     style={ibm_mono.style}
                 >
                     The People
                 </p>
-                <p className="mt-6 tablet:mt-10 text-white text-[32px] leading-10 max-w-[886px] text-center mx-auto tracking-[-0.5px] font-light">
-                    Urbx <b>Leadership</b>
+                <p className="mt-3 text-white text-2xl laptop:text-[32px] laptop:leading-10 max-w-[886px] text-center mx-auto tracking-[-0.5px] font-light">
+                    Urbx <span className="font-semibold">Leadership</span>
                 </p>
                 <div className="grid mobile:grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-4 gap-4 tablet:gap-6 mt-10 tablet:mt-[60px]">
                     {people.map((person) => (

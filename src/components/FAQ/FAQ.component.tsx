@@ -14,12 +14,12 @@ function FAQ() {
                 <div className="bg-standard-7 p-8 desktop:p-[60px] rounded-[20px]">
                     <div>
                         <p
-                            className="text-standard-4 text-sm font-medium uppercase tracking-widest"
+                            className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase tracking-widest"
                             style={ibm_mono.style}
                         >
                             FAQ
                         </p>
-                        <h2 className="text-[40px] leading-[52px] mt-4 mb-2 font-general-sans">
+                        <h2 className="text-3xl laptop:text-[40px] laptop:leading-[52px] mt-4 mb-2 font-general-sans">
                             Frequently Asked Questions
                         </h2>
                         <p className="text-base text-standard-3 font-general-sans font-light">

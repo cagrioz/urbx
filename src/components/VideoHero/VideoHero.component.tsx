@@ -20,10 +20,13 @@ export default function VideoHero({ video, subtitle, title, description }: Video
             <div className="bg-black opacity-40 absolute inset-0"></div>
             <Navigation />
             <Container className="z-50">
-                <p className="text-standard-4 text-sm font-medium uppercase" style={ibm_mono.style}>
+                <p
+                    className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase tracking-widest"
+                    style={ibm_mono.style}
+                >
                     {subtitle}
                 </p>
-                <h1 className="mt-4 text-white text-[40px] leading-tight max-w-[510px]">{title}</h1>
+                <h1 className="mt-4 text-white text-3xl tablet:text-[40px] leading-tight max-w-[510px]">{title}</h1>
                 {description && (
                     <p className="max-w-[550px] text-white font-normal font-general-sans mt-6">{description}</p>
                 )}

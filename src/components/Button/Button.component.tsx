@@ -1,10 +1,10 @@
 import { ibm_mono } from '@/styles/fonts';
 import classNames from 'classnames';
 
-export type ButtonLinkVariants = 'dark' | 'light' | 'primary';
-export type ButtonLinkVariantStyle = { background: string; text: string };
+export type ButtonVariants = 'dark' | 'light' | 'primary';
+export type ButtonVariantStyle = { background: string; text: string };
 
-const VariantStyling: Record<ButtonLinkVariants, ButtonLinkVariantStyle> = {
+const VariantStyling: Record<ButtonVariants, ButtonVariantStyle> = {
     dark: {
         background: 'bg-standard-1',
         text: 'text-white',
@@ -22,12 +22,12 @@ const VariantStyling: Record<ButtonLinkVariants, ButtonLinkVariantStyle> = {
 export interface ButtonProps {
     children: React.ReactNode;
     className?: string;
-    variant?: ButtonLinkVariants;
+    variant?: ButtonVariants;
     onClick?: any;
     disabled?: boolean;
 }
 
-export default function ButtonLink({
+export default function Button({
     onClick,
     children,
     className,
