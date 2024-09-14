@@ -29,6 +29,10 @@ const navigationItems: NavigationItem[] = [
         text: 'About Us',
         href: '/about-us',
     },
+    {
+        text: 'Partners',
+        href: '/partners',
+    },
 ];
 
 export default function Navigation() {
@@ -95,15 +99,15 @@ export default function Navigation() {
                         <Link href="/">
                             <Image src={UrbxLogo} alt="Urbx Logo" width={123} height={30} />
                         </Link>
-                        <nav className="hidden tablet:block">
-                            <ul className="list-none tablet:flex gap-x-2 laptop:gap-x-4">
+                        <nav className="hidden laptop:block">
+                            <ul className="list-none laptop:flex gap-1 laptop:gap-4">
                                 {navigationItems.map((item) => (
                                     <li key={item.text}>
                                         <Link
                                             style={ibm_mono.style}
                                             href={item.href}
                                             className={classNames(
-                                                'uppercase text-standard-5 hover:text-standard-4 text-sm font-light px-[22px] py-2.5 rounded-full',
+                                                'uppercase text-standard-5 hover:text-standard-4 text-sm font-light px-4 laptop:px-[22px] py-2.5 rounded-full',
                                                 {
                                                     border: pathname === item.href,
                                                 }
@@ -127,7 +131,7 @@ export default function Navigation() {
                                 </li>
                             </ul>
                         </nav>
-                        <div className="hidden tablet:block">
+                        <div className="hidden laptop:block">
                             <ButtonLink
                                 href="/contact-us"
                                 className="uppercase text-center text-sm py-[14px]"
@@ -136,7 +140,7 @@ export default function Navigation() {
                                 Contact Us
                             </ButtonLink>
                         </div>
-                        <div className="tablet:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                        <div className="laptop:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                             <IoMenuOutline className="text-white text-5xl" />
                         </div>
                     </div>
