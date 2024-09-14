@@ -26,9 +26,10 @@ export default function AISoftware() {
                     subtitle="Complex Routing and Tasking Algorithms"
                     description={
                         <>
-                            Using <b>machine learning</b> we optimize tasking to determine to maximize throughput and
-                            optimal storage. <b>Using an artificial intelligence coordinator</b> the robots are routed
-                            throughout the structure using the most optimal paths for the fleet.
+                            Using <span className="font-semibold">machine learning</span> we optimize tasking to
+                            determine to maximize throughput and optimal storage.{' '}
+                            <span className="font-semibold">Using an artificial intelligence coordinator</span> the
+                            robots are routed throughout the structure using the most optimal paths for the fleet.
                         </>
                     }
                     video="/videos/dual_grid.mp4"
