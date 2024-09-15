@@ -5,46 +5,46 @@ import { ibm_mono } from '@/styles/fonts';
 
 const people = [
     {
-        name: 'Joseph Fleming',
-        role: 'Executive Director',
-        description:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.",
-    },
-    {
         name: 'Andrew Breckenridge',
-        role: 'Executive Director',
+        role: 'Board Member',
         description:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.",
-    },
-    {
-        name: 'Nikko Pianetto',
-        role: 'Executive Director',
-        description:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.",
+            'Andrew has over 30 years of executive global supply chain experience, helping industry leaders and organizations transform their businesses through supply chain capability and enablement to achieve challenging business goals. He is currently an Executive VP and Strategic Adviser to FORTNA, and has previously served in various leadership positions with Aero Fulfillment Services, Melbourne Markets (Australia), and several years consulting in the supply chain arena with Price Waterhouse.',
     },
     {
         name: 'Lincoln Cavalieri',
-        role: 'Executive Director',
+        role: 'Board Member & CEO',
         description:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.",
-    },
-    {
-        name: 'Rudi Lueg',
-        role: 'Executive Director',
-        description:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.",
-    },
-    {
-        name: 'Jake Gearwar',
-        role: 'Executive Director',
-        description:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.",
+            'Lincoln possesses extensive experience in software design and product development. Before his time at Urbx, he founded Omega Group, spearheading the development of products and software solutions for notable entities like BlackRock, Stryker, and several other Fortune 500 companies.',
     },
     {
         name: 'Lincoln Sise',
-        role: 'Executive Director',
+        role: 'Board Member-Elect & COO',
         description:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.",
+            'Lincoln is a seasoned operations professional with a diverse background in leadership roles. He spent seven years at Symbotic, where he held various positions including VP of Implementation, Supply Chain, Manufacturing, and Project Management. Prior to his time at Symbotic, Lincoln spent 14 years at Raytheon (RTX), where he managed large-scale operations, overseeing factories with over 1000 employees in Florida and Texas.',
+    },
+    {
+        name: 'Jake Gearwar',
+        role: 'CFO',
+        description:
+            'Jake has over 20 years of financial, operational, and business experience at both public and private companies. Prior to Urbx, Jake spent over 12 years at Symbotic, most recently as VP of Financial Planning & Analysis, and helped grow the company from a private startup to a billion-dollar public company.',
+    },
+    {
+        name: 'Joseph Fleming',
+        role: 'Board Member',
+        description:
+            'Joseph is a lawyer with more than 35 years of corporate and securities legal experience. He has served as legal counsel to private and public companies and funds advising clients on complex corporate transactional matters, fund formation, board governance, and regulatory compliance matters.',
+    },
+    {
+        name: 'Rudi Lueg',
+        role: 'CRO',
+        description:
+            'Rudi was Managing Director of Exotec North America, an international supplier of robotic systems for the supply chain. He joins the team with three decades of experience in the supply chain industry, including leadership positions at KNAPP, Fortna, and SDI among others.',
+    },
+    {
+        name: 'Nikko Pianetto',
+        role: 'Board Member',
+        description:
+            'Nikko has extensive experience in supply chain and organizational leadership. Before joining URBX, he was the Executive Vice President of Professional Services at Fortna and also served as the Vice President of Software Engineering for Daifuku/Wynright. Nikko is currently a partner at an investment firm focusing on angel level startup investing.',
     },
 ];
 

@@ -26,10 +26,10 @@ export default function AISoftware() {
                     subtitle="Complex Routing and Tasking Algorithms"
                     description={
                         <>
-                            Using <span className="font-semibold">machine learning</span> we optimize tasking to
-                            determine to maximize throughput and optimal storage.{' '}
-                            <span className="font-semibold">Using an artificial intelligence coordinator</span> the
-                            robots are routed throughout the structure using the most optimal paths for the fleet.
+                            By utilizing <span className="font-semibold">machine learning</span> software, we optimize
+                            task management to achieve maximum throughput and optimal storage.{' '}
+                            <span className="font-semibold">An artificial intelligence coordinator</span> ensures that
+                            robots are routed throughout the system using the most efficient paths for the entire fleet.
                         </>
                     }
                     video="/videos/dual_grid.mp4"
@@ -37,7 +37,7 @@ export default function AISoftware() {
                 <div className="mt-[50px]">
                     <StackedImageContentB
                         title="Advanced Mobile Robotics Controls"
-                        description="URBX's distributed controls architecture enables fast, accurate navigation and localization. Our proprietary software provides torque assistance for improved control and efficient turning, enhancing system performance with advanced case handling."
+                        description="URBX's distributed control architecture ensures swift, precise navigation and localization. Our proprietary software enhances system performance by providing torque assistance, resulting in improved control and more efficient turning, especially during complex case handling tasks."
                         image={RoboticsControlImg}
                     />
                 </div>
