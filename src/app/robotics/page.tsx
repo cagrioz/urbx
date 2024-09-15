@@ -47,15 +47,13 @@ export default function Robotics() {
                     title="TowerBot"
                     superTitle="01."
                     description={`Our TowerBot is designed for vertical storage and retrieval, maximizing space efficiency and
-                            throughput. It operates seamlessly within multi-level racking systems, providing rapid
-                            access to stored items.\n\nKey Features: The TowerBot offers high-density vertical storage,
-                            rapid access and retrieval, and seamless integration with existing systems.`}
+                            throughput. It operates seamlessly within multi-level racking systems, providing rapid access to stored items.\n\nKey Features: The TowerBot offers high-density vertical storage, rapid access and retrieval, and seamless integration with existing systems.`}
                     image={TowerbotImage}
                 />
                 <ContentWithImageGrid
                     title="GridBot"
                     superTitle="02."
-                    description={`Our TowerBot is designed for vertical storage and retrieval, maximizing space efficiency and throughput. It operates seamlessly within multi-level racking systems, providing rapid access to stored items.\n\nKey Features: The TowerBot offers high-density vertical storage, rapid access and retrieval, and seamless integration with existing systems.`}
+                    description={`Our GridBot is strategically designed to streamline storage and retrieval operations, significantly boosting efficiency and throughput. They work in perfect harmony with our TowerBots and multilevel racking system, ensuring rapid and accurate delivery of stored goods to the pick station.\n\nKey Features: The GridBot delivers rapid, reliable, and efficient storage and retrieval of totes, complemented by fast charging, swift mobility, and seamless integration with our existing systems`}
                     image={GridbotImage}
                     reverse
                 />
