@@ -18,15 +18,7 @@ export default function Partners() {
                 image={HeroImg}
             />
             <PartnersDetails />
-            <CTA
-                title={
-                    <>
-                        Want to become a <br /> <span className="font-semibold">Partners?</span>
-                    </>
-                }
-                ctaVariant="primary"
-                cta={{ href: '/contact-us', text: 'Contact Us' }}
-            />
+            <CTA />
             <Footer />
         </>
     );
