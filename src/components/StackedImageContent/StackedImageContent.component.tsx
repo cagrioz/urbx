@@ -11,7 +11,7 @@ type StackedImageContentProps = {
 
 function StackedImageContent({ subtitle, description, image, video }: StackedImageContentProps) {
     return (
-        <section className="bg-black">
+        <section>
             <Container>
                 <p
                     className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase text-center tracking-widest"

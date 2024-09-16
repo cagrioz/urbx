@@ -50,7 +50,7 @@ const people = [
 
 function Team() {
     return (
-        <section className="bg-black pt-[60px] laptop:pt-[120px] pb-[60px]">
+        <section className="pt-[60px] laptop:pt-[120px] pb-[60px]">
             <Container>
                 <p
                     className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase text-center tracking-widest"

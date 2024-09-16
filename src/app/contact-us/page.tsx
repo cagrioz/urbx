@@ -60,10 +60,10 @@ export default function ContactUs() {
 
     return (
         <>
-            <div className="bg-black pb-20">
+            <div className="pb-20">
                 <Navigation />
             </div>
-            <section className="bg-black">
+            <section>
                 <Container>
                     <p
                         className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase tracking-wide tablet:tracking-widest"
@@ -75,11 +75,11 @@ export default function ContactUs() {
                         Let&apos;s talk together
                     </h1>
                     <div className="mx-auto px-6 py-8 laptop:p-[60px] bg-standard-7 rounded-[20px] shadow-sm mt-10">
-                        <p className="max-w-[589px] font-general-sans text-xl laptop:text-2xl mb-10 font-normal">
+                        <p className="text-black max-w-[589px] font-general-sans text-xl laptop:text-2xl mb-10 font-normal">
                             Tell us more about your business so we can determine the right URBX solution for your space.
                         </p>
                         <form onSubmit={handleSubmit}>
-                            <h2 className="text-base font-semibold mb-4">Introduce yourself</h2>
+                            <h2 className="text-base font-semibold mb-4 text-black">Introduce yourself</h2>
                             <div className="grid grid-cols-1 tablet:grid-cols-2 gap-6">
                                 {/* First Name */}
                                 <div className="overflow-hidden flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
@@ -175,7 +175,7 @@ export default function ContactUs() {
                                     />
                                 </div>
                             </div>
-                            <h2 className="text-base font-semibold mb-4 mt-10">
+                            <h2 className="text-base font-semibold mb-4 mt-10 text-black">
                                 Tell us about your business <span className="font-normal">(optional)</span>
                             </h2>
                             <div className="grid grid-cols-1 tablet:grid-cols-2 gap-6">
@@ -374,7 +374,7 @@ export default function ContactUs() {
                                         />
                                     </svg>
                                 </Checkbox>
-                                <p className="text-sm">
+                                <p className="text-sm text-black">
                                     I accept the{' '}
                                     <a href="#" className="text-accent">
                                         URBX Terms of Use

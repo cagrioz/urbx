@@ -46,7 +46,7 @@ const Overview: React.FC = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative flex flex-col bg-black -mt-1 pt-[80px]">
+        <section ref={sectionRef} className="relative flex flex-col -mt-1 pt-[80px]">
             <Container className="text-center pb-20">
                 <h3 className="text-white text-2xl laptop:text-[32px] laptop:leading-10 max-w-[680px] mx-auto">
                     Our fully automated system leverages advanced robotics to <b>optimize efficiency, accuracy,</b> and

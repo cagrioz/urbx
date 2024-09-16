@@ -14,7 +14,7 @@ export interface FeatureShowcaseWithDetailsProps {
 
 function FeatureShowcaseWithDetails({ title, description, bgImage, showcaseImage }: FeatureShowcaseWithDetailsProps) {
     return (
-        <section className="bg-black relative overflow-hidden">
+        <section className="relative overflow-hidden">
             <div className="laptop h-fit desktop:h-[450px] overflow-hidden">
                 <Image src={bgImage} alt={title} />
             </div>

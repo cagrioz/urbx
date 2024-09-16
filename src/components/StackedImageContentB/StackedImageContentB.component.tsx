@@ -12,7 +12,7 @@ export interface StackedImageContentBProps {
 
 function StackedImageContentB({ title, description, image }: StackedImageContentBProps) {
     return (
-        <section className="bg-black">
+        <section>
             <Container>
                 <h3 className="text-white text-[40px] leading-tight text-center">{title}</h3>
                 <p className="mt-4 text-white text-base max-w-[644px] text-center mx-auto">{description}</p>

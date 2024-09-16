@@ -24,7 +24,7 @@ export default function Robotics() {
                 }
                 description="Discover the power of our advanced robotic systems designed to optimize and revolutionize your fulfillment operations."
             />
-            <div className="py-16 desktop:py-[120px] bg-black">
+            <div className="py-16 desktop:py-[120px]">
                 <StackedImageContent
                     subtitle="Efficient and Intelligent 3D Storage Solutions"
                     description={
@@ -42,7 +42,7 @@ export default function Robotics() {
                     video="/videos/fulfillment_cube.mp4"
                 />
             </div>
-            <div className="flex flex-col gap-10 pt-16 desktop:pt-[120px] pb-20 desktop:pb-40 bg-black">
+            <div className="flex flex-col gap-10 pt-16 desktop:pt-[120px] pb-20 desktop:pb-40">
                 <ContentWithImageGrid
                     title="TowerBot"
                     superTitle="01."
@@ -58,7 +58,7 @@ export default function Robotics() {
                     reverse
                 />
             </div>
-            <div className="bg-black">
+            <div>
                 <GridContentWithImage
                     title="Embedded Conveyor"
                     superTitle="03."
