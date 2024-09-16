@@ -46,7 +46,7 @@ const VideoSection: React.FC = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative flex flex-col bg-black -mt-1">
+        <section ref={sectionRef} className="relative flex flex-col -mt-1">
             <Container className="text-center pb-[65px]">
                 <p
                     className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase tracking-widest"

@@ -16,7 +16,7 @@ export type FeaturesProps = {
 
 export default function Features({ title, features, image, video }: FeaturesProps) {
     return (
-        <section className="bg-black py-[20px] laptop:py-[60px]">
+        <section className="py-[20px] laptop:py-[60px]">
             {title && (
                 <Container>
                     <p

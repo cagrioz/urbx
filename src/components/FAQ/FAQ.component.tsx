@@ -9,7 +9,7 @@ import ButtonLink from '../ButtonLink';
 
 function FAQ() {
     return (
-        <section className="bg-black pb-8 tablet:pb-16 laptop:pb-[120px]">
+        <section className="pb-8 tablet:pb-16 laptop:pb-[120px]">
             <Container>
                 <div className="bg-standard-7 p-8 desktop:p-[60px] rounded-[20px]">
                     <div>
@@ -19,7 +19,7 @@ function FAQ() {
                         >
                             FAQ
                         </p>
-                        <h2 className="text-3xl laptop:text-[40px] laptop:leading-[52px] mt-4 mb-2 font-general-sans">
+                        <h2 className="text-black text-3xl laptop:text-[40px] laptop:leading-[52px] mt-4 mb-2 font-general-sans">
                             Frequently Asked Questions
                         </h2>
                         <p className="text-base text-standard-3 font-general-sans font-light">

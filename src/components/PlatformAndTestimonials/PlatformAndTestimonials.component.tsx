@@ -7,7 +7,7 @@ import ButtonLink from '@/components/ButtonLink';
 export default function PlatformAndTestimonials() {
     return (
         <section className="grid grid-cols-1 laptop:grid-cols-2">
-            <div className="px-6 tablet:px-0 py-16 laptop:pr-8 laptop:pt-24 laptop:pb-32 desktop:pt-[120px] desktop:pr-[110px] desktop:pb-[180px]">
+            <div className="bg-white px-6 tablet:px-0 py-16 laptop:pr-8 laptop:pt-24 laptop:pb-32 desktop:pt-[120px] desktop:pr-[110px] desktop:pb-[180px]">
                 <div className="max-w-[460px] mx-auto laptop:ml-auto laptop:mr-0 flex flex-col h-full justify-between">
                     <div>
                         <p
@@ -16,7 +16,7 @@ export default function PlatformAndTestimonials() {
                         >
                             URBX PLATOFRM
                         </p>
-                        <h3 className="mt-5 text-3xl laptop:text-[40px] laptop:leading-[52px] font-light">
+                        <h3 className="mt-5 text-3xl laptop:text-[40px] laptop:leading-[52px] font-light text-standard-1">
                             High-Speed <br /> Fulfillment Automation <br /> for Rapid Distribution
                         </h3>
                     </div>
@@ -30,7 +30,7 @@ export default function PlatformAndTestimonials() {
                     </div>
                 </div>
             </div>
-            <div className="px-6 tablet:px-0 bg-standard-7 py-16 laptop:pl-8 laptop:pt-24 laptop:pb-32 desktop:pt-[120px] desktop:pl-[110px] desktop:pb-[180px]">
+            <div className="bg-standard-7 px-6 tablet:px-0 py-16 laptop:pl-8 laptop:pt-24 laptop:pb-32 desktop:pt-[120px] desktop:pl-[110px] desktop:pb-[180px]">
                 <div className="max-w-[440px] mx-auto laptop:mr-auto laptop:ml-0">
                     <p
                         className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase tracking-widest"
@@ -38,7 +38,7 @@ export default function PlatformAndTestimonials() {
                     >
                         Enterprise Partners
                     </p>
-                    <p className="text-xl font-medium mt-5">
+                    <p className="text-xl font-medium mt-5 text-standard-1">
                         “The URBX system is truly a strategic game-changer in the retail space because it enables
                         high-speed, on-demand fulfillment of both e-commerce and store-level replenishment orders.”
                     </p>
@@ -46,7 +46,7 @@ export default function PlatformAndTestimonials() {
                         <div className="flex items-center gap-10">
                             <div>
                                 <p className="font-bold text-standard-1">Matt Ferguson</p>
-                                <span>President, DCS</span>
+                                <span className="text-standard-3">President, DCS</span>
                             </div>
                         </div>
                     </div>
