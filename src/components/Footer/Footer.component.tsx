@@ -7,7 +7,7 @@ import FadedLine from '@/assets/faded_line.png';
 
 export default function Footer() {
     return (
-        <footer className="bg-black py-[60px]">
+        <footer className="py-[60px]">
             <Container>
                 <div className="text-white">
                     <div className="flex flex-col tablet:flex-row gap-4 text-white tablet:justify-between tablet:items-center">

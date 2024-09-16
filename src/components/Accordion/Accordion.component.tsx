@@ -22,7 +22,7 @@ export default function Accordion({ labelText, defaultOpen = false, disabled = f
 
     return (
         <div
-            className={classNames('rounded-[10px] bg-white p-5', {
+            className={classNames('rounded-[10px] bg-white text-black p-5', {
                 'opacity-50 cursor-not-allowed': disabled,
                 'cursor-pointer': !disabled,
             })}

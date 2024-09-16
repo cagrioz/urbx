@@ -9,7 +9,7 @@ export interface SeperatorProps {
 
 export default function Seperator({ noPadding = false }: SeperatorProps) {
     return (
-        <div className="bg-black">
+        <div>
             <Container>
                 <Image
                     src={SeparatorLine}

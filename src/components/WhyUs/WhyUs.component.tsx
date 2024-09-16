@@ -48,7 +48,7 @@ export default function WhyUs() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="bg-black py-20">
+        <section ref={sectionRef} className="py-20">
             <Container>
                 <div className="grid grid-cols-1 tablet:grid-cols-2 gap-2 text-white">
                     <div>

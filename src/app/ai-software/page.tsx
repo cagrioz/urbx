@@ -21,7 +21,7 @@ export default function AISoftware() {
                 title={<>Revolutionizing Fulfillment with Intelligent Robotics</>}
                 description="Discover the power of our advanced robotic systems designed to optimize and revolutionize your fulfillment operations."
             />
-            <div className="py-16 desktop:py-[120px] bg-black">
+            <div className="py-16 desktop:py-[120px]">
                 <StackedImageContent
                     subtitle="Complex Routing and Tasking Algorithms"
                     description={

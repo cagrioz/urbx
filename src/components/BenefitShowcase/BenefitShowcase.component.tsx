@@ -19,7 +19,7 @@ export interface BenefitShowcaseProps {
 
 function BenefitShowcase({ subtitle, title, image, description, benefit }: BenefitShowcaseProps) {
     return (
-        <section className="bg-black pb-[60px] laptop:pb-[120px]">
+        <section className="pb-[60px] laptop:pb-[120px]">
             <Container>
                 <p
                     className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase text-center tracking-widest"

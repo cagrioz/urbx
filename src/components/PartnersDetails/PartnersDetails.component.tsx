@@ -65,7 +65,7 @@ const partners = [
 
 export default function PartnersDetails() {
     return (
-        <section className="bg-black pb-12 tablet:pb-20 laptop:pb-[120px] overflow-hidden">
+        <section className="pb-12 tablet:pb-20 laptop:pb-[120px] overflow-hidden">
             <Container>
                 <h2 className="text-2xl laptop:text-[32px] laptop:leading-10 text-white text-center mb-12 tablet:mb-16 laptop:mb-40 laptop:w-[576px] mx-auto">
                     Our esteemed partners form the foundation of Urbx’s success, making all our achievements possible.
