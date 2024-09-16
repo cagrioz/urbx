@@ -32,7 +32,7 @@ function ContentWithImageGrid({ title, superTitle, description, image, reverse }
                         <h3 className="text-white text-3xl laptop:text-[40px] laptop:leading-[52px] relative inline-block mb-5 desktop:mb-[60px]">
                             {title}
                             <span
-                                className="text-standard-4 text-sm absolute top-0 left-full pl-3"
+                                className="text-standard-4 text-[12px] tablet:text-sm absolute top-0 left-full pl-3"
                                 style={ibm_mono.style}
                             >
                                 {superTitle}

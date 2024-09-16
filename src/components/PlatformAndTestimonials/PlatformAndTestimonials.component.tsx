@@ -7,7 +7,7 @@ import ButtonLink from '@/components/ButtonLink';
 export default function PlatformAndTestimonials() {
     return (
         <section className="grid grid-cols-1 laptop:grid-cols-2">
-            <div className="px-6 tablet:px-0 py-16 laptop:pr-8 laptop:pt-24 laptop:pb-32 desktop:pt-[120px] desktop:pr-[110px] desktop:pb-[180px]">
+            <div className="bg-white px-6 tablet:px-0 py-16 laptop:pr-8 laptop:pt-24 laptop:pb-32 desktop:pt-[120px] desktop:pr-[110px] desktop:pb-[180px]">
                 <div className="max-w-[460px] mx-auto laptop:ml-auto laptop:mr-0 flex flex-col h-full justify-between">
                     <div>
                         <p
@@ -30,7 +30,7 @@ export default function PlatformAndTestimonials() {
                     </div>
                 </div>
             </div>
-            <div className="px-6 tablet:px-0 bg-standard-7 py-16 laptop:pl-8 laptop:pt-24 laptop:pb-32 desktop:pt-[120px] desktop:pl-[110px] desktop:pb-[180px]">
+            <div className="bg-standard-7 px-6 tablet:px-0 py-16 laptop:pl-8 laptop:pt-24 laptop:pb-32 desktop:pt-[120px] desktop:pl-[110px] desktop:pb-[180px]">
                 <div className="max-w-[440px] mx-auto laptop:mr-auto laptop:ml-0">
                     <p
                         className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase tracking-widest"
