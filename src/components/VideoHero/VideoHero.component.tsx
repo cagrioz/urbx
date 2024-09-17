@@ -17,7 +17,7 @@ export default function VideoHero({ video, subtitle, title, description }: Video
                 <source src={video} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-            <div className="bg-black opacity-40 absolute inset-0"></div>
+            <div className="absolute inset-0"></div>
             <Navigation />
             <Container className="z-50">
                 <p
