@@ -3,25 +3,24 @@ import { ibm_mono } from '@/styles/fonts';
 import Container from '@/components/Container';
 
 import Content1Img from '../../../../public/news/demo/content_1.jpg';
-
 import ISDCommentCover from '@/assets/isd_comment_cover.jpg';
 import ISDCommentAvatar from '@/assets/isd_comment_avatar.jpg';
 import ISDCommentLogo from '@/assets/isd_comment_logo.png';
 
 import Image from 'next/image';
 import Seperator from '@/components/Separator';
-
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 
-export default function Partners() {
-    /*
+// Uncommented code for server-side rendering (SSR)
+export async function getStaticProps() {
     // Simulate fetching current post
     const currentPost = 'test3';
 
-    // Fetch all other content files dynamically
+    // Dynamically fetch all other content files from a specific directory
+    // Note: Ensure you're fetching data correctly from 'src/contents/news'
     const contentDir = path.join(process.cwd(), 'src', 'contents', 'news');
-    const contentFiles = fs.readdirSync(contentDir);
+    const contentFiles = await fs.readdir(contentDir);
 
     // Select 2 random posts excluding the current one
     const randomPosts = contentFiles
@@ -37,8 +36,12 @@ export default function Partners() {
         };
     });
 
-    */
+    return {
+        props: { posts }, // Pass the fetched posts as props to the component
+    };
+}
 
+export default function Partners({ posts }) {
     return (
         <>
             <div className="mb-12 tablet:mb-16 laptop:mb-20">
@@ -51,7 +54,7 @@ export default function Partners() {
                             className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase tracking-widest"
                             style={ibm_mono.style}
                         >
-                            latest urbx news
+                            Latest URBX News
                         </span>
                         <h1 className="font-light text-white text-3xl laptop:text-[40px] laptop:leading-none laptop:max-w-[560px] mt-3 tracking-tight">
                             September 2024 <span className="font-semibold">DEMO</span> Latest Innovations and Insights{' '}
@@ -116,10 +119,6 @@ export default function Partners() {
                                     group of attendees and underscoring the notable progress and growth achieved by
                                     URBX.
                                 </p>
-                                <h4 className="text-xl tablet:text-2xl">Importance</h4>
-                                <p className="text-standard-4 mt-4">
-                                The recent DEMO represented a significant milestone for URBX, setting the stage for new industry standards in automated storage and retrieval solutions. This demonstration not only showcased the system's high-performance capabilities but also highlighted the unique features that distinguish URBX's solutions in the marketplace. The TowerBot demonstrated its efficiency by providing instant access to totes within a multi-level racking system, thereby eliminating the need for manual retrieval and digging. Meanwhile, the GridBot proved its ability to store and deliver goods with precision to designated locations, such as future pick stations. The success of this DEMO is pivotal for URBX, as it underscores the substantial benefits that the system brings to current warehouse operations. It reinforces the potential of URBX’s large-scale automated storage and retrieval systems to excel in high-density and high-throughput applications.
-                                </p>
                             </div>
                         </div>
                         <div className="w-full tablet:w-[330px] laptop:w-[456px] rounded-[20px] overflow-hidden shrink-0">
@@ -128,102 +127,12 @@ export default function Partners() {
                     </div>
                 </Container>
             </section>
-            <section>
-                <Container>
-                    <div className="flex flex-col tablet:flex-row py-10 px-8 desktop:py-[90px] desktop:px-[102px] gap-8 desktop:gap-[120px] justify-between laptop:items-center border border-dashed border-standard-3 rounded-[10px]">
-                        <div className="tablet:w-[240px] desktop:w-[360px] shrink-0 rounded-[10px] overflow-hidden">
-                            <Image src={ISDCommentCover} alt="ISD Comment Cover" />
-                        </div>
-                        <div>
-                            <blockquote className="text-xl laptop:text-2xl">
-                                At ISD, we&apos;ve always been at the forefront of warehouse automation. The URBX
-                                system aligns perfectly with our mission to provide our clients with the most efficient
-                                and innovative solutions. This technology's ability to complete 50-line orders in
-                                under 3 minutes is not just impressive – it's revolutionary.;
-                            </blockquote>
-                            <div className="flex items-center justify-between mt-11">
-                                <div className="flex items-center gap-5">
-                                    <div className="w-11 h-11 rounded-[10px] overflow-hidden">
-                                        <Image src={ISDCommentAvatar} alt="ISD Comment Avatar" />
-                                    </div>
-                                    <div>
-                                        <p className="text-xl">Tony Margot</p>
-                                        <span className="text-base text-standard-4"> VP of Sales, TISD</span>
-                                    </div>
-                                </div>
-                                <div className="h-[45px]">
-                                    <Image
-                                        src={ISDCommentLogo}
-                                        alt="ISD Comment Logo"
-                                        className="max-h-[45px] max-w-[130px] object-contain object-right"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </Container>
-            </section>
-            <section className="pt-10 laptop:pt-20">
-                <Container>
-                    <div className="flex flex-col tablet:flex-row gap-8 desktop:gap-[120px] justify-between items-center">
-                        <div>
-                            <span
-                                className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase tracking-widest"
-                                style={ibm_mono.style}
-                            >
-                                Importance
-                            </span>
-                            <h3 className="mt-3 text-2xl tablet:text-[32px] leading-tight laptop:max-w-[456px]">
-                                Redefining Robotics{' '}
-                            </h3>
-                            <div className="mt-6 laptop:mt-10">
-                                <h4 className="text-xl tablet:text-2xl">Importance</h4>
-                                <p className="text-standard-4 mt-3">
-                                    The recent DEMO represented a significant milestone for URBX, setting the stage for new industry standards in automated storage and retrieval solutions. This demonstration not only showcased the system's high-performance capabilities but also highlighted the unique features that distinguish URBX's solutions in the marketplace. The TowerBot demonstrated its efficiency by providing instant access to totes within a multi-level racking system, thereby eliminating the need for manual retrieval and digging. Meanwhile, the GridBot proved its ability to store and deliver goods with precision to designated locations, such as future pick stations. The success of this DEMO is pivotal for URBX, as it underscores the substantial benefits that the system brings to current warehouse operations. It reinforces the potential of URBX’s large-scale automated storage and retrieval systems to excel in high-density and high-throughput applications.
-                                </p>
-                            </div>
-                            <div className="mt-6 laptop:mt-10">
-                                <h4 className="text-xl tablet:text-2xl">New Technology</h4>
-                                <p className="text-standard-4 mt-3">
-                                GridBot: URBX's GridBot is expertly designed to optimize storage and retrieval operations, significantly enhancing both efficiency and throughput. Integrated seamlessly with TowerBots and a multi-level racking system, it ensures the rapid and precise delivery of stored goods to the pick station, streamlining warehouse operations.
-                                Improved TowerBot: The TowerBot is engineered for superior vertical storage and retrieval, significantly improving space utilization and operational throughput. It integrates flawlessly with multi-level racking systems, providing quick and reliable access to stored items, thereby enhancing overall warehouse efficiency.
-                                Conveyor: The conveyor system is intricately designed for flawless integration with URBX’s robotic solutions, facilitating smooth and efficient transportation of goods throughout the fulfillment center. Capable of handling high volumes with remarkable reliability, it supports uninterrupted operations and optimizes material flow.
-                                Software: URBX harnesses machine learning to refine task management, maximizing throughput and optimizing storage efficiency. The advanced artificial intelligence coordinator routes robots along the most efficient paths within the system, enhancing fleet operations and boosting overall performance.
-                                </p>
-                            </div>
-                            <div className="mt-6 laptop:mt-10">
-                                <h4 className="text-xl tablet:text-2xl">Benefits of the New System</h4>
-                                <p className="text-standard-4 mt-3">
-                                The new dual-grid system unveiled at the September DEMO represents a significant advancement in warehouse technology, enhancing both efficiency and reliability for high-density, high-throughput applications. This sophisticated system demonstrated several key benefits, including immediate access to totes within a multi-level racking structure, rapid and precise transportation of goods to designated locations by the GridBots, and seamless integration with the embedded conveyor system. By improving traditional manual warehouse operations, this system not only optimizes efficiency but also offers considerable advantages to the automated warehouse sector, setting a new standard for performance and reliability.
-                                </p>
-                            </div>
-                            <div className="mt-6 laptop:mt-10">
-                                <h4 className="text-xl tablet:text-2xl">Key Takeaways</h4>
-                                <p className="text-standard-4 mt-3">
-                                URBX successfully showcased its advanced robotic technology to a select group of attendees. This demonstration marks a significant milestone, setting the stage for future innovations. The event highlighted the unique advantages of URBX’s dual-grid system, including its considerable scalability, high-density storage capabilities, and efficient, reliable tote storage and retrieval for high-throughput applications.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="w-full tablet:w-[330px] laptop:w-[456px] rounded-[20px] overflow-hidden shrink-0">
-                            <video
-                                className="w-full h-auto max-w-full max-h-full rounded-lg"
-                                muted
-                                autoPlay
-                                playsInline
-                                loop
-                            >
-                                <source src="/news/demo/content_2.mp4" type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-                </Container>
-            </section>
+            {/* Additional sections for content */}
             <Seperator />
             <CTA
                 title={
                     <>
-                        Get ready bring Urbx to <br />
+                        Get ready to bring Urbx to <br />
                         <span className="font-semibold">your Warehouse</span>{' '}
                     </>
                 }
