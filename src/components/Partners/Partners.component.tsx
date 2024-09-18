@@ -21,14 +21,14 @@ export default function Partners() {
                 <div className="animate-marquee flex">
                     {partners.map((partner, index) => (
                         <div key={index} className="w-80 h-60 flex-shrink-0 mx-3">
-                            <Image src={partner} alt="partner" />
+                            <Image src={partner} alt="partner" loading="eager" />
                         </div>
                     ))}
                 </div>
                 <div className="animate-marquee flex">
                     {partners.map((partner, index) => (
                         <div key={index} className="w-80 h-60 flex-shrink-0 mx-3">
-                            <Image src={partner} alt="partner" />
+                            <Image src={partner} alt="partner" loading="eager" />
                         </div>
                     ))}
                 </div>
