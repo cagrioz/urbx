@@ -76,7 +76,7 @@ export default function Partners() {
                                 PARTNERSHIP
                             </span>
                             <h3 className="mt-3 text-2xl tablet:text-[32px] leading-tight laptop:max-w-[456px]">
-                                URBX's Inaugural DEMO Reveals Exciting New Features and Capabilities{' '}
+                                URBX&apos;s Inaugural DEMO Reveals Exciting New Features and Capabilities{' '}
                             </h3>
                             <div className="mt-6 laptop:mt-10">
                                 <h4 className="text-xl tablet:text-2xl">About the DEMO</h4>
@@ -87,8 +87,8 @@ export default function Partners() {
                                     attendees received an exclusive look at URBX’s groundbreaking technology, including
                                     the new GridBot, TowerBot, and conveyor system, demonstrated within a compact
                                     25-foot racking system. This DEMO represents a significant milestone for URBX,
-                                    highlighting the company's commitment to delivering a revolutionary system designed
-                                    to enhance efficiency and transform warehouse operations.
+                                    highlighting the company&apos;s commitment to delivering a revolutionary system
+                                    designed to enhance efficiency and transform warehouse operations.
                                 </p>
                             </div>
                             <div className="mt-8 laptop:mt-[60px]">
@@ -103,11 +103,12 @@ export default function Partners() {
                                     included a GridBot interacting with a separate TowerBot. In this configuration, the
                                     TowerBot collected multiple totes from storage and delivered them to a designated
                                     buffer zone. From there, the GridBot handled the totes, ensuring precise and
-                                    efficient picking operations. The DEMO effectively showcased the system's capability
-                                    to store and retrieve numerous totes within a multi-level racking system at high
-                                    speeds, all through a fully automated process. This event marked a significant
-                                    milestone, highlighting the advancements of the URBX system to a select group of
-                                    attendees and underscoring the notable progress and growth achieved by URBX.
+                                    efficient picking operations. The DEMO effectively showcased the system&apos;s
+                                    capability to store and retrieve numerous totes within a multi-level racking system
+                                    at high speeds, all through a fully automated process. This event marked a
+                                    significant milestone, highlighting the advancements of the URBX system to a select
+                                    group of attendees and underscoring the notable progress and growth achieved by
+                                    URBX.
                                 </p>
                                 <p className="text-standard-4 mt-4">
                                     ISD’s extensive expertise includes handling, storing, picking pieces (eaches),
@@ -134,10 +135,10 @@ export default function Partners() {
                         </div>
                         <div>
                             <blockquote className="text-xl laptop:text-2xl">
-                                "At ISD, we've always been at the forefront of warehouse automation. The URBX system
-                                aligns perfectly with our mission to provide our clients with the most efficient and
-                                innovative solutions. This technology's ability to complete 50-line orders in under 3
-                                minutes is not just impressive – it's revolutionary."
+                                &quot;At ISD, we&apos;ve always been at the forefront of warehouse automation. The URBX
+                                system aligns perfectly with our mission to provide our clients with the most efficient
+                                and innovative solutions. This technology&apos;s ability to complete 50-line orders in
+                                under 3 minutes is not just impressive – it&apos;s revolutionary.&quot;
                             </blockquote>
                             <div className="flex items-center justify-between mt-11">
                                 <div className="flex items-center gap-5">
