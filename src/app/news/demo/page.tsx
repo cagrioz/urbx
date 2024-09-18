@@ -144,7 +144,7 @@ export default function Partners() {
                                     </div>
                                     <div>
                                         <p className="text-xl">Tony Margot</p>
-                                        <span className="text-base text-standard-4"> VP of Sales, TISD</span>
+                                        <span className="text-base text-standard-4"> VP of Sales, ISD</span>
                                     </div>
                                 </div>
                                 <div className="h-[45px]">
