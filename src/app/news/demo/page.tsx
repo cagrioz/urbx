@@ -2,10 +2,10 @@ import Navigation from '@/components/Navigation';
 import { ibm_mono } from '@/styles/fonts';
 import Container from '@/components/Container';
 
-import ISDPartnerHero from '../../../../public/news/demo/featured.jpg';
+import ISDPartnerVideo from '../../../../public/news/demo/featured.mp4';
 
 import Content1Img from '../../../../public/news/demo/content_1.jpg';
-import Content2Img from '../../../../public/news/demo/content_2.jpg';
+import Content2Video from '../../../../public/news/demo/content_2.mp4';
 
 import ISDCommentCover from '@/assets/isd_comment_cover.jpg';
 import ISDCommentAvatar from '@/assets/isd_comment_avatar.jpg';
@@ -61,7 +61,16 @@ export default function Partners() {
                         </h1>
                     </div>
                     <div className="rounded-2xl overflow-hidden">
-                        <Image src={ISDPartnerHero} alt="ISD Partner Hero" />
+                        <video
+                            className="w-full h-auto max-w-full max-h-full rounded-lg"
+                            muted
+                            autoPlay
+                            playsInline
+                            loop
+                        >
+                            <source src={ISDPartnerVideo} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </Container>
             </section>
@@ -207,7 +216,16 @@ export default function Partners() {
                             </div>
                         </div>
                         <div className="w-full tablet:w-[330px] laptop:w-[456px] rounded-[20px] overflow-hidden shrink-0">
-                            <Image src={Content2Img} alt="ISD Content Image 1" />
+                            <video
+                                className="w-full h-auto max-w-full max-h-full rounded-lg"
+                                muted
+                                autoPlay
+                                playsInline
+                                loop
+                            >
+                                <source src={Content2Video} type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
                 </Container>
