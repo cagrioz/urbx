@@ -2,10 +2,7 @@ import Navigation from '@/components/Navigation';
 import { ibm_mono } from '@/styles/fonts';
 import Container from '@/components/Container';
 
-import ISDPartnerVideo from '../../../../public/news/demo/featured.mp4';
-
 import Content1Img from '../../../../public/news/demo/content_1.jpg';
-import Content2Video from '../../../../public/news/demo/content_2.mp4';
 
 import ISDCommentCover from '@/assets/isd_comment_cover.jpg';
 import ISDCommentAvatar from '@/assets/isd_comment_avatar.jpg';
@@ -68,7 +65,7 @@ export default function Partners() {
                             playsInline
                             loop
                         >
-                            <source src={ISDPartnerVideo} type="video/mp4" />
+                            <source src="/news/demo/featured.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -223,7 +220,7 @@ export default function Partners() {
                                 playsInline
                                 loop
                             >
-                                <source src={Content2Video} type="video/mp4" />
+                                <source src="/news/demo/content_2.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                         </div>
