@@ -14,7 +14,7 @@ export interface StandardHeroProps {
 export default function StandardHero({ title, subtitle, image }: StandardHeroProps): JSX.Element {
     return (
         <section className="pb-12 tablet:pb-16 laptop:pb-20">
-            <div className="mb-12 tablet:pb-16 laptop:mb-20">
+            <div className="mb-12 tablet:mb-16 laptop:mb-20">
                 <Navigation />
             </div>
             <Container>

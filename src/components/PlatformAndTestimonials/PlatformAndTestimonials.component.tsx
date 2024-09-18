@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { ibm_mono } from '@/styles/fonts';
-import CompanyLogo from '@/assets/plain_hytek.png';
+import CompanyLogo from '@/assets/dcs_logo_black.svg';
+import PersonImg from '@/assets/matt.jpeg';
 import Link from 'next/link';
 import ButtonLink from '@/components/ButtonLink';
 
@@ -39,20 +40,20 @@ export default function PlatformAndTestimonials() {
                         Enterprise Partners
                     </p>
                     <p className="text-xl font-medium mt-5 text-standard-1">
-                        “At Hy-Tek, we are committed to bringing new and innovative solutions to the order fulfillment
-                        process. Because automation is continually evolving to meet the rapid changes in the market, we
-                        are actively evaluating what&apos;s next. URBX is exactly the kind of business we want to work
-                        with as we keep pushing the leading edge of technology to help expedite and streamline processes
-                        for our customers.”
+                        “The URBX system is truly a strategic game-changer in the retail space because it enables
+                        high-speed, on-demand fulfillment of both e-commerce and store-level replenishment orders”
                     </p>
-                    <div className="mt-[60px] flex items-center gap-5">
-                        <div className="flex items-center gap-10">
-                            <div>
-                                <p className="font-bold text-standard-1">Zac Boehm</p>
-                                <span className="text-standard-3">Chief Automation Officer, Hy-Tek</span>
+                    <div className="mt-[60px] flex items-center gap-2 laptop:gap-5">
+                        <div className="flex items-center justify-center laptop:justify-start gap-6">
+                            <div className="w-14 tablet:w-20">
+                                <Image src={PersonImg} alt="Matt Ferguson" className="rounded-full" />
                             </div>
-                            <div className="brightness-0 w-20">
-                                <Image src={CompanyLogo} alt="Hy-Tek" className="brightness-0" />
+                            <div>
+                                <p className="font-bold text-standard-1">Matt Ferguson</p>
+                                <span className="text-standard-3">President, DCS</span>
+                            </div>
+                            <div className="w-14 tablet:w-20 ml-4">
+                                <Image src={CompanyLogo} alt="DCS Logo" />
                             </div>
                         </div>
                     </div>

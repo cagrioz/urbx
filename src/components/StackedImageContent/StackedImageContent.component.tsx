@@ -26,7 +26,7 @@ function StackedImageContent({ subtitle, description, image, video }: StackedIma
                     {image ? (
                         <Image src={image} alt={subtitle} />
                     ) : (
-                        <video className="w-full h-auto" autoPlay loop muted>
+                        <video className="w-full h-auto" autoPlay playsInline loop muted>
                             <source src={video as string} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>

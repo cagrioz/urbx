@@ -30,7 +30,7 @@ function GridContentWithImage({ title, superTitle, description, image, video }: 
                     {image ? (
                         <Image src={image} alt={title} />
                     ) : (
-                        <video className="w-full h-auto" autoPlay loop muted>
+                        <video className="w-full h-auto" autoPlay playsInline loop muted>
                             <source src={video as string} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>

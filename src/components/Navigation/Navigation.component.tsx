@@ -33,6 +33,10 @@ const navigationItems: NavigationItem[] = [
         text: 'Partners',
         href: '/partners',
     },
+    {
+        text: 'News',
+        href: '/news',
+    },
 ];
 
 export default function Navigation() {
@@ -71,18 +75,7 @@ export default function Navigation() {
                                 </Link>
                             </li>
                         ))}
-                        <li>
-                            <Link
-                                style={ibm_mono.style}
-                                href="#"
-                                className="flex items-center uppercase opacity-70 text-standard-5 hover:text-standard-4 text-sm font-light py-3"
-                            >
-                                News
-                                <span className="ml-3 bg-red-500 text-white font-semibold rounded-2xl py-1.5 px-2 inline-block text-[9px] leading-none">
-                                    Soon
-                                </span>
-                            </Link>
-                        </li>
+
                         <ButtonLink
                             href="/contact-us"
                             className="mt-12 uppercase text-center text-sm"
@@ -117,18 +110,6 @@ export default function Navigation() {
                                         </Link>
                                     </li>
                                 ))}
-                                <li className="relative">
-                                    <Link
-                                        style={ibm_mono.style}
-                                        href="#"
-                                        className="uppercase opacity-70 text-standard-5 hover:text-standard-4 text-sm font-light px-[22px] py-2.5 rounded-full"
-                                    >
-                                        News
-                                        <span className="absolute -top-3 -right-5 bg-red-500 text-white font-semibold rounded-2xl py-1.5 px-2 inline-block text-[9px] leading-none">
-                                            Soon
-                                        </span>
-                                    </Link>
-                                </li>
                             </ul>
                         </nav>
                         <div className="hidden laptop:block">
