@@ -79,7 +79,7 @@ export default function Partners() {
                                 className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase tracking-widest"
                                 style={ibm_mono.style}
                             >
-                                PARTNERSHIP
+                                DEMO
                             </span>
                             <h3 className="mt-3 text-2xl tablet:text-[32px] leading-tight laptop:max-w-[456px]">
                                 URBX&apos;s Inaugural DEMO Reveals Exciting New Features and Capabilities&nbsp;
