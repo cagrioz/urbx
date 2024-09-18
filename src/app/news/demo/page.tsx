@@ -118,9 +118,7 @@ export default function Partners() {
                                 </p>
                                 <h4 className="text-xl tablet:text-2xl">Importance</h4>
                                 <p className="text-standard-4 mt-4">
-                                The recent DEMO represented a significant milestone for URBX, setting the stage for new industry standards in automated storage and retrieval solutions. This demonstration not only showcased the system's high-performance capabilities but also highlighted the unique features that distinguish URBX's solutions in the marketplace.
-                                The TowerBot demonstrated its efficiency by providing instant access to totes within a multi-level racking system, thereby eliminating the need for manual retrieval and digging. Meanwhile, the GridBot proved its ability to store and deliver goods with precision to designated locations, such as future pick stations.
-                                The success of this DEMO is pivotal for URBX, as it underscores the substantial benefits that the system brings to current warehouse operations. It reinforces the potential of URBX’s large-scale automated storage and retrieval systems to excel in high-density and high-throughput applications.
+                                The recent DEMO represented a significant milestone for URBX, setting the stage for new industry standards in automated storage and retrieval solutions. This demonstration not only showcased the system's high-performance capabilities but also highlighted the unique features that distinguish URBX's solutions in the marketplace. The TowerBot demonstrated its efficiency by providing instant access to totes within a multi-level racking system, thereby eliminating the need for manual retrieval and digging. Meanwhile, the GridBot proved its ability to store and deliver goods with precision to designated locations, such as future pick stations. The success of this DEMO is pivotal for URBX, as it underscores the substantial benefits that the system brings to current warehouse operations. It reinforces the potential of URBX’s large-scale automated storage and retrieval systems to excel in high-density and high-throughput applications.
                                 </p>
                             </div>
                         </div>
@@ -138,10 +136,10 @@ export default function Partners() {
                         </div>
                         <div>
                             <blockquote className="text-xl laptop:text-2xl">
-                                &quot;At ISD, we&apos;ve always been at the forefront of warehouse automation. The URBX
+                                At ISD, we&apos;ve always been at the forefront of warehouse automation. The URBX
                                 system aligns perfectly with our mission to provide our clients with the most efficient
-                                and innovative solutions. This technology&apos;s ability to complete 50-line orders in
-                                under 3 minutes is not just impressive – it&apos;s revolutionary.&quot;
+                                and innovative solutions. This technology's ability to complete 50-line orders in
+                                under 3 minutes is not just impressive – it's revolutionary.;
                             </blockquote>
                             <div className="flex items-center justify-between mt-11">
                                 <div className="flex items-center gap-5">
