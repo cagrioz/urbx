@@ -2,9 +2,10 @@ import Navigation from '@/components/Navigation';
 import { ibm_mono } from '@/styles/fonts';
 import Container from '@/components/Container';
 
-import ISDPartnerHero from '@/assets/isd_partner_hero.jpg';
-import ISDContentImg1 from '@/assets/isd_content_1.jpg';
-import ISDContentImg2 from '@/assets/isd_content_2.jpg';
+import ISDPartnerHero from '../../../../public/news/demo/featured.jpg';
+
+import Content1Img from '../../../../public/news/demo/content_1.jpg';
+import Content2Img from '../../../../public/news/demo/content_2.jpg';
 
 import ISDCommentCover from '@/assets/isd_comment_cover.jpg';
 import ISDCommentAvatar from '@/assets/isd_comment_avatar.jpg';
@@ -13,8 +14,6 @@ import ISDCommentLogo from '@/assets/isd_comment_logo.png';
 import Image from 'next/image';
 import Seperator from '@/components/Separator';
 
-import fs from 'fs';
-import path from 'path';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 
@@ -45,21 +44,20 @@ export default function Partners() {
 
     return (
         <>
-            <div>
+            <div className="mb-12 tablet:mb-16 laptop:mb-20">
                 <Navigation />
             </div>
-            <section className="pt-20">
+            <section>
                 <Container>
-                    <div className="mb-[60px]">
+                    <div className="mb-8 laptop:mb-[60px]">
                         <span
                             className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase tracking-widest"
                             style={ibm_mono.style}
                         >
                             latest urbx news
                         </span>
-                        <h1 className="font-light text-white text-[40px] leading-none laptop:max-w-[547px] mt-3">
-                            URBX and ISD: Transforming Tomorrow's Warehouse{' '}
-                            <span className="font-semibold">Solutions</span>
+                        <h1 className="font-light text-white text-3xl laptop:text-[40px] laptop:leading-none laptop:max-w-[560px] mt-3 tracking-tight">
+                            September 2024 <span className="font-semibold">DEMO</span> Latest Innovations and Insights{' '}
                         </h1>
                     </div>
                     <div className="rounded-2xl overflow-hidden">
@@ -67,9 +65,9 @@ export default function Partners() {
                     </div>
                 </Container>
             </section>
-            <section className="py-20">
+            <section className="py-10 laptop:py-20">
                 <Container>
-                    <div className="flex gap-[120px] justify-between items-center">
+                    <div className="flex flex-col tablet:flex-row gap-8 desktop:gap-[120px] justify-between items-center">
                         <div>
                             <span
                                 className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase tracking-widest"
@@ -77,28 +75,39 @@ export default function Partners() {
                             >
                                 PARTNERSHIP
                             </span>
-                            <h3 className="mt-3 text-[32px] leading-tight laptop:max-w-[456px]">
-                                URBX Partners with ISD to Revolutionize Warehouse Automation
+                            <h3 className="mt-3 text-2xl tablet:text-[32px] leading-tight laptop:max-w-[456px]">
+                                URBX's Inaugural DEMO Reveals Exciting New Features and Capabilities{' '}
                             </h3>
-                            <div className="mt-10">
-                                <h4 className="text-2xl">About the Partnership</h4>
+                            <div className="mt-6 laptop:mt-10">
+                                <h4 className="text-xl tablet:text-2xl">About the DEMO</h4>
                                 <p className="text-standard-4 mt-3">
-                                    URBX has entered into a strategic partnership with Integrated System Design (ISD),
-                                    appointing ISD as an authorized integrator of URBX’s cutting-edge robotic solutions.
-                                    These solutions are designed for high-density, high-throughput goods-to-person
-                                    automated storage and retrieval systems, enhancing operational efficiency and
-                                    productivity across various industries
+                                    In September 2024, URBX hosted its inaugural DEMO, presenting the latest
+                                    advancements in robotic technology. This event showcased the unique features and
+                                    benefits of their innovations within the automated warehouse sector. Over 30
+                                    attendees received an exclusive look at URBX’s groundbreaking technology, including
+                                    the new GridBot, TowerBot, and conveyor system, demonstrated within a compact
+                                    25-foot racking system. This DEMO represents a significant milestone for URBX,
+                                    highlighting the company's commitment to delivering a revolutionary system designed
+                                    to enhance efficiency and transform warehouse operations.
                                 </p>
                             </div>
-                            <div className="mt-[60px]">
-                                <h4 className="text-2xl">About ISD</h4>
+                            <div className="mt-8 laptop:mt-[60px]">
+                                <h4 className="text-xl tablet:text-2xl">Key Components</h4>
                                 <p className="text-standard-4 mt-3">
-                                    ISD, based in Wixom, MI, specializes in providing scalable automated solutions for
-                                    warehouse, manufacturing, distribution, retail, and wholesale applications. Offering
-                                    a comprehensive range of services, including consulting, system design, integration,
-                                    industrial controls, and customer support, ISD tailors innovative solutions to meet
-                                    specific client needs. Their approach significantly reduces operational cost while
-                                    developing scalable plans to address evolving industry challenges. 
+                                    The DEMO featured an advanced system incorporating the latest GridBot, two
+                                    TowerBots, and a conveyor system, all engineered for optimal performance. The system
+                                    demonstrated at the event was designed for efficient operation with two TowerBots
+                                    and one GridBot. On the left side of the setup, a conveyor mechanism was utilized,
+                                    where one TowerBot retrieved multiple totes from storage and transported them to the
+                                    conveyor system for further processing. On the right side, the racking system
+                                    included a GridBot interacting with a separate TowerBot. In this configuration, the
+                                    TowerBot collected multiple totes from storage and delivered them to a designated
+                                    buffer zone. From there, the GridBot handled the totes, ensuring precise and
+                                    efficient picking operations. The DEMO effectively showcased the system's capability
+                                    to store and retrieve numerous totes within a multi-level racking system at high
+                                    speeds, all through a fully automated process. This event marked a significant
+                                    milestone, highlighting the advancements of the URBX system to a select group of
+                                    attendees and underscoring the notable progress and growth achieved by URBX.
                                 </p>
                                 <p className="text-standard-4 mt-4">
                                     ISD’s extensive expertise includes handling, storing, picking pieces (eaches),
@@ -111,20 +120,20 @@ export default function Partners() {
                                 </p>
                             </div>
                         </div>
-                        <div className="w-[456px] rounded-[20px] overflow-hidden shrink-0">
-                            <Image src={ISDContentImg1} alt="ISD Content Image 1" />
+                        <div className="w-full tablet:w-[330px] laptop:w-[456px] rounded-[20px] overflow-hidden shrink-0">
+                            <Image src={Content1Img} alt="ISD Content Image 1" />
                         </div>
                     </div>
                 </Container>
             </section>
             <section>
                 <Container>
-                    <div className="flex desktop:gap-[120px] justify-between items-center border border-dashed border-standard-3 rounded-[10px] py-[90px] px-[102px]">
-                        <div className="desktop:w-[360px] shrink-0 rounded-[10px] overflow-hidden">
+                    <div className="flex flex-col tablet:flex-row py-10 px-8 desktop:py-[90px] desktop:px-[102px] gap-8 desktop:gap-[120px] justify-between laptop:items-center border border-dashed border-standard-3 rounded-[10px]">
+                        <div className="tablet:w-[240px] desktop:w-[360px] shrink-0 rounded-[10px] overflow-hidden">
                             <Image src={ISDCommentCover} alt="ISD Comment Cover" />
                         </div>
                         <div>
-                            <blockquote className="text-2xl">
+                            <blockquote className="text-xl laptop:text-2xl">
                                 "At ISD, we've always been at the forefront of warehouse automation. The URBX system
                                 aligns perfectly with our mission to provide our clients with the most efficient and
                                 innovative solutions. This technology's ability to complete 50-line orders in under 3
@@ -152,9 +161,9 @@ export default function Partners() {
                     </div>
                 </Container>
             </section>
-            <section className="py-20 pb-0">
+            <section className="pt-10 laptop:pt-20">
                 <Container>
-                    <div className="flex gap-[120px] justify-between items-center">
+                    <div className="flex flex-col tablet:flex-row gap-8 desktop:gap-[120px] justify-between items-center">
                         <div>
                             <span
                                 className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase tracking-widest"
@@ -162,11 +171,11 @@ export default function Partners() {
                             >
                                 PARTNERSHIP
                             </span>
-                            <h3 className="mt-3 text-[32px] leading-tight laptop:max-w-[456px]">
+                            <h3 className="mt-3 text-2xl tablet:text-[32px] leading-tight laptop:max-w-[456px]">
                                 Redefining Robotics{' '}
                             </h3>
-                            <div className="mt-10">
-                                <h4 className="text-2xl">Benefits</h4>
+                            <div className="mt-6 laptop:mt-10">
+                                <h4 className="text-xl tablet:text-2xl">Benefits</h4>
                                 <p className="text-standard-4 mt-3">
                                     This partnership envisions a prosperous future by combining URBX’s high-density,
                                     high-throughput robotic goods-to-person system with ISD’s specialized expertise in
@@ -178,8 +187,8 @@ export default function Partners() {
                                     automation and fulfillment process.
                                 </p>
                             </div>
-                            <div className="mt-[60px]">
-                                <h4 className="text-2xl">In Summary</h4>
+                            <div className="mt-6 laptop:mt-10">
+                                <h4 className="text-xl tablet:text-2xl">In Summary</h4>
                                 <p className="text-standard-4 mt-3">
                                     URBX has announced a strategic partnership with Integrated Systems Design (ISD) to
                                     integrate advanced robotic solutions for high-density, high-throughput automated
@@ -196,8 +205,8 @@ export default function Partners() {
                                 </p>
                             </div>
                         </div>
-                        <div className="w-[456px] rounded-[20px] overflow-hidden shrink-0">
-                            <Image src={ISDContentImg2} alt="ISD Content Image 1" />
+                        <div className="w-full tablet:w-[330px] laptop:w-[456px] rounded-[20px] overflow-hidden shrink-0">
+                            <Image src={Content2Img} alt="ISD Content Image 1" />
                         </div>
                     </div>
                 </Container>

@@ -33,6 +33,10 @@ const navigationItems: NavigationItem[] = [
         text: 'Partners',
         href: '/partners',
     },
+    {
+        text: 'News',
+        href: '/news',
+    },
 ];
 
 export default function Navigation() {
