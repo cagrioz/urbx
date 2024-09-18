@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
     title: 'Urbx',
@@ -14,15 +15,19 @@ export default function RootLayout({
     return (
         <html lang="en">
             <head>
-            {/* <!-- Google tag (gtag.js) --> */}
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6JX2CF5PP"></script>
-            <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-X6JX2CF5PP');
-            </script>
+                {/* Google Tag Manager Script */}
+                <Script
+                    src="https://www.googletagmanager.com/gtag/js?id=G-X6JX2CF5PP"
+                    strategy="afterInteractive" // Loads script after the page becomes interactive
+                />
+                <Script id="gtag-init" strategy="afterInteractive">
+                    {`
+                      window.dataLayer = window.dataLayer || [];
+                      function gtag(){dataLayer.push(arguments);}
+                      gtag('js', new Date());
+                      gtag('config', 'G-X6JX2CF5PP');
+                    `}
+                </Script>
                 <link
                     href="https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600,700&display=swap"
                     rel="stylesheet"
