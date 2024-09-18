@@ -31,15 +31,23 @@ export default function News() {
                     </div>
                     <div className="grid grid-cols-1 tablet:grid-cols-2 bg-standard-7 rounded-[20px] items-center">
                         <div className="rounded-[20px] overflow-hidden h-full">
-                            <Image src={DemoFeatured} alt="Demo" className="object-cover h-full laptop:min-h-[480px]" />
+                            <Link href="/news/demo">
+                                <Image
+                                    src={DemoFeatured}
+                                    alt="Demo"
+                                    className="object-cover h-full laptop:min-h-[480px]"
+                                />
+                            </Link>
                         </div>
                         <div className="p-8 laptop:p-10">
                             <span className="text-standard-4 text-sm" style={ibm_mono.style}>
                                 NEWS . 8 min
                             </span>
                             <h3 className="text-black text-3xl laptop:text-[40px] laptop:leading-[52px] mt-6">
-                                September 2024 <span className="font-semibold">Demo</span> Latest Innovations and
-                                Insights
+                                <Link href="/news/demo">
+                                    September 2024 <span className="font-semibold">Demo</span> Latest Innovations and
+                                    Insights
+                                </Link>
                             </h3>
                             <p className="text-standard-4 text-base mt-3">
                                 In September 2024, URBX hosted its inaugural DEMO, presenting the latest advancements in
