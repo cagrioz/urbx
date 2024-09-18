@@ -41,9 +41,9 @@ export default function PlatformAndTestimonials() {
                     <p className="text-xl font-medium mt-5 text-standard-1">
                         “At Hy-Tek, we are committed to bringing new and innovative solutions to the order fulfillment
                         process. Because automation is continually evolving to meet the rapid changes in the market, we
-                        are actively evaluating what's next. URBX is exactly the kind of business we want to work with
-                        as we keep pushing the leading edge of technology to help expedite and streamline processes for
-                        our customers.”
+                        are actively evaluating what&apos;s next. URBX is exactly the kind of business we want to work
+                        with as we keep pushing the leading edge of technology to help expedite and streamline processes
+                        for our customers.”
                     </p>
                     <div className="mt-[60px] flex items-center gap-5">
                         <div className="flex items-center gap-10">
