@@ -14,6 +14,15 @@ export default function RootLayout({
     return (
         <html lang="en">
             <head>
+            {/* <!-- Google tag (gtag.js) --> */}
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6JX2CF5PP"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-X6JX2CF5PP');
+            </script>
                 <link
                     href="https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600,700&display=swap"
                     rel="stylesheet"
