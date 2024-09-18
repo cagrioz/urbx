@@ -54,7 +54,7 @@ export default function Partners() {
                             latest urbx news
                         </span>
                         <h1 className="font-light text-white text-3xl laptop:text-[40px] laptop:leading-none laptop:max-w-[560px] mt-3 tracking-tight">
-                            September 2024 <span className="font-semibold">DEMO</span> Latest Innovations and Insights{' '}
+                            September 2024 <span className="font-semibold">DEMO</span> Latest Innovations and Insights&nbsp;
                         </h1>
                     </div>
                     <div className="rounded-2xl overflow-hidden">
@@ -82,7 +82,7 @@ export default function Partners() {
                                 PARTNERSHIP
                             </span>
                             <h3 className="mt-3 text-2xl tablet:text-[32px] leading-tight laptop:max-w-[456px]">
-                                URBX&apos;s Inaugural DEMO Reveals Exciting New Features and Capabilities{' '}
+                                URBX&apos;s Inaugural DEMO Reveals Exciting New Features and Capabilities&nbsp;
                             </h3>
                             <div className="mt-6 laptop:mt-10">
                                 <h4 className="text-xl tablet:text-2xl">About the DEMO</h4>
@@ -170,12 +170,12 @@ export default function Partners() {
                                 Importance
                             </span>
                             <h3 className="mt-3 text-2xl tablet:text-[32px] leading-tight laptop:max-w-[456px]">
-                                Redefining Robotics{' '}
+                                Redefining Robotics&nbsp;
                             </h3>
                             <div className="mt-6 laptop:mt-10">
                                 <h4 className="text-xl tablet:text-2xl">Benefits</h4>
                                 <p className="text-standard-4 mt-3">
-                                    The recent DEMO represented a significant milestone for URBX, setting the stage for new industry standards in automated storage and retrieval solutions. This demonstration not only showcased the system's high-performance capabilities but also highlighted the unique features that distinguish URBX's solutions in the marketplace. The TowerBot demonstrated its efficiency by providing instant access to totes within a multi-level racking system, thereby eliminating the need for manual retrieval and digging. Meanwhile, the GridBot proved its ability to store and deliver goods with precision to designated locations, such as future pick stations. The success of this DEMO is pivotal for URBX, as it underscores the substantial benefits that the system brings to current warehouse operations. It reinforces the potential of URBX’s large-scale automated storage and retrieval systems to excel in high-density and high-throughput applications.
+                                    The recent DEMO represented a significant milestone for URBX, setting the stage for new industry standards in automated storage and retrieval solutions. This demonstration not only showcased the system&apos;s high-performance capabilities but also highlighted the unique features that distinguish URBX&apos;s solutions in the marketplace. The TowerBot demonstrated its efficiency by providing instant access to totes within a multi-level racking system, thereby eliminating the need for manual retrieval and digging. Meanwhile, the GridBot proved its ability to store and deliver goods with precision to designated locations, such as future pick stations. The success of this DEMO is pivotal for URBX, as it underscores the substantial benefits that the system brings to current warehouse operations. It reinforces the potential of URBX’s large-scale automated storage and retrieval systems to excel in high-density and high-throughput applications.
                                 </p>
                             </div>
                             <div className="mt-6 laptop:mt-10">
@@ -205,7 +205,7 @@ export default function Partners() {
                 title={
                     <>
                         Get ready bring Urbx to <br />
-                        <span className="font-semibold">your Warehouse</span>{' '}
+                        <span className="font-semibold">your Warehouse</span>&nbsp;
                     </>
                 }
                 ctaVariant="dark"
@@ -215,4 +215,3 @@ export default function Partners() {
         </>
     );
 }
-             
