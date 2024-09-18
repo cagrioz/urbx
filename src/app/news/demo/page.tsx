@@ -92,7 +92,7 @@ export default function Partners() {
                                     benefits of their innovations within the automated warehouse sector. Over 30
                                     attendees received an exclusive look at URBX’s groundbreaking technology, including
                                     the new GridBot, TowerBot, and conveyor system, demonstrated within a compact
-                                    25-foot racking system. This DEMO represents a significant milestone for URBX,
+                                    15-foot system. This DEMO represents a significant milestone for URBX,
                                     highlighting the company&apos;s commitment to delivering a revolutionary system
                                     designed to enhance efficiency and transform warehouse operations.
                                 </p>
@@ -116,14 +116,11 @@ export default function Partners() {
                                     group of attendees and underscoring the notable progress and growth achieved by
                                     URBX.
                                 </p>
+                                <h4 className="text-xl tablet:text-2xl">Importance</h4>
                                 <p className="text-standard-4 mt-4">
-                                    ISD’s extensive expertise includes handling, storing, picking pieces (eaches),
-                                    cases, pallets, build lines, and specialized or custom handling solutions. Their
-                                    product and service offerings encompass automatic storage and retrieval systems
-                                    (ASRS), conveyors, robotics, batch stations, shuttles, pick-to-light systems,
-                                    A-Frames, carousels, vertical lift modules (VLMs), controls, and software (inventory
-                                    management systems - WCS, WMS, MES, ERP). ISD provides unparalleled solutions
-                                    tailored to meet the unique needs of their clients
+                                    The recent DEMO represented a significant milestone for URBX, setting the stage for new industry standards in automated storage and retrieval solutions. This demonstration not only showcased the system's high-performance capabilities but also highlighted the unique features that distinguish URBX's solutions in the marketplace.
+                                </br>The TowerBot demonstrated its efficiency by providing instant access to totes within a multi-level racking system, thereby eliminating the need for manual retrieval and digging. Meanwhile, the GridBot proved its ability to store and deliver goods with precision to designated locations, such as future pick stations.
+                                </br>The success of this DEMO is pivotal for URBX, as it underscores the substantial benefits that the system brings to current warehouse operations. It reinforces the potential of URBX’s large-scale automated storage and retrieval systems to excel in high-density and high-throughput applications.
                                 </p>
                             </div>
                         </div>
@@ -176,39 +173,36 @@ export default function Partners() {
                                 className="text-standard-4 text-[12px] tablet:text-sm font-medium uppercase tracking-widest"
                                 style={ibm_mono.style}
                             >
-                                PARTNERSHIP
+                                Importance
                             </span>
                             <h3 className="mt-3 text-2xl tablet:text-[32px] leading-tight laptop:max-w-[456px]">
                                 Redefining Robotics{' '}
                             </h3>
                             <div className="mt-6 laptop:mt-10">
-                                <h4 className="text-xl tablet:text-2xl">Benefits</h4>
+                                <h4 className="text-xl tablet:text-2xl">Importance</h4>
                                 <p className="text-standard-4 mt-3">
-                                    This partnership envisions a prosperous future by combining URBX’s high-density,
-                                    high-throughput robotic goods-to-person system with ISD’s specialized expertise in
-                                    optimizing warehouse fulfillment and material handling. By integrating these
-                                    advanced technologies and expert methodologies, the collaboration aims to redefine
-                                    efficiency standards in the industry. This alliance is expected to bring
-                                    transformative improvements in operational performance, enabling both companies to
-                                    meet the evolving needs of their clients while setting new benchmarks in warehouse
-                                    automation and fulfillment process.
+                                    The recent DEMO represented a significant milestone for URBX, setting the stage for new industry standards in automated storage and retrieval solutions. This demonstration not only showcased the system's high-performance capabilities but also highlighted the unique features that distinguish URBX's solutions in the marketplace. The TowerBot demonstrated its efficiency by providing instant access to totes within a multi-level racking system, thereby eliminating the need for manual retrieval and digging. Meanwhile, the GridBot proved its ability to store and deliver goods with precision to designated locations, such as future pick stations. The success of this DEMO is pivotal for URBX, as it underscores the substantial benefits that the system brings to current warehouse operations. It reinforces the potential of URBX’s large-scale automated storage and retrieval systems to excel in high-density and high-throughput applications.
                                 </p>
                             </div>
                             <div className="mt-6 laptop:mt-10">
-                                <h4 className="text-xl tablet:text-2xl">In Summary</h4>
+                                <h4 className="text-xl tablet:text-2xl">New Technology</h4>
                                 <p className="text-standard-4 mt-3">
-                                    URBX has announced a strategic partnership with Integrated Systems Design (ISD) to
-                                    integrate advanced robotic solutions for high-density, high-throughput automated
-                                    storage and retrieval systems. ISD, headquartered in Wixom, MI, specializes in
-                                    scalable automation solutions that significantly reduce operational costs while
-                                    meeting specific client needs. This collaboration, which combines URBX’s
-                                    cutting-edge robotic technology with ISD’s material handling expertise is poised to
-                                    transform warehouse operations. URBX CEO Lincoln Cavalieri highlights the
-                                    transformative potential of this partnership, noting that it is poised to
-                                    significantly enhance efficiency and foster innovation within the automated
-                                    warehouse industry. He underscores how the collaboration aims to introduce
-                                    groundbreaking advancements, streamline operations, and set new benchmarks for
-                                    performance, ultimately reshaping industry standards and driving future growth.
+                                GridBot: URBX's GridBot is expertly designed to optimize storage and retrieval operations, significantly enhancing both efficiency and throughput. Integrated seamlessly with TowerBots and a multi-level racking system, it ensures the rapid and precise delivery of stored goods to the pick station, streamlining warehouse operations.
+                                </br>Improved TowerBot: The TowerBot is engineered for superior vertical storage and retrieval, significantly improving space utilization and operational throughput. It integrates flawlessly with multi-level racking systems, providing quick and reliable access to stored items, thereby enhancing overall warehouse efficiency.
+                                </br>Conveyor: The conveyor system is intricately designed for flawless integration with URBX’s robotic solutions, facilitating smooth and efficient transportation of goods throughout the fulfillment center. Capable of handling high volumes with remarkable reliability, it supports uninterrupted operations and optimizes material flow.
+                                </br>Software: URBX harnesses machine learning to refine task management, maximizing throughput and optimizing storage efficiency. The advanced artificial intelligence coordinator routes robots along the most efficient paths within the system, enhancing fleet operations and boosting overall performance.
+                                </p>
+                            </div>
+                            <div className="mt-6 laptop:mt-10">
+                                <h4 className="text-xl tablet:text-2xl">Benefits of the New System</h4>
+                                <p className="text-standard-4 mt-3">
+                                The new dual-grid system unveiled at the September DEMO represents a significant advancement in warehouse technology, enhancing both efficiency and reliability for high-density, high-throughput applications. This sophisticated system demonstrated several key benefits, including immediate access to totes within a multi-level racking structure, rapid and precise transportation of goods to designated locations by the GridBots, and seamless integration with the embedded conveyor system. By improving traditional manual warehouse operations, this system not only optimizes efficiency but also offers considerable advantages to the automated warehouse sector, setting a new standard for performance and reliability.
+                                </p>
+                            </div>
+                            <div className="mt-6 laptop:mt-10">
+                                <h4 className="text-xl tablet:text-2xl">Key Takeaways</h4>
+                                <p className="text-standard-4 mt-3">
+                                URBX successfully showcased its advanced robotic technology to a select group of attendees. This demonstration marks a significant milestone, setting the stage for future innovations. The event highlighted the unique advantages of URBX’s dual-grid system, including its considerable scalability, high-density storage capabilities, and efficient, reliable tote storage and retrieval for high-throughput applications.
                                 </p>
                             </div>
                         </div>
