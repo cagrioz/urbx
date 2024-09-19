@@ -38,18 +38,19 @@ function FAQ() {
                                     times faster than manual picking operations.
                                 </p>
                             </Accordion>
-                            <Accordion labelText="How long does a bin retrieval take?">
+                            <Accordion labelText="Can URBX’s system be integrated with existing warehouses or material handling equipment?">
                                 <p>
-                                    Your efficiency gain will depend on a number of factors, such as your picking speed
-                                    before and after, error reduction ratio and storage area reduction. Normally 2 to 5
-                                    times faster than manual picking operations.
+                                    The URBX system is engineered to operate at vertical heights ranging from 10 to 125 feet, allowing it to seamlessly integrate into virtually any existing warehouse configuration. Designed with a focus on simplicity and reliability, our system effortlessly adapts to your warehouse's footprint, ensuring compatibility with current material handling equipment. This flexibility not only enhances operational efficiency but also optimizes space utilization, making the URBX system an ideal solution for modern warehousing needs.
                                 </p>
                             </Accordion>
-                            <Accordion labelText="Can I change the picking list">
+                            <Accordion labelText="Can URBX’s solutions handle a variety of goods and packing types?">
                                 <p>
-                                    Your efficiency gain will depend on a number of factors, such as your picking speed
-                                    before and after, error reduction ratio and storage area reduction. Normally 2 to 5
-                                    times faster than manual picking operations.
+                                    URBX totes are engineered to support weights of up to 100 pounds, enabling them to handle a diverse array of goods in various configurations. The URBX system is designed to accommodate multiple tote heights, providing the versatility needed to store a wide range of products. This capability not only enhances operational flexibility but also optimizes storage density, significantly improving the efficiency of your warehouse operations. By maximizing the use of vertical space and adapting to different inventory types, the URBX system helps streamline logistics and drive productivity within your facility.
+                                </p>
+                            </Accordion>
+                            <Accordion labelText="What is the typical lead time for deploying URBX’s robotic system in a warehouse?">
+                                <p>
+                                    The timeline for implementing the URBX system into your existing warehouse operations is influenced by your current setup and throughput requirements. Typically, the integration process can take between four to eight months. This timeframe encompasses system installation, comprehensive employee training, and any necessary maintenance to ensure optimal performance. Our goal is to facilitate a smooth transition that minimizes disruption to your operations while maximizing efficiency.
                                 </p>
                             </Accordion>
                         </div>
