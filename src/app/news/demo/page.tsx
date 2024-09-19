@@ -92,7 +92,7 @@ export default function Partners() {
                                     benefits of their innovations within the automated warehouse sector. Over 30
                                     attendees received an exclusive look at URBX’s groundbreaking technology, including
                                     the new GridBot, TowerBot, and conveyor system, demonstrated within a compact
-                                    25-foot racking system. This DEMO represents a significant milestone for URBX,
+                                    10-foot racking system. This DEMO represents a significant milestone for URBX,
                                     highlighting the company&apos;s commitment to delivering a revolutionary system
                                     designed to enhance efficiency and transform warehouse operations.
                                 </p>
