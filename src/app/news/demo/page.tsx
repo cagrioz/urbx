@@ -139,9 +139,6 @@ export default function Partners() {
                             </blockquote>
                             <div className="flex items-center justify-between mt-11">
                                 <div className="flex items-center gap-5">
-                                    <div className="w-11 h-11 rounded-[10px] overflow-hidden">
-                                        <Image src={ISDCommentAvatar} alt="ISD Comment Avatar" />
-                                    </div>
                                     <div>
                                         <p className="text-xl">Tony Margot</p>
                                         <span className="text-base text-standard-4"> VP of Sales, ISD</span>
