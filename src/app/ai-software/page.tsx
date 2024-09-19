@@ -1,4 +1,3 @@
-import ContentWithImageGrid from '@/components/ContentWithImageGrid';
 import Footer from '@/components/Footer';
 import StackedImageContent from '@/components/StackedImageContent';
 import VideoHero from '@/components/VideoHero';
@@ -11,6 +10,9 @@ import RoboticsControlImg from '@/assets/robotics_control.jpg';
 import StackedImageContentB from '@/components/StackedImageContentB';
 import PlatformAndTestimonials from '@/components/PlatformAndTestimonials';
 import FeatureShowcaseWithDetails from '@/components/FeatureShowcaseWithDetails';
+
+import CompanyLogo from '@/assets/dcs_logo_black.svg';
+import PersonImg from '@/assets/matt.jpeg';
 
 export default function AISoftware() {
     return (
@@ -48,7 +50,14 @@ export default function AISoftware() {
                 bgImage={MobileRoboticsImg}
                 showcaseImage={RoboticsShowcaseImg}
             />
-            <PlatformAndTestimonials />
+            <PlatformAndTestimonials
+                quote="“The URBX system is truly a strategic game-changer in the retail space because it enables
+                        high-speed, on-demand fulfillment of both e-commerce and store-level replenishment orders”"
+                personImg={PersonImg}
+                personName="Matt Ferguson"
+                personRole="CEO, DCS"
+                companyLogo={CompanyLogo}
+            />
             <Footer />
         </>
     );

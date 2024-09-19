@@ -1,11 +1,26 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { ibm_mono } from '@/styles/fonts';
-import CompanyLogo from '@/assets/dcs_logo_black.svg';
-import PersonImg from '@/assets/matt.jpeg';
-import Link from 'next/link';
-import ButtonLink from '@/components/ButtonLink';
 
-export default function PlatformAndTestimonials() {
+import ButtonLink from '@/components/ButtonLink';
+import classNames from 'classnames';
+
+export interface PlatformAndTestimonialsProps {
+    quote: string;
+    personImg?: StaticImageData;
+    personName: string;
+    personRole: string;
+    companyLogo: StaticImageData;
+    invertLogoBrigtness?: boolean;
+}
+
+export default function PlatformAndTestimonials({
+    quote,
+    personImg,
+    personName,
+    personRole,
+    companyLogo,
+    invertLogoBrigtness,
+}: PlatformAndTestimonialsProps) {
     return (
         <section className="grid grid-cols-1 laptop:grid-cols-2">
             <div className="bg-white px-6 tablet:px-0 py-16 laptop:pr-8 laptop:pt-24 laptop:pb-32 desktop:pt-[120px] desktop:pr-[110px] desktop:pb-[180px]">
@@ -39,21 +54,24 @@ export default function PlatformAndTestimonials() {
                     >
                         Enterprise Partners
                     </p>
-                    <p className="text-xl font-medium mt-5 text-standard-1">
-                        “The URBX system is truly a strategic game-changer in the retail space because it enables
-                        high-speed, on-demand fulfillment of both e-commerce and store-level replenishment orders”
-                    </p>
+                    <p className="text-xl font-medium mt-5 text-standard-1">{quote}</p>
                     <div className="mt-[60px] flex items-center gap-2 laptop:gap-5">
                         <div className="flex items-center justify-center laptop:justify-start gap-6">
-                            <div className="w-14 tablet:w-20">
-                                <Image src={PersonImg} alt="Matt Ferguson" className="rounded-full" />
-                            </div>
+                            {personImg && (
+                                <div className="w-14 tablet:w-20">
+                                    <Image src={personImg} alt={personName} className="rounded-full" />
+                                </div>
+                            )}
                             <div>
-                                <p className="font-bold text-standard-1">Matt Ferguson</p>
-                                <span className="text-standard-3">President, DCS</span>
+                                <p className="font-bold text-standard-1">{personName}</p>
+                                <span className="text-standard-3">{personRole}</span>
                             </div>
                             <div className="w-14 tablet:w-20 ml-4">
-                                <Image src={CompanyLogo} alt="DCS Logo" />
+                                <Image
+                                    src={companyLogo}
+                                    alt="DCS Logo"
+                                    className={classNames({ 'brightness-0': invertLogoBrigtness })}
+                                />
                             </div>
                         </div>
                     </div>

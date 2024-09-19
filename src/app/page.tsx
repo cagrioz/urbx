@@ -9,6 +9,9 @@ import VideoSection from '@/components/VideoSection';
 import Overview from '@/components/Overview';
 import VideoHero from '@/components/VideoHero';
 
+import CompanyLogo from '@/assets/plain_hytek.png';
+import PersonImg from '@/assets/matt.jpeg';
+
 export default function Home() {
     return (
         <>
@@ -70,7 +73,17 @@ export default function Home() {
                 video="/videos/routing.mp4"
             />
             <WhyUs />
-            <PlatformAndTestimonials />
+            <PlatformAndTestimonials
+                quote="“At Hy-Tek, we are committed to bringing new and innovative solutions to the order fulfillment
+                        process. Because automation is continually evolving to meet the rapid changes in the market, we
+                        are actively evaluating what's next. URBX is exactly the kind of business we want to work
+                        with as we keep pushing the leading edge of technology to help expedite and streamline processes
+                        for our customers.”"
+                personName="Zac Boehm"
+                personRole="Chief Automation Officer, Hy-Tek"
+                companyLogo={CompanyLogo}
+                invertLogoBrigtness
+            />
             <Footer />
         </>
     );
