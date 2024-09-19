@@ -57,11 +57,6 @@ export default function PlatformAndTestimonials({
                     <p className="text-xl font-medium mt-5 text-standard-1">{quote}</p>
                     <div className="mt-[60px] flex items-center gap-2 laptop:gap-5">
                         <div className="flex items-center justify-center laptop:justify-start gap-6">
-                            {personImg && (
-                                <div className="w-14 tablet:w-20">
-                                    <Image src={personImg} alt={personName} className="rounded-full" />
-                                </div>
-                            )}
                             <div>
                                 <p className="font-bold text-standard-1">{personName}</p>
                                 <span className="text-standard-3">{personRole}</span>
