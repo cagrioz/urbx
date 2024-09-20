@@ -178,7 +178,7 @@ export default function Partners() {
                             <div className="mt-6 laptop:mt-10">
                                 <h4 className="text-xl tablet:text-2xl">Key Takeaways</h4>
                                 <p className="text-standard-4 mt-3">
-                                    URBX successfully showcased its advanced robotic technology to a select group of attendees. This demonstration marks a significant milestone, setting the stage for future innovations. The event highlighted the unique advantages of URBX’s dual-grid system, including its considerable scalability, high-density storage capabilities, and efficient, reliable tote storage and retrieval for high-throughput applications.
+                                    URBX successfully showcased its advanced robotic technology to a select group of attendees. The event highlighted the unique advantages of URBX’s dual-grid system, including its considerable scalability, high-density storage capabilities, and efficient, reliable tote storage and retrieval for high-throughput applications.
                                 </p>
                             </div>
                         </div>
