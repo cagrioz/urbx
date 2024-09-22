@@ -25,6 +25,7 @@ export interface ButtonProps {
     variant?: ButtonVariants;
     onClick?: any;
     disabled?: boolean;
+    icon?: React.ReactNode;
 }
 
 export default function Button({
@@ -33,6 +34,7 @@ export default function Button({
     className,
     variant = 'dark',
     disabled,
+    icon,
     ...otherProps
 }: ButtonProps) {
     return (
@@ -43,12 +45,16 @@ export default function Button({
                 VariantStyling[variant].background,
                 VariantStyling[variant].text,
                 className,
-                ibm_mono.className
+                ibm_mono.className,
+                {
+                    'flex items-center': icon,
+                }
             )}
             disabled={disabled}
             {...otherProps}
         >
             {children}
+            {icon && <span className="ml-3 -mb-0.5">{icon}</span>}
         </button>
     );
 }
