@@ -52,7 +52,6 @@ export default function VideoHero({ video, subtitle, title, description, popupVi
                     )}
                 </Container>
             </section>
-            {/* Modal */}
             <Modal isOpen={isModalOpen} closeModal={closeModal}>
                 <div className="relative pb-[56.25%]">
                     <iframe
