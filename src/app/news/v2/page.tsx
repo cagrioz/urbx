@@ -12,7 +12,10 @@ import Footer from '@/components/Footer';
 export default function PostsPage() {
     // Read the posts.json file to get all posts metadata
     const postsFilePath = path.join(process.cwd(), 'src', 'posts.json');
-    const allPosts = JSON.parse(fs.readFileSync(postsFilePath, 'utf-8'));
+    const postsObj = JSON.parse(fs.readFileSync(postsFilePath, 'utf-8'));
+
+    const allPosts = postsObj.posts as Post[];
+    const featuredPost = postsObj.featured as Post;
 
     // Sort posts by date (newest first)
     const sortedPosts = allPosts.sort((a: Post, b: Post) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -70,6 +73,10 @@ export default function PostsPage() {
                                 Read More
                             </Link>
                         </div>
+                    </div>
+                    <div className="grid grid-cols-2">
+                        <div></div>
+                        <div></div>
                     </div>
                 </Container>
             </section>
