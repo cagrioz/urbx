@@ -97,7 +97,7 @@ export default function ContactUs() {
                                         id="firstName"
                                         value={form.firstName}
                                         onChange={handleChange}
-                                        className="grow h-14 bg-white rounded-r-[10px] px-3 py-2 focus:outline-none"
+                                        className="grow h-14 bg-white text-black rounded-r-[10px] px-3 py-2 focus:outline-none"
                                         required
                                     />
                                 </div>
@@ -117,7 +117,7 @@ export default function ContactUs() {
                                         id="lastName"
                                         value={form.lastName}
                                         onChange={handleChange}
-                                        className="grow h-14 bg-white rounded-r-[10px] px-3 py-2 focus:outline-none"
+                                        className="grow h-14 bg-white text-black rounded-r-[10px] px-3 py-2 focus:outline-none"
                                         required
                                     />
                                 </div>
@@ -149,7 +149,7 @@ export default function ContactUs() {
                                             id="phoneNumber"
                                             value={form.phoneNumber}
                                             onChange={handleChange}
-                                            className="grow h-14 bg-white rounded-r-[10px] pl-16 py-2 focus:outline-none"
+                                            className="grow h-14 bg-white text-black rounded-r-[10px] pl-16 py-2 focus:outline-none"
                                         />
                                     </div>
                                 </div>
@@ -170,7 +170,7 @@ export default function ContactUs() {
                                         id="emailAddress"
                                         value={form.emailAddress}
                                         onChange={handleChange}
-                                        className="grow h-14 bg-white rounded-r-[10px] px-3 py-2 focus:outline-none"
+                                        className="grow h-14 bg-white text-black rounded-r-[10px] px-3 py-2 focus:outline-none"
                                         required
                                     />
                                 </div>
@@ -194,7 +194,7 @@ export default function ContactUs() {
                                         id="businessType"
                                         value={form.businessType}
                                         onChange={handleChange}
-                                        className="grow h-14 bg-white rounded-r-[10px] px-3 py-2 focus:outline-none"
+                                        className="grow h-14 bg-white text-black rounded-r-[10px] px-3 py-2 focus:outline-none"
                                     />
                                 </div>
 
@@ -212,7 +212,7 @@ export default function ContactUs() {
                                         id="businessName"
                                         value={form.businessName}
                                         onChange={handleChange}
-                                        className="grow h-14 bg-white rounded-r-[10px] px-3 py-2 focus:outline-none"
+                                        className="grow h-14 bg-white text-black rounded-r-[10px] px-3 py-2 focus:outline-none"
                                     />
                                 </div>
                                 <div className="overflow-hidden flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
@@ -229,7 +229,7 @@ export default function ContactUs() {
                                         id="businessAddress"
                                         value={form.businessAddress}
                                         onChange={handleChange}
-                                        className="grow h-14 bg-white rounded-r-[10px] px-3 py-2 focus:outline-none"
+                                        className="grow h-14 bg-white text-black rounded-r-[10px] px-3 py-2 focus:outline-none"
                                     />
                                 </div>
                                 <div className="overflow-hidden flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
@@ -245,7 +245,7 @@ export default function ContactUs() {
                                         id="businessState"
                                         value={form.businessState}
                                         onChange={handleChange}
-                                        className="grow h-14 bg-white rounded-r-[10px] px-3 py-2 focus:outline-none appearance-none"
+                                        className="grow h-14 bg-white text-black rounded-r-[10px] px-3 py-2 focus:outline-none appearance-none"
                                     >
                                         <option value="">Select a state</option>
                                         <option value="AL">Alabama</option>
@@ -314,7 +314,7 @@ export default function ContactUs() {
                                         id="businessZipCode"
                                         value={form.businessZipCode}
                                         onChange={handleChange}
-                                        className="grow h-14 bg-white rounded-r-[10px] px-3 py-2 focus:outline-none"
+                                        className="grow h-14 bg-white text-black rounded-r-[10px] px-3 py-2 focus:outline-none"
                                     />
                                 </div>
 
@@ -332,7 +332,7 @@ export default function ContactUs() {
                                         id="country"
                                         value={form.country}
                                         onChange={handleChange}
-                                        className="grow h-14 bg-white rounded-r-[10px] px-3 py-2 focus:outline-none appearance-none"
+                                        className="grow h-14 bg-white text-black rounded-r-[10px] px-3 py-2 focus:outline-none appearance-none"
                                     >
                                         <option value="US">🇺🇸 United States</option>
                                     </select>
@@ -351,7 +351,7 @@ export default function ContactUs() {
                                         id="numberOfLocations"
                                         value={form.numberOfLocations}
                                         onChange={handleChange}
-                                        className="grow h-14 bg-white rounded-r-[10px] px-3 py-2 focus:outline-none"
+                                        className="grow h-14 bg-white text-black rounded-r-[10px] px-3 py-2 focus:outline-none"
                                     />
                                 </div>
                             </div>
