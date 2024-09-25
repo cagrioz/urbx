@@ -1,13 +1,13 @@
 import fs from 'fs';
 import path from 'path';
-import Link from 'next/link';
 import CTA from '@/components/CTA';
 import Container from '@/components/Container';
 import Navigation from '@/components/Navigation';
 import { ibm_mono } from '@/styles/fonts';
-import Image from 'next/image';
 import { Post } from '@/types';
 import Footer from '@/components/Footer';
+import GridPost from '@/components/news/GridPost';
+import FeaturedPost from '@/components/news/FeaturedPost';
 
 export default function PostsPage() {
     // Read the posts.json file to get all posts metadata
@@ -38,45 +38,20 @@ export default function PostsPage() {
                             Urbx News
                         </h1>
                     </div>
-                    <div className="grid grid-cols-1 tablet:grid-cols-2 bg-standard-7 rounded-[20px] items-center">
-                        <div className="rounded-[20px] overflow-hidden h-full">
-                            <Link href="/news/demo">
-                                <Image
-                                    src="/news/demo/featured.jpg"
-                                    alt="Demo"
-                                    className="object-cover h-full laptop:min-h-[480px]"
-                                    width={600}
-                                    height={400}
-                                />
-                            </Link>
-                        </div>
-                        <div className="p-8 laptop:p-10">
-                            <span className="text-standard-4 text-sm" style={ibm_mono.style}>
-                                NEWS . 8 min
-                            </span>
-                            <h3 className="text-black text-3xl laptop:text-[40px] laptop:leading-[52px] mt-6">
-                                <Link href="/news/demo">
-                                    September 2024 <span className="font-semibold">Demo</span> Latest Innovations and
-                                    Insights
-                                </Link>
-                            </h3>
-                            <p className="text-standard-4 text-base mt-3">
-                                In September 2024, URBX hosted its inaugural DEMO, presenting the latest advancements in
-                                robotic technology. This event showcased the unique features and benefits of their
-                                innovations within the automated warehouse sector.
-                            </p>
-                            <Link
-                                href="/news/demo"
-                                className="underline text-accent text-sm mt-6 inline-block"
-                                style={ibm_mono.style}
-                            >
-                                Read More
-                            </Link>
-                        </div>
+                    <div className="mb-10 laptop:mb-[60px] grid grid-cols-1">
+                        <FeaturedPost {...featuredPost} />
                     </div>
-                    <div className="grid grid-cols-2">
-                        <div></div>
-                        <div></div>
+                    <div className="grid grid-cols-2 gap-6">
+                        {sortedPosts.map((post) => (
+                            <GridPost
+                                key={post.title}
+                                title={post.title}
+                                description={post.description}
+                                image={post.image}
+                                slug={post.slug}
+                                date={post.date}
+                            />
+                        ))}
                     </div>
                 </Container>
             </section>

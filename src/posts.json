@@ -2,17 +2,38 @@
     "featured": {
         "title": "September 2024 <strong>DEMO</strong> Latest Innovations and Insights",
         "description": "URBX has entered into a strategic partnership with ISD to introduce cutting-edge robotic solutions.",
-        "slug": "urbx-partners-with-isd",
+        "slug": "isd",
         "date": "2023-09-13",
-        "image": "/news/demo/content_1.jpg"
+        "image": "/news/demo/content_2.jpg"
     },
     "posts": [
         {
             "title": "September 2024 <strong>DEMO</strong> Latest Innovations and Insights",
             "description": "URBX has entered into a strategic partnership with ISD to introduce cutting-edge robotic solutions.",
-            "slug": "urbx-partners-with-isd",
+            "slug": "isd-1",
             "date": "2023-09-13",
-            "image": "/news/demo/content_1.jpg"
+            "image": "/news/demo/content_2.jpg"
+        },
+        {
+            "title": "September 2024 <strong>DEMO</strong> Latest Innovations and Insights",
+            "description": "URBX has entered into a strategic partnership with ISD to introduce cutting-edge robotic solutions.",
+            "slug": "isd-2",
+            "date": "2023-09-13",
+            "image": "/news/demo/content_2.jpg"
+        },
+        {
+            "title": "September 2024 <strong>DEMO</strong> Latest Innovations and Insights",
+            "description": "URBX has entered into a strategic partnership with ISD to introduce cutting-edge robotic solutions.",
+            "slug": "isd-3",
+            "date": "2023-09-13",
+            "image": "/news/demo/content_2.jpg"
+        },
+        {
+            "title": "September 2024 <strong>DEMO</strong> Latest Innovations and Insights",
+            "description": "URBX has entered into a strategic partnership with ISD to introduce cutting-edge robotic solutions.",
+            "slug": "isd-4",
+            "date": "2023-09-13",
+            "image": "/news/demo/content_2.jpg"
         }
     ]
 }

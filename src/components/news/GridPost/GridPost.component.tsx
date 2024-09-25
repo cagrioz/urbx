@@ -1,0 +1,44 @@
+'use client';
+
+import useBuildNewsUrl from '@/hooks/useBuildNewsUrl';
+import useCalculateReadtime from '@/hooks/useCalculateReadtime';
+import { ibm_mono } from '@/styles/fonts';
+import { Post } from '@/types';
+import Image from 'next/image';
+import Link from 'next/link';
+
+export default function GridPost({ title, description, image, slug, date }: Post) {
+    const readtime = useCalculateReadtime(description);
+    const postUrl = useBuildNewsUrl(slug);
+
+    return (
+        <div className="flex items-center gap-6 bg-standard-7 rounded-[20px] overflow-hidden p-3.5">
+            <div className="w-[262px] shrink-0">
+                <div className="h-[292px] w-full overflow-hidden rounded-[10px]">
+                    <Link href={postUrl}>
+                        <Image src={image} alt={title} width={262} height={292} />
+                    </Link>
+                </div>
+            </div>
+            <div className="grow flex flex-col h-full">
+                <div className="grow pt-2">
+                    <span className="text-standard-4 text-sm" style={ibm_mono.style}>
+                        NEWS . {readtime} min
+                    </span>
+                    <h3 className="text-black text-2xl mt-6">
+                        <Link href={postUrl}>
+                            <span dangerouslySetInnerHTML={{ __html: title }} />
+                        </Link>
+                    </h3>
+                </div>
+                <Link
+                    href={postUrl}
+                    className="underline text-accent text-sm mt-6 inline-block pb-2"
+                    style={ibm_mono.style}
+                >
+                    Read More
+                </Link>
+            </div>
+        </div>
+    );
+}
