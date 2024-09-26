@@ -30,7 +30,7 @@ export default function News() {
                             Urbx News
                         </h1>
                     </div>
-                    <div className="laptop:mb-[60px] grid grid-cols-1 tablet:grid-cols-2 bg-standard-7 rounded-[20px] items-center">
+                    <div className="mb-10 laptop:mb-[60px] grid grid-cols-1 tablet:grid-cols-2 bg-standard-7 rounded-[20px] items-center">
                         <div className="rounded-[20px] overflow-hidden h-full">
                             <Link href="/news/demo">
                                 <Image
