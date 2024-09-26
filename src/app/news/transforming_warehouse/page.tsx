@@ -137,7 +137,7 @@ export default function Partners() {
                                 playsInline
                                 loop
                             >
-                                <source src="/news/demo/featured.mp4" type="video/mp4" />
+                                <source src="/news/demo/featured2.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>{' '}
                         </div>
