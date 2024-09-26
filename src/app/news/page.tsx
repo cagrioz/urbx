@@ -6,6 +6,7 @@ import { ibm_mono } from '@/styles/fonts';
 import Image from 'next/image';
 
 import DemoFeatured from '../../../public/news/demo/featured.jpg';
+import WarehouseFeatured from '../../../public/news/transforming_warehouse/cover.jpg';
 
 import Link from 'next/link';
 import CTA from '@/components/CTA';
@@ -29,7 +30,7 @@ export default function News() {
                             Urbx News
                         </h1>
                     </div>
-                    <div className="grid grid-cols-1 tablet:grid-cols-2 bg-standard-7 rounded-[20px] items-center">
+                    <div className="mb-10 laptop:mb-[60px] grid grid-cols-1 tablet:grid-cols-2 bg-standard-7 rounded-[20px] items-center">
                         <div className="rounded-[20px] overflow-hidden h-full">
                             <Link href="/news/demo">
                                 <Image
@@ -53,6 +54,40 @@ export default function News() {
                                 In September 2024, URBX hosted its inaugural DEMO, presenting the latest advancements in
                                 robotic technology. This event showcased the unique features and benefits of their
                                 innovations within the automated warehouse sector.
+                            </p>
+                            <Link
+                                href="/news/demo"
+                                className="underline text-accent text-sm mt-6 inline-block"
+                                style={ibm_mono.style}
+                            >
+                                Read More
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-1 tablet:grid-cols-2 bg-standard-7 rounded-[20px] items-center">
+                        <div className="rounded-[20px] overflow-hidden h-full">
+                            <Link href="/news/transforming_warehouse">
+                                <Image
+                                    src={WarehouseFeatured}
+                                    alt="Warehouse"
+                                    className="object-cover h-full laptop:min-h-[480px]"
+                                />
+                            </Link>
+                        </div>
+                        <div className="p-8 laptop:p-10">
+                            <span className="text-standard-4 text-sm" style={ibm_mono.style}>
+                                NEWS . 8 min
+                            </span>
+                            <h3 className="text-black text-3xl laptop:text-[40px] laptop:leading-[52px] mt-6">
+                                <Link href="/news/transforming_warehouse">
+                                    Reaching New Heights: How URBX is Transforming Warehouse Operations Through Vertical
+                                    Innovation
+                                </Link>
+                            </h3>
+                            <p className="text-standard-4 text-base mt-3">
+                                URBX is revolutionizing the warehouse industry with its innovative vertical warehouse
+                                solutions. Discover how URBX is transforming warehouse operations with its cutting-edge
+                                technology.
                             </p>
                             <Link
                                 href="/news/demo"
