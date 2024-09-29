@@ -30,7 +30,7 @@ export default function News() {
                             Urbx News
                         </h1>
                     </div>
-                    <div className="mb-10 laptop:mb-[60px] grid grid-cols-1 tablet:grid-cols-2 bg-standard-7 rounded-[20px] items-center">
+                    <div className="mb-10 laptop:mb-[60px] grid grid-cols-1 tablet:grid-cols-1 bg-standard-7 rounded-[20px] items-center">
                         <div className="rounded-[20px] overflow-hidden w-full">
                             <Link href="/news/demo">
                                 <Image
@@ -64,13 +64,13 @@ export default function News() {
                             </Link>
                         </div>
                     </div>
-                    <div className="grid grid-cols-1 tablet:grid-cols-2 bg-standard-7 rounded-[20px] items-center">
-                        <div className="rounded-[20px] overflow-hidden w-full">
+                    <div className="grid grid-cols-1 tablet:grid-cols-1 bg-standard-7 rounded-[20px] items-center">
+                        <div className="rounded-[20px] overflow-hidden h-full">
                             <Link href="/news/transforming_warehouse">
                                 <Image
                                     src={WarehouseFeatured}
                                     alt="Warehouse"
-                                    className="object-contain w-full laptop:min-h-[480px]"
+                                    className="object-cover h-full laptop:min-h-[480px]"
                                 />
                             </Link>
                         </div>
