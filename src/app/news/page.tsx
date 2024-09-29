@@ -65,12 +65,12 @@ export default function News() {
                         </div>
                     </div>
                     <div className="grid grid-cols-1 tablet:grid-cols-2 bg-standard-7 rounded-[20px] items-center">
-                        <div className="rounded-[20px] overflow-hidden h-full">
+                        <div className="rounded-[20px] overflow-hidden w-full">
                             <Link href="/news/transforming_warehouse">
                                 <Image
                                     src={WarehouseFeatured}
                                     alt="Warehouse"
-                                    className="object-cover w-full laptop:min-h-[480px]"
+                                    className="object-cover h-full laptop:min-h-[480px]"
                                 />
                             </Link>
                         </div>
