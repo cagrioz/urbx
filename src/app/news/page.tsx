@@ -6,7 +6,7 @@ import { ibm_mono } from '@/styles/fonts';
 import Image from 'next/image';
 
 import DemoFeatured from '../../../public/news/demo/featured.jpg';
-import WarehouseFeatured from '../../../public/news/transforming_warehouse/cover.jpg';
+import WarehouseFeatured from '../../../public/news/transforming_warehouse/skyhigh.png';
 
 import Link from 'next/link';
 import CTA from '@/components/CTA';
