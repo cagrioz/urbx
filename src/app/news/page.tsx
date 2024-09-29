@@ -70,7 +70,7 @@ export default function News() {
                                 <Image
                                     src={WarehouseFeatured}
                                     alt="Warehouse"
-                                    className="object-cover h-full laptop:min-h-[480px]"
+                                    className="object-cover w-full laptop:min-h-[480px]"
                                 />
                             </Link>
                         </div>
@@ -80,14 +80,11 @@ export default function News() {
                             </span>
                             <h3 className="text-black text-3xl laptop:text-[40px] laptop:leading-[52px] mt-6">
                                 <Link href="/news/transforming_warehouse">
-                                    Reaching New Heights: How URBX is Transforming Warehouse Operations Through Vertical
-                                    Innovation
+                                    Elevating Fulfillment: URBX Draws Inspiration from Otis to Revolutionize Warehousing
                                 </Link>
                             </h3>
                             <p className="text-standard-4 text-base mt-3">
-                                URBX is revolutionizing the warehouse industry with its innovative vertical warehouse
-                                solutions. Discover how URBX is transforming warehouse operations with its cutting-edge
-                                technology.
+                                This week, we invite you to explore a pivotal moment in architectural history: the invention of the elevator by Elisha Graves Otis. This groundbreaking innovation not only revolutionized building design but also offers intriguing parallels to the modern landscape of warehouse operations.
                             </p>
                             <Link
                                 href="/news/demo"
