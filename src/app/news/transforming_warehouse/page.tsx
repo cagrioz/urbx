@@ -2,8 +2,8 @@ import Navigation from '@/components/Navigation';
 import { ibm_mono } from '@/styles/fonts';
 import Container from '@/components/Container';
 
-import CoverImg from '../../../../public/news/transforming_warehouse/cover.jpg';
-import Content1Img from '../../../../public/news/transforming_warehouse/cover.jpg';
+import CoverImg from '../../../../public/news/transforming_warehouse/skyhigh.png';
+import Content1Img from '../../../../public/news/transforming_warehouse/skyhigh.png';
 
 import ISDCommentCover from '@/assets/isd_comment_cover.jpg';
 import ISDCommentAvatar from '@/assets/isd_comment_avatar.jpg';
