@@ -36,7 +36,7 @@ export default function News() {
                                 <Image
                                     src={DemoFeatured}
                                     alt="Demo"
-                                    className="object-cover h-full laptop:min-h-[480px]"
+                                    className="object-contain h-full laptop:min-h-[480px]"
                                 />
                             </Link>
                         </div>
