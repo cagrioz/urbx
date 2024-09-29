@@ -80,7 +80,7 @@ export default function News() {
                             </span>
                             <h3 className="text-black text-3xl laptop:text-[40px] laptop:leading-[52px] mt-6">
                                 <Link href="/news/transforming_warehouse">
-                                    Elevating Fulfillment: URBX Draws Inspiration from Otis to Revolutionize Warehousing
+                                    URBX Revolutionizes Warehousing with Inspiration from Otis
                                 </Link>
                             </h3>
                             <p className="text-standard-4 text-base mt-3">
