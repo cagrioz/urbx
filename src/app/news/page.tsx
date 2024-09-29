@@ -84,7 +84,7 @@ export default function News() {
                                 </Link>
                             </h3>
                             <p className="text-standard-4 text-base mt-3">
-                                This week, we invite you to explore a pivotal moment in architectural history: the invention of the elevator by Elisha Graves Otis. This groundbreaking innovation not only revolutionized building design but also offers intriguing parallels to the modern landscape of warehouse operations.
+                                This week, we invite you to explore a pivotal moment in architectural history: the invention of the elevator by Elisha Graves Otis.
                             </p>
                             <Link
                                 href="/news/demo"
