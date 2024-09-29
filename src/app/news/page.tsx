@@ -31,12 +31,12 @@ export default function News() {
                         </h1>
                     </div>
                     <div className="mb-10 laptop:mb-[60px] grid grid-cols-1 tablet:grid-cols-2 bg-standard-7 rounded-[20px] items-center">
-                        <div className="rounded-[20px] overflow-hidden h-full">
+                        <div className="rounded-[20px] overflow-hidden w-full">
                             <Link href="/news/demo">
                                 <Image
                                     src={DemoFeatured}
                                     alt="Demo"
-                                    className="object-contain h-full laptop:min-h-[480px]"
+                                    className="object-cover w-full laptop:min-h-[480px]"
                                 />
                             </Link>
                         </div>
@@ -70,7 +70,7 @@ export default function News() {
                                 <Image
                                     src={WarehouseFeatured}
                                     alt="Warehouse"
-                                    className="object-cover h-full laptop:min-h-[480px]"
+                                    className="object-contain w-full laptop:min-h-[480px]"
                                 />
                             </Link>
                         </div>
