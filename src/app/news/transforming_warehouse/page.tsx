@@ -54,8 +54,8 @@ export default function Partners() {
                         >
                             latest urbx news
                         </span>
-                        <h1 className="font-light text-white text-3xl laptop:text-[40px] laptop:leading-none laptop:max-w-[560px] mt-3 tracking-tight">
-                            Reaching for the Sky: URBX's Next-Level Approach to Fulfillment
+                        <h1 className="font-light text-white text-3xl laptop:text-[40px] laptop:leading-none mt-3 tracking-tight">
+                            Inspired by Otis: URBX Takes Warehouse Fulfillment to New Heights
                         </h1>
                     </div>
                     <div className="rounded-2xl overflow-hidden">
