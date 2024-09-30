@@ -150,31 +150,13 @@ export default function Partners() {
                             <div className="mt-6 laptop:mt-10">
                                 <h4 className="text-xl tablet:text-2xl"> Benefits of Vertical Integration</h4>
                                 <p className="text-standard-4 mt-3">
-                                    The URBX system provides a transformative approach to warehouse operations through
-                                    its advanced vertical integration capabilities, significantly enhancing storage
-                                    efficiency and operational throughput. By enabling warehouses to reach heights of up
-                                    to 125 feet, URBX maximizes vertical space that is often overlooked in traditional
-                                    designs. This increased height allows businesses to store a greater volume of goods
-                                    within a smaller footprint, effectively optimizing the utilization of available real
-                                    estate.
+                                    URBX transforms how warehouses operate by harnessing the full potential of vertical integration, pushing the limits of storage efficiency and performance. Imagine warehouses that don’t just take up space but rise—up to 125 feet high—making every inch count. This vertical approach allows you to store more in a smaller footprint, making the most of real estate and unlocking valuable storage potential often left untapped.
                                 </p>
                                 <p className="text-standard-4 mt-3">
-                                    In addition to maximizing storage capacity, the URBX system enhances operational
-                                    throughput by facilitating rapid retrieval of stored items. With its dual-grid
-                                    AI-driven technology, the system ensures that inventory can be accessed quickly and
-                                    efficiently, reducing wait times and improving order fulfillment rates. This
-                                    efficiency not only streamlines material handling processes but also minimizes labor
-                                    costs associated with manual retrieval methods.
+                                    But it’s not just about space. With URBX’s smart dual-grid technology, retrieving items becomes lightning fast and incredibly efficient. Think of it as on-demand access to your inventory, drastically cutting down wait times and supercharging fulfillment speed. This streamlined approach not only reduces reliance on manual labor but also drives down costs, all while improving throughput.
                                 </p>
                                 <p className="text-standard-4 mt-3">
-                                    The remarkable scalability of the URBX system allows it to seamlessly integrate into
-                                    virtually any existing warehouse configuration, fully optimizing facility
-                                    footprints. By maximizing vertical space and enhancing storage capacity, the URBX
-                                    system ensures that warehouses utilize the full capability of their facility's
-                                    footprint. This flexibility not only makes efficient use of available resources but
-                                    also allows businesses to adapt to changing demands and operational needs. As a
-                                    result, companies can achieve significant improvements in both efficiency and
-                                    productivity.
+                                    URBX's system seamlessly integrates into any warehouse setup, adapting to your unique space and needs. By expanding upward rather than outward, you're not just increasing storage—you're amplifying your operational flexibility. With URBX, you’re equipped to scale effortlessly, meet new demands, and enhance productivity—all within the same footprint.
                                 </p>
                             </div>
                         </div>
