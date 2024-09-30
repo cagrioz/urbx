@@ -87,7 +87,7 @@ export default function News() {
                                 This week, we invite you to explore a pivotal moment in architectural history: the invention of the elevator by Elisha Graves Otis. This groundbreaking innovation not only revolutionized building design but also offers intriguing parallels to the modern landscape of warehouse operations.
                             </p>
                             <Link
-                                href="/news/demo"
+                                href="/news/transforming_warehouse"
                                 className="underline text-accent text-sm mt-6 inline-block"
                                 style={ibm_mono.style}
                             >
