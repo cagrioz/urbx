@@ -89,8 +89,7 @@ export default function News() {
                             <Link
                                 href="/news/transforming_warehouse"
                                 className="underline text-accent text-sm mt-6 inline-block"
-                                style={ibm_mono.style}
-                            >
+                                style={ibm_mono.style} >
                                 Read More
                             </Link>
                         </div>
