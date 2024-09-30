@@ -93,7 +93,7 @@ export default function Partners() {
                                     URBX envisions a future where vertical space isn’t wasted. We’re building systems that make storage efficient and retrieval fast and safe. By embracing vertical integration, we’re streamlining operations, cutting inefficiencies, and making every square foot of your facility work harder.
                                 </p>
                                 <p className="text-standard-4 mt-3">
-                                    Looking ahead, URBX is leading the charge in this next era of warehousing. We see a future where businesses tap into the power of vertical scalability, ready to meet the demands of a fast-moving market. Join us as we reimagine what’s possible in warehouse operations, and unlock new heights of growth and efficiency.
+                                    Looking ahead, URBX is leading the charge in this next era of warehousing. We see a future where businesses tap into the power of vertical scalability, ready to meet the demands of a fast-moving market.
                                 </p>
                             </div>
                         </div>
@@ -125,8 +125,7 @@ export default function Partners() {
                                     But it’s not just about space. With URBX’s smart dual-grid technology, retrieving items becomes lightning fast and incredibly efficient. Think of it as on-demand access to your inventory, drastically cutting down wait times and supercharging fulfillment speed. This streamlined approach not only reduces reliance on manual labor but also drives down costs, all while improving throughput.
                                 </p>
                                 <p className="text-standard-4 mt-3">
-                                    URBX's system seamlessly integrates into any warehouse setup, adapting to your unique space and needs. By expanding upward rather than outward, you're not just increasing storage—you're amplifying your operational flexibility. With URBX, you’re equipped to scale effortlessly, meet new demands, and enhance productivity—all within the same footprint.
-                                </p>
+                                    URBX's system seamlessly integrates into any warehouse setup, adapting to your unique space and needs. By expanding upward rather than outward, you're not just increasing storage—you're amplifying your operational flexibility.
                             </div>
                         </div>
                         <div className="w-full tablet:w-[330px] laptop:w-[456px] rounded-[20px] overflow-hidden shrink-0">
