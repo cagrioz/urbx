@@ -78,53 +78,22 @@ export default function Partners() {
                             </h3>
                             <div className="mt-6 laptop:mt-10">
                                 <p className="text-standard-4 mt-3">
-                                    This week, we invite you to explore a pivotal moment in architectural history: the
-                                    invention of the elevator by Elisha Graves Otis. This groundbreaking innovation not
-                                    only revolutionized building design but also offers intriguing parallels to the
-                                    modern landscape of warehouse operations.
+                                    This week, we dive into a defining moment in architectural history: Elisha Graves Otis’s game-changing invention of the elevator. It didn’t just change how we build—it reimagined what was possible, and we see the same revolution happening today in warehouses.
                                 </p>
                                 <p className="text-standard-4 mt-3">
-                                    Prior to Otis’s invention, buildings were limited to a mere five stories,
-                                    constraining the potential for vertical expansion in urban environments. Imagine
-                                    bustling city streets with modest skylines, where the dream of vertical living
-                                    seemed unattainable. The introduction of the elevator empowered architects to
-                                    envision towering skyscrapers that pierced the clouds, fundamentally transforming
-                                    urban planning dynamics. This newfound ability to ascend allowed cities to maximize
-                                    valuable real estate, paving the way for the iconic skylines we admire today.
+                                    Before Otis’s innovation, buildings were capped at five stories, limiting the vertical growth of cities. Picture city streets with modest skylines, where the thought of towering skyscrapers was nothing but a distant dream. Otis’s elevator changed that forever. It allowed architects to reach for the sky, creating the iconic skylines we know today, and making vertical living a reality.
                                 </p>
                                 <p className="text-standard-4 mt-3">
-                                    As we turn our attention to the present, we recognize a similar challenge in the
-                                    warehousing sector. Traditional warehouses typically reach heights of only 40 feet,
-                                    a limitation that stifles operational efficiency and inflates real estate costs in
-                                    an increasingly competitive market. Just as buildings once struggled to stack high
-                                    without proper elevators, modern warehouses face significant obstacles when
-                                    attempting to store goods at greater heights. Over-stacking pallets can pose serious
-                                    safety risks for employees and lead to time-consuming retrieval processes that
-                                    hinder productivity.
+                                    Fast forward to the present, and warehouses are facing a similar hurdle. Traditional warehouse heights cap out at around 40 feet, putting a ceiling on efficiency and driving up real estate costs in a world where space is scarce. Like buildings before elevators, warehouses struggle to rise higher without the right technology. Over-stacking leads to safety risks and slows down the entire operation.
                                 </p>
                                 <p className="text-standard-4 mt-3">
-                                    With urban real estate prices on the rise, the need for vertical scalability in
-                                    warehousing has never been more urgent. At URBX, we draw inspiration from Otis’s
-                                    legacy, striving to transform warehouse operations in much the same way he
-                                    transformed architecture. Our advanced robotic systems are engineered to reach
-                                    impressive heights of up to 125 feet, enabling the development of taller warehouses
-                                    in densely populated areas where space is at a premium.
+                                    As property costs soar in urban areas, the need to scale vertically in warehousing has never been more urgent. That’s where URBX steps in. Taking a page from Otis’s playbook, we’re rethinking warehouse design with robotic systems that reach up to 125 feet, enabling taller, smarter warehouses in the tightest spaces.
                                 </p>
                                 <p className="text-standard-4 mt-3">
-                                    URBX envisions a future where vertical space is fully optimized, allowing for
-                                    efficient storage and swift, safe retrieval of goods. By embracing vertical
-                                    integration, URBX aims to redefine the warehousing landscape, converting
-                                    inefficiencies into streamlined operations that enhance overall productivity. Our
-                                    innovative solutions focus not only on increasing height but also on optimizing
-                                    workflows, reducing operational inefficiencies, and maximizing the utility of every
-                                    square foot of your facility.
+                                    URBX envisions a future where vertical space isn’t wasted. We’re building systems that make storage efficient and retrieval fast and safe. By embracing vertical integration, we’re streamlining operations, cutting inefficiencies, and making every square foot of your facility work harder.
                                 </p>
                                 <p className="text-standard-4 mt-3">
-                                    Looking ahead, URBX is committed to leading the charge in this new era of
-                                    warehousing. We envision a landscape where businesses can leverage vertical
-                                    scalability to meet the evolving demands of a rapidly changing market. Join us on
-                                    this journey as we reimagine the possibilities of warehouse operations, unlocking
-                                    new opportunities for growth and efficiency that benefit all businesses.
+                                    Looking ahead, URBX is leading the charge in this next era of warehousing. We see a future where businesses tap into the power of vertical scalability, ready to meet the demands of a fast-moving market. Join us as we reimagine what’s possible in warehouse operations, and unlock new heights of growth and efficiency.
                                 </p>
                             </div>
                         </div>
