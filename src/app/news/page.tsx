@@ -55,11 +55,7 @@ export default function News() {
                                 robotic technology. This event showcased the unique features and benefits of their
                                 innovations within the automated warehouse sector.
                             </p>
-                            <Link
-                                href="/news/demo"
-                                className="underline text-accent text-sm mt-6 inline-block"
-                                style={ibm_mono.style}
-                            >
+                            <Link href="/news/demo" className="underline text-accent text-sm mt-6 inline-block" style={ibm_mono.style}>
                                 Read More
                             </Link>
                         </div>
@@ -86,10 +82,7 @@ export default function News() {
                             <p className="text-standard-4 text-base mt-3">
                                 This week, we invite you to explore a pivotal moment in architectural history: the invention of the elevator by Elisha Graves Otis. This groundbreaking innovation not only revolutionized building design but also offers intriguing parallels to the modern landscape of warehouse operations.
                             </p>
-                            <Link
-                                href="/news/transforming_warehouse"
-                                className="underline text-accent text-sm mt-6 inline-block"
-                                style={ibm_mono.style} >
+                            <Link href="/news/demo" className="underline text-accent text-sm mt-6 inline-block" style={ibm_mono.style}>
                                 Read More
                             </Link>
                         </div>
