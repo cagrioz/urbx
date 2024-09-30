@@ -14,7 +14,7 @@ const config: Config = {
                     1: '#111222',
                     2: '#394365',
                     3: '#535B75',
-                    4: '#FFFFFF',
+                    4: '#969FBC',
                     5: '#CAD0DD',
                     6: '#DCE0EA',
                     7: '#F2F4F9',
