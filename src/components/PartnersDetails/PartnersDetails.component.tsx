@@ -50,7 +50,7 @@ const partners = [
     {
         logo: ISDLogo,
         description:
-            'Based in Wixom, MI, Integrated Systems Design (ISD) specializes in delivering scalable automated solutions for a variety of sectors, including warehouse operations, manufacturing, distribution, retail, and wholesale. ISD offers a comprehensive suite of services that encompasses consulting, system design, integration, industrial controls, and customer support, all tailored to meet the specific needs of each client. ',
+            'Integrated Systems Design (ISD) specializes in delivering scalable automated solutions for a variety of sectors, including warehouse operations, manufacturing, distribution, retail, and wholesale. ISD offers a comprehensive suite of services that encompasses consulting, system design, integration, industrial controls, and customer support, all tailored to meet the specific needs of each client. ',
         location: 'ISD - Wixom, MI ',
         website: 'https://www.isd-solutions.com/ ',
     },
