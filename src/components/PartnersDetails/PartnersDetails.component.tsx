@@ -14,7 +14,7 @@ const partners = [
     {
         logo: DCSLogo,
         description:
-            'Design Conveyor Systems has been Urbx’s first partner, boasting over 40 years of experience in material handling, full-scale warehouse operations, and conveyor design. Founded in 1982, Design Conveyors offers a wide range of services, including supply chain consulting, customer support, and systems design integration. Urbx has been fortunate to collaborate with DCS from the very beginning, and their expertise has been a crucial aspect of our success.',
+            'Design Conveyor Systems has been Urbx’s first partner, boasting over 40 years of experience in material handling, full-scale warehouse operations, and conveyor design. Founded in 1982, Design Conveyors offers a wide range of services, including supply chain consulting, customer support, and systems design integration. ',
 
         location: 'DCS - Nasvhille, TN',
         website: 'https://www.designconveyor.com/',
@@ -22,42 +22,42 @@ const partners = [
     {
         logo: AbcoLogo,
         description:
-            'ABCO systems is one of Urbx’s esteemed partners, specializing in warehouse design. From the outset, ABCO has collaborated with Urbx, establishing itself as a leader in warehouse automation and design. They offer a comprehensive range of services to meet customer needs, making them a one-stop shop for warehouse design and providing expertise throughout the entire process. ABCO and Urbx have maintained a loyal partnership for many years, playing a crucial role in our success. ',
+            'ABCO systems is one of Urbx’s esteemed partners, specializing in warehouse design. From the outset, ABCO has collaborated with Urbx, establishing itself as a leader in warehouse automation and design. They offer a comprehensive range of services to meet customer needs, making them a one-stop shop for warehouse design and providing expertise throughout the entire process. ',
         location: 'ABCO System - Carlstadt, NJ',
         website: 'https://www.abcoautomation.us/',
     },
     {
         logo: MainwayLogo,
         description:
-            'Mainway Handling specializes in optimizing warehouse operations and driving efficiency. With prestigious partners such as FedEx, Ikea, and Staples, Mainway offers expertise across a broad range of services. These include conveyor systems, sortation systems, goods-to-person solutions, pick towers, truck loading and unloading, and many more. Mainway Handling has been a trusted partner to Urbx for many years, continually bolstering our success.',
+            'Mainway Handling specializes in optimizing warehouse operations and driving efficiency. With prestigious partners such as FedEx, Ikea, and Staples, Mainway offers expertise across a broad range of services. These include conveyor systems, sortation systems, goods-to-person solutions, pick towers, truck loading and unloading, and many more. ',
         location: 'Mainway - Ontario, Canada',
         website: 'https://www.mainwayhandling.com/',
     },
     {
         logo: CarterLogo,
         description:
-            'Carter Intralogistics specializes in automation and custom equipment integration. Carter provides cutting-edge automation solutions and material handling expertise across various industries, including e-commerce, distribution and fulfillment, postal and parcel, reverse logistics, food and beverage, and more. Their services encompass solution design, retrofits, parts and services, as well as scheduled and resident maintenance. Carter Intralogistics continues to be a trusted and esteemed partner of Urbx. ',
+            'Carter Intralogistics specializes in automation and custom equipment integration. Carter provides cutting-edge automation solutions and material handling expertise across various industries, including e-commerce, distribution and fulfillment, postal and parcel, reverse logistics, food and beverage, and more. Their services encompass solution design, retrofits, parts and services, as well as scheduled and resident maintenance. ',
         location: 'Carter Intralogistics - Fredrick, MD',
         website: 'https://www.cartercontrols.com/',
     },
     {
         logo: VargoLogo,
         description:
-            'Vargo Solutions specializes in e-commerce fulfillment, serving prominent customers such as American Eagle, WineDirect, Forever21, and many others. Vargo Solutions supports a diverse range of industries, including e-commerce, wholesale, retail, and manufacturing, by streamlining the fulfillment process. As a trusted partner of Urbx , Vargo Solutions has been instrumental in our success and will continue to play a crucial role in our future achievements.',
+            'Vargo Solutions specializes in e-commerce fulfillment, serving prominent customers such as American Eagle, WineDirect, Forever21, and many others. Vargo Solutions supports a diverse range of industries, including e-commerce, wholesale, retail, and manufacturing, by streamlining the fulfillment process. ',
         location: 'Vargo - Dublin, Ohio ',
         website: 'https://www.vargosolutions.com/',
     },
     {
         logo: ISDLogo,
         description:
-            'Based in Wixom, MI, Integrated Systems Design (ISD) specializes in delivering scalable automated solutions for a variety of sectors, including warehouse operations, manufacturing, distribution, retail, and wholesale. The company offers a comprehensive suite of services that encompasses consulting, system design, integration, industrial controls, and customer support, all tailored to meet the specific needs of each client. ',
+            'Based in Wixom, MI, Integrated Systems Design (ISD) specializes in delivering scalable automated solutions for a variety of sectors, including warehouse operations, manufacturing, distribution, retail, and wholesale. ISD offers a comprehensive suite of services that encompasses consulting, system design, integration, industrial controls, and customer support, all tailored to meet the specific needs of each client. ',
         location: 'ISD - Wixom, MI ',
         website: 'https://www.isd-solutions.com/ ',
     },
     {
         logo: HytekLogo,
         description:
-            'Hytek Automation specializes in providing cutting-edge automation solutions to a wide range of industries. Their services include conveyor systems, sortation systems, robotic solutions, and many more. Hytek Automation has been a trusted partner of Urbx for many years, providing critical expertise in automation and material handling. ',
+            'Hytek Automation specializes in providing cutting-edge automation solutions to a wide range of industries. Their services include conveyor systems, sortation systems, robotic solutions, and many more. ',
         location: 'Hy-tek Intralogistics - Columbus, OH ',
         website: 'https://www.hytekautomation.com/',
     },
