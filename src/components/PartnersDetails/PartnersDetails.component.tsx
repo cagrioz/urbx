@@ -52,7 +52,7 @@ const partners = [
         description:
             'Integrated Systems Design (ISD) specializes in delivering scalable automated solutions for a variety of sectors, including automotive, manufacturing, distribution, retail, and wholesale. ISD offers a comprehensive suite of services that encompasses consulting, system design, integration, industrial controls, and customer support, all tailored to meet the specific needs of each client. ',
         location: 'ISD - Wixom, MI ',
-        website: 'https://www.isd-solutions.com/ ',
+        website: 'https://isddd.com/',
     },
     {
         logo: HytekLogo,
