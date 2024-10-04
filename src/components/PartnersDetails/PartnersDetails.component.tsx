@@ -50,8 +50,10 @@ const partners = [
     {
         logo: ISDLogo,
         description:
-            'Vargo Solutions specializes in e-commerce fulfillment, serving prominent customers such as American Eagle, WineDirect, Forever21, and many others. Vargo Solutions supports a diverse range of industries, including e-commerce, wholesale, retail, and manufacturing, by streamlining the fulfillment process. As a trusted partner of Urbx , Vargo Solutions has been instrumental in our success and will continue to play a crucial role in our future achievements. ',
-        location: 'Integrated Systems Design - Dublin, Ohio ',
+            'Based in Wixom, MI, Integrated Systems Design (ISD) specializes in delivering scalable automated solutions for a variety of sectors, 
+including warehouse operations, manufacturing, distribution, retail, and wholesale. The company offers a comprehensive suite of 
+services that encompasses consulting, system design, integration, industrial controls, and customer support, all tailored to meet the 
+specific needs of each client.',
         website: 'https://www.isd-solutions.com/',
     },
     {
