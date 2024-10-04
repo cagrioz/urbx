@@ -36,7 +36,7 @@ const partners = [
     {
         logo: CarterLogo,
         description:
-            'Carter Intralogistics specializes in automation and custom equipment integration. Carter provides cutting-edge automation solutions and material handling expertise across various industries, including e-commerce, distribution and fulfillment, postal and parcel, reverse logistics, food and beverage, and more. Their services encompass solution design, retrofits, parts and services, as well as scheduled and resident maintenance. ',
+            'Carter Intralogistics specializes in automation and custom equipment integration. Carter automation solutions and material handling expertise across various industries, including e-commerce, distribution and fulfillment, postal and parcel, reverse logistics, food and beverage, and more. Their services encompass solution design, retrofits, parts and services, as well as scheduled and resident maintenance. ',
         location: 'Carter Intralogistics - Fredrick, MD',
         website: 'https://www.cartercontrols.com/',
     },
@@ -50,7 +50,7 @@ const partners = [
     {
         logo: ISDLogo,
         description:
-            'Integrated Systems Design (ISD) specializes in delivering scalable automated solutions for a variety of sectors, including warehouse operations, manufacturing, distribution, retail, and wholesale. ISD offers a comprehensive suite of services that encompasses consulting, system design, integration, industrial controls, and customer support, all tailored to meet the specific needs of each client. ',
+            'Integrated Systems Design (ISD) specializes in delivering scalable automated solutions for a variety of sectors, including automotive, manufacturing, distribution, retail, and wholesale. ISD offers a comprehensive suite of services that encompasses consulting, system design, integration, industrial controls, and customer support, all tailored to meet the specific needs of each client. ',
         location: 'ISD - Wixom, MI ',
         website: 'https://www.isd-solutions.com/ ',
     },
