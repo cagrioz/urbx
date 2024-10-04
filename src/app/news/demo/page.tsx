@@ -4,9 +4,8 @@ import Container from '@/components/Container';
 
 import Content1Img from '../../../../public/news/demo/content_1.jpg';
 
-import ISDCommentCover from '@/assets/isd_comment_cover.jpg';
-import ISDCommentAvatar from '@/assets/isd_comment_avatar.jpg';
-import ISDCommentLogo from '@/assets/isd_comment_logo.png';
+import ISDCommentCover from '../../../../public/news/demo/isd_comment_cover.jpg';
+import ISDCommentLogo from '../../../../public/news/demo/isd_comment_logo.png';
 
 import Image from 'next/image';
 import Seperator from '@/components/Separator';
@@ -54,7 +53,8 @@ export default function Partners() {
                             latest urbx news
                         </span>
                         <h1 className="font-light text-white text-3xl laptop:text-[40px] laptop:leading-none laptop:max-w-[560px] mt-3 tracking-tight">
-                            September 2024 <span className="font-semibold">DEMO</span> Latest Innovations and Insights&nbsp;
+                            September 2024 <span className="font-semibold">DEMO</span> Latest Innovations and
+                            Insights&nbsp;
                         </h1>
                     </div>
                     <div className="rounded-2xl overflow-hidden">
@@ -172,13 +172,27 @@ export default function Partners() {
                             <div className="mt-6 laptop:mt-10">
                                 <h4 className="text-xl tablet:text-2xl">Benefits</h4>
                                 <p className="text-standard-4 mt-3">
-                                    The recent DEMO represented a significant milestone for URBX, setting the stage for new industry standards in automated storage and retrieval solutions. This demonstration not only showcased the system&apos;s high-performance capabilities but also highlighted the unique features that distinguish URBX&apos;s solutions in the marketplace. The TowerBot demonstrated its efficiency by providing instant access to totes within a multi-level racking system, thereby eliminating the need for manual retrieval and digging. Meanwhile, the GridBot proved its ability to store and deliver goods with precision to designated locations, such as future pick stations. The success of this DEMO is pivotal for URBX, as it underscores the substantial benefits that the system brings to current warehouse operations. It reinforces the potential of URBX’s large-scale automated storage and retrieval systems to excel in high-density and high-throughput applications.
+                                    The recent DEMO represented a significant milestone for URBX, setting the stage for
+                                    new industry standards in automated storage and retrieval solutions. This
+                                    demonstration not only showcased the system&apos;s high-performance capabilities but
+                                    also highlighted the unique features that distinguish URBX&apos;s solutions in the
+                                    marketplace. The TowerBot demonstrated its efficiency by providing instant access to
+                                    totes within a multi-level racking system, thereby eliminating the need for manual
+                                    retrieval and digging. Meanwhile, the GridBot proved its ability to store and
+                                    deliver goods with precision to designated locations, such as future pick stations.
+                                    The success of this DEMO is pivotal for URBX, as it underscores the substantial
+                                    benefits that the system brings to current warehouse operations. It reinforces the
+                                    potential of URBX’s large-scale automated storage and retrieval systems to excel in
+                                    high-density and high-throughput applications.
                                 </p>
                             </div>
                             <div className="mt-6 laptop:mt-10">
                                 <h4 className="text-xl tablet:text-2xl">Key Takeaways</h4>
                                 <p className="text-standard-4 mt-3">
-                                    URBX successfully showcased its advanced robotic technology to a select group of attendees. The event highlighted the unique advantages of URBX’s dual-grid system, including its considerable scalability, high-density storage capabilities, and efficient, reliable tote storage and retrieval for high-throughput applications.
+                                    URBX successfully showcased its advanced robotic technology to a select group of
+                                    attendees. The event highlighted the unique advantages of URBX’s dual-grid system,
+                                    including its considerable scalability, high-density storage capabilities, and
+                                    efficient, reliable tote storage and retrieval for high-throughput applications.
                                 </p>
                             </div>
                         </div>

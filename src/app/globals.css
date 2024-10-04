@@ -22,3 +22,15 @@ h1 {
 .animate-marquee {
     animation: marquee 15s linear infinite;
 }
+
+.blog-content h4 {
+    @apply text-xl tablet:text-2xl text-white;
+}
+
+.blog-content p {
+    @apply mt-3;
+}
+
+.blog-content > div {
+    @apply mt-10;
+}
