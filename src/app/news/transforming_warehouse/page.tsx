@@ -78,22 +78,41 @@ export default function Partners() {
                             </h3>
                             <div className="mt-6 laptop:mt-10">
                                 <p className="text-standard-4 mt-3">
-                                    This week, we dive into a defining moment in architectural history: Elisha Graves Otis’s game-changing invention of the elevator. It didn’t just change how we build—it reimagined what was possible, and we see the same revolution happening today in warehouses.
+                                    This week, we dive into a defining moment in architectural history: Elisha Graves
+                                    Otis’s game-changing invention of the elevator. It didn’t just change how we
+                                    build—it reimagined what was possible, and we see the same revolution happening
+                                    today in warehouses.
                                 </p>
                                 <p className="text-standard-4 mt-3">
-                                    Before Otis’s innovation, buildings were capped at five stories, limiting the vertical growth of cities. Picture city streets with modest skylines, where the thought of towering skyscrapers was nothing but a distant dream. Otis’s elevator changed that forever. It allowed architects to reach for the sky, creating the iconic skylines we know today, and making vertical living a reality.
+                                    Before Otis’s innovation, buildings were capped at five stories, limiting the
+                                    vertical growth of cities. Picture city streets with modest skylines, where the
+                                    thought of towering skyscrapers was nothing but a distant dream. Otis’s elevator
+                                    changed that forever. It allowed architects to reach for the sky, creating the
+                                    iconic skylines we know today, and making vertical living a reality.
                                 </p>
                                 <p className="text-standard-4 mt-3">
-                                    Fast forward to the present, and warehouses are facing a similar hurdle. Traditional warehouse heights cap out at around 40 feet, putting a ceiling on efficiency and driving up real estate costs in a world where space is scarce. Like buildings before elevators, warehouses struggle to rise higher without the right technology. Over-stacking leads to safety risks and slows down the entire operation.
+                                    Fast forward to the present, and warehouses are facing a similar hurdle. Traditional
+                                    warehouse heights cap out at around 40 feet, putting a ceiling on efficiency and
+                                    driving up real estate costs in a world where space is scarce. Like buildings before
+                                    elevators, warehouses struggle to rise higher without the right technology.
+                                    Over-stacking leads to safety risks and slows down the entire operation.
                                 </p>
                                 <p className="text-standard-4 mt-3">
-                                    As property costs soar in urban areas, the need to scale vertically in warehousing has never been more urgent. That’s where URBX steps in. Taking a page from Otis’s playbook, we’re rethinking warehouse design with robotic systems that reach up to 125 feet, enabling taller, smarter warehouses in the tightest spaces.
+                                    As property costs soar in urban areas, the need to scale vertically in warehousing
+                                    has never been more urgent. That’s where URBX steps in. Taking a page from Otis’s
+                                    playbook, we’re rethinking warehouse design with robotic systems that reach up to
+                                    125 feet, enabling taller, smarter warehouses in the tightest spaces.
                                 </p>
                                 <p className="text-standard-4 mt-3">
-                                    URBX envisions a future where vertical space isn’t wasted. We’re building systems that make storage efficient and retrieval fast and safe. By embracing vertical integration, we’re streamlining operations, cutting inefficiencies, and making every square foot of your facility work harder.
+                                    URBX envisions a future where vertical space isn’t wasted. We’re building systems
+                                    that make storage efficient and retrieval fast and safe. By embracing vertical
+                                    integration, we’re streamlining operations, cutting inefficiencies, and making every
+                                    square foot of your facility work harder.
                                 </p>
                                 <p className="text-standard-4 mt-3">
-                                    Looking ahead, URBX is leading the charge in this next era of warehousing. We see a future where businesses tap into the power of vertical scalability, ready to meet the demands of a fast-moving market.
+                                    Looking ahead, URBX is leading the charge in this next era of warehousing. We see a
+                                    future where businesses tap into the power of vertical scalability, ready to meet
+                                    the demands of a fast-moving market.
                                 </p>
                             </div>
                         </div>
@@ -105,7 +124,7 @@ export default function Partners() {
                                 playsInline
                                 loop
                             >
-                                <source src="/news/demo/featured2.mp4" type="video/mp4" />
+                                <source src="/news/transforming_warehouse/content_1.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>{' '}
                         </div>
@@ -119,13 +138,25 @@ export default function Partners() {
                             <div className="mt-6 laptop:mt-10">
                                 <h4 className="text-xl tablet:text-2xl"> Benefits of Vertical Integration</h4>
                                 <p className="text-standard-4 mt-3">
-                                    URBX transforms how warehouses operate by harnessing the full potential of vertical integration, pushing the limits of storage efficiency and performance. Imagine warehouses that don’t just take up space but rise—up to 125 feet high—making every inch count. This vertical approach allows you to store more in a smaller footprint, making the most of real estate and unlocking valuable storage potential often left untapped.
+                                    URBX transforms how warehouses operate by harnessing the full potential of vertical
+                                    integration, pushing the limits of storage efficiency and performance. Imagine
+                                    warehouses that don’t just take up space but rise—up to 125 feet high—making every
+                                    inch count. This vertical approach allows you to store more in a smaller footprint,
+                                    making the most of real estate and unlocking valuable storage potential often left
+                                    untapped.
                                 </p>
                                 <p className="text-standard-4 mt-3">
-                                    But it’s not just about space. With URBX’s smart dual-grid technology, retrieving items becomes lightning fast and incredibly efficient. Think of it as on-demand access to your inventory, drastically cutting down wait times and supercharging fulfillment speed. This streamlined approach not only reduces reliance on manual labor but also drives down costs, all while improving throughput.
+                                    But it’s not just about space. With URBX’s smart dual-grid technology, retrieving
+                                    items becomes lightning fast and incredibly efficient. Think of it as on-demand
+                                    access to your inventory, drastically cutting down wait times and supercharging
+                                    fulfillment speed. This streamlined approach not only reduces reliance on manual
+                                    labor but also drives down costs, all while improving throughput.
                                 </p>
                                 <p className="text-standard-4 mt-3">
-                                    URBX's system seamlessly integrates into any warehouse setup, adapting to your unique space and needs. By expanding upward rather than outward, you're not just increasing storage—you're amplifying your operational flexibility.
+                                    URBX's system seamlessly integrates into any warehouse setup, adapting to your
+                                    unique space and needs. By expanding upward rather than outward, you're not just
+                                    increasing storage—you're amplifying your operational flexibility.
+                                </p>
                             </div>
                         </div>
                         <div className="w-full tablet:w-[330px] laptop:w-[456px] rounded-[20px] overflow-hidden shrink-0">
@@ -136,7 +167,7 @@ export default function Partners() {
                                 playsInline
                                 loop
                             >
-                                <source src="/news/demo/featurednews.mp4" type="video/mp4" />
+                                <source src="/news/demo/content_2.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                         </div>

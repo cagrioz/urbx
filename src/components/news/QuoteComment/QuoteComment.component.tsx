@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Container from '@/components/Container';
 
-type CommentSectionProps = {
+export type QuoteCommentProps = {
     comment: string;
     authorName: string;
     authorRole: string;
@@ -11,7 +11,7 @@ type CommentSectionProps = {
     companyLogoAlt?: string;
 };
 
-export default function CommentSection({
+export default function QuoteComment({
     comment,
     authorName,
     authorRole,
@@ -19,7 +19,7 @@ export default function CommentSection({
     companyLogo,
     imageAlt = 'Cover image',
     companyLogoAlt = 'Company logo',
-}: CommentSectionProps) {
+}: QuoteCommentProps) {
     return (
         <section>
             <Container>
