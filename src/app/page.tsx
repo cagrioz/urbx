@@ -23,7 +23,7 @@ export default function Home() {
                         AI-Driven <b>Dual Grid Robotics</b> in 3D Space.
                     </>
                 }
-                popupVideoId="UoFbuf4blZw"
+                popupVideoId="PHxxVdxKu6I"
             />
             <Partners />
             <VideoSection />
