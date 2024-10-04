@@ -51,13 +51,14 @@ const partners = [
         logo: ISDLogo,
         description:
             'Based in Wixom, MI, Integrated Systems Design (ISD) specializes in delivering scalable automated solutions for a variety of sectors, including warehouse operations, manufacturing, distribution, retail, and wholesale. The company offers a comprehensive suite of services that encompasses consulting, system design, integration, industrial controls, and customer support, all tailored to meet the specific needs of each client. ',
+        location: 'ISD - Wixom, MI ',
         website: 'https://www.isd-solutions.com/ ',
     },
     {
         logo: HytekLogo,
         description:
             'Hytek Automation specializes in providing cutting-edge automation solutions to a wide range of industries. Their services include conveyor systems, sortation systems, robotic solutions, and many more. Hytek Automation has been a trusted partner of Urbx for many years, providing critical expertise in automation and material handling. ',
-        location: 'Hy-tek Intralogistics - Dublin, Ohio ',
+        location: 'Hy-tek Intralogistics - Columbus, OH ',
         website: 'https://www.hytekautomation.com/',
     },
 ];
