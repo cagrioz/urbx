@@ -1,3 +1,3 @@
 export default function useBuildNewsUrl(slug: string) {
-    return `/news/${slug}`;
+    return `/news/v2/${slug}`;
 }

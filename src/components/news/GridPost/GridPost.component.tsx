@@ -3,11 +3,17 @@
 import useBuildNewsUrl from '@/hooks/useBuildNewsUrl';
 import useCalculateReadtime from '@/hooks/useCalculateReadtime';
 import { ibm_mono } from '@/styles/fonts';
-import { Post } from '@/types';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 
-export default function GridPost({ title, description, image, slug, date }: Post) {
+export interface GridPostProps {
+    title: string;
+    description: string;
+    image: string | StaticImageData;
+    slug: string;
+}
+
+export default function GridPost({ title, description, image, slug }: GridPostProps) {
     const readtime = useCalculateReadtime(description);
     const postUrl = useBuildNewsUrl(slug);
 

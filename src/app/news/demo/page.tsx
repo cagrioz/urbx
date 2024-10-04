@@ -4,8 +4,8 @@ import Container from '@/components/Container';
 
 import Content1Img from '../../../../public/news/demo/content_1.jpg';
 
-import ISDCommentCover from '@/assets/isd_comment_cover.jpg';
-import ISDCommentLogo from '@/assets/isd_comment_logo.png';
+import ISDCommentCover from '../../../../public/news/demo/isd_comment_cover.jpg';
+import ISDCommentLogo from '../../../../public/news/demo/isd_comment_logo.png';
 
 import Image from 'next/image';
 import Seperator from '@/components/Separator';

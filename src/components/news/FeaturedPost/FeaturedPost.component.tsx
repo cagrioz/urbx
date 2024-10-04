@@ -3,11 +3,18 @@
 import useBuildNewsUrl from '@/hooks/useBuildNewsUrl';
 import useCalculateReadtime from '@/hooks/useCalculateReadtime';
 import { ibm_mono } from '@/styles/fonts';
-import { Post } from '@/types';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 
-export default function FeaturedPost({ title, description, image, slug, date }: Post) {
+export interface FeaturedPostProps {
+    title: string;
+    excerpt: string;
+    description: string;
+    image: string | StaticImageData;
+    slug: string;
+}
+
+export default function FeaturedPost({ title, excerpt, description, image, slug }: FeaturedPostProps) {
     const readtime = useCalculateReadtime(description);
     const postUrl = useBuildNewsUrl(slug);
 
@@ -33,7 +40,7 @@ export default function FeaturedPost({ title, description, image, slug, date }: 
                         <span dangerouslySetInnerHTML={{ __html: title }} />
                     </Link>
                 </h3>
-                <div className="text-standard-4 text-base mt-3" dangerouslySetInnerHTML={{ __html: description }}></div>
+                <div className="text-standard-4 text-base mt-3" dangerouslySetInnerHTML={{ __html: excerpt }}></div>
                 <Link href={postUrl} className="underline text-accent text-sm mt-6 inline-block" style={ibm_mono.style}>
                     Read More
                 </Link>

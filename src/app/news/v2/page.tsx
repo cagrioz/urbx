@@ -8,17 +8,13 @@ import { Post } from '@/types';
 import Footer from '@/components/Footer';
 import GridPost from '@/components/news/GridPost';
 import FeaturedPost from '@/components/news/FeaturedPost';
+import { featuredPostContent, getAllPosts } from '@/posts';
 
 export default function PostsPage() {
-    // Read the posts.json file to get all posts metadata
-    const postsFilePath = path.join(process.cwd(), 'src', 'posts.json');
-    const postsObj = JSON.parse(fs.readFileSync(postsFilePath, 'utf-8'));
-
-    const allPosts = postsObj.posts as Post[];
-    const featuredPost = postsObj.featured as Post;
-
     // Sort posts by date (newest first)
-    const sortedPosts = allPosts.sort((a: Post, b: Post) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    const sortedPosts = getAllPosts().sort(
+        (a: Post, b: Post) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
 
     return (
         <>
@@ -39,17 +35,20 @@ export default function PostsPage() {
                         </h1>
                     </div>
                     <div className="mb-10 laptop:mb-[60px] grid grid-cols-1">
-                        <FeaturedPost {...featuredPost} />
+                        <FeaturedPost {...featuredPostContent} />
                     </div>
                     <div className="grid grid-cols-2 gap-6">
                         {sortedPosts.map((post) => (
                             <GridPost
                                 key={post.title}
                                 title={post.title}
-                                description={post.description}
-                                image={post.image}
+                                description={
+                                    post.imageWithGridContent.content.toString() +
+                                    post?.quoteCommentContent?.comment.toString() +
+                                    post?.imageWithGridAfterContent?.content.toString()
+                                }
+                                image={post.cover}
                                 slug={post.slug}
-                                date={post.date}
                             />
                         ))}
                     </div>

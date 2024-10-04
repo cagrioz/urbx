@@ -1,10 +1,14 @@
+import { FeaturedPostProps } from './components/news/FeaturedPost/FeaturedPost.component';
+import { Post } from './types';
+
 // Post 1: DEMO
-export const demo = {
+export const demo: Post = {
     label: 'latest urbx news',
     title: 'September 2024 <strong>DEMO</strong> Latest Innovations and Insights',
-    description: 'URBX has entered into a strategic partnership with ISD to introduce cutting-edge robotic solutions.',
+    excerpt: 'URBX has entered into a strategic partnership with ISD to introduce cutting-edge robotic solutions.',
     slug: 'demo',
     date: '2023-09-13',
+    cover: '/news/demo/cover.jpg',
     media: {
         videoSrc: '/news/demo/featured.mp4',
     },
@@ -35,12 +39,13 @@ export const demo = {
 // Post 2: Transforming Warehouse
 //import transformCoverImg from '../public/news/transforming_warehouse/skyhigh.png';
 
-export const transformingWarehouse = {
+export const transformingWarehouse: Post = {
     label: 'latest urbx news',
     title: 'Elevating Fulfillment: URBX Draws Inspiration from Otis to Revolutionize Warehousing',
-    description: 'URBX has entered into a strategic partnership with ISD to introduce cutting-edge robotic solutions.',
+    excerpt: 'URBX has entered into a strategic partnership with ISD to introduce cutting-edge robotic solutions.',
     slug: 'transforming_warehouse',
     date: '2023-09-13',
+    cover: '/news/transforming_warehouse/cover.png',
     media: {
         image: '/news/transforming_warehouse/skyhigh.png',
     },
@@ -70,4 +75,18 @@ export const transformingWarehouse = {
 
 // Export all posts as an array
 export const allPosts = [demo, transformingWarehouse];
-export const featuredPost = transformingWarehouse;
+export const featuredPost = demo;
+export const featuredPostContent: FeaturedPostProps = {
+    title: featuredPost.title,
+    excerpt: featuredPost.excerpt,
+    description:
+        featuredPost.imageWithGridContent.content.toString() +
+        featuredPost?.quoteCommentContent?.comment.toString() +
+        featuredPost?.imageWithGridAfterContent?.content.toString(),
+    image: featuredPost.cover,
+    slug: featuredPost.slug,
+};
+
+export function getAllPosts(includeFeaturedPost: boolean = false): Post[] {
+    return includeFeaturedPost ? allPosts : allPosts.filter((post) => post !== featuredPost);
+}
