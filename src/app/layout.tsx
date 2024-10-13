@@ -3,9 +3,9 @@ import './globals.css';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-    title: 'Urbx - AI Robotics for Fulfillment',
+    title: 'Urbx - Advanced AI Robotics for Omni-Channel Fulfillment Solutions',
     description:
-        'Urbx offers AI-powered robotics solutions for omni-channel fulfillment, optimizing logistics and supply chain operations through automation and advanced machine learning.',
+        'Urbx provides AI-powered robotics solutions for omni-channel fulfillment, optimizing logistics and supply chain efficiency with automation and machine learning.',
     keywords: 'Urbx, AI robotics, omni-channel fulfillment, logistics automation, supply chain optimization',
     authors: [{ name: 'Urbx' }],
     viewport: 'width=device-width, initial-scale=1.0',
@@ -38,6 +38,7 @@ export default function RootLayout({
                 <link rel="icon" type="image/png" href="/favicon_black.png" media="(prefers-color-scheme: dark)" />
                 <link rel="icon" type="image/png" href="/favicon_white.png" media="(prefers-color-scheme: light)" />
                 <meta charSet="UTF-8" />
+                <link rel="canonical" href="https://urbx.com/" />
             </head>
             <body>{children}</body>
         </html>
