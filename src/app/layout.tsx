@@ -3,10 +3,13 @@ import './globals.css';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-    title: 'Urbx',
-    description: '',
+    title: 'Urbx - AI Robotics for Fulfillment',
+    description:
+        'Urbx offers AI-powered robotics solutions for omni-channel fulfillment, optimizing logistics and supply chain operations through automation and advanced machine learning.',
+    keywords: 'Urbx, AI robotics, omni-channel fulfillment, logistics automation, supply chain optimization',
+    authors: [{ name: 'Urbx' }],
+    viewport: 'width=device-width, initial-scale=1.0',
 };
-
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -34,6 +37,7 @@ export default function RootLayout({
                 />
                 <link rel="icon" type="image/png" href="/favicon_black.png" media="(prefers-color-scheme: dark)" />
                 <link rel="icon" type="image/png" href="/favicon_white.png" media="(prefers-color-scheme: light)" />
+                <meta charSet="UTF-8" />
             </head>
             <body>{children}</body>
         </html>
