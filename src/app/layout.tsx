@@ -3,7 +3,7 @@ import './globals.css';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-    title: 'Urbx - Advanced AI Robotics for Omni-Channel Fulfillment Solutions',
+    title: 'Urbx - AI Robotics for Omni-Channel Fulfillment',
     description:
         'Urbx provides AI-powered robotics solutions for omni-channel fulfillment, optimizing logistics and supply chain efficiency with automation and machine learning.',
     keywords: 'Urbx, AI robotics, omni-channel fulfillment, logistics automation, supply chain optimization',
