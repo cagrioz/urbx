@@ -15,7 +15,7 @@ export default function Robotics() {
     return (
         <>
             <VideoHero
-                video="/videos/fulfillment.mp4"
+                video="/videos/home_hero.mp4"
                 subtitle="Fulfillment Solution"
                 title={
                     <>
