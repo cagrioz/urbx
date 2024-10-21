@@ -79,7 +79,7 @@ export default function ContactUs() {
                             Tell us more about your business so we can determine the right URBX solution for your space.
                         </p>
                         <form onSubmit={handleSubmit}>
-                            <h2 className="text-base font-semibold mb-4 text-black">Introduce yourself</h2>
+                            <h2 className="text-base font-semibold mb-4 text-black">Email us at sales@urbx.com or fill out the form below.</h2>
                             <div className="grid grid-cols-1 tablet:grid-cols-2 gap-6">
                                 {/* First Name */}
                                 <div className="overflow-hidden flex items-center rounded-[10px] focus-within:ring-2 border border-standard-5 focus-within:ring-blue-500 focus-within:border-blue-500 focus-within:outline-none">
