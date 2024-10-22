@@ -27,7 +27,7 @@ export async function POST(req: Request) {
 
     const msg = {
         to: 'sales@urbx.com',
-        from: 'sales@urbx.com',
+        from: 'lincoln+1@urbx.com',
         subject,
         text: `
                 First Name: ${firstName}
