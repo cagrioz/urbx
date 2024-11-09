@@ -2,7 +2,7 @@
 import Container from '@/components/Container';
 import { ibm_mono } from '@/styles/fonts';
 
-import UrbxSystem from '@/assets/urbx_system.mp4';
+import UrbxSystem from '@/assets/urbx_system_v2.mp4';
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 
