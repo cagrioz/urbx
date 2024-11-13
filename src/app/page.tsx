@@ -20,10 +20,10 @@ export default function Home() {
                 subtitle="Urbx - The Vertical Revolution"
                 title={
                     <>
-                        AI-Driven <b>Robotics</b> in 3D Space.
+                        AI-Driven <b>Robotics</b> in 3D.
                     </>
                 }
-                popupVideoId="ROMGszByHNA"
+                popupVideoId="PHxxVdxKu6I"
             />
             <Partners />
             <VideoSection />
