@@ -16,7 +16,7 @@ export default function Home() {
     return (
         <>
             <VideoHero
-                video="/videos/fulfillment_new.mp4"
+                video="/videos/fulfillment_cropped.mp4"
                 subtitle="Urbx - The Vertical Revolution"
                 title={
                     <>
