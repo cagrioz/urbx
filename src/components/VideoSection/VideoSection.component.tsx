@@ -14,7 +14,7 @@ const VideoSection: React.FC = () => {
 
         if (!video || !section) return;
 
-        video.playbackRate = 3; // Set video playback rate to 3x speed
+        video.playbackRate = 1; // Set video playback rate to 3x speed
 
         const handleVisibilityChange = () => {
             if (document.hidden) {
