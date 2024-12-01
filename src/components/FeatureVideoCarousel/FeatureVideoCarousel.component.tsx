@@ -13,48 +13,46 @@ export interface FeatureVideoCarouselProps {
 
 const FeatureVideoCarousel: React.FC<FeatureVideoCarouselProps> = ({ title, markerText, description, videos }) => {
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-    const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+    const videoRefs = useRef<(HTMLVideoElement | null)[]>([]); // UseRef for storing video elements
     const [progress, setProgress] = useState<number[]>(new Array(videos.length).fill(0));
 
     // Update progress bar
     useEffect(() => {
         const updateProgress = () => {
             const video = videoRefs.current[currentVideoIndex];
-            if (video) {
+            if (video && video.duration) {
                 const progressPercent = (video.currentTime / video.duration) * 100 || 0;
                 setProgress((prev) => prev.map((p, index) => (index === currentVideoIndex ? progressPercent : p)));
             }
         };
 
-        const interval = setInterval(updateProgress, 50); // Smaller interval for smoother updates
-        return () => clearInterval(interval);
+        const interval = setInterval(updateProgress, 50); // Update progress at a smooth interval
+        return () => clearInterval(interval); // Cleanup interval on unmount or dependency change
     }, [currentVideoIndex]);
 
     const handleVideoEnd = () => {
         const nextIndex = (currentVideoIndex + 1) % videos.length;
+
+        // Reset progress for all videos when autoplay restarts
+        if (nextIndex === 0) {
+            setProgress(new Array(videos.length).fill(0));
+        }
+
         setCurrentVideoIndex(nextIndex);
     };
 
-    /*************  ✨ Codeium Command ⭐  *************/
-    /**
-     * Handle click on progress bar.
-     * @param {number} index Index of the video that was clicked.
-     * Sets the current video index to the clicked one and plays the video.
-     * Resets progress bars of other videos to 0.
-     */
-    /******  443dfd60-f791-4ba2-94c1-8860110e85e3  *******/
     const handleProgressClick = (index: number) => {
         if (videoRefs.current[index]) {
             setCurrentVideoIndex(index);
             videoRefs.current[index]?.play();
         }
 
-        // Reset other progress bars after click to one
-        setProgress(new Array(videos.length).fill(0));
+        // Reset progress for all other videos
+        setProgress((prev) => prev.map((_, i) => (i === index ? 0 : 0)));
     };
 
     useEffect(() => {
-        // Pause all videos and play only the active one
+        // Pause all videos except the currently active one
         videoRefs.current.forEach((video, index) => {
             if (video) {
                 if (index === currentVideoIndex) {
@@ -89,7 +87,9 @@ const FeatureVideoCarousel: React.FC<FeatureVideoCarouselProps> = ({ title, mark
                             })}
                         >
                             <video
-                                ref={(el) => (videoRefs.current[index] = el)}
+                                ref={(el) => {
+                                    videoRefs.current[index] = el; // Store the reference
+                                }}
                                 className="w-full h-auto"
                                 autoPlay
                                 playsInline
