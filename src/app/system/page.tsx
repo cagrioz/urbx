@@ -1,23 +1,18 @@
 import Footer from '@/components/Footer';
-import StackedImageContent from '@/components/StackedImageContent';
 import VideoHero from '@/components/VideoHero';
 
-import MobileRoboticsImg from '@/assets/mobile_robotics.jpg';
-import RoboticsShowcaseImg from '@/assets/ipad_mockup_robotics.png';
-
-import RoboticsControlImg from '@/assets/robotics_control.jpg';
-
-import StackedImageContentB from '@/components/StackedImageContentB';
-import PlatformAndTestimonials from '@/components/PlatformAndTestimonials';
-import FeatureShowcaseWithDetails from '@/components/FeatureShowcaseWithDetails';
-
-import CompanyLogo from '@/assets/dcs_logo_black.svg';
-import PersonImg from '@/assets/matt.jpeg';
 import FAQ from '@/components/FAQ';
 import StackedHighlightText from '@/components/StackedHighlightText';
 import FeatureVideoCarousel from '@/components/FeatureVideoCarousel';
 
 export default function AISoftware() {
+    // First section video
+    const toteHandlerVideos = ['/videos/home_hero.mp4', '/videos/retract_hero.mp4', '/videos/home_hero.mp4'];
+    // Second section video
+    const caseHandlerVideos = ['/videos/home_hero.mp4', '/videos/retract_hero.mp4', '/videos/home_hero.mp4'];
+    // Third section video
+    const roboticPickstationVideos = ['/videos/home_hero.mp4', '/videos/retract_hero.mp4', '/videos/home_hero.mp4'];
+
     return (
         <>
             <VideoHero
@@ -57,7 +52,7 @@ export default function AISoftware() {
                         performance, and seamless integration with existing robotic systems.
                     </>
                 }
-                videos={['/videos/home_hero.mp4', '/videos/retract_hero.mp4', '/videos/home_hero.mp4']}
+                videos={toteHandlerVideos}
             />
             <FeatureVideoCarousel
                 title="Case Handler"
@@ -71,7 +66,7 @@ export default function AISoftware() {
                         picking, and seamless integration with current warehouse systems.
                     </>
                 }
-                videos={['/videos/home_hero.mp4', '/videos/retract_hero.mp4', '/videos/home_hero.mp4']}
+                videos={caseHandlerVideos}
             />
             <FeatureVideoCarousel
                 title="Robotic Pickstation"
@@ -85,7 +80,7 @@ export default function AISoftware() {
                         seamless integration with existing warehouse systems.
                     </>
                 }
-                videos={['/videos/home_hero.mp4', '/videos/retract_hero.mp4', '/videos/home_hero.mp4']}
+                videos={roboticPickstationVideos}
             />
             <FAQ />
             <Footer />
