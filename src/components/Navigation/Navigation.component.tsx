@@ -22,6 +22,10 @@ const navigationItems: NavigationItem[] = [
         href: '/robotics',
     },
     {
+        text: 'System',
+        href: '/system',
+    },
+    {
         text: 'AI Software',
         href: '/ai-software',
     },

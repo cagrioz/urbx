@@ -43,7 +43,9 @@ export default function VideoHero({ video, subtitle, title, description, popupVi
                     </p>
                     <h1 className="mt-4 text-white text-3xl tablet:text-[40px] leading-tight max-w-[510px]">{title}</h1>
                     {description && (
-                        <p className="max-w-[550px] text-white font-normal font-general-sans mt-6">{description}</p>
+                        <p className="max-w-[550px] text-standard-4 font-normal font-general-sans mt-6">
+                            {description}
+                        </p>
                     )}
                     {popupVideoId && (
                         <Button variant="light" onClick={openModal} className="mt-6" icon={<IoPlaySharp />}>
