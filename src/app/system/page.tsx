@@ -69,7 +69,7 @@ export default function AISoftware() {
                 videos={caseHandlerVideos}
             />
             <FeatureVideoCarousel
-                title="Robotic Pickstation"
+                title="Ergonomic Pickstation"
                 markerText="03."
                 description={
                     <>
