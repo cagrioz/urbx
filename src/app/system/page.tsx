@@ -7,7 +7,7 @@ import FeatureVideoCarousel from '@/components/FeatureVideoCarousel';
 
 export default function AISoftware() {
     // First section video
-    const toteHandlerVideos = ['/videos/home_hero.mp4', '/videos/retract_hero.mp4', '/videos/home_hero.mp4'];
+    const toteHandlerVideos = ['/videos/case_one.mp4', '/videos/retract_hero.mp4', '/videos/home_hero.mp4'];
     // Second section video
     const caseHandlerVideos = ['/videos/home_hero.mp4', '/videos/retract_hero.mp4', '/videos/home_hero.mp4'];
     // Third section video
