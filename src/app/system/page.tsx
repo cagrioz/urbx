@@ -11,7 +11,7 @@ export default function AISoftware() {
     // Second section video
     const caseHandlerVideos = ['/videos/case_drop_one.mp4', '/videos/case_drop_two.mp4', '/videos/case_drop_three.mp4'];
     // Third section video
-    const roboticPickstationVideos = ['/videos/system_pickstation.mp4', '/videos/retract_hero.mp4', '/videos/home_hero.mp4'];
+    const roboticPickstationVideos = ['/videos/pickstation_one.mp4', '/videos/system_pickstation.mp4', '/videos/pickstation_three.mp4'];
 
     return (
         <>
