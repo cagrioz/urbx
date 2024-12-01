@@ -16,7 +16,7 @@ export default function AISoftware() {
     return (
         <>
             <VideoHero
-                video="/videos/retract_hero.mp4"
+                video="/videos/system_header.mp4"
                 subtitle="urbx systems "
                 title={<>AI-Driven Robotics for Tote and Case Picking</>}
                 description="Discover our adaptable operations that enable businesses to seamlessly switch between tote and case picking configurations using interchangeable carriages."
