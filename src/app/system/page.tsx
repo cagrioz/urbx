@@ -11,7 +11,7 @@ export default function AISoftware() {
     // Second section video
     const caseHandlerVideos = ['/videos/home_hero.mp4', '/videos/retract_hero.mp4', '/videos/home_hero.mp4'];
     // Third section video
-    const roboticPickstationVideos = ['/videos/home_hero.mp4', '/videos/retract_hero.mp4', '/videos/home_hero.mp4'];
+    const roboticPickstationVideos = ['/videos/system_pickstation.mp4', '/videos/retract_hero.mp4', '/videos/home_hero.mp4'];
 
     return (
         <>
@@ -73,11 +73,7 @@ export default function AISoftware() {
                 markerText="03."
                 description={
                     <>
-                        Our robotic pick station fully automates the picking process, driving increased throughput,
-                        reliability, and efficiency while minimizing human error. Powered by advanced AI-driven
-                        robotics, this solution significantly enhances warehouse operations. <br />
-                        <br /> Key features: Fully autonomous picking, optimized throughput, reduced human error, and
-                        seamless integration with existing warehouse systems.
+                        Our ergonomic pick station fully automates the picking process, driving increased throughput, reliability, and efficiency while minimizing human error.<br /> <br /> Key features: Optimized throughput, reduced human error, and seamless integration with existing warehouse systems.
                     </>
                 }
                 videos={roboticPickstationVideos}
