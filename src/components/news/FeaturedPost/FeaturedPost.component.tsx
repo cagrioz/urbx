@@ -19,7 +19,7 @@ export default function FeaturedPost({ title, excerpt, description, image, slug 
     const postUrl = useBuildNewsUrl(slug);
 
     return (
-        <div className="flex items-center gap-6 bg-standard-7 rounded-[20px] overflow-hidden">
+        <div className="flex items-center gap-6 bg-standard-7 rounded-[20px] overflow-hidden p-2.5">
             <div className="rounded-[20px] overflow-hidden shrink-0 w-[564px] h-[480px]">
                 <Link href={postUrl}>
                     <Image

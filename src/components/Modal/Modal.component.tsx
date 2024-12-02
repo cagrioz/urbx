@@ -20,7 +20,7 @@ export default function Modal({ isOpen, closeModal, children, overlayClassName }
             </button>
             <div className={classNames('fixed inset-0 bg-black bg-opacity-50 cursor-pointer', overlayClassName)}></div>
             <div className="fixed inset-0 overflow-y-auto flex items-center justify-center">
-                <Dialog.Panel className="relative max-w-3xl w-full bg-black rounded-xl shadow-lg p-8 text-left">
+                <Dialog.Panel className="relative max-w-5xl w-full bg-black rounded-xl shadow-lg p-8 text-left">
                     {children}
                 </Dialog.Panel>
             </div>

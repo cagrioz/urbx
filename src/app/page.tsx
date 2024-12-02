@@ -24,6 +24,10 @@ export default function Home() {
                     </>
                 }
                 popupVideoId="O91LBUvC3v4"
+                learnMoreBtn={{
+                    text: 'Learn More',
+                    href: '/news/towerbot-case-handling',
+                }}
             />
             <Partners />
             <VideoSection />
@@ -68,7 +72,8 @@ export default function Home() {
                     },
                     {
                         title: 'Totes & Case Storage',
-                        description: 'Maximizes space utilization and enhances operational efficiency for both tote and case handling.',
+                        description:
+                            'Maximizes space utilization and enhances operational efficiency for both tote and case handling.',
                     },
                 ]}
                 video="/videos/routing.mp4"
