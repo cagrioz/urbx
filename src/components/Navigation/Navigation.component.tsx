@@ -14,6 +14,7 @@ import ButtonLink from '../ButtonLink';
 type NavigationItem = {
     text: string;
     href: string;
+    tag?: string;
 };
 
 const navigationItems: NavigationItem[] = [
@@ -21,12 +22,11 @@ const navigationItems: NavigationItem[] = [
         text: 'Robotics',
         href: '/robotics',
     },
-    /*
     {
         text: 'System',
         href: '/system',
+        tag: 'New',
     },
-    */
     {
         text: 'AI Software',
         href: '/ai-software',
@@ -101,12 +101,12 @@ export default function Navigation() {
                         <nav className="hidden laptop:block">
                             <ul className="list-none laptop:flex gap-1 laptop:gap-4">
                                 {navigationItems.map((item) => (
-                                    <li key={item.text}>
+                                    <li key={item.text} className="relative">
                                         <Link
                                             style={ibm_mono.style}
                                             href={item.href}
                                             className={classNames(
-                                                'uppercase text-standard-5 hover:text-standard-4 text-sm font-light px-4 laptop:px-[22px] py-2.5 rounded-full',
+                                                'inline-block uppercase text-standard-5 hover:text-standard-4 text-sm font-light px-4 laptop:px-[22px] py-2.5 rounded-full',
                                                 {
                                                     border: pathname === item.href,
                                                 }
@@ -114,6 +114,14 @@ export default function Navigation() {
                                         >
                                             {item.text}
                                         </Link>
+                                        {item.tag && (
+                                            <span
+                                                style={ibm_mono.style}
+                                                className="-mt-2.5 uppercase absolute leading-3 top-0 right-0 ml py-1 px-3 bg-accent text-white text-[10px] font-medium rounded-full"
+                                            >
+                                                {item.tag}
+                                            </span>
+                                        )}
                                     </li>
                                 ))}
                             </ul>
