@@ -6,15 +6,25 @@ import { ibm_mono } from '@/styles/fonts';
 import Button from '../Button';
 import Modal from '../Modal';
 import { IoPlaySharp } from 'react-icons/io5';
+import { SimpleCta } from '@/types';
+import ButtonLink from '../ButtonLink';
 export interface VideoHeroProps {
     video: any;
     subtitle: string;
     title: ReactNode;
     description?: string;
     popupVideoId?: string;
+    learnMoreBtn?: SimpleCta;
 }
 
-export default function VideoHero({ video, subtitle, title, description, popupVideoId }: VideoHeroProps): JSX.Element {
+export default function VideoHero({
+    video,
+    subtitle,
+    title,
+    description,
+    popupVideoId,
+    learnMoreBtn,
+}: VideoHeroProps): JSX.Element {
     const [isModalOpen, setModalOpen] = useState(false);
 
     const openModal = () => {
@@ -47,10 +57,23 @@ export default function VideoHero({ video, subtitle, title, description, popupVi
                             {description}
                         </p>
                     )}
-                    {popupVideoId && (
-                        <Button variant="light" onClick={openModal} className="mt-6" icon={<IoPlaySharp />}>
-                            Watch Video
-                        </Button>
+                    {popupVideoId && learnMoreBtn && (
+                        <div className="flex mt-6 gap-6">
+                            {popupVideoId && (
+                                <Button variant="light" onClick={openModal} icon={<IoPlaySharp />}>
+                                    Watch Video
+                                </Button>
+                            )}
+                            {learnMoreBtn && (
+                                <ButtonLink
+                                    href={learnMoreBtn.href}
+                                    className="uppercase text-center text-sm"
+                                    variant="primary"
+                                >
+                                    {learnMoreBtn.text}
+                                </ButtonLink>
+                            )}
+                        </div>
                     )}
                 </Container>
             </section>
