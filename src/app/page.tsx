@@ -67,8 +67,8 @@ export default function Home() {
                             'Fast, accurate navigation and localization with torque-assisted control for better performance.',
                     },
                     {
-                        title: 'Optimized Storage',
-                        description: 'Maximizes space utilization and enhances operational efficiency.',
+                        title: 'Totes & Case Storage',
+                        description: 'Maximizes space utilization and enhances operational efficiency for both tote and case handling.',
                     },
                 ]}
                 video="/videos/routing.mp4"
