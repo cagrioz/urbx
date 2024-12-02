@@ -20,9 +20,9 @@ export default function GridPost({ title, description, image, slug }: GridPostPr
     return (
         <div className="flex items-center gap-6 bg-standard-7 rounded-[20px] overflow-hidden p-3.5">
             <div className="w-[262px] shrink-0">
-                <div className="h-[292px] w-full overflow-hidden rounded-[10px]">
+                <div className="h-[292px] w-full overflow-hidden rounded-[10px] relative">
                     <Link href={postUrl}>
-                        <Image src={image} alt={title} width={262} height={292} />
+                        <Image src={image} alt={title} fill className="object-cover" />
                     </Link>
                 </div>
             </div>

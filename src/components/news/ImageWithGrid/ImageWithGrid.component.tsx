@@ -5,7 +5,7 @@ import { MediaContent } from '@/types';
 
 export type ImageWithGridProps = MediaContent & {
     label?: string;
-    title: string | JSX.Element;
+    title?: string | JSX.Element;
     content: string | JSX.Element;
     mediaAlt?: string;
 };
@@ -31,11 +31,12 @@ export default function ImageWithGridProps({
                                 {label}
                             </span>
                         )}
-                        <h3 className="mt-3 text-2xl tablet:text-[32px] leading-tight laptop:max-w-[456px]">{title}</h3>
-                        <div
-                            className="text-standard-4 mt-3 blog-content"
-                            dangerouslySetInnerHTML={{ __html: content }}
-                        />
+                        {title && (
+                            <h3 className="my-3 text-2xl tablet:text-[32px] leading-tight laptop:max-w-[456px]">
+                                {title}
+                            </h3>
+                        )}
+                        <div className="text-standard-4 blog-content" dangerouslySetInnerHTML={{ __html: content }} />
                     </div>
                     <div className="w-full relative tablet:w-[330px] laptop:w-[456px] rounded-[20px] overflow-hidden shrink-0">
                         {videoSrc ? (

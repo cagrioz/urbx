@@ -73,9 +73,47 @@ export const transformingWarehouse: Post = {
     },
 };
 
+// Post 3: Towerbot 2.0
+export const towerbot20: Post = {
+    intro: {
+        label: 'TowerBot 2.0',
+        title: 'TowerBot 2025: Meeting the Real Needs of Case-Handling',
+        description:
+            'After extensive research and market analysis of existing goods-to-person systems, URBX has discovered a critical gap in the market: the lack of a cost-effective, scalable, and efficient case-handling solution. Despite impressive advancements in automation, warehouse managers across industries consistently expressed frustration with systems that fail to meet their practical and financial needs for case-handling.',
+    },
+    outro: {
+        title: 'Conclusion',
+        description:
+            'This launch is more than a product unveiling—it’s a conversation about listening to the real challenges of operators and delivering innovation where it matters most. We’ll position URBX as not just a robotics company but a partner that designs solutions for the evolving demands of modern warehouses.',
+        image: '/news/towerbot_handling/conclusion.png',
+    },
+    label: 'latest urbx news',
+    title: '2025 TowerBot with Case-Handling',
+    excerpt:
+        'After extensive research and market analysis of existing goods-to-person systems, URBX has discovered a critical gap in the market: the lack of a cost-effective, scalable, and efficient case-handling solution. Despite impressive advancements in automation, warehouse managers across industries consistently expressed frustration with systems that fail to meet their practical and financial needs for case-handling.',
+    slug: 'towerbot-case-handling',
+    date: '2024-12-02',
+    cover: '/news/towerbot_handling/cover.png',
+    media: {
+        image: '/news/towerbot_handling/cover.png',
+    },
+    imageWithGridContent: {
+        image: '/news/towerbot_handling/content_1.jpg',
+        content: `<div>
+        <h4>Key Insights</h4>
+        <p>Through in-depth conversations with managers of leading distribution centers and fulfillment operations, one challenge was clear: while goods-to-person systems are transforming operations, case-handling remains an expensive and operationally inefficient bottleneck. Existing solutions often fail to balance affordability, space efficiency, and reliability, leaving managers searching for alternatives.
+        </p>
+        <br><br>
+        <h4>Our Solution</h4>
+        <p>In 2025, we are introducing a case-handling adaptor for the new TowerBot. Designed to address the case-handling gap, this innovation leverages URBX’s expertise in vertical automation. The enhanced TowerBot combines high-speed, high-density storage capabilities with precise case-handling functionality, providing a cost-effective solution tailored to the operational realities of modern warehouses.
+        </p>
+        </div>`,
+    },
+};
+
 // Export all posts as an array
-export const allPosts = [demo, transformingWarehouse];
-export const featuredPost = demo;
+export const allPosts = [towerbot20, demo, transformingWarehouse];
+export const featuredPost = towerbot20;
 export const featuredPostContent: FeaturedPostProps = {
     title: featuredPost.title,
     excerpt: featuredPost.excerpt,
