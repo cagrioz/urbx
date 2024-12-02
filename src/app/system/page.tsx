@@ -18,7 +18,7 @@ export default function AISoftware() {
             <VideoHero
                 video="/videos/system_header.mp4"
                 subtitle="urbx systems "
-                title={<>Robotics for Tote and Case Picking</>}
+                title={<>Tote and Case Picking</>}
                 description="Discover our adaptable operations that enable businesses to seamlessly switch between tote and case picking configurations using interchangeable carriages."
             />
             <StackedHighlightText
@@ -33,10 +33,7 @@ export default function AISoftware() {
                         Our robotic solutions offer unparalleled <span className="font-semibold">flexibility</span> with
                         an <span className="font-semibold">interchangeable</span> carriage that seamlessly transitions
                         between <span className="font-semibold">tote</span> picking and{' '}
-                        <span className="font-semibold">case</span> picking. When integrated with our robotic pick
-                        station, the AI-driven dual-grid system enhances operational{' '}
-                        <span className="font-semibold">efficiency</span>, delivering unique value to warehouse
-                        operations.
+                        <span className="font-semibold">case</span> picking.
                     </>
                 }
             />
@@ -48,8 +45,8 @@ export default function AISoftware() {
                         Our tote handling carriage is designed to effortlessly and efficiently manage the storage and
                         retrieval of totes within the racking system. Capable of reliably and precisely handling up to
                         100lbs, it significantly enhances operational efficiency in warehouse environments. <br />
-                        <br /> Key features include double-deep storage and picking, a 100lb lift capacity, high-speed
-                        performance, and seamless integration with existing robotic systems.
+                        <br /> Key features: Double-deep storage and picking, a 100lb lift capacity, high-speed
+                        performance, and seamless integration.
                     </>
                 }
                 videos={toteHandlerVideos}
