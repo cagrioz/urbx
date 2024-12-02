@@ -32,7 +32,7 @@ export default function AISoftware() {
                     <>
                         Our robotic solutions offer unparalleled <span className="font-semibold">flexibility</span> with
                         an <span className="font-semibold">interchangeable</span> carriage that seamlessly transitions
-                        between <span className="font-semibold">tote</span> picking and{' '}
+                        between <span className="font-semibold">tote</span> handling and{' '}
                         <span className="font-semibold">case</span> picking.
                     </>
                 }
