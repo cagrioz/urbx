@@ -19,26 +19,50 @@ export default function Footer() {
                                 <ul className="flex gap-[60px]">
                                     <li>
                                         <Link
-                                            href="#"
+                                            href="/robotics"
                                             className="text-standard-5 hover:text-standard-4 text-base font-light"
                                         >
-                                            Enterprise
+                                            Robotics
                                         </Link>
                                     </li>
                                     <li>
                                         <Link
-                                            href="#"
+                                            href="/system"
                                             className="text-standard-5 hover:text-standard-4 text-base font-light"
                                         >
-                                            News
+                                            System
                                         </Link>
                                     </li>
                                     <li>
                                         <Link
-                                            href="#"
+                                            href="/ai-software"
+                                            className="text-standard-5 hover:text-standard-4 text-base font-light"
+                                        >
+                                            Ai Software
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            href="/about-us"
                                             className="text-standard-5 hover:text-standard-4 text-base font-light"
                                         >
                                             About Us
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            href="/partners"
+                                            className="text-standard-5 hover:text-standard-4 text-base font-light"
+                                        >
+                                            Partners
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            href="/news"
+                                            className="text-standard-5 hover:text-standard-4 text-base font-light"
+                                        >
+                                            News
                                         </Link>
                                     </li>
                                 </ul>
