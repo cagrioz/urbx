@@ -17,10 +17,10 @@ export default function Home() {
         <>
             <VideoHero
                 video="/videos/fulfillment-new-optwo.mp4"
-                subtitle="Urbx - The Vertical Revolution"
+                subtitle="Introducing the 2025 Towerbot"
                 title={
                     <>
-                        AI-Driven <b>Robotics</b> in 3D.
+                        Case-Handling <b>Elevated</b>.
                     </>
                 }
                 popupVideoId="O91LBUvC3v4"
