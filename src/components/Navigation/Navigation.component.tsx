@@ -71,7 +71,7 @@ export default function Navigation() {
                 <nav>
                     <ul className="list-none flex flex-col gap-1">
                         {navigationItems.map((item) => (
-                            <li key={item.text}>
+                            <li key={item.text} className="relative">
                                 <Link
                                     style={ibm_mono.style}
                                     href={item.href}
@@ -79,6 +79,14 @@ export default function Navigation() {
                                 >
                                     {item.text}
                                 </Link>
+                                {item.tag && (
+                                    <span
+                                        style={ibm_mono.style}
+                                        className="-mt-2.5 uppercase absolute leading-3 top-0 right-0 ml py-1 px-3 bg-accent text-white text-[10px] font-medium rounded-full"
+                                    >
+                                        {item.tag}
+                                    </span>
+                                )}
                             </li>
                         ))}
 
