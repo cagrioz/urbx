@@ -18,7 +18,7 @@ export default function AISoftware() {
             <VideoHero
                 video="/videos/system_header.mp4"
                 subtitle="urbx systems "
-                title={<>Tote and Case Picking</>}
+                title={<>Tote and Case-Handling</>}
                 description="Discover our adaptable operations that enable businesses to seamlessly switch between tote and case picking configurations using interchangeable carriages."
             />
             <StackedHighlightText
