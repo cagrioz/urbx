@@ -77,7 +77,7 @@ const FeatureVideoCarousel: React.FC<FeatureVideoCarouselProps> = ({ title, mark
                     </span>
                     <p className="text-white text-base whitespace-pre-line laptop:w-[648px]">{description}</p>
                 </div>
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden rounded-[20px]">
                     {videos.map((video, index) => (
                         <div
                             key={index}
