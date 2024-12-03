@@ -17,14 +17,14 @@ const partners = [
             'Design Conveyor Systems has been Urbx’s first partner, boasting over 40 years of experience in material handling, full-scale warehouse operations, and conveyor design. Founded in 1982, Design Conveyors offers a wide range of services, including supply chain consulting, customer support, and systems design integration. ',
 
         location: 'DCS - Nasvhille, TN',
-        website: 'https://www.designconveyor.com/',
+        website: 'https://www.designedconveyor.com/',
     },
     {
         logo: AbcoLogo,
         description:
             'ABCO systems is one of Urbx’s esteemed partners, specializing in warehouse design. From the outset, ABCO has collaborated with Urbx, establishing itself as a leader in warehouse automation and design. They offer a comprehensive range of services to meet customer needs, making them a one-stop shop for warehouse design and providing expertise throughout the entire process. ',
         location: 'ABCO System - Carlstadt, NJ',
-        website: 'https://www.abcoautomation.us/',
+        website: 'https://www.abcosystems.net/',
     },
     {
         logo: MainwayLogo,
@@ -38,7 +38,7 @@ const partners = [
         description:
             'Carter Intralogistics specializes in automation and custom equipment integration. Carter automation solutions and material handling expertise across various industries, including e-commerce, distribution and fulfillment, postal and parcel, reverse logistics, food and beverage, and more. Their services encompass solution design, retrofits, parts and services, as well as scheduled and resident maintenance. ',
         location: 'Carter Intralogistics - Fredrick, MD',
-        website: 'https://www.cartercontrols.com/',
+        website: 'https://www.carterintralogistics.com/',
     },
     {
         logo: VargoLogo,
@@ -59,7 +59,7 @@ const partners = [
         description:
             'Hytek Automation specializes in providing cutting-edge automation solutions to a wide range of industries. Their services include conveyor systems, sortation systems, robotic solutions, and many more. ',
         location: 'Hy-tek Intralogistics - Columbus, OH ',
-        website: 'https://www.hytekautomation.com/',
+        website: 'https://www.hy-tek.com/',
     },
 ];
 
