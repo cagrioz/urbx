@@ -9,9 +9,13 @@ export default function AISoftware() {
     // First section video
     const toteHandlerVideos = ['/videos/case_one.mp4', '/videos/system_tote_two.mp4', '/videos/system_tote_three.mp4'];
     // Second section video
-    const caseHandlerVideos = ['/videos/case_drop_one.mp4', '/videos/case_drop_two.mp4', '/videos/case_drop_three.mp4'];
+    const caseHandlerVideos = ['/videos/case_drop_one.mp4', '/videos/case_two.mp4', '/videos/case_drop_three.mp4'];
     // Third section video
-    const roboticPickstationVideos = ['/videos/pickstation_one.mp4', '/videos/system_pickstation.mp4', '/videos/pickstation_three.mp4'];
+    const roboticPickstationVideos = [
+        '/videos/pickstation_one.mp4',
+        '/videos/system_pickstation.mp4',
+        '/videos/pickstation_three.mp4',
+    ];
 
     return (
         <>
@@ -70,7 +74,10 @@ export default function AISoftware() {
                 markerText="03."
                 description={
                     <>
-                        Our ergonomic pick station fully automates the picking process, driving increased throughput, reliability, and efficiency while minimizing human error.<br /> <br /> Key features: Optimized throughput, reduced human error, and seamless integration with existing warehouse systems.
+                        Our ergonomic pick station fully automates the picking process, driving increased throughput,
+                        reliability, and efficiency while minimizing human error.
+                        <br /> <br /> Key features: Optimized throughput, reduced human error, and seamless integration
+                        with existing warehouse systems.
                     </>
                 }
                 videos={roboticPickstationVideos}
