@@ -58,9 +58,14 @@ export default function VideoHero({
                         </p>
                     )}
                     {popupVideoId && learnMoreBtn && (
-                        <div className="flex mt-6 gap-6">
+                        <div className="flex flex-col tablet:flex-row mt-6 gap-6">
                             {popupVideoId && (
-                                <Button variant="light" onClick={openModal} icon={<IoPlaySharp />}>
+                                <Button
+                                    variant="light"
+                                    className="text-center justify-center tablet:justify-start tablet:flex"
+                                    onClick={openModal}
+                                    icon={<IoPlaySharp />}
+                                >
                                     Watch Video
                                 </Button>
                             )}
