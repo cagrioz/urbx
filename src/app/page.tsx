@@ -20,7 +20,7 @@ export default function Home() {
                 subtitle="Introducing the 2025 Towerbot"
                 title={
                     <>
-                        Case-Handling <b>Elevated to 125 feet</b>.
+                        Case-Handling <b>Elevated</b> to 125 feet.
                     </>
                 }
                 popupVideoId="O91LBUvC3v4"
