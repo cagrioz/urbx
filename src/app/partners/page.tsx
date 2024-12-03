@@ -22,7 +22,7 @@ export default function Partners() {
                 title={
                     <>
                         Want to become a <br />
-                        <span className="font-semibold">Partners?</span>
+                        <span className="font-semibold">Partner?</span>
                     </>
                 }
                 ctaVariant="primary"
