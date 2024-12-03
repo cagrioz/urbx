@@ -16,7 +16,7 @@ export default function Footer() {
                         </div>
                         <div>
                             <nav>
-                                <ul className="flex gap-[60px]">
+                                <ul className="flex flex-wrap gap-4 laptop:gap-10">
                                     <li>
                                         <Link
                                             href="/robotics"
