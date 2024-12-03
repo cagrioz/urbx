@@ -20,7 +20,7 @@ export default function Home() {
                 subtitle="Introducing the 2025 Towerbot"
                 title={
                     <>
-                        Case-Handling <b>Elevating</b><br /> 100 pounds to 125 feet.
+                        Effortless <b>Case-Handling:</b><br /> 100 Pounds to 125 Feet.
                     </>
                 }
                 popupVideoId="O91LBUvC3v4"
