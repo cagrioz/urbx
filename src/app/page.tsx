@@ -81,7 +81,7 @@ export default function Home() {
             <Features
                 features={[
                     {
-                        title: 'Higher Throughput',
+                        title: 'Totes & Cases',
                         description:
                             'Case handling allows for the movement of multiple items simultaneously, reducing the number of retrieval trips and increasing overall system speed.',
                     },
