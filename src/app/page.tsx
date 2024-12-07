@@ -78,6 +78,31 @@ export default function Home() {
                 ]}
                 video="/videos/routing.mp4"
             />
+            <System
+                title="Case-handling"
+                features={[
+                    {
+                        title: 'Higher Throughput',
+                        description:
+                            'Case handling allows for the movement of multiple items simultaneously, reducing the number of retrieval trips and increasing overall system speed.',
+                    },
+                    {
+                        title: 'Existing Infrastructure',
+                        description: 'Cases are more commonly used in traditional warehouse workflows, making them easier to integrate with conveyors, palletizers, and outbound systems.',
+                    },
+                    {
+                        title: 'Reduced Complexity',
+                        description:
+                            'Handling full cases eliminates the need for individual item picking, simplifying operations and reducing labor costs.',
+                    },
+                    {
+                        title: 'Minimized Requirements',
+                        description:
+                            'Unlike totes, which often require sorting and repacking for specific orders, cases can be transported and processed directly to fulfillment areas.',
+                    },
+                ]}
+                video="/videos/pickem.mp4"
+            />
             <WhyUs />
             <PlatformAndTestimonials
                 quote="“At Hy-Tek, we are committed to bringing new and innovative solutions to the order fulfillment
