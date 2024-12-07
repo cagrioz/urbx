@@ -3,16 +3,16 @@ import Partners from '@/components/Partners';
 import PlatformAndTestimonials from '@/components/PlatformAndTestimonials';
 import WhyUs from '@/components/WhyUs';
 
-import SideViewImage from '@/assets/urbx_top_view.jpg';
 import Footer from '@/components/Footer';
 import VideoSection from '@/components/VideoSection';
 import Overview from '@/components/Overview';
 import VideoHero from '@/components/VideoHero';
 
 import CompanyLogo from '@/assets/plain_hytek.png';
-import PersonImg from '@/assets/matt.jpeg';
+import FeaturesGridVideoCarousel from '@/components/FeaturesGridVideoCarousel';
 
 export default function Home() {
+    const videoSliderItems = ['/videos/pickem.mp4', '/videos/pickem.mp4', '/videos/pickem.mp4'];
     return (
         <>
             <VideoHero
@@ -20,7 +20,8 @@ export default function Home() {
                 subtitle="Introducing the 2025 Towerbot"
                 title={
                     <>
-                        Effortless <b>Case-Handling:</b><br /> 100 Pounds to 125 Feet
+                        Effortless <b>Case-Handling:</b>
+                        <br /> 100 Pounds to 125 Feet
                     </>
                 }
                 popupVideoId="O91LBUvC3v4"
@@ -72,35 +73,32 @@ export default function Home() {
                     },
                     {
                         title: 'Cost Efficiency',
-                        description:
-                            'Affordable automation for operations of all sizes.',
+                        description: 'Affordable automation for operations of all sizes.',
                     },
                 ]}
                 video="/videos/routing.mp4"
             />
-            <Features
+            <FeaturesGridVideoCarousel
                 features={[
                     {
                         title: 'Totes & Cases',
-                        description:
-                            'Handles varying case sizes and weights with precision.',
+                        description: 'Handles varying case sizes and weights with precision.',
                     },
                     {
                         title: 'Existing Infrastructure',
-                        description: 'Cases are more commonly used in traditional warehouse workflows, making them easier to integrate with conveyors, palletizers, and outbound systems.',
+                        description:
+                            'Cases are more commonly used in traditional warehouse workflows, making them easier to integrate with conveyors, palletizers, and outbound systems.',
                     },
                     {
                         title: 'Vision and Sensing',
-                        description:
-                            'Detects dimensions, anomalies, and barcodes accurately.',
+                        description: 'Detects dimensions, anomalies, and barcodes accurately.',
                     },
                     {
                         title: 'Minimized Requirements',
-                        description:
-                            'Increases storage density with a compact footprint.',
+                        description: 'Increases storage density with a compact footprint.',
                     },
                 ]}
-                video="/videos/pickem.mp4"
+                videos={videoSliderItems}
             />
             <WhyUs />
             <PlatformAndTestimonials

@@ -4,7 +4,7 @@ import Image, { StaticImageData } from 'next/image';
 
 import FadedLine from '@/assets/faded_line_bordered.png';
 
-type FeatureItem = {
+export type FeatureItem = {
     title: string;
     description: string;
 };
