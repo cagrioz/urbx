@@ -71,9 +71,9 @@ export default function Home() {
                             'Fast, accurate navigation and localization with torque-assisted control for better performance.',
                     },
                     {
-                        title: 'Totes & Case Storage',
+                        title: 'Cost Efficiency',
                         description:
-                            'Maximizes space utilization and enhances operational efficiency for both tote and case handling.',
+                            'Affordable automation for operations of all sizes.',
                     },
                 ]}
                 video="/videos/routing.mp4"
@@ -83,21 +83,21 @@ export default function Home() {
                     {
                         title: 'Totes & Cases',
                         description:
-                            'Case handling allows for the movement of multiple items simultaneously, reducing the number of retrieval trips and increasing overall system speed.',
+                            'Handles varying case sizes and weights with precision.',
                     },
                     {
                         title: 'Existing Infrastructure',
                         description: 'Cases are more commonly used in traditional warehouse workflows, making them easier to integrate with conveyors, palletizers, and outbound systems.',
                     },
                     {
-                        title: 'Reduced Complexity',
+                        title: 'Vision and Sensing',
                         description:
-                            'Handling full cases eliminates the need for individual item picking, simplifying operations and reducing labor costs.',
+                            'Detects dimensions, anomalies, and barcodes accurately.',
                     },
                     {
                         title: 'Minimized Requirements',
                         description:
-                            'Unlike totes, which often require sorting and repacking for specific orders, cases can be transported and processed directly to fulfillment areas.',
+                            'Increases storage density with a compact footprint.',
                     },
                 ]}
                 video="/videos/pickem.mp4"
