@@ -78,7 +78,7 @@ export default function Home() {
                 ]}
                 video="/videos/routing.mp4"
             />
-            <System
+            <Features
                 title="Case-handling"
                 features={[
                     {
