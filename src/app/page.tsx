@@ -81,21 +81,21 @@ export default function Home() {
             <FeaturesGridVideoCarousel
                 features={[
                     {
-                        title: 'Totes & Cases',
-                        description: 'Handles varying case sizes and weights with precision.',
+                        title: 'Totes and Cases',
+                        description: 'Handles a wide range of case sizes with precision, from 6-inch to 24-inch boxes.',
                     },
                     {
                         title: 'Existing Infrastructure',
                         description:
-                            'Cases are more commonly used in traditional warehouse workflows, making them easier to integrate with conveyors, palletizers, and outbound systems.',
+                            'Effortlessly integrates with conveyors, palletizers, and outbound systems for optimized workflows.',
                     },
                     {
                         title: 'Vision and Sensing',
-                        description: 'Detects dimensions, anomalies, and barcodes accurately.',
+                        description: 'Detects dimensions, anomalies, and barcodes with unmatched accuracy.',
                     },
                     {
                         title: 'Minimized Requirements',
-                        description: 'Increases storage density with a compact footprint.',
+                        description: 'Increases storage density with a compact footprint, accommodating flexible box configurations.',
                     },
                 ]}
                 videos={videoSliderItems}
