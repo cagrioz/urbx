@@ -12,7 +12,7 @@ import CompanyLogo from '@/assets/plain_hytek.png';
 import FeaturesGridVideoCarousel from '@/components/FeaturesGridVideoCarousel';
 
 export default function Home() {
-    const videoSliderItems = ['/videos/pickem.mp4', '/videos/pickem.mp4', '/videos/pickem.mp4'];
+    const videoSliderItems = ['/videos/urbx_case_one.mp4', '/videos/urbx_case_two.mp4', '/videos/urbx_case_three.mp4'];
     return (
         <>
             <VideoHero
