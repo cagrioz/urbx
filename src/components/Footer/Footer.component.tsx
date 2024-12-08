@@ -94,8 +94,8 @@ export default function Footer() {
                         <Link href="https://twitter.com/urbx_inc" className="text-sm">
                             X (twitter)
                         </Link>
-                        <Link href="https://instagram.com/urbx_inc" className="text-sm">
-                            Instagram
+                        <Link href="https://www.youtube.com/@Urbx_" className="text-sm">
+                            YouTube
                         </Link>
                         <Link href="https://www.linkedin.com/company/urbx/" className="text-sm">
                             LinkedIn
