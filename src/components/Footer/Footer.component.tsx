@@ -91,8 +91,8 @@ export default function Footer() {
                         </Link>
                     </div>
                     <div className="flex gap-6 laptop:gap-10">
-                        <Link href="https://twitter.com/urbx_inc" className="text-sm">
-                            X (twitter)
+                        <Link href="https://x.com/urbx_inc" className="text-sm">
+                            X
                         </Link>
                         <Link href="https://www.youtube.com/@Urbx_" className="text-sm">
                             YouTube
