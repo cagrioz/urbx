@@ -9,7 +9,7 @@ export default function AISoftware() {
     // First section video
     const toteHandlerVideos = ['/videos/case_one.mp4', '/videos/system_tote_two.mp4', '/videos/system_tote_three.mp4'];
     // Second section video
-    const caseHandlerVideos = ['/videos/case_drop_one.mp4', '/videos/case_two.mp4', '/videos/case_drop_three.mp4'];
+    const caseHandlerVideos = ['/videos/urbx_case_one.mp4', '/videos/urbx_video_two.mp4', '/videos/urbx_case_three.mp4'];
     // Third section video
     const roboticPickstationVideos = [
         '/videos/pickstation_one.mp4',
