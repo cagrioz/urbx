@@ -20,7 +20,7 @@ export default function Home() {
                 subtitle="Introducing the 2025 Towerbot"
                 title={
                     <>
-                        Effortless <b>Case-Handling:</b>
+                        Tote & <b>Case-Handling:</b>
                         <br /> 100 Pounds to 125 Feet
                     </>
                 }
