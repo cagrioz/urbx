@@ -21,7 +21,7 @@ export default function Home() {
                 title={
                     <>
                         Our Robots Excel:</b>
-                        <br /> When real estate is at a premium.
+                        <br />When real estate is at a premium.
                     </>
                 }
                 popupVideoId="O91LBUvC3v4"
