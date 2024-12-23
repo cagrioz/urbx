@@ -16,7 +16,7 @@ export default function Home() {
     return (
         <>
             <VideoHero
-                video="/videos/case_two.mp4"
+                video="/videos/new_one.mp4"
                 subtitle="Introducing the 2025 Towerbot"
                 title={
                     <>
