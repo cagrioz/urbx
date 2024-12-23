@@ -20,8 +20,8 @@ export default function Home() {
                 subtitle="Introducing the 2025 Towerbot"
                 title={
                     <>
-                        Tote & <b>Case-Handling:</b>
-                        <br /> 100 Pounds to 125 Feet
+                        Our Robots Excel:</b>
+                        <br /> When real estate is at a premium.
                     </>
                 }
                 popupVideoId="O91LBUvC3v4"
