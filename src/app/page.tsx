@@ -20,8 +20,8 @@ export default function Home() {
                 subtitle="Introducing the 2025 Towerbot"
                 title={
                     <>
-                        Our robots <b>excel</b>
-                        <br /> when land is premium.
+                        <b>Maximizing space.</b>
+                        <br /> Redefining possibilities.
                     </>
                 }
                 popupVideoId="O91LBUvC3v4"
