@@ -20,8 +20,8 @@ export default function Home() {
                 subtitle="Introducing the 2025 Towerbot"
                 title={
                     <>
-                        Our Robots Excel:</b>
-                        <br />When real estate is at a premium.
+                        Our Robots <b>Excel:</b>
+                        <br /> When real estate is at a premium.
                     </>
                 }
                 popupVideoId="O91LBUvC3v4"
