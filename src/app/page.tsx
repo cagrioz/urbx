@@ -100,7 +100,6 @@ export default function Home() {
                 ]}
                 videos={videoSliderItems}
             />
-            <WhyUs />
             <PlatformAndTestimonials
                 quote="“At Hy-Tek, we are committed to bringing new and innovative solutions to the order fulfillment
                         process. Because automation is continually evolving to meet the rapid changes in the market, we
