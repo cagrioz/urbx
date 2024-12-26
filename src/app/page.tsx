@@ -32,7 +32,6 @@ export default function Home() {
             />
             <Partners />
             <VideoSection />
-            <Overview />
             <Features
                 title="Urbx Specs"
                 features={[
