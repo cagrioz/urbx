@@ -52,7 +52,7 @@ export default function Home() {
                         description: 'Achieves up to 100 transactions per hour for optimal workflow.',
                     },
                 ]}
-                video="/videos/bots_side_view.mp4"
+                image="/videos/block.jpg"
             />
             <Features
                 features={[
