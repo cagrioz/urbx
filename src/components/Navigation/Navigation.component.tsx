@@ -29,7 +29,7 @@ const navigationItems: NavigationItem[] = [
     },
     {
         text: 'Intelligence',
-        href: '/intelligence',
+        href: '/ai-software',
     },
     {
         text: 'About Us',
