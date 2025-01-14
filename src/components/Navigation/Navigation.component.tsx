@@ -28,8 +28,8 @@ const navigationItems: NavigationItem[] = [
         tag: 'New',
     },
     {
-        text: 'AI Software',
-        href: '/ai-software',
+        text: 'Intelligence',
+        href: '/intelligence',
     },
     {
         text: 'About Us',
