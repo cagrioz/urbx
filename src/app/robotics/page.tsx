@@ -70,7 +70,7 @@ export default function Robotics() {
                     title="3D Storage System"
                     superTitle="04."
                     description={`Our 3D storage system leverages vertical space to increase storage density, allowing for the efficient use of your warehouse or fulfillment center's footprint. By integrating advanced robotics and AI, our storage system ensures rapid retrieval and precise placement of items, significantly reducing the time and effort required for manual handling.\n\nKey Features: The 3D storage system offers high-density vertical storage, rapid access and retrieval, and seamless integration with other robotic systems.`}
-                    image={StorageSystemImage} style={{ borderRadius: '20px' }}
+                    image={StorageSystemImage}
                 />
                 <Separator />
             </div>
