@@ -86,7 +86,7 @@ export default function VideoHero({
                 <div className="relative pb-[56.25%]">
                     <iframe
                         className="absolute inset-0 w-full h-full"
-                        src={`https://www.youtube.com/embed/${popupVideoId}?si=T7Bf4cV885K4Jsk7&autoplay=1`}
+                        src={`https://www.youtube.com/embed/${popupVideoId}?si=tYIC7Urjzrg&autoplay=1`}
                         title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin"
