@@ -14,7 +14,7 @@ const partners = [
     {
         logo: DCSLogo,
         description:
-            'Design Conveyor Systems has been Urbx’s first partner, boasting over 40 years of experience in material handling, full-scale warehouse operations, and conveyor design. Founded in 1982, Design Conveyors offers a wide range of services, including supply chain consulting, customer support, and systems design integration. ',
+            'Designed Conveyor Systems has been Urbx’s first partner, boasting over 40 years of experience in material handling, full-scale warehouse operations, and conveyor design. Founded in 1982, Design Conveyors offers a wide range of services, including supply chain consulting, customer support, and systems design integration. ',
 
         location: 'DCS - Nasvhille, TN',
         website: 'https://www.designedconveyor.com/',
