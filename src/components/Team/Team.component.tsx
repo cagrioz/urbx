@@ -35,12 +35,6 @@ const people = [
             'Joseph is a lawyer with more than 35 years of corporate and securities legal experience. He has served as legal counsel to private and public companies and funds advising clients on complex corporate transactional matters, fund formation, board governance, and regulatory compliance matters.',
     },
     {
-        name: 'Rudi Lueg',
-        role: 'CRO',
-        description:
-            'Rudi was Managing Director of Exotec North America, an international supplier of robotic systems for the supply chain. He joins the team with three decades of experience in the supply chain industry, including leadership positions at KNAPP, Fortna, and SDI among others.',
-    },
-    {
         name: 'Nikko Pianetto',
         role: 'Board Member',
         description:
