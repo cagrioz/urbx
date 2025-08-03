@@ -8,8 +8,9 @@ import CarterLogo from '@/assets/carter.png';
 import MainwayLogo from '@/assets/mainway.png';
 import YargoLogo from '@/assets/yargo.png';
 import AbcoLogo from '@/assets/abco.png';
+import BeaconLogo from '@/assets/beacon.png';
 
-const partners = [DCSLogo, ISDLogo, HytekLogo, CarterLogo, MainwayLogo, YargoLogo, AbcoLogo];
+const partners = [DCSLogo, ISDLogo, HytekLogo, CarterLogo, MainwayLogo, YargoLogo, AbcoLogo, BeaconLogo];
 
 export default function Partners() {
     return (
@@ -20,14 +21,14 @@ export default function Partners() {
             <div className="relative flex overflow-x-hidden">
                 <div className="animate-marquee flex">
                     {partners.map((partner, index) => (
-                        <div key={index} className="w-80 h-60 flex-shrink-0 mx-3">
+                        <div key={index} className="w-80 h-60 flex-shrink-0 mx-3 flex items-center justify-center">
                             <Image src={partner} alt="partner" loading="eager" />
                         </div>
                     ))}
                 </div>
                 <div className="animate-marquee flex">
                     {partners.map((partner, index) => (
-                        <div key={index} className="w-80 h-60 flex-shrink-0 mx-3">
+                        <div key={index} className="w-80 h-60 flex-shrink-0 mx-3 flex items-center justify-center">
                             <Image src={partner} alt="partner" loading="eager" />
                         </div>
                     ))}
