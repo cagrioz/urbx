@@ -114,7 +114,7 @@ export default function Navigation() {
                                             style={ibm_mono.style}
                                             href={item.href}
                                             className={classNames(
-                                                'inline-block uppercase text-standard-5 hover:text-standard-4 text-sm font-light px-4 laptop:px-[22px] py-2.5 rounded-full',
+                                                'inline-block uppercase text-standard-5 hover:text-standard-4 text-sm font-light px-4 laptop:px-[14px] desktop:px-[22px] py-2.5 rounded-full',
                                                 {
                                                     border: pathname === item.href,
                                                 }
