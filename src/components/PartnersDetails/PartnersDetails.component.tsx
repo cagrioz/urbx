@@ -92,7 +92,7 @@ export default function PartnersDetails() {
                             key={index}
                             className="flex flex-col tablet:flex-row px-8 py-8 desktop:px-[60px] desktop:py-10 gap-6 tablet:gap-8 laptop:gap-[60px] border border-dashed border-standard-3/70 rounded-2xl"
                         >
-                            <div className="tablet:w-1/3 laptop:w-auto grow flex flex-col justify-between gap-6 tablet:gap-8">
+                            <div className="tablet:w-1/3 laptop:shrink-0 laptop:w-1/4 grow flex flex-col justify-between gap-6 tablet:gap-8">
                                 <div>
                                     <Image src={partner.logo} alt="partner" height={50} />
                                 </div>
