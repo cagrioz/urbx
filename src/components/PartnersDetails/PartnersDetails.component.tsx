@@ -9,6 +9,7 @@ import MainwayLogo from '@/assets/plain_mainway.png';
 import VargoLogo from '@/assets/plain_vargo.png';
 import AbcoLogo from '@/assets/plain_abco.png';
 import BeaconLogo from '@/assets/plain_beacon.png';
+import LiftLogo from '@/assets/plain_lift.png';
 import { ibm_mono } from '@/styles/fonts';
 
 const partners = [
@@ -61,6 +62,13 @@ const partners = [
             'Hytek Automation specializes in providing cutting-edge automation solutions to a wide range of industries. Their services include conveyor systems, sortation systems, robotic solutions, and many more. ',
         location: 'Hy-tek Intralogistics - Columbus, OH ',
         website: 'https://www.hy-tek.com/',
+    },
+    {
+        logo: LiftLogo,
+        description:
+            ' At the forefront of supply chain innovation, The Beacon Group is a premier systems integration firm specializing in material handling automation. We design, engineer, and deliver tailored end-to-end solutions that seamlessly integrate robotics, conveyors, AS/RS, WCS software, and control systems into high-performance distribution, fulfillment, and manufacturing environments. The multidisciplinary team at The Beacon Group combines mechanical, electrical, and software engineering to create scalable turnkey solutions that optimize throughput, maximize space utilization, and reduce labor dependency.',
+        location: 'LIFT INCORPORATED - MOUNTVILLE, PA',
+        website: 'https://www.liftincorporated.com/',
     },
     {
         logo: BeaconLogo,

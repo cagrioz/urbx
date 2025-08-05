@@ -9,8 +9,9 @@ import MainwayLogo from '@/assets/mainway.png';
 import YargoLogo from '@/assets/yargo.png';
 import AbcoLogo from '@/assets/abco.png';
 import BeaconLogo from '@/assets/beacon.png';
+import LiftLogo from '@/assets/lift.png';
 
-const partners = [DCSLogo, ISDLogo, HytekLogo, CarterLogo, MainwayLogo, YargoLogo, AbcoLogo, BeaconLogo];
+const partners = [DCSLogo, ISDLogo, HytekLogo, CarterLogo, MainwayLogo, YargoLogo, AbcoLogo, LiftLogo, BeaconLogo];
 
 export default function Partners() {
     return (
