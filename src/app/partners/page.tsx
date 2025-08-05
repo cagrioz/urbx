@@ -1,7 +1,7 @@
 import Footer from '@/components/Footer';
 import StandardHero from '@/components/StandardHero';
 
-import HeroImg from '@/assets/partners.png';
+import HeroImg from '@/assets/partners_new.png';
 import PartnersDetails from '@/components/PartnersDetails';
 import CTA from '@/components/CTA';
 
