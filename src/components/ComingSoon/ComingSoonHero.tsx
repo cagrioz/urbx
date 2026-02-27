@@ -13,7 +13,7 @@ export default function ComingSoonHero() {
                     className="hero-animate-title font-general-sans text-[32px] tablet:text-[48px] desktop:text-[56px] font-normal text-center leading-[1.1] tracking-[-0.01em] pb-1"
                 >
                     <span className="hero-title-line hero-title-line-1 hero-title-gradient">Next-Gen Cube</span>
-                    <span className="hero-title-line hero-title-line-2 hero-title-gradient">Storage</span>
+                    <span className="hero-title-line hero-title-line-2 hero-title-gradient inline-block pb-0.5">Storage</span>
                 </h1>
 
                 <div className="relative w-full max-w-[1232px] mt-6 tablet:mt-10">
