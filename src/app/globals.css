@@ -34,3 +34,147 @@ h1 {
 .blog-content > div {
     @apply mt-10;
 }
+
+@keyframes hero-fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(16px);
+        filter: blur(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes hero-subtitle-reveal {
+    0% {
+        opacity: 0;
+        transform: translateX(-22px);
+        letter-spacing: 0.14em;
+        filter: blur(6px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        letter-spacing: -0.0312em;
+        filter: blur(0);
+    }
+}
+
+@keyframes hero-title-line-in {
+    0% {
+        opacity: 0;
+        transform: translateX(34px) scale(0.985);
+        filter: blur(8px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes hero-title-glow-settle {
+    0% {
+        filter: drop-shadow(0 0 0 rgba(57, 199, 254, 0));
+    }
+    40% {
+        filter: drop-shadow(0 0 10px rgba(57, 199, 254, 0.24));
+    }
+    100% {
+        filter: drop-shadow(0 0 2px rgba(57, 199, 254, 0.08));
+    }
+}
+
+@keyframes hero-glow-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.97);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes hero-glow-breathe {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.9;
+    }
+}
+
+@keyframes hero-image-in {
+    0% {
+        opacity: 0;
+        transform: translateY(24px) scale(0.985);
+        filter: blur(4px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+.hero-animate-subtitle {
+    opacity: 0;
+    animation: hero-subtitle-reveal 760ms cubic-bezier(0.22, 1, 0.36, 1) 120ms forwards;
+}
+
+.hero-animate-title {
+    filter: drop-shadow(0 0 0 rgba(57, 199, 254, 0));
+    animation: hero-title-glow-settle 1400ms ease-out 420ms forwards;
+}
+
+.hero-animate-title .hero-title-line {
+    display: block;
+    opacity: 0;
+    will-change: transform, opacity, filter;
+}
+
+.hero-title-gradient {
+    background-image: radial-gradient(ellipse at top center, #ffffff 0%, #39c7fe 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-animate-title .hero-title-line-1 {
+    animation: hero-title-line-in 900ms cubic-bezier(0.22, 1, 0.36, 1) 240ms forwards;
+}
+
+.hero-animate-title .hero-title-line-2 {
+    animation: hero-title-line-in 900ms cubic-bezier(0.22, 1, 0.36, 1) 360ms forwards;
+}
+
+.hero-animate-glow {
+    opacity: 0;
+    animation:
+        hero-glow-in 1200ms cubic-bezier(0.22, 1, 0.36, 1) 360ms forwards,
+        hero-glow-breathe 8s ease-in-out 1800ms infinite;
+}
+
+.hero-animate-image {
+    opacity: 0;
+    animation: hero-image-in 1200ms cubic-bezier(0.22, 1, 0.36, 1) 420ms forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-animate-subtitle,
+    .hero-animate-title,
+    .hero-animate-title .hero-title-line,
+    .hero-animate-glow,
+    .hero-animate-image {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+    }
+}
