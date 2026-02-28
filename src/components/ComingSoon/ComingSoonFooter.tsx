@@ -213,9 +213,9 @@ export default function ComingSoonFooter() {
                         <NewsletterForm />
 
                         <p className="font-ibm-mono text-[12px] text-comingSoon-muted tracking-[-0.0312em] leading-[1.4]">
-                            Redefining urban fulfillment through high-density
+                            Autonomous vertical storage that unlocks density,
                             <br />
-                            automation and intelligent orchestration.
+                            speed, and throughput at any height.
                         </p>
 
                         <div className="mt-2">
@@ -241,7 +241,7 @@ export default function ComingSoonFooter() {
                 {/* Bottom section - Copyright and legal */}
                 <div className="flex flex-col tablet:flex-row justify-between items-start tablet:items-center mt-12 tablet:mt-16 pt-6">
                     <p className="font-ibm-mono text-[10px] text-comingSoon-muted tracking-[-0.0312em] leading-[1.4]">
-                        © 2026 Urbx Logistics. All rights reserved.
+                        © 2026 Urbx, Inc. All rights reserved.
                     </p>
                     <div className="flex gap-6 mt-4 tablet:mt-0">
                         <a
