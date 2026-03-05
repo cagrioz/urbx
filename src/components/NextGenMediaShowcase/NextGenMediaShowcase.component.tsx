@@ -1,8 +1,10 @@
 import classNames from 'classnames';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
+import type { ReactNode } from 'react';
 import NextGenNavigation from '@/components/NextGenNavigation';
 import FullVideoPlayIcon from '@/assets/version2/fullvideo_play_icon.png';
+import DownArrowIcon from '@/assets/version2/arrow_down.png';
 import RightArrowIcon from '@/assets/version2/arrow_right.png';
 
 export type MediaShowcaseVariant = 'full' | 'icon' | 'explore';
@@ -16,6 +18,7 @@ export interface MediaShowcaseAction {
 }
 
 export interface MediaShowcaseProps {
+    id?: string;
     image: StaticImageData | string;
     imageAlt: string;
     backgroundVideoUrl?: string;
@@ -31,17 +34,33 @@ export interface MediaShowcaseProps {
     descriptionClassName?: string;
 }
 
-function ArrowRightIcon() {
+function MediaShowcaseActionLink({
+    action,
+    ariaLabel,
+    className,
+    children,
+}: {
+    action: MediaShowcaseAction;
+    ariaLabel: string;
+    className: string;
+    children: ReactNode;
+}) {
+    const isInPageAnchor = action.href.startsWith('#');
+    const target = action.openInNewTab ? '_blank' : undefined;
+    const rel = action.openInNewTab ? 'noopener noreferrer' : undefined;
+
+    if (isInPageAnchor) {
+        return (
+            <a href={action.href} aria-label={ariaLabel} className={className}>
+                {children}
+            </a>
+        );
+    }
+
     return (
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-            <path
-                d="M5.25 3.5L8.75 7L5.25 10.5"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
-        </svg>
+        <Link href={action.href} aria-label={ariaLabel} target={target} rel={rel} className={className}>
+            {children}
+        </Link>
     );
 }
 
@@ -49,47 +68,39 @@ function MediaShowcaseActionButton({ action }: { action: MediaShowcaseAction }) 
     const variant = action.variant ?? 'full';
     const label = action.label ?? 'FULL VIDEO';
     const baseClassName = 'inline-flex items-center rounded-[8px] text-[#F3F4F9] transition-colors';
-    const target = action.openInNewTab ? '_blank' : undefined;
-    const rel = action.openInNewTab ? 'noopener noreferrer' : undefined;
 
     if (variant === 'icon') {
         return (
-            <Link
-                href={action.href}
-                aria-label={action.ariaLabel ?? 'Open page media'}
-                target={target}
-                rel={rel}
+            <MediaShowcaseActionLink
+                action={action}
+                ariaLabel={action.ariaLabel ?? 'Open page media'}
                 className={classNames(
                     baseClassName,
                     'h-10 w-10 justify-center border border-white/40 bg-white/[0.11] hover:bg-white/[0.17]'
                 )}
             >
-                <ArrowRightIcon />
-            </Link>
+                <Image src={DownArrowIcon} alt="" aria-hidden="true" width={16} height={16} className="h-3 w-3 shrink-0" />
+            </MediaShowcaseActionLink>
         );
     }
 
     if (variant === 'explore') {
         return (
-            <Link
-                href={action.href}
-                aria-label={action.ariaLabel ?? 'Explore'}
-                target={target}
-                rel={rel}
+            <MediaShowcaseActionLink
+                action={action}
+                ariaLabel={action.ariaLabel ?? 'Explore'}
                 className={classNames(baseClassName, 'h-10 min-w-[138px] gap-2 justify-between border border-white/40 bg-white/[0.11] pl-4 pr-[10px] font-ibm-mono text-[12px] font-normal leading-5 tracking-[0.02em] hover:bg-white/[0.17]')}
             >
                 <span className="whitespace-nowrap">{label}</span>
                 <Image src={RightArrowIcon} alt="" aria-hidden="true" width={16} height={16} className="h-3 w-3 shrink-0" />
-            </Link>
+            </MediaShowcaseActionLink>
         );
     }
 
     return (
-        <Link
-            href={action.href}
-            aria-label={action.ariaLabel ?? label}
-            target={target}
-            rel={rel}
+        <MediaShowcaseActionLink
+            action={action}
+            ariaLabel={action.ariaLabel ?? label}
             className={classNames(
                 baseClassName,
                 'h-10 min-w-[138px] justify-between border border-white/40 bg-white/[0.11] pl-4 pr-[10px] font-ibm-mono text-[12px] font-normal leading-5 tracking-[0.02em] hover:bg-white/[0.17] gap-2'
@@ -97,11 +108,12 @@ function MediaShowcaseActionButton({ action }: { action: MediaShowcaseAction }) 
         >
             <span className="whitespace-nowrap">{label}</span>
             <Image src={FullVideoPlayIcon} alt="" aria-hidden="true" width={12} height={12} className="h-3 w-3 shrink-0" />
-        </Link>
+        </MediaShowcaseActionLink>
     );
 }
 
 export default function NextGenMediaShowcase({
+    id,
     image,
     imageAlt,
     backgroundVideoUrl,
@@ -118,6 +130,7 @@ export default function NextGenMediaShowcase({
 }: MediaShowcaseProps) {
     return (
         <section
+            id={id}
             className={classNames(
                 'relative isolate overflow-hidden',
                 hasBottomRadius && 'rounded-b-[18px]',

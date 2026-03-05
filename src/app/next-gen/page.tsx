@@ -24,7 +24,7 @@ export default function NextGenLandingPage() {
                         href: 'https://youtube.com',
                         variant: 'full',
                         label: 'FULL VIDEO',
-                        ariaLabel: 'Play full video',
+                        ariaLabel: 'Play youtube video',
                         openInNewTab: true,
                     }}
                 />
@@ -50,7 +50,7 @@ export default function NextGenLandingPage() {
                     title="Ergonomic Pick Station"
                     description="Brings cases and totes directly to operators, eliminating travel and maximizing throughput"
                     action={{
-                        href: '/next-gen/solutions/totes#pick-station',
+                        href: '/solutions/totes#pick-station',
                         variant: 'explore',
                         label: 'EXPLORE',
                         ariaLabel: 'Explore',
