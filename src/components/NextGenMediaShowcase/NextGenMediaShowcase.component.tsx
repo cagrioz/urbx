@@ -12,11 +12,13 @@ export interface MediaShowcaseAction {
     variant?: MediaShowcaseVariant;
     label?: string;
     ariaLabel?: string;
+    openInNewTab?: boolean;
 }
 
 export interface MediaShowcaseProps {
     image: StaticImageData | string;
     imageAlt: string;
+    backgroundVideoUrl?: string;
     header?: string;
     title: string;
     description: string;
@@ -47,12 +49,16 @@ function MediaShowcaseActionButton({ action }: { action: MediaShowcaseAction }) 
     const variant = action.variant ?? 'full';
     const label = action.label ?? 'FULL VIDEO';
     const baseClassName = 'inline-flex items-center rounded-[8px] text-[#F3F4F9] transition-colors';
+    const target = action.openInNewTab ? '_blank' : undefined;
+    const rel = action.openInNewTab ? 'noopener noreferrer' : undefined;
 
     if (variant === 'icon') {
         return (
             <Link
                 href={action.href}
                 aria-label={action.ariaLabel ?? 'Open page media'}
+                target={target}
+                rel={rel}
                 className={classNames(
                     baseClassName,
                     'h-10 w-10 justify-center border border-white/40 bg-white/[0.11] hover:bg-white/[0.17]'
@@ -68,6 +74,8 @@ function MediaShowcaseActionButton({ action }: { action: MediaShowcaseAction }) 
             <Link
                 href={action.href}
                 aria-label={action.ariaLabel ?? 'Explore'}
+                target={target}
+                rel={rel}
                 className={classNames(baseClassName, 'h-10 min-w-[138px] gap-2 justify-between border border-white/40 bg-white/[0.11] pl-4 pr-[10px] font-ibm-mono text-[12px] font-normal leading-5 tracking-[0.02em] hover:bg-white/[0.17]')}
             >
                 <span className="whitespace-nowrap">{label}</span>
@@ -80,6 +88,8 @@ function MediaShowcaseActionButton({ action }: { action: MediaShowcaseAction }) 
         <Link
             href={action.href}
             aria-label={action.ariaLabel ?? label}
+            target={target}
+            rel={rel}
             className={classNames(
                 baseClassName,
                 'h-10 min-w-[138px] justify-between border border-white/40 bg-white/[0.11] pl-4 pr-[10px] font-ibm-mono text-[12px] font-normal leading-5 tracking-[0.02em] hover:bg-white/[0.17] gap-2'
@@ -94,6 +104,7 @@ function MediaShowcaseActionButton({ action }: { action: MediaShowcaseAction }) 
 export default function NextGenMediaShowcase({
     image,
     imageAlt,
+    backgroundVideoUrl,
     header,
     title,
     description,
@@ -113,7 +124,21 @@ export default function NextGenMediaShowcase({
                 className
             )}
         >
-            <Image src={image} alt={imageAlt} priority fill className="object-cover object-top" />
+            {/* Background can be switched to looped live footage via backgroundVideoUrl. */}
+            {backgroundVideoUrl ? (
+                <video
+                    className="absolute inset-0 h-full w-full object-cover object-top"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    poster={typeof image === 'string' ? image : image.src}
+                >
+                    <source src={backgroundVideoUrl} />
+                </video>
+            ) : (
+                <Image src={image} alt={imageAlt} priority fill className="object-cover object-top" />
+            )}
 
             <div
                 aria-hidden="true"

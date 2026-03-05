@@ -28,15 +28,15 @@ export default function NextGenCompanyPage() {
                     <NextGenNavigation className="absolute inset-x-0 top-0 pt-3 tablet:pt-[14px] desktop:pt-6" />
 
                     <div className="mx-auto w-full max-w-[1340px] px-5 pb-12 pt-[92px] tablet:px-10 tablet:pb-14 tablet:pt-[106px] desktop:px-0 desktop:pb-16 desktop:pt-[102px]">
-                        <div className="grid items-start gap-10 laptop:grid-cols-[minmax(0,1fr)_487px] laptop:gap-x-12 desktop:gap-x-[56px]">
-                            <div className="relative h-[420px] overflow-hidden tablet:h-[560px] laptop:h-[720px] desktop:h-[760px]">
+                        <div className="grid items-start justify-items-center gap-10 laptop:grid-cols-[minmax(0,1fr)_487px] laptop:justify-items-stretch laptop:gap-x-12 desktop:gap-x-[56px]">
+                            <div className="relative h-[420px] w-full max-w-[490px] overflow-hidden tablet:h-[560px] laptop:h-[720px] laptop:max-w-none desktop:h-[760px]">
                                 <Image
                                     src={CompanyHeroImage}
                                     alt="URBX company journey image"
                                     priority
                                     fill
-                                    sizes="(min-width: 1024px) 60vw, 100vw"
-                                    className="object-cover object-left"
+                                    sizes="(min-width: 1440px) 490px, (min-width: 1024px) 46vw, (min-width: 768px) 55vw, 100vw"
+                                    className="object-contain object-center laptop:object-left"
                                 />
                                 <div
                                     aria-hidden="true"
@@ -48,7 +48,7 @@ export default function NextGenCompanyPage() {
                                 />
                             </div>
 
-                            <div className="w-full max-w-[487px]">
+                            <div className="mx-auto w-full max-w-none text-justify laptop:mx-0 laptop:max-w-[487px] laptop:text-left">
                                 <h1 className="hero-title-radial font-general-sans text-[32px] font-normal leading-[1] tracking-[-0.01em]">
                                     Our Journey
                                 </h1>
@@ -69,7 +69,7 @@ export default function NextGenCompanyPage() {
                                         Social Media
                                     </h2>
 
-                                    <div className="mt-4 flex items-center gap-2.5">
+                                    <div className="mt-4 flex items-center justify-center gap-2.5 laptop:justify-start">
                                         {socialLinks.map(({ label, href, icon }) => (
                                             <a
                                                 key={label}

@@ -76,19 +76,31 @@ export default function NextGenNavigation({
                                         className="h-[10px] w-[12px] shrink-0"
                                     />
                                 </button>
+                                <span
+                                    aria-hidden="true"
+                                    className="pointer-events-none absolute inset-x-0 top-full h-px origin-left scale-x-0 bg-white/80 opacity-0 transition-all duration-150 group-hover/solutions:scale-x-100 group-hover/solutions:opacity-100 group-focus-within/solutions:scale-x-100 group-focus-within/solutions:opacity-100"
+                                />
 
-                                <div className="absolute left-0 top-full z-30 hidden pt-2 group-hover/solutions:block group-focus-within/solutions:block">
+                                <div className="absolute left-0 top-full z-30 pt-2 opacity-0 pointer-events-none -translate-y-1 transition-all duration-250 ease-out delay-100 group-hover/solutions:opacity-100 group-hover/solutions:pointer-events-auto group-hover/solutions:translate-y-0 group-focus-within/solutions:opacity-100 group-focus-within/solutions:pointer-events-auto group-focus-within/solutions:translate-y-0">
                                     <div className="relative w-[93px] overflow-hidden [box-shadow:inset_0_1px_0_rgba(255,255,255,0.95)]">
                                         <span
                                             aria-hidden="true"
                                             className="pointer-events-none absolute inset-x-0 top-0 h-[10px] bg-[linear-gradient(180deg,rgba(255,255,255,0.32)_0%,rgba(255,255,255,0)_100%)]"
                                         />
                                         <ul className="relative w-[93px] bg-[linear-gradient(180deg,rgba(255,255,255,0.16)_0%,rgba(147,147,147,0.09)_100%)] backdrop-blur-[3px]">
-                                            {nextGenSolutionLinks.map((solutionLink) => (
+                                            {nextGenSolutionLinks.map((solutionLink, index) => (
                                                 <li key={solutionLink.label}>
                                                     <Link
                                                         href={solutionLink.href}
-                                                        className="flex h-9 items-center px-[10px] font-ibm-mono text-[12px] font-normal leading-5 text-[#DADADA] transition-colors hover:bg-white/5 hover:text-white"
+                                                        className={classNames(
+                                                            'flex h-9 items-center px-[10px] font-ibm-mono text-[12px] font-normal leading-5 text-[#DADADA] opacity-0 translate-y-1 transition-all duration-200 ease-out hover:bg-white/5 hover:text-white group-hover/solutions:opacity-100 group-hover/solutions:translate-y-0 group-focus-within/solutions:opacity-100 group-focus-within/solutions:translate-y-0',
+                                                            {
+                                                                'group-hover/solutions:delay-150 group-focus-within/solutions:delay-150': index === 0,
+                                                                'group-hover/solutions:delay-200 group-focus-within/solutions:delay-200': index === 1,
+                                                                'group-hover/solutions:delay-[250ms] group-focus-within/solutions:delay-[250ms]':
+                                                                    index === 2,
+                                                            }
+                                                        )}
                                                     >
                                                         <span>{solutionLink.label}</span>
                                                         {isActiveLink(solutionLink.href) ? (
