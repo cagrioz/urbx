@@ -5,6 +5,7 @@ import type { ReactNode } from 'react';
 import NextGenNavigation from '@/components/NextGenNavigation';
 import NextGenFlipCounters from '@/components/NextGenFlipCounters';
 import type { FlipCounterMetric } from '@/components/NextGenFlipCounters';
+import NextGenSpecRows, { type NextGenSpecRow } from '@/components/NextGenSpecRows';
 import FullVideoPlayIcon from '@/assets/version2/fullvideo_play_icon.png';
 import DownArrowIcon from '@/assets/version2/arrow_down.png';
 import RightArrowIcon from '@/assets/version2/arrow_right.png';
@@ -19,6 +20,8 @@ export interface MediaShowcaseAction {
     openInNewTab?: boolean;
 }
 
+export type MediaShowcaseSpecRow = NextGenSpecRow;
+
 export interface MediaShowcaseProps {
     id?: string;
     image: StaticImageData | string;
@@ -29,6 +32,10 @@ export interface MediaShowcaseProps {
     description: string;
     action?: MediaShowcaseAction;
     metrics?: FlipCounterMetric[];
+    specRows?: MediaShowcaseSpecRow[];
+    specHeaderColor?: string;
+    specTextColor?: string;
+    specBorderColor?: string;
     className?: string;
     hasBottomRadius?: boolean;
     showNavigation?: boolean;
@@ -125,6 +132,10 @@ export default function NextGenMediaShowcase({
     description,
     action,
     metrics,
+    specRows,
+    specHeaderColor,
+    specTextColor,
+    specBorderColor,
     className,
     hasBottomRadius = true,
     showNavigation = true,
@@ -194,7 +205,16 @@ export default function NextGenMediaShowcase({
                         </p>
                     </div>
 
-                    {metrics && metrics.length > 0 ? (
+                    {specRows && specRows.length > 0 ? (
+                        <div className="tablet:mb-1 tablet:shrink-1">
+                            <NextGenSpecRows
+                                rows={specRows}
+                                headerColor={specHeaderColor}
+                                textColor={specTextColor}
+                                borderColor={specBorderColor}
+                            />
+                        </div>
+                    ) : metrics && metrics.length > 0 ? (
                         <div className="tablet:mb-1">
                             <NextGenFlipCounters metrics={metrics} />
                         </div>
