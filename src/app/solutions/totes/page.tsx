@@ -1,6 +1,13 @@
 import { ComingSoonFooter } from '@/components/ComingSoon';
 import NextGenMediaShowcase from '@/components/NextGenMediaShowcase';
 import ToteBackdrop from '@/assets/version2/tote-gripper.png';
+import ToteHandlingCapacityBackdrop from '@/assets/version2/tote-handling-capacity.png';
+
+const toteHandlingMetrics = [
+    { value: 100, unit: 'lbs' },
+    { value: 45, unit: 'kg' },
+];
+
 export default function NextGenTotesPage() {
     return (
         <>
@@ -16,24 +23,26 @@ export default function NextGenTotesPage() {
                 />
                 <NextGenMediaShowcase
                     id="tote-handling-capacity"
+                    className="scroll-mt-20 tablet:scroll-mt-24 desktop:scroll-mt-28"
+                    hasBottomRadius={false}
+                    showNavigation={false}
+                    image={ToteHandlingCapacityBackdrop}
+                    imageAlt="URBX tote handling capacity"
+                    title="Tote Handling Capacity"
+                    description="Industry-leading payload capacity enables the handling of a diverse range of goods"
+                    metrics={toteHandlingMetrics}
+                />
+                <NextGenMediaShowcase
+                    id="pick-station"
+                    className="scroll-mt-20 tablet:scroll-mt-24 desktop:scroll-mt-28"
                     hasBottomRadius={false}
                     showNavigation={false}
                     image={ToteBackdrop}
-                    imageAlt="URBX tote gripper"
-                    title="2"
-                    description="2"
-                />
-                <section id="pick-station" className="mx-auto w-full max-w-[1340px] px-5 py-16 tablet:px-10 desktop:px-0 desktop:py-20">
-                    <div className="max-w-[760px]">
-                        <h2 className="font-general-sans text-[28px] font-normal leading-[1] tracking-[-0.01em] text-[#F3F4F9] tablet:text-[32px]">
-                            Pick Station
-                        </h2>
-                        <p className="mt-4 font-ibm-mono text-[14px] leading-[1.4] tracking-[-0.01em] text-white/70 tablet:text-[16px]">
-                            The URBX pick station is designed for efficient goods-to-person workflows, with fast tote presentation, clear operator
-                            interaction, and consistent picking performance.
-                        </p>
-                    </div>
-                </section>
+                    imageAlt="URBX tote handling capacity"
+                    title="Tote Handling Capacity"
+                    description="Industry-leading payload capacity enables the handling of a diverse range of goods"
+
+                />  
             </main>
             <ComingSoonFooter />
         </>

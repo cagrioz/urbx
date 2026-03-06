@@ -3,6 +3,8 @@ import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import NextGenNavigation from '@/components/NextGenNavigation';
+import NextGenFlipCounters from '@/components/NextGenFlipCounters';
+import type { FlipCounterMetric } from '@/components/NextGenFlipCounters';
 import FullVideoPlayIcon from '@/assets/version2/fullvideo_play_icon.png';
 import DownArrowIcon from '@/assets/version2/arrow_down.png';
 import RightArrowIcon from '@/assets/version2/arrow_right.png';
@@ -26,6 +28,7 @@ export interface MediaShowcaseProps {
     title: string;
     description: string;
     action?: MediaShowcaseAction;
+    metrics?: FlipCounterMetric[];
     className?: string;
     hasBottomRadius?: boolean;
     showNavigation?: boolean;
@@ -121,6 +124,7 @@ export default function NextGenMediaShowcase({
     title,
     description,
     action,
+    metrics,
     className,
     hasBottomRadius = true,
     showNavigation = true,
@@ -153,10 +157,10 @@ export default function NextGenMediaShowcase({
                 <Image src={image} alt={imageAlt} priority fill className="object-cover object-top" />
             )}
 
-            <div
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-x-0 bottom-0 h-[300px] bg-[linear-gradient(to_top,rgba(8,10,12,0.95)_0%,rgba(8,10,12,0.7)_40%,transparent_100%)]"
-            />
+           <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-x-0 bottom-0 h-[300px] bg-[linear-gradient(to_top,rgba(8,10,12,0.95)_0%,rgba(8,10,12,0.7)_40%,transparent_100%)]"
+                />
 
             {showNavigation ? (
                 <NextGenNavigation
@@ -190,7 +194,11 @@ export default function NextGenMediaShowcase({
                         </p>
                     </div>
 
-                    {action ? (
+                    {metrics && metrics.length > 0 ? (
+                        <div className="tablet:mb-1">
+                            <NextGenFlipCounters metrics={metrics} />
+                        </div>
+                    ) : action ? (
                         <div className="tablet:mb-1">
                             <MediaShowcaseActionButton action={action} />
                         </div>
