@@ -8,6 +8,11 @@ const toteHandlingMetrics = [
     { value: 45, unit: 'kg' },
 ];
 
+const toteGripperSpeedMetrics = [
+    { value: 4, unit: 'm/s²' },
+    { value: 6, unit: 'm/s' },
+];
+
 export default function NextGenTotesPage() {
     return (
         <>
@@ -31,6 +36,15 @@ export default function NextGenTotesPage() {
                     title="Tote Handling Capacity"
                     description="Industry-leading payload capacity enables the handling of a diverse range of goods"
                     metrics={toteHandlingMetrics}
+                />
+                <NextGenMediaShowcase
+                    hasBottomRadius={false}
+                    showNavigation={false}
+                    image={ToteBackdrop}
+                    imageAlt="URBX tote gripper speed"
+                    title="Tote Gripper Speed"
+                    description="Industry-leading speed increases throughput and accelerates fulfillment"
+                    metrics={toteGripperSpeedMetrics}
                 />
                 <NextGenMediaShowcase
                     id="pick-station"
