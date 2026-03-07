@@ -1,7 +1,9 @@
+'use client';
+
 import classNames from 'classnames';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
-import type { ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import NextGenNavigation from '@/components/NextGenNavigation';
 import NextGenFlipCounters from '@/components/NextGenFlipCounters';
 import type { FlipCounterMetric } from '@/components/NextGenFlipCounters';
@@ -9,6 +11,7 @@ import NextGenSpecRows, { type NextGenSpecRow } from '@/components/NextGenSpecRo
 import FullVideoPlayIcon from '@/assets/version2/fullvideo_play_icon.png';
 import DownArrowIcon from '@/assets/version2/arrow_down.png';
 import RightArrowIcon from '@/assets/version2/arrow_right.png';
+import LeftArrowIcon from '@/assets/version2/arrow_left.png';
 
 export type MediaShowcaseVariant = 'full' | 'icon' | 'explore';
 
@@ -20,6 +23,14 @@ export interface MediaShowcaseAction {
     openInNewTab?: boolean;
 }
 
+export interface MediaShowcaseCarouselSlide {
+    image: StaticImageData | string;
+    imageAlt?: string;
+    backgroundVideoUrl?: string;
+}
+
+export type MediaShowcaseTextPosition = 'bottom' | 'top';
+
 export type MediaShowcaseSpecRow = NextGenSpecRow;
 
 export interface MediaShowcaseProps {
@@ -27,19 +38,22 @@ export interface MediaShowcaseProps {
     image: StaticImageData | string;
     imageAlt: string;
     backgroundVideoUrl?: string;
+    carouselSlides?: MediaShowcaseCarouselSlide[];
     header?: string;
     title: string;
     description: string;
+    textPosition?: MediaShowcaseTextPosition;
     action?: MediaShowcaseAction;
     metrics?: FlipCounterMetric[];
     specRows?: MediaShowcaseSpecRow[];
+    specHeading?: string;
+    specHeadingColor?: string;
     specHeaderColor?: string;
     specTextColor?: string;
     specBorderColor?: string;
     className?: string;
     hasBottomRadius?: boolean;
     showNavigation?: boolean;
-    navigationClassName?: string;
     titleClassName?: string;
     descriptionClassName?: string;
 }
@@ -133,97 +147,196 @@ export default function NextGenMediaShowcase({
     action,
     metrics,
     specRows,
+    carouselSlides,
+    textPosition = 'bottom',
+    specHeading,
+    specHeadingColor,
     specHeaderColor,
     specTextColor,
     specBorderColor,
     className,
     hasBottomRadius = true,
     showNavigation = true,
-    navigationClassName,
     titleClassName,
     descriptionClassName,
 }: MediaShowcaseProps) {
+    const totalSlides = carouselSlides?.length ?? 0;
+    const hasCarousel = totalSlides > 0;
+    const hasCarouselControls = totalSlides > 1;
+    const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+
+    useEffect(() => {
+        if (!hasCarousel || totalSlides <= 0) {
+            setActiveSlideIndex(0);
+            return;
+        }
+
+        if (activeSlideIndex >= totalSlides) {
+            setActiveSlideIndex(0);
+        }
+    }, [activeSlideIndex, hasCarousel, totalSlides]);
+
+    const activeSlide = hasCarousel ? carouselSlides?.[activeSlideIndex] : undefined;
+    const activeImage = activeSlide?.image ?? image;
+    const activeImageAlt = activeSlide?.imageAlt ?? imageAlt;
+    const activeBackgroundVideoUrl = activeSlide?.backgroundVideoUrl ?? backgroundVideoUrl;
+
+    const handlePreviousSlide = () => {
+        if (!hasCarouselControls) {
+            return;
+        }
+
+        setActiveSlideIndex((previousIndex) => (previousIndex - 1 + totalSlides) % totalSlides);
+    };
+
+    const handleNextSlide = () => {
+        if (!hasCarouselControls) {
+            return;
+        }
+
+        setActiveSlideIndex((previousIndex) => (previousIndex + 1) % totalSlides);
+    };
+
+    const rightContent = specRows && specRows.length > 0 ? (
+        <div className="w-full tablet:mb-1 tablet:w-auto tablet:shrink-0">
+            <NextGenSpecRows
+                rows={specRows}
+                heading={specHeading}
+                headingColor={specHeadingColor}
+                headerColor={specHeaderColor}
+                textColor={specTextColor}
+                borderColor={specBorderColor}
+            />
+        </div>
+    ) : metrics && metrics.length > 0 ? (
+        <div className="tablet:mb-1">
+            <NextGenFlipCounters metrics={metrics} />
+        </div>
+    ) : action ? (
+        <div className="tablet:mb-1">
+            <MediaShowcaseActionButton action={action} />
+        </div>
+    ) : null;
+
     return (
         <section
             id={id}
             className={classNames(
-                'relative isolate overflow-hidden',
+                'relative isolate overflow-hidden bg-white',
                 hasBottomRadius && 'rounded-b-[18px]',
                 className
             )}
         >
             {/* Background can be switched to looped live footage via backgroundVideoUrl. */}
-            {backgroundVideoUrl ? (
+            {activeBackgroundVideoUrl ? (
                 <video
                     className="absolute inset-0 h-full w-full object-cover object-top"
                     autoPlay
                     muted
                     loop
                     playsInline
-                    poster={typeof image === 'string' ? image : image.src}
+                    poster={typeof activeImage === 'string' ? activeImage : activeImage.src}
                 >
-                    <source src={backgroundVideoUrl} />
+                    <source src={activeBackgroundVideoUrl} />
                 </video>
             ) : (
-                <Image src={image} alt={imageAlt} priority fill className="object-cover object-top" />
+                <Image src={activeImage} alt={activeImageAlt} priority fill className="object-cover object-top" />
             )}
 
-           <div
-                    aria-hidden="true"
-                    className="pointer-events-none absolute inset-x-0 bottom-0 h-[300px] bg-[linear-gradient(to_top,rgba(8,10,12,0.95)_0%,rgba(8,10,12,0.7)_40%,transparent_100%)]"
-                />
+            {hasCarouselControls ? (
+                <>
+                    <button
+                        type="button"
+                        onClick={handlePreviousSlide}
+                        aria-label="Previous slide"
+                        className="carousel-arrow-btn absolute left-4 top-1/2 z-20 inline-flex h-[38px] w-[58px] -translate-y-1/2 items-center justify-center rounded-[8px] px-[18px] py-[8px] transition-opacity hover:opacity-80 tablet:left-6 desktop:left-8"
+                    >
+                        <Image src={LeftArrowIcon} alt="" aria-hidden="true" width={22} height={22} className="h-[22px] w-[22px]" />
+                    </button>
+                    <button
+                        type="button"
+                        onClick={handleNextSlide}
+                        aria-label="Next slide"
+                        className="carousel-arrow-btn absolute right-4 top-1/2 z-20 inline-flex h-[38px] w-[58px] -translate-y-1/2 items-center justify-center rounded-[8px] px-[18px] py-[8px] transition-opacity hover:opacity-80 tablet:right-6 desktop:right-8"
+                    >
+                        <Image src={RightArrowIcon} alt="" aria-hidden="true" width={22} height={22} className="h-[22px] w-[22px]" />
+                    </button>
+                </>
+            ) : null}
+
+            <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-x-0 bottom-0 h-[300px] bg-[linear-gradient(to_top,rgba(8,10,12,0.95)_0%,rgba(8,10,12,0.7)_40%,transparent_100%)]"
+            />
 
             {showNavigation ? (
                 <NextGenNavigation
-                    className={classNames('absolute inset-x-0 top-0 pt-3 tablet:pt-[14px] desktop:pt-6', navigationClassName)}
+                    className={classNames('absolute inset-x-0 top-0 pt-3 tablet:pt-[14px] desktop:pt-6')}
                 />
             ) : null}
 
-            <div className="relative z-10 mx-auto flex min-h-[640px] w-full max-w-[1340px] flex-col px-5 pb-9 pt-[86px] tablet:min-h-[760px] tablet:px-10 tablet:pt-[94px] tablet:pb-11 desktop:min-h-[849px] desktop:px-0 desktop:pb-[50px]">
-                <div className="mt-auto flex flex-col gap-5 tablet:flex-row tablet:items-end tablet:justify-between">
-                    <div className="max-w-[480px]">
-                        {header ? (
-                            <p className="mb-4 font-ibm-mono text-[14px] font-medium uppercase leading-[1.4] tracking-[0.1em] text-[#F3F4F9]">
-                                {header}
+            <div className="relative z-10 mx-auto flex min-h-[640px] w-full max-w-[1340px] flex-1 flex-col px-5 pb-9 pt-[86px] tablet:min-h-[760px] tablet:px-10 tablet:pt-[94px] tablet:pb-11 desktop:min-h-[849px] desktop:px-0 desktop:pb-[50px]">
+                {textPosition === 'top' ? (
+                    <>
+                        <div className="max-w-[480px]">
+                            {header ? (
+                                <p className="mb-4 font-ibm-mono text-[14px] font-medium uppercase leading-[1.4] tracking-[0.1em] text-[#F3F4F9]">
+                                    {header}
+                                </p>
+                            ) : null}
+                            <h1
+                                className={classNames(
+                                    'font-general-sans text-[28px] font-normal leading-[1] tracking-[-0.01em] text-[#F3F4F9] tablet:text-[32px]',
+                                    titleClassName
+                                )}
+                            >
+                                {title}
+                            </h1>
+                            <p
+                                className={classNames(
+                                    'mt-4 max-w-[560px] font-ibm-mono text-[14px] leading-[1.4] tracking-[-0.01em] text-white/60 tablet:text-[16px]',
+                                    descriptionClassName
+                                )}
+                            >
+                                {description}
                             </p>
-                        ) : null}
-                        <h1
-                            className={classNames(
-                                'font-general-sans text-[28px] font-normal leading-[1] tracking-[-0.01em] text-[#F3F4F9] tablet:text-[32px]',
-                                titleClassName
-                            )}
-                        >
-                            {title}
-                        </h1>
-                        <p
-                            className={classNames(
-                                'mt-4 max-w-[560px] font-ibm-mono text-[14px] leading-[1.4] tracking-[-0.01em] text-white/60 tablet:text-[16px]',
-                                descriptionClassName
-                            )}
-                        >
-                            {description}
-                        </p>
-                    </div>
+                        </div>
 
-                    {specRows && specRows.length > 0 ? (
-                        <div className="tablet:mb-1 tablet:shrink-1">
-                            <NextGenSpecRows
-                                rows={specRows}
-                                headerColor={specHeaderColor}
-                                textColor={specTextColor}
-                                borderColor={specBorderColor}
-                            />
+                        {rightContent ? (
+                            <div className="mt-auto flex w-full justify-start tablet:justify-end">
+                                {rightContent}
+                            </div>
+                        ) : null}
+                    </>
+                ) : (
+                    <div className="mt-auto flex flex-col gap-5 tablet:flex-row tablet:items-end tablet:justify-between">
+                        <div className="max-w-[480px]">
+                            {header ? (
+                                <p className="mb-4 font-ibm-mono text-[14px] font-medium uppercase leading-[1.4] tracking-[0.1em] text-[#F3F4F9]">
+                                    {header}
+                                </p>
+                            ) : null}
+                            <h1
+                                className={classNames(
+                                    'font-general-sans text-[28px] font-normal leading-[1] tracking-[-0.01em] text-[#F3F4F9] tablet:text-[32px]',
+                                    titleClassName
+                                )}
+                            >
+                                {title}
+                            </h1>
+                            <p
+                                className={classNames(
+                                    'mt-4 max-w-[560px] font-ibm-mono text-[14px] leading-[1.4] tracking-[-0.01em] text-white/60 tablet:text-[16px]',
+                                    descriptionClassName
+                                )}
+                            >
+                                {description}
+                            </p>
                         </div>
-                    ) : metrics && metrics.length > 0 ? (
-                        <div className="tablet:mb-1">
-                            <NextGenFlipCounters metrics={metrics} />
-                        </div>
-                    ) : action ? (
-                        <div className="tablet:mb-1">
-                            <MediaShowcaseActionButton action={action} />
-                        </div>
-                    ) : null}
-                </div>
+
+                        {rightContent}
+                    </div>
+                )}
             </div>
         </section>
     );

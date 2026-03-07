@@ -10,6 +10,8 @@ export interface NextGenSpecRow {
 
 export interface NextGenSpecRowsProps {
     rows: NextGenSpecRow[];
+    heading?: string;
+    headingColor?: string;
     headerColor?: string;
     textColor?: string;
     borderColor?: string;
@@ -18,6 +20,8 @@ export interface NextGenSpecRowsProps {
 
 export default function NextGenSpecRows({
     rows,
+    heading,
+    headingColor = '#FFFFFF',
     headerColor = 'rgba(255,255,255,0.6)',
     textColor = '#FFFFFF',
     borderColor = 'rgba(255,255,255,0.22)',
@@ -25,6 +29,16 @@ export default function NextGenSpecRows({
 }: NextGenSpecRowsProps) {
     return (
         <div className={classNames('w-full tablet:w-[clamp(340px,44vw,480px)] desktop:w-[480px]', className)}>
+            {heading ? (
+                <p
+                    className={classNames(
+                        'mb-[24px] font-general-sans text-[16px] font-medium uppercase leading-[1.4] tracking-[-0.01em]',
+                    )}
+                    style={{ color: headingColor }}
+                >
+                    {heading}
+                </p>
+            ) : null}
             {rows.map((row, index) => {
                 const isLastRow = index === rows.length - 1;
                 const resolvedHeaderColor = row.headerColor ?? headerColor;
