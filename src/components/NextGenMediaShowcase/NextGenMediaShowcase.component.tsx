@@ -148,14 +148,94 @@ function MediaShowcaseActionButton({ action }: { action: MediaShowcaseAction }) 
     );
 }
 
+interface MediaShowcaseTextBlockProps {
+    header?: string;
+    title: string;
+    description: string;
+    titleColor?: string;
+    descriptionColor?: string;
+    titleClassName?: string;
+    descriptionClassName?: string;
+}
+
+function MediaShowcaseTextBlock({
+    header,
+    title,
+    description,
+    titleColor,
+    descriptionColor,
+    titleClassName,
+    descriptionClassName,
+}: MediaShowcaseTextBlockProps) {
+    return (
+        <div className="max-w-[480px]">
+            {header ? (
+                <p className="mb-4 font-ibm-mono text-[14px] font-medium uppercase leading-[1.4] tracking-[0.1em] text-[#F3F4F9]">
+                    {header}
+                </p>
+            ) : null}
+            <h1
+                className={classNames(
+                    'font-general-sans text-[28px] font-normal leading-[1] tracking-[-0.01em] text-[#F3F4F9] tablet:text-[32px]',
+                    titleClassName
+                )}
+                style={titleColor ? { color: titleColor } : undefined}
+            >
+                {title}
+            </h1>
+            <p
+                className={classNames(
+                    'mt-4 max-w-[560px] font-ibm-mono text-[14px] leading-[1.4] tracking-[-0.01em] text-white/60 tablet:text-[16px]',
+                    descriptionClassName
+                )}
+                style={descriptionColor ? { color: descriptionColor } : undefined}
+            >
+                {description}
+            </p>
+        </div>
+    );
+}
+
+function MediaShowcaseCarouselControls({
+    onPrevious,
+    onNext,
+}: {
+    onPrevious: () => void;
+    onNext: () => void;
+}) {
+    return (
+        <>
+            <button
+                type="button"
+                onClick={onPrevious}
+                aria-label="Previous slide"
+                className="carousel-arrow-btn absolute left-4 top-1/2 z-20 inline-flex h-[38px] w-[58px] -translate-y-1/2 items-center justify-center rounded-[8px] px-[18px] py-[8px] transition-opacity hover:opacity-80 tablet:left-6 desktop:left-8"
+            >
+                <Image src={LeftArrowIcon} alt="" aria-hidden="true" width={22} height={22} className="h-[22px] w-[22px]" />
+            </button>
+            <button
+                type="button"
+                onClick={onNext}
+                aria-label="Next slide"
+                className="carousel-arrow-btn absolute right-4 top-1/2 z-20 inline-flex h-[38px] w-[58px] -translate-y-1/2 items-center justify-center rounded-[8px] px-[18px] py-[8px] transition-opacity hover:opacity-80 tablet:right-6 desktop:right-8"
+            >
+                <Image src={RightArrowIcon} alt="" aria-hidden="true" width={22} height={22} className="h-[22px] w-[22px]" />
+            </button>
+        </>
+    );
+}
+
 export default function NextGenMediaShowcase({
     id,
     image,
     imageAlt,
     backgroundVideoUrl,
+    carouselSlides,
     header,
     title,
     description,
+    textPosition = 'bottom',
+    textHorizontalPosition = 'left',
     action,
     metrics,
     metricValueColor,
@@ -164,9 +244,6 @@ export default function NextGenMediaShowcase({
     specRows,
     specRowsPlacement = 'side',
     specRowsClassName,
-    carouselSlides,
-    textPosition = 'bottom',
-    textHorizontalPosition = 'left',
     specHeading,
     specHeadingColor,
     specHeaderColor,
@@ -183,22 +260,22 @@ export default function NextGenMediaShowcase({
     descriptionClassName,
 }: MediaShowcaseProps) {
     const totalSlides = carouselSlides?.length ?? 0;
-    const hasCarousel = totalSlides > 0;
     const hasCarouselControls = totalSlides > 1;
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+    const specRowsData = specRows ?? [];
+    const hasSpecRows = specRowsData.length > 0;
+    const isTopSpecRowsLayout = hasSpecRows && specRowsPlacement === 'top';
 
     useEffect(() => {
-        if (!hasCarousel || totalSlides <= 0) {
-            setActiveSlideIndex(0);
+        if (totalSlides <= 0) {
             return;
         }
 
-        if (activeSlideIndex >= totalSlides) {
-            setActiveSlideIndex(0);
-        }
-    }, [activeSlideIndex, hasCarousel, totalSlides]);
+        setActiveSlideIndex((previousIndex) => (previousIndex < totalSlides ? previousIndex : 0));
+    }, [totalSlides]);
 
-    const activeSlide = hasCarousel ? carouselSlides?.[activeSlideIndex] : undefined;
+    const safeSlideIndex = totalSlides > 0 ? activeSlideIndex % totalSlides : 0;
+    const activeSlide = totalSlides > 0 ? carouselSlides?.[safeSlideIndex] : undefined;
     const activeImage = activeSlide?.image ?? image;
     const activeImageAlt = activeSlide?.imageAlt ?? imageAlt;
     const activeBackgroundVideoUrl = activeSlide?.backgroundVideoUrl ?? backgroundVideoUrl;
@@ -219,49 +296,47 @@ export default function NextGenMediaShowcase({
         setActiveSlideIndex((previousIndex) => (previousIndex + 1) % totalSlides);
     };
 
-    const hasSpecRows = Boolean(specRows && specRows.length > 0);
-    const isTopSpecRowsLayout = hasSpecRows && specRowsPlacement === 'top';
+    const renderSpecRows = (extraClassName?: string) => (
+        <NextGenSpecRows
+            rows={specRowsData}
+            className={classNames(extraClassName, specRowsClassName)}
+            heading={specHeading}
+            headingColor={specHeadingColor}
+            headerColor={specHeaderColor}
+            textColor={specTextColor}
+            borderColor={specBorderColor}
+        />
+    );
 
-    const topSpecRowsContent = isTopSpecRowsLayout ? (
-        <div className="w-full">
-            <NextGenSpecRows
-                rows={specRows!}
-                className={classNames('max-w-none tablet:w-full desktop:w-full', specRowsClassName)}
-                heading={specHeading}
-                headingColor={specHeadingColor}
-                headerColor={specHeaderColor}
-                textColor={specTextColor}
-                borderColor={specBorderColor}
-            />
-        </div>
-    ) : null;
+    const sideContent =
+        hasSpecRows && specRowsPlacement !== 'top' ? (
+            <div className="w-full tablet:mb-1 tablet:w-auto tablet:shrink-0">{renderSpecRows()}</div>
+        ) : metrics && metrics.length > 0 ? (
+            <div className="tablet:mb-1">
+                <NextGenFlipCounters
+                    metrics={metrics}
+                    valueColor={metricValueColor}
+                    unitColor={metricUnitColor}
+                    accentColor={metricAccentColor}
+                />
+            </div>
+        ) : action ? (
+            <div className="tablet:mb-1">
+                <MediaShowcaseActionButton action={action} />
+            </div>
+        ) : null;
 
-    const rightContent = hasSpecRows && specRowsPlacement !== 'top' ? (
-        <div className="w-full tablet:mb-1 tablet:w-auto tablet:shrink-0">
-            <NextGenSpecRows
-                rows={specRows!}
-                className={specRowsClassName}
-                heading={specHeading}
-                headingColor={specHeadingColor}
-                headerColor={specHeaderColor}
-                textColor={specTextColor}
-                borderColor={specBorderColor}
-            />
-        </div>
-    ) : metrics && metrics.length > 0 ? (
-        <div className="tablet:mb-1">
-            <NextGenFlipCounters
-                metrics={metrics}
-                valueColor={metricValueColor}
-                unitColor={metricUnitColor}
-                accentColor={metricAccentColor}
-            />
-        </div>
-    ) : action ? (
-        <div className="tablet:mb-1">
-            <MediaShowcaseActionButton action={action} />
-        </div>
-    ) : null;
+    const textBlock = (
+        <MediaShowcaseTextBlock
+            header={header}
+            title={title}
+            description={description}
+            titleColor={titleColor}
+            descriptionColor={descriptionColor}
+            titleClassName={titleClassName}
+            descriptionClassName={descriptionClassName}
+        />
+    );
 
     const textBottomAlignmentClass =
         textHorizontalPosition === 'right' ? 'justify-start tablet:justify-end' : 'justify-start';
@@ -298,24 +373,7 @@ export default function NextGenMediaShowcase({
             )}
 
             {hasCarouselControls ? (
-                <>
-                    <button
-                        type="button"
-                        onClick={handlePreviousSlide}
-                        aria-label="Previous slide"
-                        className="carousel-arrow-btn absolute left-4 top-1/2 z-20 inline-flex h-[38px] w-[58px] -translate-y-1/2 items-center justify-center rounded-[8px] px-[18px] py-[8px] transition-opacity hover:opacity-80 tablet:left-6 desktop:left-8"
-                    >
-                        <Image src={LeftArrowIcon} alt="" aria-hidden="true" width={22} height={22} className="h-[22px] w-[22px]" />
-                    </button>
-                    <button
-                        type="button"
-                        onClick={handleNextSlide}
-                        aria-label="Next slide"
-                        className="carousel-arrow-btn absolute right-4 top-1/2 z-20 inline-flex h-[38px] w-[58px] -translate-y-1/2 items-center justify-center rounded-[8px] px-[18px] py-[8px] transition-opacity hover:opacity-80 tablet:right-6 desktop:right-8"
-                    >
-                        <Image src={RightArrowIcon} alt="" aria-hidden="true" width={22} height={22} className="h-[22px] w-[22px]" />
-                    </button>
-                </>
+                <MediaShowcaseCarouselControls onPrevious={handlePreviousSlide} onNext={handleNextSlide} />
             ) : null}
 
             {showBottomOverlay ? (
@@ -326,106 +384,26 @@ export default function NextGenMediaShowcase({
             ) : null}
 
             {showNavigation ? (
-                <NextGenNavigation
-                    className={classNames('absolute inset-x-0 top-0 pt-3 tablet:pt-[14px] desktop:pt-6')}
-                />
+                <NextGenNavigation className="absolute inset-x-0 top-0 pt-3 tablet:pt-[14px] desktop:pt-6" />
             ) : null}
 
             <div className="relative z-10 mx-auto flex min-h-[640px] w-full max-w-[1340px] flex-1 flex-col px-5 pb-9 pt-[86px] tablet:min-h-[760px] tablet:px-10 tablet:pt-[94px] tablet:pb-11 desktop:min-h-[849px] desktop:px-0 desktop:pb-[50px]">
                 {isTopSpecRowsLayout ? (
                     <>
-                        {topSpecRowsContent}
-                        <div className={classNames('mt-auto flex w-full', textBottomAlignmentClass)}>
-                            <div className="max-w-[480px]">
-                                {header ? (
-                                    <p className="mb-4 font-ibm-mono text-[14px] font-medium uppercase leading-[1.4] tracking-[0.1em] text-[#F3F4F9]">
-                                        {header}
-                                    </p>
-                                ) : null}
-                                <h1
-                                    className={classNames(
-                                        'font-general-sans text-[28px] font-normal leading-[1] tracking-[-0.01em] text-[#F3F4F9] tablet:text-[32px]',
-                                        titleClassName
-                                    )}
-                                    style={titleColor ? { color: titleColor } : undefined}
-                                >
-                                    {title}
-                                </h1>
-                                <p
-                                    className={classNames(
-                                        'mt-4 max-w-[560px] font-ibm-mono text-[14px] leading-[1.4] tracking-[-0.01em] text-white/60 tablet:text-[16px]',
-                                        descriptionClassName
-                                    )}
-                                    style={descriptionColor ? { color: descriptionColor } : undefined}
-                                >
-                                    {description}
-                                </p>
-                            </div>
-                        </div>
+                        <div className="w-full">{renderSpecRows('max-w-none tablet:w-full desktop:w-full')}</div>
+                        <div className={classNames('mt-auto flex w-full', textBottomAlignmentClass)}>{textBlock}</div>
                     </>
                 ) : textPosition === 'top' ? (
                     <>
-                        <div className="max-w-[480px]">
-                            {header ? (
-                                <p className="mb-4 font-ibm-mono text-[14px] font-medium uppercase leading-[1.4] tracking-[0.1em] text-[#F3F4F9]">
-                                    {header}
-                                </p>
-                            ) : null}
-                            <h1
-                                className={classNames(
-                                    'font-general-sans text-[28px] font-normal leading-[1] tracking-[-0.01em] text-[#F3F4F9] tablet:text-[32px]',
-                                    titleClassName
-                                )}
-                                style={titleColor ? { color: titleColor } : undefined}
-                            >
-                                {title}
-                            </h1>
-                            <p
-                                className={classNames(
-                                    'mt-4 max-w-[560px] font-ibm-mono text-[14px] leading-[1.4] tracking-[-0.01em] text-white/60 tablet:text-[16px]',
-                                    descriptionClassName
-                                )}
-                                style={descriptionColor ? { color: descriptionColor } : undefined}
-                            >
-                                {description}
-                            </p>
-                        </div>
-
-                        {rightContent ? (
-                            <div className={classNames('mt-auto flex w-full', textBottomAlignmentClass)}>
-                                {rightContent}
-                            </div>
+                        {textBlock}
+                        {sideContent ? (
+                            <div className={classNames('mt-auto flex w-full', textBottomAlignmentClass)}>{sideContent}</div>
                         ) : null}
                     </>
                 ) : (
                     <div className="mt-auto flex flex-col gap-5 tablet:flex-row tablet:items-end tablet:justify-between">
-                        <div className="max-w-[480px]">
-                            {header ? (
-                                <p className="mb-4 font-ibm-mono text-[14px] font-medium uppercase leading-[1.4] tracking-[0.1em] text-[#F3F4F9]">
-                                    {header}
-                                </p>
-                            ) : null}
-                            <h1
-                                className={classNames(
-                                    'font-general-sans text-[28px] font-normal leading-[1] tracking-[-0.01em] text-[#F3F4F9] tablet:text-[32px]',
-                                    titleClassName
-                                )}
-                                style={titleColor ? { color: titleColor } : undefined}
-                            >
-                                {title}
-                            </h1>
-                            <p
-                                className={classNames(
-                                    'mt-4 max-w-[560px] font-ibm-mono text-[14px] leading-[1.4] tracking-[-0.01em] text-white/60 tablet:text-[16px]',
-                                    descriptionClassName
-                                )}
-                                style={descriptionColor ? { color: descriptionColor } : undefined}
-                            >
-                                {description}
-                            </p>
-                        </div>
-
-                        {rightContent}
+                        {textBlock}
+                        {sideContent}
                     </div>
                 )}
             </div>
