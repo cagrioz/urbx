@@ -66,7 +66,7 @@ export default function NextGenLandingPage() {
                     titleColor="#000000"
                     descriptionColor="rgba(86, 86, 86, 0.6)"
                     action={{
-                        href: '/next-gen/solutions/storage',
+                        href: '/solutions/storage',
                         variant: 'explore',
                         label: 'EXPLORE',
                         ariaLabel: 'Explore',

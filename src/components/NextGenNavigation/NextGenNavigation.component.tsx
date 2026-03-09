@@ -22,7 +22,7 @@ const nextGenSolutionLinks: NextGenSolutionLink[] = [
 ];
 
 const nextGenTopLevelLinks: NextGenNavigationLink[] = [
-    { label: 'NEON', href: '/next-gen/neon' },
+    { label: 'NEON', href: '/neon' },
     { label: 'COMPANY', href: '/company' },
     { label: 'NEWS', href: '/next-gen/news' },
     { label: 'CAREER', href: '/next-gen/career' },
