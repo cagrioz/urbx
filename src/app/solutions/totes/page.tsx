@@ -71,6 +71,8 @@ export default function NextGenTotesPage() {
                     image={ToteHandlingCapacityBackdrop}
                     imageAlt="URBX tote handling capacity"
                     title="Tote Handling Capacity"
+                    titleColor="#000000"
+                    descriptionColor="rgba(86, 86, 86, 0.6)"
                     description="Industry-leading payload capacity enables the handling of a diverse range of goods"
                     metrics={toteHandlingMetrics}
                 />
@@ -81,6 +83,8 @@ export default function NextGenTotesPage() {
                     imageAlt="URBX tote gripper speed"
                     title="Tote Gripper Speed"
                     description="Industry-leading speed increases throughput and accelerates fulfillment"
+                    titleColor="#000000"
+                    descriptionColor="rgba(86, 86, 86, 0.6)"
                     metrics={toteGripperSpeedMetrics}
                 />
                 <NextGenMediaShowcase
@@ -90,6 +94,8 @@ export default function NextGenTotesPage() {
                     imageAlt="URBX dynamic tote height"
                     title="Dynamic Tote Height"
                     description="Accommodates diverse tote sizes without system reconfiguration"
+                    titleColor="#000000"
+                    descriptionColor="rgba(86, 86, 86, 0.6)"
                     specRows={dynamicToteHeightRows}
                 />
                 <NextGenMediaShowcase
@@ -107,11 +113,13 @@ export default function NextGenTotesPage() {
                 <NextGenMediaShowcase
                     hasBottomRadius={false}
                     showNavigation={false}
+                    showBottomOverlay={false}
                     image={GripperSpecificationBackdrop}
                     imageAlt="URBX tote gripper specification"
                     title="Tote Gripper Specification"
                     description="Tote handler engineered for speed and reliability-delivering high-throughput pick-and-place operations that scale with demand. Designed for continuous operation with minimal maintenance, enabling businesses to meet peak season requirements without additional labor or system downtime."
                     textPosition="top"
+                    textHorizontalPosition="right"
                     specHeading="TOTE HANDLER SPECIFICATIONS"
                     specRows={toteHandlerSpecificationRows}
                 />

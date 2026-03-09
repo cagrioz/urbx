@@ -36,7 +36,7 @@ export default function NextGenLandingPage() {
                     title="The Vertical Advantage"
                     description="Maximize storage capacity within your existing footprint—no building expansion required"
                     action={{
-                        href: '/next-gen/solutions/cases',
+                        href: '/solutions/cases',
                         variant: 'explore',
                         label: 'EXPLORE',
                         ariaLabel: 'Explore',
@@ -63,6 +63,8 @@ export default function NextGenLandingPage() {
                     imageAlt="URBX dual bot"
                     title="Dual-Bot Archietecture"
                     description="Specialized robots working in coordination—maximizing throughput while minimizing complexity."
+                    titleColor="#000000"
+                    descriptionColor="rgba(86, 86, 86, 0.6)"
                     action={{
                         href: '/next-gen/solutions/storage',
                         variant: 'explore',

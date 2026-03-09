@@ -30,6 +30,8 @@ export interface MediaShowcaseCarouselSlide {
 }
 
 export type MediaShowcaseTextPosition = 'bottom' | 'top';
+export type MediaShowcaseTextHorizontalPosition = 'left' | 'right';
+export type MediaShowcaseSpecRowsPlacement = 'side' | 'top';
 
 export type MediaShowcaseSpecRow = NextGenSpecRow;
 
@@ -43,17 +45,27 @@ export interface MediaShowcaseProps {
     title: string;
     description: string;
     textPosition?: MediaShowcaseTextPosition;
+    textHorizontalPosition?: MediaShowcaseTextHorizontalPosition;
     action?: MediaShowcaseAction;
     metrics?: FlipCounterMetric[];
+    metricValueColor?: string;
+    metricUnitColor?: string;
+    metricAccentColor?: string;
     specRows?: MediaShowcaseSpecRow[];
+    specRowsPlacement?: MediaShowcaseSpecRowsPlacement;
+    specRowsClassName?: string;
     specHeading?: string;
     specHeadingColor?: string;
     specHeaderColor?: string;
     specTextColor?: string;
     specBorderColor?: string;
     className?: string;
+    mediaClassName?: string;
     hasBottomRadius?: boolean;
+    showBottomOverlay?: boolean;
     showNavigation?: boolean;
+    titleColor?: string;
+    descriptionColor?: string;
     titleClassName?: string;
     descriptionClassName?: string;
 }
@@ -146,17 +158,27 @@ export default function NextGenMediaShowcase({
     description,
     action,
     metrics,
+    metricValueColor,
+    metricUnitColor,
+    metricAccentColor,
     specRows,
+    specRowsPlacement = 'side',
+    specRowsClassName,
     carouselSlides,
     textPosition = 'bottom',
+    textHorizontalPosition = 'left',
     specHeading,
     specHeadingColor,
     specHeaderColor,
     specTextColor,
     specBorderColor,
     className,
+    mediaClassName,
     hasBottomRadius = true,
+    showBottomOverlay = true,
     showNavigation = true,
+    titleColor,
+    descriptionColor,
     titleClassName,
     descriptionClassName,
 }: MediaShowcaseProps) {
@@ -197,10 +219,28 @@ export default function NextGenMediaShowcase({
         setActiveSlideIndex((previousIndex) => (previousIndex + 1) % totalSlides);
     };
 
-    const rightContent = specRows && specRows.length > 0 ? (
+    const hasSpecRows = Boolean(specRows && specRows.length > 0);
+    const isTopSpecRowsLayout = hasSpecRows && specRowsPlacement === 'top';
+
+    const topSpecRowsContent = isTopSpecRowsLayout ? (
+        <div className="w-full">
+            <NextGenSpecRows
+                rows={specRows!}
+                className={classNames('max-w-none tablet:w-full desktop:w-full', specRowsClassName)}
+                heading={specHeading}
+                headingColor={specHeadingColor}
+                headerColor={specHeaderColor}
+                textColor={specTextColor}
+                borderColor={specBorderColor}
+            />
+        </div>
+    ) : null;
+
+    const rightContent = hasSpecRows && specRowsPlacement !== 'top' ? (
         <div className="w-full tablet:mb-1 tablet:w-auto tablet:shrink-0">
             <NextGenSpecRows
-                rows={specRows}
+                rows={specRows!}
+                className={specRowsClassName}
                 heading={specHeading}
                 headingColor={specHeadingColor}
                 headerColor={specHeaderColor}
@@ -210,13 +250,21 @@ export default function NextGenMediaShowcase({
         </div>
     ) : metrics && metrics.length > 0 ? (
         <div className="tablet:mb-1">
-            <NextGenFlipCounters metrics={metrics} />
+            <NextGenFlipCounters
+                metrics={metrics}
+                valueColor={metricValueColor}
+                unitColor={metricUnitColor}
+                accentColor={metricAccentColor}
+            />
         </div>
     ) : action ? (
         <div className="tablet:mb-1">
             <MediaShowcaseActionButton action={action} />
         </div>
     ) : null;
+
+    const textBottomAlignmentClass =
+        textHorizontalPosition === 'right' ? 'justify-start tablet:justify-end' : 'justify-start';
 
     return (
         <section
@@ -230,7 +278,7 @@ export default function NextGenMediaShowcase({
             {/* Background can be switched to looped live footage via backgroundVideoUrl. */}
             {activeBackgroundVideoUrl ? (
                 <video
-                    className="absolute inset-0 h-full w-full object-cover object-top"
+                    className={classNames('absolute inset-0 h-full w-full object-cover object-top', mediaClassName)}
                     autoPlay
                     muted
                     loop
@@ -240,7 +288,13 @@ export default function NextGenMediaShowcase({
                     <source src={activeBackgroundVideoUrl} />
                 </video>
             ) : (
-                <Image src={activeImage} alt={activeImageAlt} priority fill className="object-cover object-top" />
+                <Image
+                    src={activeImage}
+                    alt={activeImageAlt}
+                    priority
+                    fill
+                    className={classNames('object-cover object-top', mediaClassName)}
+                />
             )}
 
             {hasCarouselControls ? (
@@ -264,10 +318,12 @@ export default function NextGenMediaShowcase({
                 </>
             ) : null}
 
-            <div
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-x-0 bottom-0 h-[300px] bg-[linear-gradient(to_top,rgba(8,10,12,0.95)_0%,rgba(8,10,12,0.7)_40%,transparent_100%)]"
-            />
+            {showBottomOverlay ? (
+                <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-x-0 bottom-0 h-[300px] bg-[linear-gradient(to_top,rgba(8,10,12,0.95)_0%,rgba(8,10,12,0.7)_40%,transparent_100%)]"
+                />
+            ) : null}
 
             {showNavigation ? (
                 <NextGenNavigation
@@ -276,7 +332,38 @@ export default function NextGenMediaShowcase({
             ) : null}
 
             <div className="relative z-10 mx-auto flex min-h-[640px] w-full max-w-[1340px] flex-1 flex-col px-5 pb-9 pt-[86px] tablet:min-h-[760px] tablet:px-10 tablet:pt-[94px] tablet:pb-11 desktop:min-h-[849px] desktop:px-0 desktop:pb-[50px]">
-                {textPosition === 'top' ? (
+                {isTopSpecRowsLayout ? (
+                    <>
+                        {topSpecRowsContent}
+                        <div className={classNames('mt-auto flex w-full', textBottomAlignmentClass)}>
+                            <div className="max-w-[480px]">
+                                {header ? (
+                                    <p className="mb-4 font-ibm-mono text-[14px] font-medium uppercase leading-[1.4] tracking-[0.1em] text-[#F3F4F9]">
+                                        {header}
+                                    </p>
+                                ) : null}
+                                <h1
+                                    className={classNames(
+                                        'font-general-sans text-[28px] font-normal leading-[1] tracking-[-0.01em] text-[#F3F4F9] tablet:text-[32px]',
+                                        titleClassName
+                                    )}
+                                    style={titleColor ? { color: titleColor } : undefined}
+                                >
+                                    {title}
+                                </h1>
+                                <p
+                                    className={classNames(
+                                        'mt-4 max-w-[560px] font-ibm-mono text-[14px] leading-[1.4] tracking-[-0.01em] text-white/60 tablet:text-[16px]',
+                                        descriptionClassName
+                                    )}
+                                    style={descriptionColor ? { color: descriptionColor } : undefined}
+                                >
+                                    {description}
+                                </p>
+                            </div>
+                        </div>
+                    </>
+                ) : textPosition === 'top' ? (
                     <>
                         <div className="max-w-[480px]">
                             {header ? (
@@ -289,6 +376,7 @@ export default function NextGenMediaShowcase({
                                     'font-general-sans text-[28px] font-normal leading-[1] tracking-[-0.01em] text-[#F3F4F9] tablet:text-[32px]',
                                     titleClassName
                                 )}
+                                style={titleColor ? { color: titleColor } : undefined}
                             >
                                 {title}
                             </h1>
@@ -297,13 +385,14 @@ export default function NextGenMediaShowcase({
                                     'mt-4 max-w-[560px] font-ibm-mono text-[14px] leading-[1.4] tracking-[-0.01em] text-white/60 tablet:text-[16px]',
                                     descriptionClassName
                                 )}
+                                style={descriptionColor ? { color: descriptionColor } : undefined}
                             >
                                 {description}
                             </p>
                         </div>
 
                         {rightContent ? (
-                            <div className="mt-auto flex w-full justify-start tablet:justify-end">
+                            <div className={classNames('mt-auto flex w-full', textBottomAlignmentClass)}>
                                 {rightContent}
                             </div>
                         ) : null}
@@ -321,6 +410,7 @@ export default function NextGenMediaShowcase({
                                     'font-general-sans text-[28px] font-normal leading-[1] tracking-[-0.01em] text-[#F3F4F9] tablet:text-[32px]',
                                     titleClassName
                                 )}
+                                style={titleColor ? { color: titleColor } : undefined}
                             >
                                 {title}
                             </h1>
@@ -329,6 +419,7 @@ export default function NextGenMediaShowcase({
                                     'mt-4 max-w-[560px] font-ibm-mono text-[14px] leading-[1.4] tracking-[-0.01em] text-white/60 tablet:text-[16px]',
                                     descriptionClassName
                                 )}
+                                style={descriptionColor ? { color: descriptionColor } : undefined}
                             >
                                 {description}
                             </p>

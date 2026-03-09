@@ -17,8 +17,8 @@ type NextGenSolutionLink = NextGenNavigationLink;
 
 const nextGenSolutionLinks: NextGenSolutionLink[] = [
     { label: 'TOTES', href: '/solutions/totes' },
-    { label: 'CASES', href: '/next-gen/solutions/cases' },
-    { label: 'STORAGE', href: '/next-gen/solutions/storage' },
+    { label: 'CASES', href: '/solutions/cases' },
+    { label: 'STORAGE', href: '/solutions/storage' },
 ];
 
 const nextGenTopLevelLinks: NextGenNavigationLink[] = [

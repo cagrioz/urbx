@@ -6,6 +6,9 @@ import { useEffect, useRef, useState } from 'react';
 export interface FlipCounterMetric {
     value: number;
     unit: string;
+    valueColor?: string;
+    unitColor?: string;
+    accentColor?: string;
 }
 
 interface NextGenFlipCountersProps {
@@ -13,6 +16,9 @@ interface NextGenFlipCountersProps {
     className?: string;
     durationMs?: number;
     staggerMs?: number;
+    valueColor?: string;
+    unitColor?: string;
+    accentColor?: string;
 }
 
 const DIGIT_HEIGHT_PX = 50;
@@ -41,18 +47,23 @@ function OdometerValue({
     prefersReducedMotion,
     durationMs,
     delayMs,
+    valueColor,
 }: {
     valueText: string;
     shouldAnimate: boolean;
     prefersReducedMotion: boolean;
     durationMs: number;
     delayMs: number;
+    valueColor?: string;
 }) {
     if (prefersReducedMotion) {
         const content = shouldAnimate ? valueText : maskDigitsWithZero(valueText);
 
         return (
-            <span className="inline-flex items-center font-general-sans text-[50px] font-normal leading-[1] tracking-[-0.01em] text-black">
+            <span
+                className="inline-flex items-center font-general-sans text-[50px] font-normal leading-[1] tracking-[-0.01em] text-black"
+                style={valueColor ? { color: valueColor } : undefined}
+            >
                 {content}
             </span>
         );
@@ -68,6 +79,7 @@ function OdometerValue({
                         <span
                             key={`${char}-${index}`}
                             className="mx-[1px] font-general-sans text-[50px] font-normal leading-[1] tracking-[-0.01em] text-black tabular-nums"
+                            style={valueColor ? { color: valueColor } : undefined}
                         >
                             {char}
                         </span>
@@ -101,6 +113,7 @@ function OdometerValue({
                                 <span
                                     key={rowIndex}
                                     className="flex h-[50px] items-center justify-center font-general-sans text-[50px] font-normal leading-[1] tracking-[-0.01em] text-black tabular-nums"
+                                    style={valueColor ? { color: valueColor } : undefined}
                                 >
                                     {digit}
                                 </span>
@@ -119,14 +132,23 @@ function FlipMetric({
     prefersReducedMotion,
     durationMs,
     delayMs,
+    valueColor,
+    unitColor,
+    accentColor,
 }: {
     metric: FlipCounterMetric;
     shouldAnimate: boolean;
     prefersReducedMotion: boolean;
     durationMs: number;
     delayMs: number;
+    valueColor?: string;
+    unitColor?: string;
+    accentColor?: string;
 }) {
     const formattedValue = formatMetricValue(metric.value);
+    const resolvedValueColor = metric.valueColor ?? valueColor;
+    const resolvedUnitColor = metric.unitColor ?? unitColor;
+    const resolvedAccentColor = metric.accentColor ?? accentColor;
 
     return (
         <div className="flex flex-col" role="text" aria-label={`${formattedValue} ${metric.unit}`}>
@@ -134,7 +156,10 @@ function FlipMetric({
                 {formattedValue} {metric.unit}
             </span>
             <div aria-hidden="true" className="flex items-center gap-2">
-                <span className="h-[23px] w-[4px] rounded-[1px] bg-[#00A5E2]" />
+                <span
+                    className="h-[23px] w-[4px] rounded-[1px] bg-[#00A5E2]"
+                    style={resolvedAccentColor ? { backgroundColor: resolvedAccentColor } : undefined}
+                />
 
                 <OdometerValue
                     valueText={formattedValue}
@@ -142,13 +167,29 @@ function FlipMetric({
                     prefersReducedMotion={prefersReducedMotion}
                     durationMs={durationMs}
                     delayMs={delayMs}
+                    valueColor={resolvedValueColor}
                 />
             </div>
 
             <div aria-hidden="true" className="mt-1 flex items-center gap-0.5 pl-[12px] font-ibm-mono leading-[1.4]">
-                <span className="text-[14px] font-normal text-[#00A5E2]">[</span>
-                <span className="text-[16px] font-normal text-[#565656]/60">{metric.unit}</span>
-                <span className="text-[14px] font-normal text-[#00A5E2]">]</span>
+                <span
+                    className="text-[14px] font-normal text-[#00A5E2]"
+                    style={resolvedAccentColor ? { color: resolvedAccentColor } : undefined}
+                >
+                    [
+                </span>
+                <span
+                    className="text-[16px] font-normal text-[#565656]/60"
+                    style={resolvedUnitColor ? { color: resolvedUnitColor } : undefined}
+                >
+                    {metric.unit}
+                </span>
+                <span
+                    className="text-[14px] font-normal text-[#00A5E2]"
+                    style={resolvedAccentColor ? { color: resolvedAccentColor } : undefined}
+                >
+                    ]
+                </span>
             </div>
         </div>
     );
@@ -159,6 +200,9 @@ export default function NextGenFlipCounters({
     className,
     durationMs = DEFAULT_DURATION_MS,
     staggerMs = DEFAULT_STAGGER_MS,
+    valueColor,
+    unitColor,
+    accentColor,
 }: NextGenFlipCountersProps) {
     const containerRef = useRef<HTMLDivElement | null>(null);
     const [hasStarted, setHasStarted] = useState(false);
@@ -212,6 +256,9 @@ export default function NextGenFlipCounters({
                     prefersReducedMotion={prefersReducedMotion}
                     durationMs={normalizedDurationMs}
                     delayMs={index * normalizedStaggerMs}
+                    valueColor={valueColor}
+                    unitColor={unitColor}
+                    accentColor={accentColor}
                 />
             ))}
         </div>
