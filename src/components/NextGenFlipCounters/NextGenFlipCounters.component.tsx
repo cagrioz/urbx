@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { useEffect, useRef, useState } from 'react';
 
 export interface FlipCounterMetric {
-    value: number;
+    value: number | string;
     unit: string;
     valueColor?: string;
     unitColor?: string;
@@ -33,8 +33,12 @@ function clamp(value: number, min: number, max: number) {
     return Math.min(max, Math.max(min, value));
 }
 
-function formatMetricValue(value: number) {
-    return Math.round(value).toLocaleString('en-US');
+function formatMetricValue(value: number | string) {
+    if (typeof value === 'number') {
+        return Math.round(value).toLocaleString('en-US');
+    }
+
+    return value;
 }
 
 function maskDigitsWithZero(valueText: string) {

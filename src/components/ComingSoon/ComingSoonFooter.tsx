@@ -192,12 +192,12 @@ function FooterLinksSection({ section }: { section: FooterSection }) {
 export default function ComingSoonFooter() {
     return (
         <footer
-            className="relative w-full rounded-t-lg rounded-b-lg"
+            className="relative w-full overflow-hidden rounded-tl-[32px] rounded-tr-[32px] rounded-b-lg"
             style={{
                 background: 'radial-gradient(ellipse at bottom center, #000F14 0%, #060606 100%)',
             }}
         >
-            <div className="mx-auto w-full max-w-[1344px] px-6 pt-12 pb-6 tablet:px-8 tablet:pt-16 laptop:px-12 desktop:px-[48px]">
+            <div className="mx-auto w-full max-w-[1344px] rounded-tl-[32px] rounded-tr-[32px] px-6 pt-12 pb-6 tablet:px-8 tablet:pt-16 laptop:px-12 desktop:px-[48px]">
                 {/* Upper section - Two column layout */}
                 <div className="flex flex-col gap-10 tablet:flex-row tablet:items-start tablet:justify-between tablet:gap-8 desktop:gap-12">
                     {/* Left column - Logo, newsletter, description, mark */}

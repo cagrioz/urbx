@@ -44,6 +44,7 @@ export interface MediaShowcaseProps {
     header?: string;
     title: string;
     description: string;
+    descriptionContent?: ReactNode;
     textPosition?: MediaShowcaseTextPosition;
     textHorizontalPosition?: MediaShowcaseTextHorizontalPosition;
     action?: MediaShowcaseAction;
@@ -68,6 +69,7 @@ export interface MediaShowcaseProps {
     descriptionColor?: string;
     titleClassName?: string;
     descriptionClassName?: string;
+    contentClassName?: string;
 }
 
 function MediaShowcaseActionLink({
@@ -152,6 +154,7 @@ interface MediaShowcaseTextBlockProps {
     header?: string;
     title: string;
     description: string;
+    descriptionContent?: ReactNode;
     titleColor?: string;
     descriptionColor?: string;
     titleClassName?: string;
@@ -162,6 +165,7 @@ function MediaShowcaseTextBlock({
     header,
     title,
     description,
+    descriptionContent,
     titleColor,
     descriptionColor,
     titleClassName,
@@ -190,7 +194,7 @@ function MediaShowcaseTextBlock({
                 )}
                 style={descriptionColor ? { color: descriptionColor } : undefined}
             >
-                {description}
+                {descriptionContent ?? description}
             </p>
         </div>
     );
@@ -234,6 +238,7 @@ export default function NextGenMediaShowcase({
     header,
     title,
     description,
+    descriptionContent,
     textPosition = 'bottom',
     textHorizontalPosition = 'left',
     action,
@@ -258,6 +263,7 @@ export default function NextGenMediaShowcase({
     descriptionColor,
     titleClassName,
     descriptionClassName,
+    contentClassName,
 }: MediaShowcaseProps) {
     const totalSlides = carouselSlides?.length ?? 0;
     const hasCarouselControls = totalSlides > 1;
@@ -331,6 +337,7 @@ export default function NextGenMediaShowcase({
             header={header}
             title={title}
             description={description}
+            descriptionContent={descriptionContent}
             titleColor={titleColor}
             descriptionColor={descriptionColor}
             titleClassName={titleClassName}
@@ -387,7 +394,12 @@ export default function NextGenMediaShowcase({
                 <NextGenNavigation className="absolute inset-x-0 top-0 pt-3 tablet:pt-[14px] desktop:pt-6" />
             ) : null}
 
-            <div className="relative z-10 mx-auto flex min-h-[640px] w-full max-w-[1340px] flex-1 flex-col px-5 pb-9 pt-[86px] tablet:min-h-[760px] tablet:px-10 tablet:pt-[94px] tablet:pb-11 desktop:min-h-[849px] desktop:px-0 desktop:pb-[50px]">
+            <div
+                className={classNames(
+                    'relative z-10 mx-auto flex min-h-[640px] w-full max-w-[1340px] flex-1 flex-col px-5 pb-9 pt-[86px] tablet:min-h-[760px] tablet:px-10 tablet:pt-[94px] tablet:pb-11 desktop:min-h-[849px] desktop:px-0 desktop:pb-[50px]',
+                    contentClassName
+                )}
+            >
                 {isTopSpecRowsLayout ? (
                     <>
                         <div className="w-full">{renderSpecRows('max-w-none tablet:w-full desktop:w-full')}</div>
