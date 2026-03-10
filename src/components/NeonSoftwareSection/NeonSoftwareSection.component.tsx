@@ -101,12 +101,12 @@ export default function NeonSoftwareSection() {
     }, []);
 
     return (
-        <section id="neon-software" className="bg-[#F2F4F6] pt-[32px] text-[#050608]">
-            <div className="mx-auto flex min-h-[78svh] w-full max-w-[1340px] items-center justify-center px-5 tablet:min-h-[85svh] tablet:px-10 desktop:min-h-[92svh] desktop:px-0">
+        <section id="neon-software" className="bg-[#ffffff] pt-[32px] text-[#050608]">
+            <div className="relative mx-auto flex min-h-[78svh] w-full max-w-[1340px] items-center justify-center px-5 tablet:min-h-[85svh] tablet:px-10 desktop:min-h-[92svh] desktop:px-0">
                 <div
                     ref={mockupRef}
                     className={classNames(
-                        'neon-mockup-shell relative w-full max-w-[1080px] will-change-transform',
+                        'neon-mockup-shell relative z-[1] w-full max-w-[1080px] will-change-transform',
                         isMockupAnimationActive && 'neon-mockup-shell-active'
                     )}
                 >
@@ -124,6 +124,18 @@ export default function NeonSoftwareSection() {
                         )}
                     />
                 </div>
+                <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute left-1/2 bottom-[94px] z-[2] h-[118px] w-[72%] max-w-[920px] -translate-x-1/2 rounded-[999px] bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.90)_0%,rgba(255,255,255,0.50)_44%,rgba(255,255,255,0)_100%)] blur-[48px]"
+                />
+                <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute left-1/2 bottom-[54px] z-[2] h-[168px] w-[86%] max-w-[1160px] -translate-x-1/2 rounded-[999px] bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.75)_0%,rgba(255,255,255,0.33)_40%,rgba(255,255,255,0)_100%)] blur-[70px]"
+                />
+                <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-x-0 bottom-0 z-[3] h-[243px] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(255,255,255,1)_100%)]"
+                />
             </div>
 
             <div className="mx-auto w-full max-w-[1340px] px-5 pb-20 tablet:px-10 tablet:pb-24 desktop:px-0 desktop:pb-[120px]">
