@@ -40,6 +40,7 @@ export default function CasesPage() {
         <>
             <main className="bg-[#07090C] text-white">
                 <NextGenMediaShowcase
+                    className="z-[1] -mb-[32px]"
                     hasBottomRadius={true}
                     showNavigation={true}
                     image={CasesHeroBackdrop}
@@ -50,7 +51,7 @@ export default function CasesPage() {
                 />
                 <NextGenMediaShowcase
                     id="case-handling-capacity"
-                    className="scroll-mt-20 tablet:scroll-mt-24 desktop:scroll-mt-28"
+                    className="scroll-mt-20 tablet:scroll-mt-24 desktop:scroll-mt-28 pt-[32px]"
                     hasBottomRadius={false}
                     showNavigation={false}
                     image={CaseHandlingCapacityBackdrop}
@@ -91,6 +92,7 @@ export default function CasesPage() {
                     metrics={casePalletizingMetrics}
                 />
                 <NextGenMediaShowcase
+                    className="pb-[32px]"
                     hasBottomRadius={false}
                     showNavigation={false}
                     showBottomOverlay={false}

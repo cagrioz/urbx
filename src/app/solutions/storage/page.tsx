@@ -45,6 +45,7 @@ export default function StoragePage() {
         <>
             <main className="-mb-[32px] bg-[#07090C] text-white">
                 <NextGenMediaShowcase
+                    className="z-[1] -mb-[32px]"
                     hasBottomRadius={true}
                     showNavigation={true}
                     image={StorageHeroBackdrop}
@@ -55,7 +56,7 @@ export default function StoragePage() {
                 />
                 <NextGenMediaShowcase
                     id="aisles"
-                    className="scroll-mt-20 tablet:scroll-mt-24 desktop:scroll-mt-28"
+                    className="scroll-mt-20 tablet:scroll-mt-24 desktop:scroll-mt-28 pt-[32px]"
                     hasBottomRadius={false}
                     showNavigation={false}
                     image={AislesBackdrop}

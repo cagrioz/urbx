@@ -55,6 +55,7 @@ export default function NextGenTotesPage() {
         <>
             <main className="bg-[#07090C] text-white">
                 <NextGenMediaShowcase
+                    className="z-[1] -mb-[32px]"
                     hasBottomRadius={true}
                     showNavigation={true}
                     image={ToteBackdrop}
@@ -65,7 +66,7 @@ export default function NextGenTotesPage() {
                 />
                 <NextGenMediaShowcase
                     id="tote-handling-capacity"
-                    className="scroll-mt-20 tablet:scroll-mt-24 desktop:scroll-mt-28"
+                    className="scroll-mt-20 tablet:scroll-mt-24 desktop:scroll-mt-28 pt-[32px]"
                     hasBottomRadius={false}
                     showNavigation={false}
                     image={ToteHandlingCapacityBackdrop}
@@ -111,6 +112,7 @@ export default function NextGenTotesPage() {
                     specRows={pickStationRows}
                 />
                 <NextGenMediaShowcase
+                    className="pb-[32px]"
                     hasBottomRadius={false}
                     showNavigation={false}
                     showBottomOverlay={false}

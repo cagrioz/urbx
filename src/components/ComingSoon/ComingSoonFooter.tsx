@@ -192,7 +192,7 @@ function FooterLinksSection({ section }: { section: FooterSection }) {
 export default function ComingSoonFooter() {
     return (
         <footer
-            className="relative w-full overflow-hidden rounded-tl-[32px] rounded-tr-[32px] rounded-b-lg"
+            className="relative w-full overflow-hidden rounded-tl-[32px] rounded-tr-[32px] rounded-b-lg z-[1] -mt-[32px]"
             style={{
                 background: 'radial-gradient(ellipse at bottom center, #000F14 0%, #060606 100%)',
             }}

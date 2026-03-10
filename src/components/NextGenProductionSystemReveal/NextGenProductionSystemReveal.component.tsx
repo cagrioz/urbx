@@ -50,7 +50,7 @@ export default function NextGenProductionSystemReveal({
                 />
 
                 <div className="relative z-10 mx-auto flex min-h-[640px] w-full max-w-[1340px] flex-col px-5 pb-9 pt-[86px] tablet:min-h-[760px] tablet:px-10 tablet:pt-[94px] tablet:pb-11 desktop:min-h-[849px] desktop:px-0 desktop:pb-[50px]">
-                    <div className="mt-auto flex flex-col gap-5 tablet:flex-row tablet:items-end tablet:justify-between">
+                    <div className="mt-auto flex flex-col gap-5 tablet:flex-row tablet:items-end tablet:justify-between pb-[32px]">
                         <div className="max-w-[480px]">
                             <h2 className="font-general-sans text-[28px] font-normal leading-[1] tracking-[-0.01em] text-[#F3F4F9] tablet:text-[32px]">
                                 Proven. Refined. Ready

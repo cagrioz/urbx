@@ -353,7 +353,7 @@ export default function NextGenMediaShowcase({
             id={id}
             className={classNames(
                 'relative isolate overflow-hidden bg-white',
-                hasBottomRadius && 'rounded-b-[18px]',
+                hasBottomRadius && 'rounded-b-[32px]',
                 className
             )}
         >

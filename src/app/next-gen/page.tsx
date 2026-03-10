@@ -20,6 +20,7 @@ export default function NextGenLandingPage() {
                     description="Storage that scales vertically, operates reliably, and stays accessible - delivering density, flexibility, and speed without fragility"
                     titleClassName="desktop:whitespace-nowrap"
                     descriptionClassName="max-w-[620px]"
+                    className="z-[1] -mb-[32px]"
                     action={{
                         href: 'https://youtube.com',
                         variant: 'full',
@@ -35,6 +36,7 @@ export default function NextGenLandingPage() {
                     imageAlt="URBX adaptive warehouse system"
                     title="The Vertical Advantage"
                     description="Maximize storage capacity within your existing footprint—no building expansion required"
+                    className="pt-[32px]"
                     action={{
                         href: '/solutions/cases',
                         variant: 'explore',
