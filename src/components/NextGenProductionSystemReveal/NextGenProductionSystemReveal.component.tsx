@@ -67,7 +67,7 @@ export default function NextGenProductionSystemReveal({
                                 event.stopPropagation();
                                 revealVideo();
                             }}
-                            className="inline-flex h-10 min-w-[138px] items-center justify-between gap-2 rounded-[8px] border border-white/40 bg-white/[0.11] pl-4 pr-[10px] font-ibm-mono text-[12px] font-normal leading-5 tracking-[0.02em] text-[#F3F4F9] transition-colors hover:bg-white/[0.17] tablet:mb-1"
+                            className="gradient-outline-btn inline-flex items-center gap-[10px] rounded-[8px] bg-white/[0.11] px-4 py-[10px] font-ibm-mono text-[14px] font-semibold leading-5 tracking-[0.02em] text-[#F3F4F9] transition-colors hover:bg-white/[0.17] tablet:mb-1"
                         >
                             <span className="whitespace-nowrap">PRODUCTION SYSTEM</span>
                             <Image src={RightArrowIcon} alt="" aria-hidden="true" width={16} height={16} className="h-3 w-3 shrink-0" />
@@ -103,7 +103,7 @@ export default function NextGenProductionSystemReveal({
                                 href={youtubeHref}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex h-10 min-w-[138px] items-center justify-between gap-2 rounded-[8px] border border-white/40 bg-white/[0.11] pl-4 pr-[10px] font-ibm-mono text-[12px] font-normal leading-5 tracking-[0.02em] text-[#F3F4F9] transition-colors hover:bg-white/[0.17]"
+                                className="gradient-outline-btn inline-flex items-center gap-[10px] rounded-[8px] bg-white/[0.11] px-4 py-[10px] font-ibm-mono text-[14px] font-semibold leading-5 tracking-[0.02em] text-[#F3F4F9] transition-colors hover:bg-white/[0.17]"
                             >
                                 <span className="whitespace-nowrap">OPEN ON YOUTUBE</span>
                                 <Image src={RightArrowIcon} alt="" aria-hidden="true" width={16} height={16} className="h-3 w-3 shrink-0" />

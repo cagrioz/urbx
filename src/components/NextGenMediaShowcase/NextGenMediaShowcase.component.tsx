@@ -18,6 +18,7 @@ export type MediaShowcaseVariant = 'full' | 'icon' | 'explore';
 export interface MediaShowcaseAction {
     href: string;
     variant?: MediaShowcaseVariant;
+    colorScheme?: 'default' | 'muted';
     label?: string;
     ariaLabel?: string;
     openInNewTab?: boolean;
@@ -105,7 +106,7 @@ function MediaShowcaseActionLink({
 function MediaShowcaseActionButton({ action }: { action: MediaShowcaseAction }) {
     const variant = action.variant ?? 'full';
     const label = action.label ?? 'FULL VIDEO';
-    const baseClassName = 'inline-flex items-center rounded-[8px] text-[#F3F4F9] transition-colors';
+    const baseClassName = 'gradient-outline-btn inline-flex items-center rounded-[8px] text-[#F3F4F9]';
 
     if (variant === 'icon') {
         return (
@@ -114,23 +115,51 @@ function MediaShowcaseActionButton({ action }: { action: MediaShowcaseAction }) 
                 ariaLabel={action.ariaLabel ?? 'Open page media'}
                 className={classNames(
                     baseClassName,
-                    'h-10 w-10 justify-center border border-white/40 bg-white/[0.11] hover:bg-white/[0.17]'
+                    'h-10 w-10 justify-center bg-white/[0.11] hover:bg-white/[0.17]'
                 )}
             >
-                <Image src={DownArrowIcon} alt="" aria-hidden="true" width={16} height={16} className="h-3 w-3 shrink-0" />
+                <Image
+                    src={DownArrowIcon}
+                    alt=""
+                    aria-hidden="true"
+                    width={16}
+                    height={16}
+                    className="h-3 w-3 shrink-0"
+                />
             </MediaShowcaseActionLink>
         );
     }
 
     if (variant === 'explore') {
+        const isMutedExplore = action.colorScheme === 'muted';
+
         return (
             <MediaShowcaseActionLink
                 action={action}
                 ariaLabel={action.ariaLabel ?? 'Explore'}
-                className={classNames(baseClassName, 'h-10 min-w-[138px] gap-2 justify-between border border-white/40 bg-white/[0.11] pl-4 pr-[10px] font-ibm-mono text-[12px] font-normal leading-5 tracking-[0.02em] hover:bg-white/[0.17]')}
+                className={classNames(
+                    baseClassName,
+                    'gap-[10px] px-4 py-[10px] font-ibm-mono text-[14px] font-semibold leading-5 tracking-[0.02em]',
+                    isMutedExplore
+                        ? 'bg-[rgba(86,86,86,0.11)] text-[#565656] hover:bg-[rgba(86,86,86,0.17)]'
+                        : 'bg-white/[0.11] text-[#F3F4F9] hover:bg-white/[0.17]'
+                )}
             >
                 <span className="whitespace-nowrap">{label}</span>
-                <Image src={RightArrowIcon} alt="" aria-hidden="true" width={16} height={16} className="h-3 w-3 shrink-0" />
+                <span
+                    aria-hidden="true"
+                    className="h-3 w-3 shrink-0 bg-current"
+                    style={{
+                        WebkitMaskImage: `url(${RightArrowIcon.src})`,
+                        maskImage: `url(${RightArrowIcon.src})`,
+                        WebkitMaskRepeat: 'no-repeat',
+                        maskRepeat: 'no-repeat',
+                        WebkitMaskSize: 'contain',
+                        maskSize: 'contain',
+                        WebkitMaskPosition: 'center',
+                        maskPosition: 'center',
+                    }}
+                />
             </MediaShowcaseActionLink>
         );
     }
@@ -141,11 +170,18 @@ function MediaShowcaseActionButton({ action }: { action: MediaShowcaseAction }) 
             ariaLabel={action.ariaLabel ?? label}
             className={classNames(
                 baseClassName,
-                'h-10 min-w-[138px] justify-between border border-white/40 bg-white/[0.11] pl-4 pr-[10px] font-ibm-mono text-[12px] font-normal leading-5 tracking-[0.02em] hover:bg-white/[0.17] gap-2'
+                'gap-[10px] bg-white/[0.11] px-4 py-[10px] font-ibm-mono text-[14px] font-semibold leading-5 tracking-[0.02em] hover:bg-white/[0.17]'
             )}
         >
             <span className="whitespace-nowrap">{label}</span>
-            <Image src={FullVideoPlayIcon} alt="" aria-hidden="true" width={12} height={12} className="h-3 w-3 shrink-0" />
+            <Image
+                src={FullVideoPlayIcon}
+                alt=""
+                aria-hidden="true"
+                width={12}
+                height={12}
+                className="h-3 w-3 shrink-0"
+            />
         </MediaShowcaseActionLink>
     );
 }

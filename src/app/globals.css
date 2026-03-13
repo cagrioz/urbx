@@ -201,6 +201,31 @@ h1 {
     pointer-events: none;
 }
 
+.gradient-outline-btn {
+    position: relative;
+    isolation: isolate;
+    border: none;
+}
+
+.gradient-outline-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+        120deg,
+        rgba(206, 206, 206, 1) 0%,
+        rgba(206, 206, 206, 0.01) 49%,
+        rgba(206, 206, 206, 1) 100%
+        );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .hero-animate-subtitle,
     .hero-animate-title,

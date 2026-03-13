@@ -140,7 +140,7 @@ export default function NextGenNavigation({
 
                     <Link
                         href={requestDemoHref}
-                        className="hidden h-10 w-[138px] items-center justify-center rounded-[8px] border border-white/35 bg-white/[0.11] px-[16px] font-ibm-mono text-[12px] font-semibold leading-5 tracking-[0.02em] text-[#F3F4F9] transition-colors hover:bg-white/[0.18] laptop:inline-flex"
+                        className="gradient-outline-btn hidden h-10 w-[138px] items-center justify-center rounded-[8px] bg-white/[0.11] px-[16px] font-ibm-mono text-[12px] font-semibold leading-5 tracking-[0.02em] text-[#F3F4F9] transition-colors hover:bg-white/[0.18] laptop:inline-flex"
                     >
                         REQUEST DEMO
                     </Link>

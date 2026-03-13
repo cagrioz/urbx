@@ -72,6 +72,7 @@ export default function NextGenLandingPage() {
                         variant: 'explore',
                         label: 'EXPLORE',
                         ariaLabel: 'Explore',
+                        colorScheme: 'muted',
                     }}
                 />
                 <NextGenMediaShowcase
