@@ -115,7 +115,7 @@ function MediaShowcaseActionButton({ action }: { action: MediaShowcaseAction }) 
                 ariaLabel={action.ariaLabel ?? 'Open page media'}
                 className={classNames(
                     baseClassName,
-                    'h-10 w-10 justify-center bg-white/[0.11] hover:bg-white/[0.17]'
+                    'justify-center bg-white/[0.11] px-2 py-[10px] hover:bg-white/[0.17]'
                 )}
             >
                 <Image
@@ -124,7 +124,7 @@ function MediaShowcaseActionButton({ action }: { action: MediaShowcaseAction }) 
                     aria-hidden="true"
                     width={16}
                     height={16}
-                    className="h-3 w-3 shrink-0"
+                    className="h-4 w-4 shrink-0"
                 />
             </MediaShowcaseActionLink>
         );
