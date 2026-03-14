@@ -123,7 +123,8 @@ function MediaShowcaseActionButton({
                 ariaLabel={action.ariaLabel ?? 'Open page media'}
                 className={classNames(
                     baseClassName,
-                    'justify-center bg-white/[0.11] px-2 py-[10px] hover:bg-white/[0.17]'
+                    'justify-center bg-white/[0.11] px-2 py-[10px] hover:bg-white/[0.17]',
+                    isSectionActive && 'media-showcase-btn-loop-down'
                 )}
             >
                 <Image
@@ -132,11 +133,7 @@ function MediaShowcaseActionButton({
                     aria-hidden="true"
                     width={16}
                     height={16}
-                    className={classNames(
-                        'h-4 w-4',
-                        iconMotionClassName,
-                        isSectionActive && 'media-showcase-icon-loop-down'
-                    )}
+                    className="h-4 w-4 shrink-0"
                 />
             </MediaShowcaseActionLink>
         );
@@ -153,7 +150,7 @@ function MediaShowcaseActionButton({
                     baseClassName,
                     'gap-[10px] px-4 py-[10px] font-ibm-mono text-[14px] font-semibold leading-5 tracking-[0.02em]',
                     isMutedExplore
-                        ? 'bg-[rgba(86,86,86,0.11)] text-[#565656] hover:bg-[rgba(86,86,86,0.17)]'
+                        ? '!bg-[rgba(86,86,86,0.11)] !text-[#565656] !hover:bg-[rgba(86,86,86,0.17)]'
                         : 'bg-white/[0.11] text-[#F3F4F9] hover:bg-white/[0.17]'
                 )}
             >
@@ -465,19 +462,36 @@ export default function NextGenMediaShowcase({
             ) : null}
 
             {showBottomOverlay ? (
+            <>
                 <div
-                    aria-hidden="true"
-                    className="pointer-events-none absolute inset-x-0 bottom-0 h-[300px] bg-[linear-gradient(to_top,rgba(8,10,12,0.95)_0%,rgba(8,10,12,0.7)_40%,transparent_100%)]"
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-[15%] backdrop-blur-[2px] bg-black/[0.003]"
                 />
+                <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-[25%] backdrop-blur-[1.5px] bg-black/[0.005]"
+                />
+                <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-x-0 bottom-0 z-[3] h-[35%] backdrop-blur-[1px] bg-black/[0.006]"
+                />
+                <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-x-0 bottom-0 z-[4] h-[45%] backdrop-blur-[0.5px] bg-black/[0.007]"
+                />
+                <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-[55%] bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.15)_100%)]"
+                />
+            </>
             ) : null}
-
             {showNavigation ? (
                 <NextGenNavigation className="absolute inset-x-0 top-0 pt-3 tablet:pt-[14px] desktop:pt-6" />
             ) : null}
 
             <div
                 className={classNames(
-                    'relative z-10 mx-auto flex min-h-[640px] w-full max-w-[1340px] flex-1 flex-col px-5 pb-9 pt-[86px] tablet:min-h-[760px] tablet:px-10 tablet:pt-[94px] tablet:pb-11 desktop:min-h-[849px] desktop:px-0 desktop:pb-[50px]',
+                    'relative z-10 mx-auto flex min-h-[640px] w-full max-w-[1340px] flex-1 flex-col px-5 pb-9 pt-[86px] tablet:min-h-[760px] tablet:px-10 tablet:pt-[94px] tablet:pb-11 desktop:min-h-[900px] desktop:px-0 desktop:pb-[50px]',
                     contentClassName
                 )}
             >

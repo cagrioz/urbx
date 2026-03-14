@@ -3,7 +3,7 @@ import NextGenMediaShowcase from '@/components/NextGenMediaShowcase';
 import ToteBackdrop from '@/assets/version2/tote_gripper.png';
 import ToteHandlingCapacityBackdrop from '@/assets/version2/tote_handling_capacity.png';
 import ToteGripperSpeedBackdrop from '@/assets/version2/tote_gripper_speed.png';
-import DynamicToteHeightBackdrop from '@/assets/version2/dynamic-tote-height.png';
+import DynamicToteHeightBackdrop from '@/assets/version2/dynamic_tote_height.png';
 import PickStationBackdrop from '@/assets/version2/pickstation.png';
 import VerticalStorageBackdrop from '@/assets/version2/vertical_storage.png';
 import ProductionSystemBackdrop from '@/assets/version2/production_system.png';

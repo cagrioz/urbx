@@ -1,7 +1,8 @@
 'use client';
 
 import classNames from 'classnames';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { CountUp } from 'countup.js';
 
 export interface FlipCounterMetric {
     value: number | string;
@@ -21,7 +22,6 @@ interface NextGenFlipCountersProps {
     accentColor?: string;
 }
 
-const DIGIT_HEIGHT_PX = 50;
 const RECOMMENDED_DURATION_MIN_MS = 800;
 const RECOMMENDED_DURATION_MAX_MS = 1400;
 const RECOMMENDED_STAGGER_MIN_MS = 100;
@@ -41,103 +41,140 @@ function formatMetricValue(value: number | string) {
     return value;
 }
 
-function OdometerValue({
-    valueText,
+function parseCountUpValue(value: number | string) {
+    if (typeof value === 'number') {
+        const roundedValue = Math.round(value);
+
+        return {
+            endValue: roundedValue,
+            prefix: '',
+            suffix: '',
+            decimalPlaces: 0,
+            useGrouping: true,
+            finalText: roundedValue.toLocaleString('en-US'),
+            startText: '0',
+        };
+    }
+
+    const finalText = String(value).trim();
+    const match = finalText.match(/^([^0-9+-]*)([+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?)(.*)$/);
+
+    if (!match) {
+        return {
+            endValue: null,
+            prefix: '',
+            suffix: '',
+            decimalPlaces: 0,
+            useGrouping: false,
+            finalText,
+            startText: finalText,
+        };
+    }
+
+    const [, prefix, numericText, suffix] = match;
+    const normalizedNumericText = numericText.replace(/,/g, '');
+    const parsedNumericValue = Number.parseFloat(normalizedNumericText);
+
+    if (!Number.isFinite(parsedNumericValue)) {
+        return {
+            endValue: null,
+            prefix: '',
+            suffix: '',
+            decimalPlaces: 0,
+            useGrouping: false,
+            finalText,
+            startText: finalText,
+        };
+    }
+
+    const decimalMatch = normalizedNumericText.match(/\.(\d+)$/);
+    const decimalPlaces = decimalMatch?.[1]?.length ?? 0;
+    const endValue = decimalPlaces > 0 ? parsedNumericValue : Math.round(parsedNumericValue);
+    const useGrouping = numericText.includes(',') || Math.abs(endValue) >= 1000;
+
+    return {
+        endValue,
+        prefix,
+        suffix,
+        decimalPlaces,
+        useGrouping,
+        finalText,
+        startText: `${prefix}0${suffix}`,
+    };
+}
+
+function CountUpValue({
+    value,
     shouldAnimate,
     prefersReducedMotion,
     durationMs,
     delayMs,
     valueColor,
 }: {
-    valueText: string;
+    value: number | string;
     shouldAnimate: boolean;
     prefersReducedMotion: boolean;
     durationMs: number;
     delayMs: number;
     valueColor?: string;
 }) {
-    if (prefersReducedMotion) {
-        return (
-            <span
-                className="inline-flex items-center font-general-sans text-[50px] font-normal leading-[1] tracking-[-0.01em] text-black"
-                style={valueColor ? { color: valueColor } : undefined}
-            >
-                {valueText}
-            </span>
-        );
-    }
+    const parsedValue = useMemo(() => parseCountUpValue(value), [value]);
+    const valueRef = useRef<HTMLSpanElement | null>(null);
 
-    const chars = valueText.split('');
-    const digitIndexes = chars.reduce<number[]>((indexes, char, index) => {
-        if (/\d/.test(char)) {
-            indexes.push(index);
+    useEffect(() => {
+        const valueNode = valueRef.current;
+        if (!valueNode) {
+            return;
         }
 
-        return indexes;
-    }, []);
-    const lastDigitIndex = digitIndexes[digitIndexes.length - 1] ?? -1;
+        if (prefersReducedMotion || parsedValue.endValue === null) {
+            valueNode.textContent = parsedValue.finalText;
+            return;
+        }
+
+        if (!shouldAnimate) {
+            valueNode.textContent = parsedValue.startText;
+            return;
+        }
+
+        const countUp = new CountUp(valueNode, parsedValue.endValue, {
+            startVal: 0,
+            duration: durationMs / 1000,
+            decimalPlaces: parsedValue.decimalPlaces,
+            useGrouping: parsedValue.useGrouping,
+            separator: ',',
+            prefix: parsedValue.prefix,
+            suffix: parsedValue.suffix,
+            useEasing: false,
+        });
+
+        const startTimer = window.setTimeout(() => {
+            if (!countUp.error) {
+                countUp.start();
+            }
+        }, delayMs);
+
+        return () => {
+            window.clearTimeout(startTimer);
+        };
+    }, [delayMs, durationMs, parsedValue, prefersReducedMotion, shouldAnimate]);
 
     return (
-        <span className="inline-flex items-center tabular-nums">
-            {chars.map((char, index) => {
-                if (!/\d/.test(char)) {
-                    return (
-                        <span
-                            key={`${char}-${index}`}
-                            className={classNames(
-                                'mx-[1px] font-general-sans text-[50px] font-normal leading-[1] tracking-[-0.01em] text-black tabular-nums',
-                                shouldAnimate ? 'opacity-100' : 'opacity-0'
-                            )}
-                            style={valueColor ? { color: valueColor } : undefined}
-                        >
-                            {char}
-                        </span>
-                    );
-                }
-
-                const targetDigit = Number(char);
-                const extraTurns = 4;
-                const rows = Array.from({ length: (extraTurns + 1) * 10 }, (_, rowIndex) => rowIndex % 10);
-                const targetIndex = extraTurns * 10 + targetDigit;
-                const translateY = shouldAnimate ? -(targetIndex * DIGIT_HEIGHT_PX) : 0;
-                const totalSteps = Math.max(targetIndex + 1, 16);
-                const shouldShowBeforeStart = index === lastDigitIndex;
-
-                return (
-                    <span
-                        key={`${char}-${index}`}
-                        className={classNames(
-                            'relative inline-flex h-[50px] w-[30px] overflow-hidden align-bottom',
-                            shouldAnimate || shouldShowBeforeStart ? 'opacity-100' : 'opacity-0'
-                        )}
-                    >
-                        <span
-                            className="flex flex-col will-change-transform"
-                            style={
-                                shouldAnimate
-                                    ? {
-                                          transform: `translateY(${translateY}px)`,
-                                          transitionProperty: 'transform',
-                                          transitionDuration: `${durationMs}ms`,
-                                          transitionDelay: `${delayMs}ms`,
-                                          transitionTimingFunction: `steps(${totalSteps}, end)`,
-                                      }
-                                    : { transform: 'translateY(0px)' }
-                            }
-                        >
-                            {rows.map((digit, rowIndex) => (
-                                <span
-                                    key={rowIndex}
-                                    className="flex h-[50px] items-center justify-center font-general-sans text-[50px] font-normal leading-[1] tracking-[-0.01em] text-black tabular-nums"
-                                    style={valueColor ? { color: valueColor } : undefined}
-                                >
-                                    {digit}
-                                </span>
-                            ))}
-                        </span>
-                    </span>
-                );
-            })}
+        <span className="relative inline-grid items-center tabular-nums align-bottom">
+            <span
+                aria-hidden="true"
+                className="invisible font-general-sans text-[50px] font-normal leading-[1] tracking-[-0.01em] tabular-nums"
+                style={valueColor ? { color: valueColor } : undefined}
+            >
+                {parsedValue.finalText}
+            </span>
+            <span
+                ref={valueRef}
+                className="absolute inset-0 inline-flex items-center font-general-sans text-[50px] font-normal leading-[1] tracking-[-0.01em] text-black tabular-nums"
+                style={valueColor ? { color: valueColor } : undefined}
+            >
+                {prefersReducedMotion || parsedValue.endValue === null ? parsedValue.finalText : parsedValue.startText}
+            </span>
         </span>
     );
 }
@@ -177,8 +214,8 @@ function FlipMetric({
                     style={resolvedAccentColor ? { backgroundColor: resolvedAccentColor } : undefined}
                 />
 
-                <OdometerValue
-                    valueText={formattedValue}
+                <CountUpValue
+                    value={metric.value}
                     shouldAnimate={shouldAnimate}
                     prefersReducedMotion={prefersReducedMotion}
                     durationMs={durationMs}
