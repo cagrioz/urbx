@@ -3,7 +3,7 @@
 import classNames from 'classnames';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import NextGenNavigation from '@/components/NextGenNavigation';
 import NextGenFlipCounters from '@/components/NextGenFlipCounters';
 import type { FlipCounterMetric } from '@/components/NextGenFlipCounters';
@@ -103,10 +103,18 @@ function MediaShowcaseActionLink({
     );
 }
 
-function MediaShowcaseActionButton({ action }: { action: MediaShowcaseAction }) {
+function MediaShowcaseActionButton({
+    action,
+    isSectionActive = false,
+}: {
+    action: MediaShowcaseAction;
+    isSectionActive?: boolean;
+}) {
     const variant = action.variant ?? 'full';
     const label = action.label ?? 'FULL VIDEO';
-    const baseClassName = 'gradient-outline-btn inline-flex items-center rounded-[8px] text-[#F3F4F9]';
+    const baseClassName =
+        'gradient-outline-btn group inline-flex items-center rounded-[8px] text-[#F3F4F9] transition-colors duration-300';
+    const iconMotionClassName = 'shrink-0 will-change-transform';
 
     if (variant === 'icon') {
         return (
@@ -124,7 +132,11 @@ function MediaShowcaseActionButton({ action }: { action: MediaShowcaseAction }) 
                     aria-hidden="true"
                     width={16}
                     height={16}
-                    className="h-4 w-4 shrink-0"
+                    className={classNames(
+                        'h-4 w-4',
+                        iconMotionClassName,
+                        isSectionActive && 'media-showcase-icon-loop-down'
+                    )}
                 />
             </MediaShowcaseActionLink>
         );
@@ -148,7 +160,11 @@ function MediaShowcaseActionButton({ action }: { action: MediaShowcaseAction }) 
                 <span className="whitespace-nowrap">{label}</span>
                 <span
                     aria-hidden="true"
-                    className="h-3 w-3 shrink-0 bg-current"
+                    className={classNames(
+                        'h-3 w-3 bg-current',
+                        iconMotionClassName,
+                        isSectionActive && 'media-showcase-icon-loop-right'
+                    )}
                     style={{
                         WebkitMaskImage: `url(${RightArrowIcon.src})`,
                         maskImage: `url(${RightArrowIcon.src})`,
@@ -180,7 +196,11 @@ function MediaShowcaseActionButton({ action }: { action: MediaShowcaseAction }) 
                 aria-hidden="true"
                 width={12}
                 height={12}
-                className="h-3 w-3 shrink-0"
+                className={classNames(
+                    'h-3 w-3',
+                    iconMotionClassName,
+                    isSectionActive && 'media-showcase-icon-loop-right'
+                )}
             />
         </MediaShowcaseActionLink>
     );
@@ -301,9 +321,11 @@ export default function NextGenMediaShowcase({
     descriptionClassName,
     contentClassName,
 }: MediaShowcaseProps) {
+    const sectionRef = useRef<HTMLElement | null>(null);
     const totalSlides = carouselSlides?.length ?? 0;
     const hasCarouselControls = totalSlides > 1;
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+    const [isSectionActive, setIsSectionActive] = useState(false);
     const specRowsData = specRows ?? [];
     const hasSpecRows = specRowsData.length > 0;
     const isTopSpecRowsLayout = hasSpecRows && specRowsPlacement === 'top';
@@ -315,6 +337,28 @@ export default function NextGenMediaShowcase({
 
         setActiveSlideIndex((previousIndex) => (previousIndex < totalSlides ? previousIndex : 0));
     }, [totalSlides]);
+
+    useEffect(() => {
+        if (!sectionRef.current || !action) {
+            return;
+        }
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                const isActive = entry.isIntersecting && entry.intersectionRatio >= 0.35;
+                setIsSectionActive(isActive);
+            },
+            {
+                threshold: [0, 0.35, 0.6, 1],
+            }
+        );
+
+        observer.observe(sectionRef.current);
+
+        return () => {
+            observer.disconnect();
+        };
+    }, [action]);
 
     const safeSlideIndex = totalSlides > 0 ? activeSlideIndex % totalSlides : 0;
     const activeSlide = totalSlides > 0 ? carouselSlides?.[safeSlideIndex] : undefined;
@@ -364,7 +408,7 @@ export default function NextGenMediaShowcase({
             </div>
         ) : action ? (
             <div className="tablet:mb-1">
-                <MediaShowcaseActionButton action={action} />
+                <MediaShowcaseActionButton action={action} isSectionActive={isSectionActive} />
             </div>
         ) : null;
 
@@ -386,6 +430,7 @@ export default function NextGenMediaShowcase({
 
     return (
         <section
+            ref={sectionRef}
             id={id}
             className={classNames(
                 'relative isolate overflow-hidden bg-white',

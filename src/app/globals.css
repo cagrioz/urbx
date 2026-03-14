@@ -226,12 +226,42 @@ h1 {
     pointer-events: none;
 }
 
+@keyframes media-showcase-icon-loop-right {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(6px);
+    }
+}
+
+@keyframes media-showcase-icon-loop-down {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(6px);
+    }
+}
+
+.media-showcase-icon-loop-right {
+    animation: media-showcase-icon-loop-right 1.6s ease-in-out infinite;
+}
+
+.media-showcase-icon-loop-down {
+    animation: media-showcase-icon-loop-down 1.6s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .hero-animate-subtitle,
     .hero-animate-title,
     .hero-animate-title .hero-title-line,
     .hero-animate-glow,
-    .hero-animate-image {
+    .hero-animate-image,
+    .media-showcase-icon-loop-right,
+    .media-showcase-icon-loop-down {
         animation: none !important;
         opacity: 1 !important;
         transform: none !important;

@@ -41,10 +41,6 @@ function formatMetricValue(value: number | string) {
     return value;
 }
 
-function maskDigitsWithZero(valueText: string) {
-    return valueText.replace(/\d/g, '0');
-}
-
 function OdometerValue({
     valueText,
     shouldAnimate,
@@ -61,19 +57,25 @@ function OdometerValue({
     valueColor?: string;
 }) {
     if (prefersReducedMotion) {
-        const content = shouldAnimate ? valueText : maskDigitsWithZero(valueText);
-
         return (
             <span
                 className="inline-flex items-center font-general-sans text-[50px] font-normal leading-[1] tracking-[-0.01em] text-black"
                 style={valueColor ? { color: valueColor } : undefined}
             >
-                {content}
+                {valueText}
             </span>
         );
     }
 
     const chars = valueText.split('');
+    const digitIndexes = chars.reduce<number[]>((indexes, char, index) => {
+        if (/\d/.test(char)) {
+            indexes.push(index);
+        }
+
+        return indexes;
+    }, []);
+    const lastDigitIndex = digitIndexes[digitIndexes.length - 1] ?? -1;
 
     return (
         <span className="inline-flex items-center tabular-nums">
@@ -82,7 +84,10 @@ function OdometerValue({
                     return (
                         <span
                             key={`${char}-${index}`}
-                            className="mx-[1px] font-general-sans text-[50px] font-normal leading-[1] tracking-[-0.01em] text-black tabular-nums"
+                            className={classNames(
+                                'mx-[1px] font-general-sans text-[50px] font-normal leading-[1] tracking-[-0.01em] text-black tabular-nums',
+                                shouldAnimate ? 'opacity-100' : 'opacity-0'
+                            )}
                             style={valueColor ? { color: valueColor } : undefined}
                         >
                             {char}
@@ -96,9 +101,16 @@ function OdometerValue({
                 const targetIndex = extraTurns * 10 + targetDigit;
                 const translateY = shouldAnimate ? -(targetIndex * DIGIT_HEIGHT_PX) : 0;
                 const totalSteps = Math.max(targetIndex + 1, 16);
+                const shouldShowBeforeStart = index === lastDigitIndex;
 
                 return (
-                    <span key={`${char}-${index}`} className="relative inline-flex h-[50px] w-[30px] overflow-hidden align-bottom">
+                    <span
+                        key={`${char}-${index}`}
+                        className={classNames(
+                            'relative inline-flex h-[50px] w-[30px] overflow-hidden align-bottom',
+                            shouldAnimate || shouldShowBeforeStart ? 'opacity-100' : 'opacity-0'
+                        )}
+                    >
                         <span
                             className="flex flex-col will-change-transform"
                             style={
@@ -227,6 +239,11 @@ export default function NextGenFlipCounters({
     }, []);
 
     useEffect(() => {
+        if (prefersReducedMotion) {
+            setHasStarted(true);
+            return;
+        }
+
         if (!containerRef.current || hasStarted) {
             return;
         }
@@ -248,7 +265,7 @@ export default function NextGenFlipCounters({
         return () => {
             observer.disconnect();
         };
-    }, [hasStarted]);
+    }, [hasStarted, prefersReducedMotion]);
 
     return (
         <div ref={containerRef} className={classNames('flex items-end gap-10 tablet:gap-14 desktop:gap-16', className)}>
