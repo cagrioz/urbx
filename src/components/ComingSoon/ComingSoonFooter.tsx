@@ -122,7 +122,7 @@ function FooterLinkItem({
     isFirstRow?: boolean;
 }) {
     return (
-        <div className="grid grid-cols-[140px_minmax(0,1fr)_auto] items-center gap-x-6">
+        <div className="grid min-w-0 grid-cols-[100px_minmax(0,1fr)_auto] items-center gap-x-3 tablet:grid-cols-[118px_minmax(0,1fr)_auto] tablet:gap-x-4 desktop:grid-cols-[140px_minmax(0,1fr)_auto] desktop:gap-x-6">
             <div className="py-3">
                 {sectionTitle ? (
                     <h3 className="font-general-sans text-[24px] text-white font-medium leading-[110%] tracking-[-0.01em]">
@@ -135,7 +135,7 @@ function FooterLinkItem({
 
             {link.isComingSoon ? (
                 <div
-                    className={`col-span-2 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-6 py-3 border-comingSoon-border/80 border-dashed border-b ${
+                    className={`col-span-2 grid min-w-0 grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 py-3 border-comingSoon-border/80 border-dashed border-b tablet:gap-x-4 desktop:gap-x-6 ${
                         isFirstRow ? 'border-t' : ''
                     }`}
                     aria-disabled="true"
@@ -150,7 +150,7 @@ function FooterLinkItem({
             ) : (
                 <a
                     href={link.href}
-                    className={`group col-span-2 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-6 py-3 border-comingSoon-border/80 border-dashed border-b transition-colors ${
+                    className={`group col-span-2 grid min-w-0 grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 py-3 border-comingSoon-border/80 border-dashed border-b transition-colors tablet:gap-x-4 desktop:gap-x-6 ${
                         isFirstRow ? 'border-t' : ''
                     }`}
                 >
@@ -192,16 +192,16 @@ function FooterLinksSection({ section }: { section: FooterSection }) {
 export default function ComingSoonFooter() {
     return (
         <footer
-            className="relative w-full rounded-t-lg rounded-b-lg"
+            className="relative w-full overflow-hidden rounded-tl-[32px] rounded-tr-[32px] rounded-b-lg z-[1] -mt-[32px]"
             style={{
                 background: 'radial-gradient(ellipse at bottom center, #000F14 0%, #060606 100%)',
             }}
         >
-            <div className="w-full max-w-[1344px] mx-auto px-6 tablet:px-12 desktop:px-[48px] pt-12 tablet:pt-16 pb-6">
+            <div className="mx-auto w-full max-w-[1344px] rounded-tl-[32px] rounded-tr-[32px] px-6 pt-12 pb-6 tablet:px-8 tablet:pt-16 laptop:px-12 desktop:px-[48px]">
                 {/* Upper section - Two column layout */}
-                <div className="flex flex-col tablet:flex-row gap-12 tablet:justify-between">
+                <div className="flex flex-col gap-10 tablet:flex-row tablet:items-start tablet:justify-between tablet:gap-8 desktop:gap-12">
                     {/* Left column - Logo, newsletter, description, mark */}
-                    <div className="flex flex-col gap-6 flex-shrink-0 w-full tablet:w-[337px]">
+                    <div className="flex w-full min-w-0 flex-col gap-6 tablet:max-w-[320px] desktop:max-w-[337px]">
                         <Image
                             src={footerLogo}
                             alt="URBX"
@@ -231,7 +231,7 @@ export default function ComingSoonFooter() {
                     </div>
 
                     {/* Right column - System then Company stacked vertically */}
-                    <div className="flex flex-col gap-10 w-full tablet:w-[573px] flex-shrink-0">
+                    <div className="flex w-full min-w-0 flex-col gap-10 tablet:max-w-[560px] tablet:flex-1 desktop:max-w-[573px]">
                         {footerSections.map((section) => (
                             <FooterLinksSection key={section.title} section={section} />
                         ))}
@@ -243,7 +243,7 @@ export default function ComingSoonFooter() {
                     <p className="font-ibm-mono text-[10px] text-comingSoon-muted tracking-[-0.0312em] leading-[1.4]">
                         © 2026 Urbx, Inc. All rights reserved.
                     </p>
-                    <div className="flex gap-6 mt-4 tablet:mt-0">
+                    <div className="mt-4 flex flex-wrap gap-6 tablet:mt-0">
                         <a
                             href="#"
                             className="font-ibm-mono text-[10px] text-comingSoon-muted hover:text-white transition-colors underline tracking-[-0.0312em] leading-[1.4]"
