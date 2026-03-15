@@ -134,7 +134,7 @@ export default function NeonSoftwareSection() {
                 />
                 <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute inset-x-0 bottom-0 z-[3] h-[243px] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(255,255,255,1)_100%)]"
+                    className="pointer-events-none absolute inset-x-0 bottom-0 z-[3] h-[800px] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_42%,rgba(255,255,255,0.08)_56%,rgba(255,255,255,0.22)_68%,rgba(255,255,255,0.48)_72%,rgba(255,255,255,0.78)_78%,rgba(255,255,255,1)_100%)]"
                 />
             </div>
 

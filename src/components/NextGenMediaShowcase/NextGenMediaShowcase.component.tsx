@@ -24,6 +24,13 @@ export interface MediaShowcaseAction {
     openInNewTab?: boolean;
 }
 
+export interface MediaShowcaseActionInfo {
+    heading: ReactNode;
+    description: ReactNode;
+    hideOnMobile?: boolean;
+    className?: string;
+}
+
 export interface MediaShowcaseCarouselSlide {
     image: StaticImageData | string;
     imageAlt?: string;
@@ -44,11 +51,13 @@ export interface MediaShowcaseProps {
     carouselSlides?: MediaShowcaseCarouselSlide[];
     header?: string;
     title: string;
+    titleContent?: ReactNode;
     description: string;
     descriptionContent?: ReactNode;
     textPosition?: MediaShowcaseTextPosition;
     textHorizontalPosition?: MediaShowcaseTextHorizontalPosition;
     action?: MediaShowcaseAction;
+    actionInfo?: MediaShowcaseActionInfo;
     metrics?: FlipCounterMetric[];
     metricValueColor?: string;
     metricUnitColor?: string;
@@ -206,6 +215,7 @@ function MediaShowcaseActionButton({
 interface MediaShowcaseTextBlockProps {
     header?: string;
     title: string;
+    titleContent?: ReactNode;
     description: string;
     descriptionContent?: ReactNode;
     titleColor?: string;
@@ -217,6 +227,7 @@ interface MediaShowcaseTextBlockProps {
 function MediaShowcaseTextBlock({
     header,
     title,
+    titleContent,
     description,
     descriptionContent,
     titleColor,
@@ -238,7 +249,7 @@ function MediaShowcaseTextBlock({
                 )}
                 style={titleColor ? { color: titleColor } : undefined}
             >
-                {title}
+                {titleContent ?? title}
             </h1>
             <p
                 className={classNames(
@@ -290,11 +301,13 @@ export default function NextGenMediaShowcase({
     carouselSlides,
     header,
     title,
+    titleContent,
     description,
     descriptionContent,
     textPosition = 'bottom',
     textHorizontalPosition = 'left',
     action,
+    actionInfo,
     metrics,
     metricValueColor,
     metricUnitColor,
@@ -404,7 +417,23 @@ export default function NextGenMediaShowcase({
                 />
             </div>
         ) : action ? (
-            <div className="tablet:mb-1">
+            <div className="tablet:mb-1 flex flex-col items-start gap-[80px] tablet:items-end">
+                {actionInfo ? (
+                    <div
+                        className={classNames(
+                            'max-w-[160px] pr-2',
+                            actionInfo.hideOnMobile !== false && 'hidden tablet:block',
+                            actionInfo.className
+                        )}
+                    >
+                        <p className="font-ibm-mono text-[14px] font-medium leading-[1.4] tracking-[0.02em] text-[#F3F4F9]">
+                            {actionInfo.heading}
+                        </p>
+                        <p className="mt-2 font-ibm-mono text-[16px] font-medium leading-[1.4] tracking-[-0.01em] text-white/60">
+                            {actionInfo.description}
+                        </p>
+                    </div>
+                ) : null}
                 <MediaShowcaseActionButton action={action} isSectionActive={isSectionActive} />
             </div>
         ) : null;
@@ -413,6 +442,7 @@ export default function NextGenMediaShowcase({
         <MediaShowcaseTextBlock
             header={header}
             title={title}
+            titleContent={titleContent}
             description={description}
             descriptionContent={descriptionContent}
             titleColor={titleColor}
@@ -465,19 +495,19 @@ export default function NextGenMediaShowcase({
             <>
                 <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-[15%] backdrop-blur-[2px] bg-black/[0.003]"
+                className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-[15%] backdrop-blur-[2px] bg-black/[0.006]"
                 />
                 <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-[25%] backdrop-blur-[1.5px] bg-black/[0.005]"
+                className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-[25%] backdrop-blur-[1.5px] bg-black/[0.007]"
                 />
                 <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-x-0 bottom-0 z-[3] h-[35%] backdrop-blur-[1px] bg-black/[0.006]"
+                className="pointer-events-none absolute inset-x-0 bottom-0 z-[3] h-[35%] backdrop-blur-[1px] bg-black/[0.008]"
                 />
                 <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-x-0 bottom-0 z-[4] h-[45%] backdrop-blur-[0.5px] bg-black/[0.007]"
+                className="pointer-events-none absolute inset-x-0 bottom-0 z-[4] h-[45%] backdrop-blur-[0.5px] bg-black/[0.009]"
                 />
                 <div
                 aria-hidden="true"
