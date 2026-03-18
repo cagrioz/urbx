@@ -102,7 +102,7 @@ export default function NeonSoftwareSection() {
 
     return (
         <section id="neon-software" className="bg-[#ffffff] pt-[32px] text-[#050608]">
-            <div className="relative mx-auto flex min-h-[78svh] w-full max-w-[1340px] items-center justify-center px-5 tablet:min-h-[85svh] tablet:px-10 desktop:min-h-[92svh] desktop:px-0">
+            <div className="neon-mockup-viewport relative mx-auto flex min-h-[50svh] w-full max-w-[1340px] items-center justify-center px-5 tablet:min-h-[75svh] tablet:px-10 desktop:min-h-[92svh] desktop:px-0">
                 <div
                     ref={mockupRef}
                     className={classNames(
@@ -113,7 +113,7 @@ export default function NeonSoftwareSection() {
                     <Image
                         src={ComputerMockup}
                         alt="URBX NeonOS dashboard displayed on desktop workstation"
-                        className="h-auto w-full object-contain drop-shadow-[0_30px_40px_rgba(0,0,0,0.28)]"
+                        className="neon-mockup-image h-auto w-full object-contain drop-shadow-[0_30px_40px_rgba(0,0,0,0.28)]"
                         priority={false}
                     />
                     <div
@@ -126,19 +126,19 @@ export default function NeonSoftwareSection() {
                 </div>
                 <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute left-1/2 bottom-[94px] z-[2] h-[118px] w-[72%] max-w-[920px] -translate-x-1/2 rounded-[999px] bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.90)_0%,rgba(255,255,255,0.50)_44%,rgba(255,255,255,0)_100%)] blur-[48px]"
+                    className="neon-mockup-smoke-primary pointer-events-none absolute left-1/2 bottom-[94px] z-[2] h-[118px] w-[72%] max-w-[920px] -translate-x-1/2 rounded-[999px] bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.90)_0%,rgba(255,255,255,0.50)_44%,rgba(255,255,255,0)_100%)] blur-[48px]"
                 />
                 <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute left-1/2 bottom-[54px] z-[2] h-[168px] w-[86%] max-w-[1160px] -translate-x-1/2 rounded-[999px] bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.75)_0%,rgba(255,255,255,0.33)_40%,rgba(255,255,255,0)_100%)] blur-[70px]"
+                    className="neon-mockup-smoke-secondary pointer-events-none absolute left-1/2 bottom-[54px] z-[2] h-[168px] w-[86%] max-w-[1160px] -translate-x-1/2 rounded-[999px] bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.75)_0%,rgba(255,255,255,0.33)_40%,rgba(255,255,255,0)_100%)] blur-[70px]"
                 />
                 <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute inset-x-0 bottom-0 z-[3] h-[800px] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_42%,rgba(255,255,255,0.08)_56%,rgba(255,255,255,0.22)_68%,rgba(255,255,255,0.48)_72%,rgba(255,255,255,0.78)_78%,rgba(255,255,255,1)_100%)]"
+                    className="neon-mockup-fade pointer-events-none absolute inset-x-0 bottom-0 z-[3] h-[500px] tablet:h-[800px] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_42%,rgba(255,255,255,0.08)_56%,rgba(255,255,255,0.22)_68%,rgba(255,255,255,0.48)_72%,rgba(255,255,255,0.78)_78%,rgba(255,255,255,1)_100%)]"
                 />
             </div>
 
-            <div className="mx-auto w-full max-w-[1340px] px-5 pb-20 tablet:px-10 tablet:pb-24 desktop:px-0 desktop:pb-[120px]">
+            <div className="neon-cards-wrap mx-auto w-full max-w-[1340px] px-5 pb-20 tablet:px-10 tablet:pb-24 desktop:px-0 desktop:pb-[120px]">
                 <div className="flex flex-col gap-5 desktop:flex-row">
                     {neonFeatureCards.map((feature) => (
                         <article
@@ -226,6 +226,76 @@ export default function NeonSoftwareSection() {
 
                 .neon-screen-sweep-active {
                     animation-play-state: running;
+                }
+
+                @media (max-height: 840px) {
+                    .neon-mockup-viewport {
+                        align-items: flex-end;
+                        padding-top: 12px;
+                        padding-bottom: 4px;
+                    }
+
+                    .neon-mockup-shell {
+                        max-width: 920px;
+                    }
+
+                    .neon-mockup-image {
+                        max-height: 62svh;
+                        width: auto;
+                        max-width: 100%;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+
+                    .neon-mockup-smoke-primary {
+                        bottom: 72px;
+                        height: 92px;
+                        filter: blur(38px);
+                    }
+
+                    .neon-mockup-smoke-secondary {
+                        bottom: 36px;
+                        height: 134px;
+                        filter: blur(54px);
+                    }
+
+                    .neon-mockup-fade {
+                        height: 460px;
+                    }
+
+                    .neon-cards-wrap {
+                        margin-top: -18px;
+                    }
+                }
+
+                @media (max-height: 680px) {
+                    .neon-mockup-shell {
+                        max-width: 760px;
+                    }
+
+                    .neon-mockup-image {
+                        max-height: 56svh;
+                    }
+
+                    .neon-mockup-smoke-primary {
+                        bottom: 42px;
+                        height: 68px;
+                        filter: blur(30px);
+                    }
+
+                    .neon-mockup-smoke-secondary {
+                        bottom: 20px;
+                        height: 102px;
+                        filter: blur(42px);
+                    }
+
+                    .neon-mockup-fade {
+                        height: 220px;
+                    }
+
+                    .neon-cards-wrap {
+                        margin-top: -10px;
+                    }
                 }
 
                 @media (prefers-reduced-motion: reduce) {
