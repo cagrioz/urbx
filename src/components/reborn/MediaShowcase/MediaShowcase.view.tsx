@@ -2,8 +2,8 @@
 
 import classNames from 'classnames';
 import { useRef } from 'react';
-import NextGenNavigation from '@/components/NextGenNavigation';
-import { useMediaShowcaseCarousel, useSectionActivity } from './NextGenMediaShowcase.hooks';
+import Navigation from '@/components/reborn/Navigation';
+import { useMediaShowcaseCarousel, useSectionActivity } from './MediaShowcase.hooks';
 import {
     MediaShowcaseBottomOverlay,
     MediaShowcaseCarouselControls,
@@ -11,14 +11,14 @@ import {
     MediaShowcaseSideContent,
     MediaShowcaseSpecRowsBlock,
     MediaShowcaseTextBlock,
-} from './NextGenMediaShowcase.parts';
+} from './MediaShowcase.parts';
 import type {
     MediaShowcaseMetricsConfig,
     MediaShowcaseProps,
     MediaShowcaseSpecRowsConfig,
-} from './NextGenMediaShowcase.types';
+} from './MediaShowcase.types';
 
-export default function NextGenMediaShowcase({
+export default function MediaShowcase({
     id,
     image,
     imageAlt,
@@ -133,7 +133,7 @@ export default function NextGenMediaShowcase({
 
             {showBottomOverlay && <MediaShowcaseBottomOverlay />}
             {showNavigation && (
-                <NextGenNavigation className="absolute inset-x-0 top-0 pt-3 tablet:pt-[14px] desktop:pt-6" />
+                <Navigation className="absolute inset-x-0 top-0 pt-3 tablet:pt-[14px] desktop:pt-6" />
             )}
 
             <div

@@ -1,13 +1,13 @@
-import { ComingSoonFooter } from '@/components/ComingSoon';
+import { ComingSoonFooter } from '@/components/reborn/ComingSoon';
 import NeonHeroMedia from '@/assets/version2/neon_hero.png';
-import NextGenMediaShowcase from '@/components/NextGenMediaShowcase';
-import NeonSoftwareSection from '@/components/NeonSoftwareSection';
+import MediaShowcase from '@/components/reborn/MediaShowcase';
+import NeonSoftwareSection from '@/components/reborn/NeonSoftwareSection';
 
 export default function NeonPage() {
     return (
         <>
             <main className="bg-[#07090C] text-white">
-                <NextGenMediaShowcase
+                <MediaShowcase
                     className="z-[1] -mb-[32px]"
                     hasBottomRadius={true}
                     showNavigation={true}

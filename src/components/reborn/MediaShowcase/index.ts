@@ -1,4 +1,4 @@
-export { default } from './NextGenMediaShowcase.view';
+export { default } from './MediaShowcase.view';
 export type {
     MediaShowcaseAction,
     MediaShowcaseActionInfo,
@@ -12,4 +12,4 @@ export type {
     MediaShowcaseTextHorizontalPosition,
     MediaShowcaseTextPosition,
     MediaShowcaseVariant,
-} from './NextGenMediaShowcase.types';
+} from './MediaShowcase.types';

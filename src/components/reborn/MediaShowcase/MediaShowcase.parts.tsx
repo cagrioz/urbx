@@ -2,8 +2,8 @@ import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { CSSProperties, ReactNode } from 'react';
-import NextGenFlipCounters from '@/components/NextGenFlipCounters';
-import NextGenSpecRows from '@/components/NextGenSpecRows';
+import FlipCounter from '@/components/reborn/FlipCounter';
+import SpecRows from '@/components/reborn/SpecRows';
 import FullVideoPlayIcon from '@/assets/version2/fullvideo_play_icon.png';
 import DownArrowIcon from '@/assets/version2/arrow_down.png';
 import RightArrowIcon from '@/assets/version2/arrow_right.png';
@@ -14,7 +14,7 @@ import type {
     MediaShowcaseMetricsConfig,
     MediaShowcaseResolvedMedia,
     MediaShowcaseSpecRowsConfig,
-} from './NextGenMediaShowcase.types';
+} from './MediaShowcase.types';
 
 const ACTION_BUTTON_BASE_CLASS_NAME =
     'gradient-outline-btn group inline-flex items-center rounded-[8px] text-[#F3F4F9] transition-colors duration-300';
@@ -265,7 +265,7 @@ export function MediaShowcaseSpecRowsBlock({
     className?: string;
 }) {
     return (
-        <NextGenSpecRows
+        <SpecRows
             rows={config.rows}
             className={classNames(className, config.className)}
             heading={config.heading}
@@ -302,7 +302,7 @@ export function MediaShowcaseSideContent({
     if (hasMetrics) {
         return (
             <div className="tablet:mb-1">
-                <NextGenFlipCounters
+                <FlipCounter
                     metrics={metricsConfig.metrics ?? []}
                     valueColor={metricsConfig.valueColor}
                     unitColor={metricsConfig.unitColor}

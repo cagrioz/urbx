@@ -12,7 +12,7 @@ export interface FlipCounterMetric {
     accentColor?: string;
 }
 
-interface NextGenFlipCountersProps {
+interface FlipCounterProps {
     metrics: FlipCounterMetric[];
     className?: string;
     durationMs?: number;
@@ -248,7 +248,7 @@ function FlipMetric({
     );
 }
 
-export default function NextGenFlipCounters({
+export default function FlipCounter({
     metrics,
     className,
     durationMs = DEFAULT_DURATION_MS,
@@ -256,7 +256,7 @@ export default function NextGenFlipCounters({
     valueColor,
     unitColor,
     accentColor,
-}: NextGenFlipCountersProps) {
+}: FlipCounterProps) {
     const containerRef = useRef<HTMLDivElement | null>(null);
     const [hasStarted, setHasStarted] = useState(false);
     const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);

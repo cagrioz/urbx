@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState, type RefObject } from 'react';
-import type { MediaShowcaseCarouselSlide, MediaShowcaseResolvedMedia } from './NextGenMediaShowcase.types';
+import type { MediaShowcaseCarouselSlide, MediaShowcaseResolvedMedia } from './MediaShowcase.types';
 
 interface UseMediaShowcaseCarouselOptions {
     slides?: MediaShowcaseCarouselSlide[];

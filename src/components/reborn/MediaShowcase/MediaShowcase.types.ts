@@ -1,14 +1,14 @@
 import type { StaticImageData } from 'next/image';
 import type { ReactNode } from 'react';
-import type { FlipCounterMetric } from '@/components/NextGenFlipCounters';
-import type { NextGenSpecRow } from '@/components/NextGenSpecRows';
+import type { FlipCounterMetric } from '@/components/reborn/FlipCounter';
+import type { SpecRow } from '@/components/reborn/SpecRows';
 
 export type MediaShowcaseVariant = 'full' | 'icon' | 'explore';
 export type MediaShowcaseMedia = StaticImageData | string;
 export type MediaShowcaseTextPosition = 'bottom' | 'top';
 export type MediaShowcaseTextHorizontalPosition = 'left' | 'right';
 export type MediaShowcaseSpecRowsPlacement = 'side' | 'top';
-export type MediaShowcaseSpecRow = NextGenSpecRow;
+export type MediaShowcaseSpecRow = SpecRow;
 
 export interface MediaShowcaseAction {
     href: string;

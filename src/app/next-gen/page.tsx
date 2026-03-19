@@ -1,17 +1,17 @@
-import { ComingSoonFooter } from '@/components/ComingSoon';
+import { ComingSoonFooter } from '@/components/reborn/ComingSoon';
 import LandingBackdrop from '@/assets/version2/nextgen_home_hero.png';
 import AdaptiveVerticalNetworkBackdrop from '@/assets/version2/vertical_storage.png';
 import PickStationBackdrop from '@/assets/version2/pickstation.png';
 import DualBotBackdrop from '@/assets/version2/dual_bot.jpg';
 import CareersBackdrop from '@/assets/version2/careers.png';
-import NextGenMediaShowcase from '@/components/NextGenMediaShowcase';
-import NextGenProductionSystemReveal from '@/components/NextGenProductionSystemReveal';
+import MediaShowcase from '@/components/reborn/MediaShowcase';
+import ProductionSystemReveal from '@/components/reborn/ProductionSystemReveal';
 
 export default function NextGenLandingPage() {
     return (
         <>
             <main className="bg-[#07090C] text-white">
-            <NextGenMediaShowcase
+            <MediaShowcase
                     hasBottomRadius={true}
                     showNavigation={true}
                     image={LandingBackdrop}
@@ -29,7 +29,7 @@ export default function NextGenLandingPage() {
                         openInNewTab: true,
                     }}
                 />
-                <NextGenMediaShowcase
+                <MediaShowcase
                     hasBottomRadius={false}
                     showNavigation={false}
                     image={AdaptiveVerticalNetworkBackdrop}
@@ -44,7 +44,7 @@ export default function NextGenLandingPage() {
                         ariaLabel: 'Explore',
                     }}
                 />
-                <NextGenMediaShowcase
+                <MediaShowcase
                     hasBottomRadius={false}
                     showNavigation={false}
                     image={PickStationBackdrop}
@@ -58,7 +58,7 @@ export default function NextGenLandingPage() {
                         ariaLabel: 'Explore',
                     }}
                 />
-                <NextGenMediaShowcase
+                <MediaShowcase
                     hasBottomRadius={false}
                     showNavigation={false}
                     image={DualBotBackdrop}
@@ -75,7 +75,7 @@ export default function NextGenLandingPage() {
                         colorScheme: 'muted',
                     }}
                 />
-                <NextGenMediaShowcase
+                <MediaShowcase
                     hasBottomRadius={false}
                     showNavigation={false}
                     image={CareersBackdrop}
@@ -85,7 +85,7 @@ export default function NextGenLandingPage() {
                     description="Shape the future of warehouse automation."
                     action={{ href: '/next-gen/career', variant: 'explore', label: 'EXPLORE', ariaLabel: 'Explore careers' }}
                 />
-                <NextGenProductionSystemReveal />
+                <ProductionSystemReveal />
             </main>
             <ComingSoonFooter />
         </>

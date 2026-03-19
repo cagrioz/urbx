@@ -1,5 +1,5 @@
-import { ComingSoonFooter } from '@/components/ComingSoon';
-import NextGenMediaShowcase from '@/components/NextGenMediaShowcase';
+import { ComingSoonFooter } from '@/components/reborn/ComingSoon';
+import MediaShowcase from '@/components/reborn/MediaShowcase';
 import StorageHeroBackdrop from '@/assets/version2/storage_hero.png';
 import AislesBackdrop from '@/assets/version2/aisles.png';
 import ServiceabilityBackdrop from '@/assets/version2/serviceability.png';
@@ -44,7 +44,7 @@ export default function StoragePage() {
     return (
         <>
             <main className="-mb-[32px] bg-[#07090C] text-white">
-                <NextGenMediaShowcase
+                <MediaShowcase
                     className="z-[1] -mb-[32px]"
                     hasBottomRadius={true}
                     showNavigation={true}
@@ -54,7 +54,7 @@ export default function StoragePage() {
                     description="Engineered for maximum density, unmatched reliability, and effortless scalability."
                     action={{ href: '#aisles', variant: 'icon', ariaLabel: 'Scroll to Aisles section' }}
                 />
-                <NextGenMediaShowcase
+                <MediaShowcase
                     id="aisles"
                     className="scroll-mt-20 tablet:scroll-mt-24 desktop:scroll-mt-28 pt-[32px]"
                     hasBottomRadius={false}
@@ -67,7 +67,7 @@ export default function StoragePage() {
                     descriptionColor="rgba(86, 86, 86, 0.6)"
                     metrics={aislesMetrics}
                 />
-                <NextGenMediaShowcase
+                <MediaShowcase
                     hasBottomRadius={false}
                     showNavigation={false}
                     image={AislesBackdrop}
@@ -78,7 +78,7 @@ export default function StoragePage() {
                     descriptionColor="rgba(86, 86, 86, 0.6)"
                     metrics={infillsMetrics}
                 />
-                <NextGenMediaShowcase
+                <MediaShowcase
                     hasBottomRadius={false}
                     showNavigation={false}
                     image={ServiceabilityBackdrop}
@@ -87,7 +87,7 @@ export default function StoragePage() {
                     description="Industry-leading payload capacity enables handling of diverse range of goods."
                     specRows={serviceabilityRows}
                 />
-                <NextGenMediaShowcase
+                <MediaShowcase
                     className="pb-[32px]"
                     hasBottomRadius={false}
                     showNavigation={false}

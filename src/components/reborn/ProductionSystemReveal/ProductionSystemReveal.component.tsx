@@ -6,7 +6,7 @@ import Image from 'next/image';
 import ProductionSystemBackdrop from '@/assets/version2/production_system.png';
 import RightArrowIcon from '@/assets/version2/arrow_right.png';
 
-interface NextGenProductionSystemRevealProps {
+interface ProductionSystemRevealProps {
     videoEmbedUrl?: string;
     youtubeHref?: string;
 }
@@ -14,10 +14,10 @@ interface NextGenProductionSystemRevealProps {
 const DEFAULT_VIDEO_EMBED_URL =
     'https://www.youtube.com/embed?autoplay=1&mute=1&listType=search&list=URBX+production+system+SEW';
 
-export default function NextGenProductionSystemReveal({
+export default function ProductionSystemReveal({
     videoEmbedUrl = DEFAULT_VIDEO_EMBED_URL,
     youtubeHref = 'https://youtube.com',
-}: NextGenProductionSystemRevealProps) {
+}: ProductionSystemRevealProps) {
     const [isVideoRevealed, setIsVideoRevealed] = useState(false);
 
     const revealVideo = () => {
@@ -39,7 +39,7 @@ export default function NextGenProductionSystemReveal({
                 }}
                 className={classNames(
                     'relative transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]',
-                    isVideoRevealed ? '-translate-x-full opacity-0 pointer-events-none' : 'translate-x-0 opacity-100 cursor-pointer'
+                    isVideoRevealed ? 'pointer-events-none -translate-x-full opacity-0' : 'translate-x-0 cursor-pointer opacity-100'
                 )}
             >
                 <Image src={ProductionSystemBackdrop} alt="URBX production system" priority fill className="object-cover object-top" />
@@ -49,8 +49,8 @@ export default function NextGenProductionSystemReveal({
                     className="pointer-events-none absolute inset-x-0 bottom-0 h-[300px] bg-[linear-gradient(to_top,rgba(8,10,12,0.95)_0%,rgba(8,10,12,0.7)_40%,transparent_100%)]"
                 />
 
-                <div className="relative z-10 mx-auto flex min-h-[640px] w-full max-w-[1340px] flex-col px-5 pb-9 pt-[86px] tablet:min-h-[760px] tablet:px-10 tablet:pt-[94px] tablet:pb-11 desktop:min-h-[849px] desktop:px-0 desktop:pb-[50px]">
-                    <div className="mt-auto flex flex-col gap-5 tablet:flex-row tablet:items-end tablet:justify-between pb-[32px]">
+                <div className="relative z-10 mx-auto flex min-h-[640px] w-full max-w-[1340px] flex-col px-5 pb-9 pt-[86px] tablet:min-h-[760px] tablet:px-10 tablet:pb-11 tablet:pt-[94px] desktop:min-h-[849px] desktop:px-0 desktop:pb-[50px]">
+                    <div className="mt-auto flex flex-col gap-5 pb-[32px] tablet:flex-row tablet:items-end tablet:justify-between">
                         <div className="max-w-[480px]">
                             <h2 className="font-general-sans text-[28px] font-normal leading-[1] tracking-[-0.01em] text-[#F3F4F9] tablet:text-[32px]">
                                 Proven. Refined. Ready
@@ -79,7 +79,7 @@ export default function NextGenProductionSystemReveal({
             <div
                 className={classNames(
                     'absolute inset-0 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]',
-                    isVideoRevealed ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'
+                    isVideoRevealed ? 'translate-x-0 opacity-100' : 'pointer-events-none translate-x-full opacity-0'
                 )}
                 aria-hidden={!isVideoRevealed}
             >
