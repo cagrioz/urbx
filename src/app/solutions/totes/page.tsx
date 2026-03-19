@@ -51,7 +51,7 @@ const toteHandlerSpecificationRows = [
     { header: 'CONTROLS', text: 'EtherCAT / Beckhoff-ready' },
 ];
 
-export default function NextGenTotesPage() {
+export default function TotesPage() {
     return (
         <>
             <main className="bg-[#07090C] text-white">

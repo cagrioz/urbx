@@ -1,5 +1,5 @@
 import { ComingSoonFooter } from '@/components/reborn/ComingSoon';
-import LandingBackdrop from '@/assets/version2/nextgen_home_hero.png';
+import LandingBackdrop from '@/assets/version2/home_hero.png';
 import AdaptiveVerticalNetworkBackdrop from '@/assets/version2/vertical_storage.png';
 import PickStationBackdrop from '@/assets/version2/pickstation.png';
 import DualBotBackdrop from '@/assets/version2/dual_bot.jpg';
@@ -7,7 +7,7 @@ import CareersBackdrop from '@/assets/version2/careers.png';
 import MediaShowcase from '@/components/reborn/MediaShowcase';
 import ProductionSystemReveal from '@/components/reborn/ProductionSystemReveal';
 
-export default function NextGenLandingPage() {
+export default function LandingPage() {
     return (
         <>
             <main className="bg-[#07090C] text-white">
