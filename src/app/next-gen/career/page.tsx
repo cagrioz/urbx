@@ -1,12 +1,12 @@
-import { ComingSoonFooter } from '@/components/ComingSoon';
-import NextGenMediaShowcase from '@/components/NextGenMediaShowcase';
+import { ComingSoonFooter } from '@/components/reborn/ComingSoon';
+import MediaShowcase from '@/components/reborn/MediaShowcase';
 import CareerBackdrop from '@/assets/hero_bg.jpg';
 
 export default function NextGenCareerPage() {
     return (
         <>
             <main className="min-h-screen bg-[#07090C] text-white">
-                <NextGenMediaShowcase
+                <MediaShowcase
                     image={CareerBackdrop}
                     imageAlt="URBX career and team"
                     title="Join the Team Building Autonomous Logistics"

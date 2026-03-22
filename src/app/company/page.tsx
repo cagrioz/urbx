@@ -4,8 +4,8 @@ import FacebookIcon from '@/assets/version2/facebook_icon.png';
 import InstagramIcon from '@/assets/version2/instagram_icon.png';
 import LinkedinIcon from '@/assets/version2/linkedin_icon.png';
 import XIcon from '@/assets/version2/x_icon.png';
-import { ComingSoonFooter } from '@/components/ComingSoon';
-import NextGenNavigation from '@/components/NextGenNavigation';
+import { ComingSoonFooter } from '@/components/reborn/ComingSoon';
+import Navigation from '@/components/reborn/Navigation';
 
 const companyParagraphs = [
     'URBX was founded with a clear mission: to transform order fulfillment through intelligent robotic technology and solutions that deliver meaningful improvements in operational excellence, agility, cost efficiency, and user satisfaction.',
@@ -25,7 +25,7 @@ export default function NextGenCompanyPage() {
         <>
             <main className="bg-[#07090C] text-white">
                 <section className="relative isolate overflow-hidden bg-black">
-                    <NextGenNavigation className="absolute inset-x-0 top-0 pt-3 tablet:pt-[14px] desktop:pt-6" />
+                    <Navigation className="absolute inset-x-0 top-0 pt-3 tablet:pt-[14px] desktop:pt-6" />
 
                     <div className="mx-auto w-full max-w-[1340px] px-5 pb-12 pt-[92px] tablet:px-10 tablet:pb-14 tablet:pt-[106px] desktop:px-0 desktop:pb-16 desktop:pt-[102px]">
                         <div className="grid items-start justify-items-center gap-10 laptop:grid-cols-[minmax(0,1fr)_487px] laptop:justify-items-stretch laptop:gap-x-12 desktop:gap-x-[56px]">

@@ -8,37 +8,37 @@ import { useEffect, useState } from 'react';
 import NavigationDropdown from '@/assets/version2/navigation_dropdown.svg';
 import UrbxLogo from '@/assets/version2/urbx_v2_logo.svg';
 
-type NextGenNavigationLink = {
+type NavigationLink = {
     label: string;
     href: string;
 };
 
-type NextGenSolutionLink = NextGenNavigationLink;
+type SolutionLink = NavigationLink;
 
-const nextGenSolutionLinks: NextGenSolutionLink[] = [
+const solutionLinks: SolutionLink[] = [
     { label: 'TOTES', href: '/solutions/totes' },
     { label: 'CASES', href: '/solutions/cases' },
     { label: 'STORAGE', href: '/solutions/storage' },
 ];
 
-const nextGenTopLevelLinks: NextGenNavigationLink[] = [
+const topLevelLinks: NavigationLink[] = [
     { label: 'NEON', href: '/neon' },
     { label: 'COMPANY', href: '/company' },
     { label: 'NEWS', href: '/next-gen/news' },
     { label: 'CAREER', href: '/next-gen/career' },
 ];
 
-interface NextGenNavigationProps {
+interface NavigationProps {
     className?: string;
     homeHref?: string;
     requestDemoHref?: string;
 }
 
-export default function NextGenNavigation({
+export default function Navigation({
     className,
     homeHref = '/next-gen',
     requestDemoHref = '/contact-us',
-}: NextGenNavigationProps) {
+}: NavigationProps) {
     const pathname = usePathname();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isMobileSolutionsOpen, setIsMobileSolutionsOpen] = useState(false);
@@ -53,12 +53,12 @@ export default function NextGenNavigation({
     return (
         <header className={classNames('relative z-20 w-full', className)}>
             <div className="mx-auto flex h-10 w-full max-w-[1340px] items-center justify-between px-5 tablet:px-10 desktop:px-0">
-                <Link href={homeHref} aria-label="URBX Next generation homepage">
+                <Link href={homeHref} aria-label="URBX homepage">
                     <Image src={UrbxLogo} alt="URBX" width={123} height={30} className="h-[18px] w-auto object-contain" />
                 </Link>
 
                 <div className="flex items-center gap-8">
-                    <nav className="hidden laptop:block" aria-label="Next generation primary navigation">
+                    <nav className="hidden laptop:block" aria-label="Primary navigation">
                         <ul className="flex items-center gap-8">
                             <li className="group/solutions relative">
                                 <button
@@ -81,19 +81,19 @@ export default function NextGenNavigation({
                                     className="pointer-events-none absolute inset-x-0 top-full h-px origin-left scale-x-0 bg-white/80 opacity-0 transition-all duration-150 group-hover/solutions:scale-x-100 group-hover/solutions:opacity-100 group-focus-within/solutions:scale-x-100 group-focus-within/solutions:opacity-100"
                                 />
 
-                                <div className="absolute left-0 top-full z-30 pt-2 opacity-0 pointer-events-none -translate-y-1 transition-all duration-250 ease-out delay-100 group-hover/solutions:opacity-100 group-hover/solutions:pointer-events-auto group-hover/solutions:translate-y-0 group-focus-within/solutions:opacity-100 group-focus-within/solutions:pointer-events-auto group-focus-within/solutions:translate-y-0">
+                                <div className="absolute left-0 top-full z-30 pointer-events-none -translate-y-1 pt-2 opacity-0 transition-all delay-100 duration-250 ease-out group-hover/solutions:pointer-events-auto group-hover/solutions:translate-y-0 group-hover/solutions:opacity-100 group-focus-within/solutions:pointer-events-auto group-focus-within/solutions:translate-y-0 group-focus-within/solutions:opacity-100">
                                     <div className="relative w-[93px] overflow-hidden [box-shadow:inset_0_1px_0_rgba(255,255,255,0.95)]">
                                         <span
                                             aria-hidden="true"
                                             className="pointer-events-none absolute inset-x-0 top-0 h-[10px] bg-[linear-gradient(180deg,rgba(255,255,255,0.32)_0%,rgba(255,255,255,0)_100%)]"
                                         />
                                         <ul className="relative w-[93px] bg-[linear-gradient(180deg,rgba(255,255,255,0.16)_0%,rgba(147,147,147,0.09)_100%)] backdrop-blur-[3px]">
-                                            {nextGenSolutionLinks.map((solutionLink, index) => (
+                                            {solutionLinks.map((solutionLink, index) => (
                                                 <li key={solutionLink.label}>
                                                     <Link
                                                         href={solutionLink.href}
                                                         className={classNames(
-                                                            'flex h-9 items-center px-[10px] font-ibm-mono text-[12px] font-normal leading-5 text-[#DADADA] opacity-0 translate-y-1 transition-all duration-200 ease-out hover:bg-white/5 hover:text-white group-hover/solutions:opacity-100 group-hover/solutions:translate-y-0 group-focus-within/solutions:opacity-100 group-focus-within/solutions:translate-y-0',
+                                                            'flex h-9 translate-y-1 items-center px-[10px] font-ibm-mono text-[12px] font-normal leading-5 text-[#DADADA] opacity-0 transition-all duration-200 ease-out hover:bg-white/5 hover:text-white group-hover/solutions:translate-y-0 group-hover/solutions:opacity-100 group-focus-within/solutions:translate-y-0 group-focus-within/solutions:opacity-100',
                                                             {
                                                                 'group-hover/solutions:delay-150 group-focus-within/solutions:delay-150': index === 0,
                                                                 'group-hover/solutions:delay-200 group-focus-within/solutions:delay-200': index === 1,
@@ -103,12 +103,12 @@ export default function NextGenNavigation({
                                                         )}
                                                     >
                                                         <span>{solutionLink.label}</span>
-                                                        {isActiveLink(solutionLink.href) ? (
+                                                        {isActiveLink(solutionLink.href) && (
                                                             <span
                                                                 aria-hidden="true"
                                                                 className="ml-1.5 h-[8px] w-[8px] rounded-full bg-[#00A5E2]"
                                                             />
-                                                        ) : null}
+                                                        )}
                                                     </Link>
                                                 </li>
                                             ))}
@@ -117,7 +117,7 @@ export default function NextGenNavigation({
                                 </div>
                             </li>
 
-                            {nextGenTopLevelLinks.map((link) => {
+                            {topLevelLinks.map((link) => {
                                 const isActive = isActiveLink(link.href);
 
                                 return (
@@ -177,8 +177,8 @@ export default function NextGenNavigation({
                 </div>
             </div>
 
-            {isMobileMenuOpen ? (
-                <div className="absolute inset-x-0 top-full mt-2 z-30 laptop:hidden">
+            {isMobileMenuOpen && (
+                <div className="absolute inset-x-0 top-full z-30 mt-2 laptop:hidden">
                     <div className="mx-auto w-full max-w-[1340px] px-5 tablet:px-10">
                         <div className="overflow-hidden rounded-[12px] border border-white/20 bg-[rgba(11,15,20,0.92)] backdrop-blur-[10px]">
                             <div className="px-3 py-2">
@@ -201,29 +201,29 @@ export default function NextGenNavigation({
                                     />
                                 </button>
 
-                                {isMobileSolutionsOpen ? (
+                                {isMobileSolutionsOpen && (
                                     <ul className="space-y-1 pb-2">
-                                        {nextGenSolutionLinks.map((solutionLink) => (
+                                        {solutionLinks.map((solutionLink) => (
                                             <li key={solutionLink.label}>
                                                 <Link
                                                     href={solutionLink.href}
                                                     className="flex h-9 items-center rounded-[8px] px-3 font-ibm-mono text-[12px] font-normal leading-5 text-[#DADADA] transition-colors hover:bg-white/[0.05] hover:text-white"
                                                 >
                                                     <span>{solutionLink.label}</span>
-                                                    {isActiveLink(solutionLink.href) ? (
+                                                    {isActiveLink(solutionLink.href) && (
                                                         <span
                                                             aria-hidden="true"
                                                             className="ml-1.5 h-[8px] w-[8px] rounded-full bg-[#00A5E2]"
                                                         />
-                                                    ) : null}
+                                                    )}
                                                 </Link>
                                             </li>
                                         ))}
                                     </ul>
-                                ) : null}
+                                )}
 
                                 <ul className="mt-1 space-y-1 border-t border-white/10 pt-2">
-                                    {nextGenTopLevelLinks.map((link) => {
+                                    {topLevelLinks.map((link) => {
                                         const isActive = isActiveLink(link.href);
 
                                         return (
@@ -255,7 +255,7 @@ export default function NextGenNavigation({
                         </div>
                     </div>
                 </div>
-            ) : null}
+            )}
         </header>
     );
 }

@@ -1,5 +1,5 @@
-import { ComingSoonFooter } from '@/components/ComingSoon';
-import NextGenMediaShowcase from '@/components/NextGenMediaShowcase';
+import { ComingSoonFooter } from '@/components/reborn/ComingSoon';
+import MediaShowcase from '@/components/reborn/MediaShowcase';
 import CasesHeroBackdrop from '@/assets/version2/cases_hero.png';
 import CaseHandlingCapacityBackdrop from '@/assets/version2/case_handling_capacity.png';
 import CaseSequencingBackdrop from '@/assets/version2/vertical_storage.png';
@@ -39,7 +39,7 @@ export default function CasesPage() {
     return (
         <>
             <main className="bg-[#07090C] text-white">
-                <NextGenMediaShowcase
+                <MediaShowcase
                     className="z-[1] -mb-[32px]"
                     hasBottomRadius={true}
                     showNavigation={true}
@@ -49,7 +49,7 @@ export default function CasesPage() {
                     description="Precision grip technology engineered for reliable, high-speed case handling across diverse product types."
                     action={{ href: '#case-handling-capacity', variant: 'icon', ariaLabel: 'Scroll to Case Handling Capacity section' }}
                 />
-                <NextGenMediaShowcase
+                <MediaShowcase
                     id="case-handling-capacity"
                     className="scroll-mt-20 tablet:scroll-mt-24 desktop:scroll-mt-28 pt-[32px]"
                     hasBottomRadius={false}
@@ -62,7 +62,7 @@ export default function CasesPage() {
                     descriptionColor="rgba(86, 86, 86, 0.6)"
                     metrics={caseHandlingMetrics}
                 />
-                <NextGenMediaShowcase
+                <MediaShowcase
                     hasBottomRadius={false}
                     showNavigation={false}
                     image={CaseHandlingCapacityBackdrop}
@@ -73,7 +73,7 @@ export default function CasesPage() {
                     descriptionColor="rgba(86, 86, 86, 0.6)"
                     metrics={caseGripperSpeedMetrics}
                 />
-                <NextGenMediaShowcase
+                <MediaShowcase
                     hasBottomRadius={false}
                     showNavigation={false}
                     image={CaseSequencingBackdrop}
@@ -82,7 +82,7 @@ export default function CasesPage() {
                     description="Dual-bot system with direct case handling enables in-system case sequencing"
                     specRows={caseSequencingRows}
                 />
-                <NextGenMediaShowcase
+                <MediaShowcase
                     hasBottomRadius={false}
                     showNavigation={false}
                     image={CasePalletizingBackdrop}
@@ -91,7 +91,7 @@ export default function CasesPage() {
                     description="Vertical architecture enables direct palletization from storage—eliminating costly buffer systems and manual touchpoints from storage to shipment"
                     metrics={casePalletizingMetrics}
                 />
-                <NextGenMediaShowcase
+                <MediaShowcase
                     className="pb-[32px]"
                     hasBottomRadius={false}
                     showNavigation={false}

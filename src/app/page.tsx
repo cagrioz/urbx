@@ -1,4 +1,4 @@
-import { ComingSoonHero, ComingSoonFooter } from '@/components/ComingSoon';
+import { ComingSoonHero, ComingSoonFooter } from '@/components/reborn/ComingSoon';
 
 export default function ComingSoonPage() {
     return (

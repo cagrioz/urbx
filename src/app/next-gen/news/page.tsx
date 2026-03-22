@@ -1,12 +1,12 @@
-import { ComingSoonFooter } from '@/components/ComingSoon';
-import NextGenMediaShowcase from '@/components/NextGenMediaShowcase';
+import { ComingSoonFooter } from '@/components/reborn/ComingSoon';
+import MediaShowcase from '@/components/reborn/MediaShowcase';
 import NewsBackdrop from '@/assets/mobile_robotics.jpg';
 
 export default function NextGenNewsPage() {
     return (
         <>
             <main className="min-h-screen bg-[#07090C] text-white">
-                <NextGenMediaShowcase
+                <MediaShowcase
                     image={NewsBackdrop}
                     imageAlt="URBX fulfillment operations updates"
                     title="Latest URBX Product and Company Updates"

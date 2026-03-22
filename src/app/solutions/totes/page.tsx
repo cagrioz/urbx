@@ -1,5 +1,5 @@
-import { ComingSoonFooter } from '@/components/ComingSoon';
-import NextGenMediaShowcase from '@/components/NextGenMediaShowcase';
+import { ComingSoonFooter } from '@/components/reborn/ComingSoon';
+import MediaShowcase from '@/components/reborn/MediaShowcase';
 import ToteBackdrop from '@/assets/version2/tote_gripper.png';
 import ToteHandlingCapacityBackdrop from '@/assets/version2/tote_handling_capacity.png';
 import ToteGripperSpeedBackdrop from '@/assets/version2/tote_gripper_speed.png';
@@ -51,11 +51,11 @@ const toteHandlerSpecificationRows = [
     { header: 'CONTROLS', text: 'EtherCAT / Beckhoff-ready' },
 ];
 
-export default function NextGenTotesPage() {
+export default function TotesPage() {
     return (
         <>
             <main className="bg-[#07090C] text-white">
-                <NextGenMediaShowcase
+                <MediaShowcase
                     className="z-[1] -mb-[32px]"
                     hasBottomRadius={true}
                     showNavigation={true}
@@ -65,7 +65,7 @@ export default function NextGenTotesPage() {
                     description="Reliable tote handling engineered for extended service life — reducing maintenance costs and maximizing uptime."
                     action={{ href: '#tote-handling-capacity', variant: 'icon', ariaLabel: 'Scroll to Total Handling Capacity section' }}
                 />
-                <NextGenMediaShowcase
+                <MediaShowcase
                     id="tote-handling-capacity"
                     className="scroll-mt-20 tablet:scroll-mt-24 desktop:scroll-mt-28 pt-[32px]"
                     hasBottomRadius={false}
@@ -78,7 +78,7 @@ export default function NextGenTotesPage() {
                     description="Industry-leading payload capacity enables the handling of a diverse range of goods"
                     metrics={toteHandlingMetrics}
                 />
-                <NextGenMediaShowcase
+                <MediaShowcase
                     hasBottomRadius={false}
                     showNavigation={false}
                     image={ToteGripperSpeedBackdrop}
@@ -89,7 +89,7 @@ export default function NextGenTotesPage() {
                     descriptionColor="rgba(86, 86, 86, 0.6)"
                     metrics={toteGripperSpeedMetrics}
                 />
-                <NextGenMediaShowcase
+                <MediaShowcase
                     hasBottomRadius={false}
                     showNavigation={false}
                     image={DynamicToteHeightBackdrop}
@@ -100,7 +100,7 @@ export default function NextGenTotesPage() {
                     descriptionColor="rgba(86, 86, 86, 0.6)"
                     specRows={dynamicToteHeightRows}
                 />
-                <NextGenMediaShowcase
+                <MediaShowcase
                     id="pick-station"
                     className="scroll-mt-20 tablet:scroll-mt-24 desktop:scroll-mt-28"
                     hasBottomRadius={false}
@@ -112,7 +112,7 @@ export default function NextGenTotesPage() {
                     carouselSlides={pickStationSlides}
                     specRows={pickStationRows}
                 />
-                <NextGenMediaShowcase
+                <MediaShowcase
                     className="pb-[32px]"
                     hasBottomRadius={false}
                     showNavigation={false}

@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-export interface NextGenSpecRow {
+export interface SpecRow {
     header: string;
     text: string;
     headerColor?: string;
@@ -8,8 +8,8 @@ export interface NextGenSpecRow {
     borderColor?: string;
 }
 
-export interface NextGenSpecRowsProps {
-    rows: NextGenSpecRow[];
+export interface SpecRowsProps {
+    rows: SpecRow[];
     heading?: string;
     headingColor?: string;
     headerColor?: string;
@@ -18,7 +18,7 @@ export interface NextGenSpecRowsProps {
     className?: string;
 }
 
-export default function NextGenSpecRows({
+export default function SpecRows({
     rows,
     heading,
     headingColor = '#FFFFFF',
@@ -26,19 +26,19 @@ export default function NextGenSpecRows({
     textColor = '#FFFFFF',
     borderColor = 'rgba(255,255,255,0.22)',
     className,
-}: NextGenSpecRowsProps) {
+}: SpecRowsProps) {
     return (
         <div className={classNames('w-full tablet:w-[clamp(340px,44vw,480px)] desktop:w-[480px]', className)}>
-            {heading ? (
+            {heading && (
                 <p
                     className={classNames(
-                        'mb-[24px] font-general-sans text-[16px] font-medium uppercase leading-[1.4] tracking-[-0.01em]',
+                        'mb-[24px] font-general-sans text-[16px] font-medium uppercase leading-[1.4] tracking-[-0.01em]'
                     )}
                     style={{ color: headingColor }}
                 >
                     {heading}
                 </p>
-            ) : null}
+            )}
             {rows.map((row, index) => {
                 const isLastRow = index === rows.length - 1;
                 const resolvedHeaderColor = row.headerColor ?? headerColor;
