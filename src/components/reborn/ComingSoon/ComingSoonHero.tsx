@@ -54,7 +54,8 @@ export default function ComingSoonHero() {
                     <Image
                         src={heroImage}
                         alt="URBX Next-Gen Cube Storage Robot"
-                        className="hero-animate-image relative w-full h-auto object-contain drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+                        sizes="(min-width: 1232px) 840px, (min-width: 768px) 70vw, 90vw"
+                        className="hero-animate-image relative mx-auto w-auto h-[440px] tablet:h-[620px] desktop:h-[840px] object-contain drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
                         priority
                         quality={100}
                     />
